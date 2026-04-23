@@ -1,8 +1,8 @@
 import MatriceTable from '@/components/MatriceTable';
 import { fetchMatrice } from '@/lib/googleSheets';
 
-const SHEET_ID = '1SvWQ1RGpkzKkqc4HGSsNP7YEy43S9cyl-uUmsS3SygY';
-const GID = 0;
+const SHEET_ID = process.env.GOOGLE_SHEET_ID ?? '1SvWQ1RGpkzKkqc4HGSsNP7YEy43S9cyl-uUmsS3SygY';
+const GID = Number(process.env.GOOGLE_SHEET_GID ?? '0');
 
 export default async function HomePage() {
   const rows = await fetchMatrice({ sheetId: SHEET_ID, gid: GID });
