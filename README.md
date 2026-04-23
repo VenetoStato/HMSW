@@ -1,6 +1,6 @@
 # HMSW
 
-Base site (mekosrl.it) con UI data-driven.
+Base site con UI data-driven.
 
 ## Deploy
 - Collega il repo a Vercel.

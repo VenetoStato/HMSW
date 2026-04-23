@@ -180,7 +180,7 @@ export default async function HomePage() {
         <footer className="footer">
           <div style={{ display: 'flex', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
             <div>
-              <b>mekosrl.it</b> — demo UI
+              <b>HMSW</b> — base UI
               <div className="muted" style={{ marginTop: 6, lineHeight: 1.7 }}>
                 Base pensata per essere sostituita da CMS/Framer mantenendo la logica di matrice.
               </div>

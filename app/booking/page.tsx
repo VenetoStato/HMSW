@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Prenota online — mekosrl.it (demo)',
+  title: 'Prenota online — HMSW (demo)',
   description: 'Booking/Assessment: scegli il tipo di sessione e richiedi una prenotazione.',
 };
 

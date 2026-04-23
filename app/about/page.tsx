@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Perché noi — mekosrl.it (demo) ',
+  title: 'Perché noi — HMSW (demo) ',
   description: 'Guidiamo la scelta in base a maturità, complessità e Safety Focus (non commodity).',
 };
 

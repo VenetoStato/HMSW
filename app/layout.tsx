@@ -3,14 +3,14 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: {
-    default: 'mekosrl.it — Matrice Soluzioni',
-    template: '%s | mekosrl.it — Matrice Soluzioni',
+    default: 'HMSW — Matrice Soluzioni',
+    template: '%s | HMSW — Matrice Soluzioni',
   },
   description:
     'Matrice soluzioni: scopri casi d’uso, maturità, complessità e focus di sicurezza per piattaforme robotiche.',
-  metadataBase: new URL('https://mekosrl.it'),
+  metadataBase: new URL('https://hmsw.vercel.app'),
   alternates: {
-    canonical: 'https://mekosrl.it',
+    canonical: 'https://hmsw.vercel.app',
   },
 };
 

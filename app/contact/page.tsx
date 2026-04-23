@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contatti — mekosrl.it (demo)',
+  title: 'Contatti — HMSW (demo)',
   description: 'Contattaci: rispondiamo con una proposta guidata da safety, normativa e maturità di progetto.',
 };
 
