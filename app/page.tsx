@@ -43,7 +43,7 @@ export default async function HomePage() {
         <section className="hero" aria-labelledby="hero-title">
           <div className="heroGrid">
             <div>
-              <div className="kicker">Mekosrl.it — guida alla soluzione</div>
+              <div className="kicker">HMSW — guida alla soluzione</div>
               <h1 className="h1" id="hero-title">
                 Dal caso d’uso al <span style={{ color: 'rgba(103,232,249,0.95)' }}>Safety Focus</span>
               </h1>
