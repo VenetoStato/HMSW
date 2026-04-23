@@ -44,6 +44,7 @@ export default function MatriceTable({ rows }: { rows: MatriceRow[] }) {
       });
   }, [rows, platform, query]);
 
+  // Nota: selected è un indice rispetto a rows (originale). Manteniamo logica semplice.
   const selectedRow = selected === null ? null : rows[selected];
 
   return (
@@ -68,7 +69,7 @@ export default function MatriceTable({ rows }: { rows: MatriceRow[] }) {
           <input
             className="input"
             value={query}
-            placeholder="Cerca per caso d’uso, KPI, normativa, tempo..."
+            placeholder="Cerca per caso d’uso, KPI, normativa, tempi..."
             onChange={(e) => setQuery(e.target.value)}
           />
         </div>
@@ -92,7 +93,7 @@ export default function MatriceTable({ rows }: { rows: MatriceRow[] }) {
                   <td>
                     <span className="badge">{r.piattaforma}</span>
                   </td>
-                  <td>{r.casoUso}</td>
+                  <td style={{ fontWeight: 800 }}>{r.casoUso}</td>
                   <td className="muted">{r.maturita || '—'}</td>
                   <td className="muted">{r.complessita || '—'}</td>
                   <td className="muted">{r.roi || '—'}</td>
@@ -104,9 +105,9 @@ export default function MatriceTable({ rows }: { rows: MatriceRow[] }) {
                     <button
                       className="btn"
                       onClick={() => setSelected(idx)}
-                      aria-label={`Apri dettagli per ${r.casoUso}`}
+                      aria-label={`Apri focus per ${r.casoUso}`}
                     >
-                      Dettagli
+                      Focus
                     </button>
                   </td>
                 </tr>
@@ -121,74 +122,86 @@ export default function MatriceTable({ rows }: { rows: MatriceRow[] }) {
             </tbody>
           </table>
         </div>
+
+        <div style={{ marginTop: 10, color: 'var(--muted)', fontSize: 13, lineHeight: 1.6 }}>
+          Suggerimento: usa “Focus” per leggere safety/normativa e ridurre i blocchi di progetto.
+        </div>
       </div>
 
       <div>
         <div className="card">
-          <h3 className="sectionTitle">Focus</h3>
+          <div className="miniTitle">Focus (Safety & Compliance)</div>
+
           {selectedRow ? (
-            <div style={{ display: 'grid', gap: 12 }}>
-              <div>
-                <div className="muted" style={{ fontSize: 12, marginBottom: 4 }}>
-                  {selectedRow.piattaforma}
+            <div style={{ marginTop: 10 }}>
+              <div className="focusHeader">
+                <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, alignItems: 'flex-start' }}>
+                  <div>
+                    <div className="badge" style={{ marginBottom: 10 }}>
+                      {selectedRow.piattaforma}
+                    </div>
+                    <div className="focusTitle">{selectedRow.casoUso}</div>
+                  </div>
+                  <div style={{ textAlign: 'right' }}>
+                    <div className="focusBlockTitle">Maturità</div>
+                    <div style={{ fontWeight: 900, fontSize: 16 }}>{selectedRow.maturita || '—'}</div>
+                  </div>
                 </div>
-                <div style={{ fontWeight: 800, fontSize: 18, lineHeight: 1.25 }}>
-                  {selectedRow.casoUso}
+              </div>
+
+              <div className="focusGrid2">
+                <div className="focusGrid">
+                  <div>
+                    <div className="focusBlockTitle">Servizi / progettazione (1° anno)</div>
+                    <div className="focusText">{selectedRow.serviziPrimoAnno || '—'}</div>
+                  </div>
+                  <div style={{ marginTop: 12 }}>
+                    <div className="focusBlockTitle">KPI principali</div>
+                    <div className="focusText">{selectedRow.kpi || '—'}</div>
+                  </div>
+                  <div style={{ marginTop: 12 }}>
+                    <div className="focusBlockTitle">ROI atteso</div>
+                    <div className="focusText">{selectedRow.roi || '—'}</div>
+                  </div>
+                </div>
+
+                <div className="focusGrid">
+                  <div>
+                    <div className="focusBlockTitle">Safety Focus</div>
+                    <div className="focusText">{selectedRow.safetyFocus || '—'}</div>
+                  </div>
+                  <div style={{ marginTop: 12 }}>
+                    <div className="focusBlockTitle">Normativa (IT/EU) & criticità</div>
+                    <div className="focusText">{selectedRow.normativa || '—'}</div>
+                  </div>
+                  <div style={{ marginTop: 12 }}>
+                    <div className="focusBlockTitle">Tempi</div>
+                    <div className="focusText">{selectedRow.tempoProduzione || '—'} / {selectedRow.tempoNonDelivery || '—'}</div>
+                  </div>
                 </div>
               </div>
 
-              <div>
-                <div className="muted" style={{ fontSize: 12, marginBottom: 6 }}>
-                  Maturità / Fattibilità
-                </div>
-                <div>{selectedRow.maturita || '—'}</div>
+              <div style={{ marginTop: 14, display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                <a className="btn btnPrimary" href="/booking">
+                  Prenota una sessione
+                </a>
+                <button className="btn btnGhost" onClick={() => setSelected(null)}>
+                  Chiudi focus
+                </button>
               </div>
-
-              <div>
-                <div className="muted" style={{ fontSize: 12, marginBottom: 6 }}>
-                  Complessità
-                </div>
-                <div>{selectedRow.complessita || '—'}</div>
-              </div>
-
-              <div>
-                <div className="muted" style={{ fontSize: 12, marginBottom: 6 }}>
-                  Servizi/Progettazione (1° anno)
-                </div>
-                <div style={{ whiteSpace: 'pre-wrap' }}>{selectedRow.serviziPrimoAnno || '—'}</div>
-              </div>
-
-              <div>
-                <div className="muted" style={{ fontSize: 12, marginBottom: 6 }}>KPI principali</div>
-                <div style={{ whiteSpace: 'pre-wrap' }}>{selectedRow.kpi || '—'}</div>
-              </div>
-
-              <div>
-                <div className="muted" style={{ fontSize: 12, marginBottom: 6 }}>Safety Focus</div>
-                <div style={{ whiteSpace: 'pre-wrap' }}>{selectedRow.safetyFocus || '—'}</div>
-              </div>
-
-              <div>
-                <div className="muted" style={{ fontSize: 12, marginBottom: 6 }}>Normativa (IT/EU)</div>
-                <div style={{ whiteSpace: 'pre-wrap' }}>{selectedRow.normativa || '—'}</div>
-              </div>
-
-              <button className="btn" onClick={() => setSelected(null)}>
-                Chiudi focus
-              </button>
             </div>
           ) : (
-            <div className="muted" style={{ lineHeight: 1.6 }}>
-              Seleziona una riga dalla tabella per vedere il dettaglio del caso d’uso.
+            <div style={{ marginTop: 10, color: 'var(--muted)', lineHeight: 1.7 }}>
+              Seleziona una riga dalla tabella per vedere il Focus: safety, normativa e criticità tipiche.
             </div>
           )}
         </div>
 
         <div className="card" style={{ marginTop: 14 }}>
-          <h3 className="sectionTitle">Note</h3>
-          <div className="muted" style={{ lineHeight: 1.6 }}>
-            Questa è una base iniziale (dati da Google Sheets via CSV). Se vuoi spostarla su un CMS/Framer,
-            possiamo mantenere la stessa struttura di UI e sostituire solo la sorgente dati.
+          <div className="miniTitle">Perché non è commodity</div>
+          <div style={{ marginTop: 10, color: 'var(--muted)', lineHeight: 1.7 }}>
+            Il valore qui non è “prezzo/brand”: è la decisione guidata da maturità, rischi e compliance.
+            La sorgente dati può essere Google Sheets oggi, CMS/Framer domani.
           </div>
         </div>
       </div>
