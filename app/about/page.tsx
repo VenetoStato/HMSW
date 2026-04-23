@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Perché noi — HMSW (demo) ',
-  description: 'Guidiamo la scelta in base a maturità, complessità e Safety Focus (non commodity).',
+  title: 'Perché noi — HMSW',
+  description:
+    'Aiutiamo a scegliere il robot Unitree giusto per il tuo caso d’uso, con valutazione sicurezza, rischi e conformità.',
 };
 
 export default function AboutPage() {
@@ -13,26 +14,33 @@ export default function AboutPage() {
         <h1 className="sectionTitle" style={{ marginTop: 10, fontSize: 30 }}>
           Decisioni più veloci, progetti più sicuri
         </h1>
-        <div style={{ color: 'var(--muted)', lineHeight: 1.8, marginTop: 12, fontSize: 16, maxWidth: 860 }}>
-          Questa base è progettata per trasformare l’interesse in una decisione: non “vendiamo un catalogo”, ma
-          aiutiamo a scegliere la <b>soluzione giusta</b> in base a maturità/fattibilità, complessità, tempi e soprattutto
-          safety &amp; normativa.
+        <div
+          style={{
+            color: 'var(--muted)',
+            lineHeight: 1.8,
+            marginTop: 12,
+            fontSize: 16,
+            maxWidth: 860,
+          }}
+        >
+          Non vendiamo un catalogo: aiutiamo a scegliere la <b>soluzione giusta</b> per il tuo caso d’uso
+          (quadrupedi e humanoidi Unitree), con valutazione di sicurezza, rischi di integrazione e conformità.
         </div>
 
         <div className="split" style={{ marginTop: 16 }}>
           <div className="card cardHover" style={{ padding: 16 }}>
-            <div className="miniTitle">Guided discovery</div>
-            <div style={{ fontWeight: 1000, fontSize: 18, marginTop: 10 }}>La matrice evita scelte a caso</div>
+            <div className="miniTitle">Assessment guidato</div>
+            <div style={{ fontWeight: 1000, fontSize: 18, marginTop: 10 }}>Dal bisogno al robot più adatto</div>
             <div style={{ color: 'var(--muted)', lineHeight: 1.8, marginTop: 8 }}>
-              Filtri e Focus rendono evidente cosa guida la decisione (non solo il prodotto).
+              Mettiamo a fuoco vincoli, obiettivi e KPI per arrivare alla scelta migliore.
             </div>
           </div>
 
           <div className="card cardHover" style={{ padding: 16 }}>
-            <div className="miniTitle">Safety & compliance</div>
-            <div style={{ fontWeight: 1000, fontSize: 18, marginTop: 10 }}>Riduci i blocchi di progetto</div>
+            <div className="miniTitle">Sicurezza & conformità</div>
+            <div style={{ fontWeight: 1000, fontSize: 18, marginTop: 10 }}>Rischi trattati prima del go-live</div>
             <div style={{ color: 'var(--muted)', lineHeight: 1.8, marginTop: 8 }}>
-              Normativa, criticità tipiche e rischi residui vengono portati in primo piano.
+              Safety, normative e criticità tipiche vengono portate in primo piano.
             </div>
           </div>
         </div>
@@ -40,8 +48,8 @@ export default function AboutPage() {
         <div className="card" style={{ marginTop: 16 }}>
           <div className="miniTitle">Prossimo passo</div>
           <div style={{ marginTop: 10, color: 'var(--muted)', lineHeight: 1.8 }}>
-            Vuoi tradurre la matrice in un funnel completo per il tuo business? Possiamo collegare contenuti CMS/Framer,
-            risorse (ebook/cataloghi) e un sistema di booking/contatto.
+            Vuoi trasformare il tuo caso d’uso in una proposta concreta? Possiamo collegare contenuti e
+            sistemi di booking/contatto.
           </div>
           <div style={{ marginTop: 12, display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             <a className="btn btnPrimary" href="/booking">

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Prenota online — HMSW (demo)',
-  description: 'Booking/Assessment: scegli il tipo di sessione e richiedi una prenotazione.',
+  title: 'Prenota online — HMSW',
+  description:
+    'Prenota una sessione: raccontaci il tuo caso d’uso e ti indirizziamo sul robot Unitree più adatto.',
 };
 
 export default function BookingPage() {
@@ -11,19 +12,28 @@ export default function BookingPage() {
       <div className="card" style={{ padding: 18 }}>
         <div className="miniTitle">Booking / Assessment</div>
         <h1 className="sectionTitle" style={{ marginTop: 10, fontSize: 34 }}>
-          Prenota una sessione: dalla matrice alla proposta
+          Prenota una sessione: dal caso d’uso al robot giusto
         </h1>
-        <p style={{ color: 'var(--muted)', lineHeight: 1.8, marginTop: 10, maxWidth: 880, fontSize: 16 }}>
-          Questa pagina è un placeholder UI: qui collegherete il vostro sistema di prenotazione/form.
-          L’obiettivo è qualificare la richiesta (use case, maturità, safety) e trasformarla in proposta.
+        <p
+          style={{
+            color: 'var(--muted)',
+            lineHeight: 1.8,
+            marginTop: 10,
+            maxWidth: 880,
+            fontSize: 16,
+          }}
+        >
+          Questa pagina è un placeholder UI: in produzione la collegheremo al vostro sistema di
+          prenotazione/form. L’obiettivo è qualificare la richiesta (piattaforma, obiettivo,
+          requisiti di sicurezza) e trasformarla in proposta.
         </p>
 
         <div className="split" style={{ marginTop: 16 }}>
           <div className="card cardHover" style={{ padding: 16 }}>
             <div className="miniTitle">Opzione</div>
-            <div style={{ fontWeight: 1000, fontSize: 20, marginTop: 10 }}>Sessione informativa generica</div>
+            <div style={{ fontWeight: 1000, fontSize: 20, marginTop: 10 }}>Sessione informativa</div>
             <div style={{ color: 'var(--muted)', lineHeight: 1.8, marginTop: 8 }}>
-              Capire contesto e obiettivi, poi indirizzarti alla soluzione più coerente.
+              Capire contesto e obiettivi, poi indirizzarti sulla piattaforma robotica più coerente.
             </div>
             <div style={{ marginTop: 12, display: 'flex', gap: 10, flexWrap: 'wrap' }}>
               <a className="btn btnPrimary" href="/contact">
@@ -37,11 +47,7 @@ export default function BookingPage() {
 
           <div className="card" style={{ padding: 16 }}>
             <div className="miniTitle">Form (demo)</div>
-            <form
-              style={{ marginTop: 10, display: 'grid', gap: 10 }}
-              action="#"
-              method="post"
-            >
+            <form style={{ marginTop: 10, display: 'grid', gap: 10 }} action="#" method="post">
               <input className="input" style={{ borderRadius: 14 }} placeholder="Nome" required name="name" />
               <input
                 className="input"
@@ -51,9 +57,14 @@ export default function BookingPage() {
                 required
                 name="email"
               />
-              <input className="input" style={{ borderRadius: 14 }} placeholder="Azienda (opzionale)" name="company" />
+              <input
+                className="input"
+                style={{ borderRadius: 14 }}
+                placeholder="Azienda (opzionale)"
+                name="company"
+              />
               <textarea
-                placeholder="Raccontaci il tuo caso d’uso (piattaforma, obiettivo, tempi)"
+                placeholder="Raccontaci il tuo caso d’uso (impianto, obiettivo, tempi)"
                 className="input"
                 style={{ borderRadius: 14, minHeight: 120, resize: 'vertical' }}
                 required

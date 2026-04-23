@@ -3,11 +3,11 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: {
-    default: 'HMSW — Matrice Soluzioni',
-    template: '%s | HMSW — Matrice Soluzioni',
+    default: 'HMSW — Robot Unitree',
+    template: '%s | HMSW — Robot Unitree',
   },
   description:
-    'Matrice soluzioni: scopri casi d’uso, maturità, complessità e focus di sicurezza per piattaforme robotiche.',
+    'Presentiamo e qualifichiamo robot Unitree (quadrupedi e umanoidi) per ispezione, security/patrol e missioni industriali, con focus su sicurezza e conformità.',
   metadataBase: new URL('https://hmsw.vercel.app'),
   alternates: {
     canonical: 'https://hmsw.vercel.app',

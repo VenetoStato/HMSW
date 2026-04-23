@@ -4,27 +4,39 @@ import { fetchMatrice } from '@/lib/googleSheets';
 const SHEET_ID = process.env.GOOGLE_SHEET_ID ?? '1SvWQ1RGpkzKkqc4HGSsNP7YEy43S9cyl-uUmsS3SygY';
 const GID = Number(process.env.GOOGLE_SHEET_GID ?? '0');
 
+function isUnitreeRow(row: {
+  piattaforma: string;
+  safetyFocus: string;
+}) {
+  const p = (row.piattaforma ?? '').toLowerCase();
+  const sf = (row.safetyFocus ?? '').toLowerCase();
+
+  // Rimuoviamo i cobot dal dataset: qui vogliamo parlare di robot Unitree.
+  if (p.includes('cobot')) return false;
+
+  // Manteniamo righe dove la piattaforma è Unitree o i quadrupedi (che nel dataset includono riferimenti Unitree).
+  return p.includes('unitree') || p.includes('quadrupede') || sf.includes('unitree');
+}
+
 export default async function HomePage() {
   const rows = await fetchMatrice({ sheetId: SHEET_ID, gid: GID });
+  const robotRows = rows.filter(isUnitreeRow);
 
   return (
     <div>
       <header className="header">
         <div className="nav container">
-          <div className="brand" aria-label="Meko — Matrice Soluzioni">
+          <div className="brand" aria-label="HMSW — Robot Unitree">
             <span className="logoDot" aria-hidden="true" />
-            <span>Meko — Matrice Soluzioni</span>
+            <span>HMSW — Robot Unitree</span>
           </div>
 
           <nav className="navLinks" aria-label="Navigazione">
-            <a className="navLink" href="#matrice">
-              Matrice
+            <a className="navLink" href="#robot">
+              Robot
             </a>
-            <a className="navLink" href="#come-funziona">
-              Come funziona
-            </a>
-            <a className="navLink" href="#focus">
-              Focus
+            <a className="navLink" href="#approccio">
+              Approccio
             </a>
           </nav>
 
@@ -43,52 +55,50 @@ export default async function HomePage() {
         <section className="hero" aria-labelledby="hero-title">
           <div className="heroGrid">
             <div>
-              <div className="kicker">HMSW — guida alla soluzione</div>
+              <div className="kicker">HMSW — robot Unitree, dalla sicurezza alla proposta</div>
               <h1 className="h1" id="hero-title">
-                Dal caso d’uso al <span style={{ color: 'rgba(103,232,249,0.95)' }}>Safety Focus</span>
+                Robot Unitree per <span style={{ color: 'rgba(103,232,249,0.95)' }}>inspection</span>,{' '}
+                <span style={{ color: 'rgba(103,232,249,0.95)' }}>security/patrol</span> e missioni industriali
               </h1>
               <p className="sub">
-                Non scegliamo “il prodotto”: guidiamo la decisione in base a maturità, complessità, KPI attesi e
-                criticità di sicurezza/normativa. Questo riduce i rischi di progetto e accelera la conversione.
+                Presentiamo la soluzione più adatta al tuo caso d’uso (quadrupedi e umanoidi), con un
+                assessment chiaro su sicurezza, rischi di integrazione e conformità.
               </p>
 
               <div className="pillRow" style={{ marginTop: 16 }}>
-                <a className="btn btnPrimary" href="#matrice">
-                  Esplora la matrice
+                <a className="btn btnPrimary" href="#robot">
+                  Scopri i robot
                 </a>
                 <a className="btn btnGhost" href="/booking">
                   Prenota una sessione
                 </a>
-                <a className="btn btnGhost" href="#focus">
-                  Capisci il Focus
-                </a>
               </div>
 
               <div className="card" style={{ marginTop: 16 }}>
-                <div className="miniTitle">Output della selezione</div>
+                <div className="miniTitle">Cosa trovi nel sito</div>
                 <div style={{ marginTop: 10, color: 'var(--muted)', lineHeight: 1.7 }}>
-                  Per ogni riga della matrice ottieni: <b>maturità/fattibilità</b>, <b>complessità</b>, <b>tempi</b>,
-                  e soprattutto un riepilogo “perché questa soluzione funziona” sul piano <b>safety</b> &amp; compliance.
+                  Una selezione di piattaforme robotiche: per ogni caso d’uso vedi i punti chiave per{' '}
+                  <b>sicurezza</b>, <b>integrazione</b> e <b>tempi</b>.
                 </div>
               </div>
             </div>
 
             <div className="card cardHover">
-              <div className="miniTitle">Perché questa UI converte</div>
+              <div className="miniTitle">Perché funziona</div>
               <div style={{ marginTop: 10, display: 'grid', gap: 12 }}>
                 <div className="focusGrid2">
                   <div className="card" style={{ padding: 14, background: 'rgba(255,255,255,0.02)' }}>
                     <div style={{ fontWeight: 1000, fontSize: 22, color: 'rgba(103,232,249,0.95)' }}>↓</div>
                     <div style={{ color: 'var(--muted)', marginTop: 6, fontWeight: 900 }}>Meno rischi</div>
                     <div style={{ color: 'var(--muted)', marginTop: 6, lineHeight: 1.6, fontSize: 14 }}>
-                      Safety Focus + normativa guidano le decisioni.
+                      Sicurezza e conformità entrano subito nella decisione.
                     </div>
                   </div>
                   <div className="card" style={{ padding: 14, background: 'rgba(255,255,255,0.02)' }}>
                     <div style={{ fontWeight: 1000, fontSize: 22, color: 'rgba(99,102,241,0.95)' }}>⚡</div>
                     <div style={{ color: 'var(--muted)', marginTop: 6, fontWeight: 900 }}>Percorso rapido</div>
                     <div style={{ color: 'var(--muted)', marginTop: 6, lineHeight: 1.6, fontSize: 14 }}>
-                      Dal filtro all’assessment, senza “catalogo commodity”.
+                      Dal caso d’uso alla proposta, senza “catalogo commodity”.
                     </div>
                   </div>
                 </div>
@@ -103,11 +113,11 @@ export default async function HomePage() {
                 >
                   <div className="focusBlockTitle">Dati</div>
                   <div style={{ color: 'var(--muted)', lineHeight: 1.7, fontSize: 14 }}>
-                    Fonte: Google Sheets (CSV). Puoi sostituire con CMS/Headless mantenendo stessa logica.
+                    Fonte: Google Sheets (CSV). Il dataset puoi sostituirlo senza cambiare la UI.
                   </div>
                   <div style={{ marginTop: 10, display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-                    <span className="badge">Righe: {rows.length}</span>
-                    <span className="badge">Focus: Safety + Normativa</span>
+                    <span className="badge">Righe: {robotRows.length}</span>
+                    <span className="badge">Robot: Unitree</span>
                   </div>
                 </div>
               </div>
@@ -115,66 +125,45 @@ export default async function HomePage() {
           </div>
         </section>
 
-        <section id="come-funziona" className="section">
-          <div className="miniTitle">Come funziona (in 3 step)</div>
+        <section id="approccio" className="section">
+          <div className="miniTitle">Approccio</div>
           <h2 className="sectionTitle" style={{ marginTop: 8, fontSize: 22 }}>
-            Guida alla scelta, non vendita di prodotto
+            Decisione guidata dalla sicurezza, poi proposta
           </h2>
 
           <div className="split">
             <div className="card cardHover">
-              <div className="miniTitle">1 — Discovery</div>
-              <div style={{ fontWeight: 1000, marginTop: 10, fontSize: 18 }}>Filtra per piattaforma / caso d’uso</div>
+              <div className="miniTitle">1 — Casi d’uso</div>
+              <div style={{ fontWeight: 1000, marginTop: 10, fontSize: 18 }}>Partiamo dalla tua esigenza</div>
               <div style={{ color: 'var(--muted)', marginTop: 8, lineHeight: 1.7 }}>
-                Parti dalla necessità reale. La matrice ti evita di perdersi in liste infinite.
+                Usiamo i tuoi vincoli e obiettivi per scegliere la piattaforma più coerente.
               </div>
             </div>
+
             <div className="card cardHover">
               <div className="miniTitle">2 — Qualification</div>
-              <div style={{ fontWeight: 1000, marginTop: 10, fontSize: 18 }}>
-                Valuta maturità, complessità e timeline
-              </div>
+              <div style={{ fontWeight: 1000, marginTop: 10, fontSize: 18 }}>Valutiamo integrazione e tempi</div>
               <div style={{ color: 'var(--muted)', marginTop: 8, lineHeight: 1.7 }}>
-                Non basta “il prodotto giusto”: serve chiarezza su tempi, KPI e aspettative realistiche.
+                Per ridurre sorprese: cosa serve per andare live e quanto ci mette il progetto.
               </div>
             </div>
+
             <div className="card cardHover">
-              <div className="miniTitle">3 — Safety Focus</div>
-              <div style={{ fontWeight: 1000, marginTop: 10, fontSize: 18 }}>Conferma safety e normativa</div>
+              <div className="miniTitle">3 — Safety & compliance</div>
+              <div style={{ fontWeight: 1000, marginTop: 10, fontSize: 18 }}>Conformità e rischi</div>
               <div style={{ color: 'var(--muted)', marginTop: 8, lineHeight: 1.7 }}>
-                Riduci i blocchi: compliance, criticità tipiche e rischi residui.
+                Safety, normative e criticità tipiche vengono trattate prima di impegnare budget.
               </div>
             </div>
           </div>
         </section>
 
-        <section id="matrice" className="section">
-          <div className="miniTitle">Matrice soluzioni</div>
+        <section id="robot" className="section">
+          <div className="miniTitle">Robot Unitree</div>
           <h2 className="sectionTitle" style={{ marginTop: 8, fontSize: 22 }}>
-            Scegli un caso d’uso: a destra trovi il Focus
+            Seleziona un caso d’uso e apri la scheda
           </h2>
-          <MatriceTable rows={rows} />
-        </section>
-
-        <section id="focus" className="section">
-          <div className="card">
-            <div className="miniTitle">Focus</div>
-            <h3 className="sectionTitle" style={{ marginTop: 8, fontSize: 20 }}>
-              La parte che trasforma “interesse” in “decisione”
-            </h3>
-            <div style={{ color: 'var(--muted)', lineHeight: 1.7 }}>
-              Il Focus raccoglie ciò che di solito blocca i progetti: safety, normative e rischi di timeline con team
-              non ancora “delivery-proven”.
-              <div style={{ marginTop: 12, display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-                <a className="btn btnPrimary" href="/booking">
-                  Prenota una sessione
-                </a>
-                <a className="btn btnGhost" href="/about">
-                  Perché noi
-                </a>
-              </div>
-            </div>
-          </div>
+          <MatriceTable rows={robotRows} />
         </section>
 
         <footer className="footer">
@@ -182,10 +171,10 @@ export default async function HomePage() {
             <div>
               <b>HMSW</b> — base UI
               <div className="muted" style={{ marginTop: 6, lineHeight: 1.7 }}>
-                Base pensata per essere sostituita da CMS/Framer mantenendo la logica di matrice.
+                Data-driven via Google Sheets (CSV). Nessun branding/claim esterno.
               </div>
             </div>
-            <div style={{ color: 'var(--muted)' }}>Prossimo step: sostituire contenuti con CMS e agganciare il vostro pricing/sourcing.</div>
+            <div style={{ color: 'var(--muted)' }}>Prossimo step: aggiungere catalogo/asset e sourcing.</div>
           </div>
         </footer>
       </main>

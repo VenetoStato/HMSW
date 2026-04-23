@@ -69,7 +69,7 @@ export default function MatriceTable({ rows }: { rows: MatriceRow[] }) {
           <input
             className="input"
             value={query}
-            placeholder="Cerca per caso d’uso, KPI, normativa, tempi..."
+            placeholder="Cerca per caso d’uso, KPI, sicurezza, tempi..."
             onChange={(e) => setQuery(e.target.value)}
           />
         </div>
@@ -78,13 +78,13 @@ export default function MatriceTable({ rows }: { rows: MatriceRow[] }) {
           <table>
             <thead>
               <tr>
-                <th>Piattaforma</th>
+                <th>Robot</th>
                 <th>Caso d’uso</th>
                 <th>Maturità</th>
                 <th>Complessità</th>
                 <th>ROI</th>
                 <th>Tempi</th>
-                <th style={{ width: 120 }}></th>
+                <th style={{ width: 140 }}></th>
               </tr>
             </thead>
             <tbody>
@@ -105,9 +105,9 @@ export default function MatriceTable({ rows }: { rows: MatriceRow[] }) {
                     <button
                       className="btn"
                       onClick={() => setSelected(idx)}
-                      aria-label={`Apri focus per ${r.casoUso}`}
+                      aria-label={`Apri scheda per ${r.casoUso}`}
                     >
-                      Focus
+                      Apri scheda
                     </button>
                   </td>
                 </tr>
@@ -124,13 +124,13 @@ export default function MatriceTable({ rows }: { rows: MatriceRow[] }) {
         </div>
 
         <div style={{ marginTop: 10, color: 'var(--muted)', fontSize: 13, lineHeight: 1.6 }}>
-          Suggerimento: usa “Focus” per leggere safety/normativa e ridurre i blocchi di progetto.
+          Suggerimento: apri una scheda per leggere sicurezza, normativa e criticità.
         </div>
       </div>
 
       <div>
         <div className="card">
-          <div className="miniTitle">Focus (Safety & Compliance)</div>
+          <div className="miniTitle">Scheda robot</div>
 
           {selectedRow ? (
             <div style={{ marginTop: 10 }}>
@@ -167,16 +167,18 @@ export default function MatriceTable({ rows }: { rows: MatriceRow[] }) {
 
                 <div className="focusGrid">
                   <div>
-                    <div className="focusBlockTitle">Safety Focus</div>
+                    <div className="focusBlockTitle">Sicurezza (Safety)</div>
                     <div className="focusText">{selectedRow.safetyFocus || '—'}</div>
                   </div>
                   <div style={{ marginTop: 12 }}>
-                    <div className="focusBlockTitle">Normativa (IT/EU) & criticità</div>
+                    <div className="focusBlockTitle">Normativa (IT/EU) e criticità</div>
                     <div className="focusText">{selectedRow.normativa || '—'}</div>
                   </div>
                   <div style={{ marginTop: 12 }}>
                     <div className="focusBlockTitle">Tempi</div>
-                    <div className="focusText">{selectedRow.tempoProduzione || '—'} / {selectedRow.tempoNonDelivery || '—'}</div>
+                    <div className="focusText">
+                      {selectedRow.tempoProduzione || '—'} / {selectedRow.tempoNonDelivery || '—'}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -186,13 +188,13 @@ export default function MatriceTable({ rows }: { rows: MatriceRow[] }) {
                   Prenota una sessione
                 </a>
                 <button className="btn btnGhost" onClick={() => setSelected(null)}>
-                  Chiudi focus
+                  Chiudi scheda
                 </button>
               </div>
             </div>
           ) : (
             <div style={{ marginTop: 10, color: 'var(--muted)', lineHeight: 1.7 }}>
-              Seleziona una riga dalla tabella per vedere il Focus: safety, normativa e criticità tipiche.
+              Seleziona una riga dalla tabella per vedere la scheda: sicurezza, normativa e criticità.
             </div>
           )}
         </div>
@@ -200,8 +202,8 @@ export default function MatriceTable({ rows }: { rows: MatriceRow[] }) {
         <div className="card" style={{ marginTop: 14 }}>
           <div className="miniTitle">Perché non è commodity</div>
           <div style={{ marginTop: 10, color: 'var(--muted)', lineHeight: 1.7 }}>
-            Il valore qui non è “prezzo/brand”: è la decisione guidata da maturità, rischi e compliance.
-            La sorgente dati può essere Google Sheets oggi, CMS/Framer domani.
+            Qui il valore non è “prezzo/brand”: è l’analisi per andare live in modo sicuro e conforme.
+            La sorgente dati può essere Google Sheets oggi.
           </div>
         </div>
       </div>
