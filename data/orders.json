@@ -1,0 +1,22 @@
+[
+  {
+    "id": "f6563f1f-758d-4ba9-8b16-020fd82f83a0",
+    "createdAt": "2026-04-24T07:02:37.673Z",
+    "customer": {
+      "name": "Test",
+      "email": "test@example.com"
+    },
+    "items": [
+      {
+        "productId": "unitree-go2",
+        "qty": 2,
+        "unitPriceEur": 899,
+        "name": "UNITREE Go2"
+      }
+    ],
+    "totals": {
+      "subtotalEur": 1798,
+      "totalEur": 1798
+    }
+  }
+]

@@ -1,0 +1,47 @@
+'use client';
+
+import { useMemo, useState } from 'react';
+import Image from 'next/image';
+
+export function ProductGallery({ images, name }: { images: string[]; name: string }) {
+  const safe = images?.length ? images : [];
+  const [active, setActive] = useState(safe[0] ?? '');
+
+  const activeIdx = useMemo(() => Math.max(0, safe.indexOf(active)), [active, safe]);
+
+  if (!safe.length) {
+    return <div className="aspect-[16/10] w-full rounded-xl border bg-gray-50" />;
+  }
+
+  return (
+    <div className="">
+      <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border bg-gray-50">
+        <Image
+          src={active}
+          alt={name}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 60vw"
+        />
+      </div>
+
+      <div className="mt-3 flex gap-2 overflow-x-auto">
+        {safe.map((src) => (
+          <button
+            key={src}
+            onClick={() => setActive(src)}
+            className={
+              active === src
+                ? 'ring-2 ring-black rounded-md'
+                : 'rounded-md ring-1 ring-gray-200 hover:ring-gray-400'
+            }
+          >
+            <div className="relative h-16 w-16 overflow-hidden rounded-md bg-gray-50">
+              <Image src={src} alt={`${name} - thumbnail`} fill className="object-cover" sizes="64px" />
+            </div>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
