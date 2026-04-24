@@ -17,11 +17,23 @@ export function Header() {
           </Link>
         </div>
 
-        <nav className="flex items-center gap-4 text-sm">
-          <Link href="/soluzioni/robot-per-uso-quotidiano" className="hover:underline">
-            Soluzioni
+        <nav className="flex items-center gap-3 text-sm">
+          <Link href="/soluzioni/quadrupedi" className="rounded-md px-2 py-1 hover:bg-gray-100">
+            Quadrupedi
           </Link>
-          <Link href="/shop" className="hover:underline">
+          <Link href="/soluzioni/braccia" className="rounded-md px-2 py-1 hover:bg-gray-100">
+            Braccia
+          </Link>
+          <Link href="/soluzioni/umanoidi" className="rounded-md px-2 py-1 hover:bg-gray-100">
+            Umanoidi
+          </Link>
+          <Link href="/soluzioni/accessori" className="rounded-md px-2 py-1 hover:bg-gray-100">
+            Accessori
+          </Link>
+
+          <span className="mx-1 hidden h-5 w-px bg-gray-200 lg:block" />
+
+          <Link href="/shop" className="rounded-md px-2 py-1 hover:bg-gray-100">
             Shop
           </Link>
           <Link href="/carrello" className="relative rounded-md px-2 py-1 hover:bg-gray-100">
