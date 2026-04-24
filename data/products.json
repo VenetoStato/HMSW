@@ -1,0 +1,47 @@
+[
+  {
+    "id": "unitree-go2",
+    "slug": "unitree-go2",
+    "name": "UNITREE Go2",
+    "brand": "Unitree",
+    "category": "Droni",
+    "solutionSlug": "robot-per-uso-quotidiano",
+    "priceEur": 899.0,
+    "currency": "EUR",
+    "shortDescription": "Quadrupede agile per ricerca, prova e automazione.",
+    "description": "Go2 è un quadrupede progettato per sviluppatori e maker. Prestazioni stabili, controlli flessibili e integrazione semplice con strumenti e accessori.",
+    "features": ["Controllo flessibile", "Supporto accessori", "Perfetto per demo e prototipi"],
+    "images": ["/uploads/unitree-go2/1.jpg", "/uploads/unitree-go2/2.jpg"],
+    "createdAt": "2026-04-24T08:00:00.000Z"
+  },
+  {
+    "id": "unitree-robot-controller",
+    "slug": "unitree-robot-controller",
+    "name": "Controller Unitree (accessorio)",
+    "brand": "Accessori",
+    "category": "Controller",
+    "solutionSlug": "robot-per-uso-quotidiano",
+    "priceEur": 129.0,
+    "currency": "EUR",
+    "shortDescription": "Accessorio per configurare e alimentare in modo semplice.",
+    "description": "Controller pensato per un setup pulito e veloce. Compatibilità con più soluzioni Unitree (verificare prima dell'acquisto).",
+    "features": ["Plug & Play", "Cavi inclusi", "Installazione rapida"],
+    "images": ["/uploads/unitree-robot-controller/1.jpg"],
+    "createdAt": "2026-04-24T08:00:00.000Z"
+  },
+  {
+    "id": "accessory-carry-case",
+    "slug": "accessory-carry-case",
+    "name": "Borsa trasporto rigida",
+    "brand": "Accessori",
+    "category": "Trasporto",
+    "solutionSlug": "robot-per-uso-quotidiano",
+    "priceEur": 79.0,
+    "currency": "EUR",
+    "shortDescription": "Protezione durante il trasporto, con spazio per accessori.",
+    "description": "Borsa rigida per mantenere il robot e gli accessori protetti durante spostamenti e dimostrazioni.",
+    "features": ["Struttura rigida", "Imbottitura", "Spazio interno"],
+    "images": ["/uploads/accessory-carry-case/1.jpg"],
+    "createdAt": "2026-04-24T08:00:00.000Z"
+  }
+]
