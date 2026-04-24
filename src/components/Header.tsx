@@ -36,6 +36,9 @@ export function Header() {
           <Link href="/shop" className="rounded-md px-2 py-1 hover:bg-gray-100">
             Shop
           </Link>
+          <Link href="/blog" className="rounded-md px-2 py-1 hover:bg-gray-100">
+            Blog
+          </Link>
           <Link href="/carrello" className="relative rounded-md px-2 py-1 hover:bg-gray-100">
             Carrello{count > 0 ? ` (${count})` : ''}
           </Link>
