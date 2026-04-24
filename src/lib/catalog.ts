@@ -23,6 +23,23 @@ export async function getProductBySlug(slug: string): Promise<Product | null> {
 export async function getSolutions(): Promise<Array<{ slug: string; title: string; description: string }>> {
   // Minimal default mapping. In a real setup you’ll store solutions in a dedicated JSON.
   const solutionsMap: Record<string, { title: string; description: string }> = {
+    'quadrupedi': {
+      title: 'Quadrupedi Unitree',
+      description: 'GO2 / B2 e accessori: stabilità, mobilità e ottime performance per ricerca, demo e automazione.'
+    },
+    'braccia': {
+      title: 'Braccia & Gripper',
+      description: 'Z1 / ARMs e accessori: presa, assemblaggio e manipolazione con layout pensati per integrazione rapida.'
+    },
+    'umanoidi': {
+      title: 'Umanoidi Unitree',
+      description: 'H2 e soluzioni correlate: piattaforme per educazione, R&D e dimostrazioni con ecosistema in crescita.'
+    },
+    'accessori': {
+      title: 'Accessori & Competenze',
+      description: 'Controller, sensori e componenti: scegli la configurazione che completa il tuo setup.'
+    },
+    // fallback
     'robot-per-uso-quotidiano': {
       title: 'Robot per uso quotidiano',
       description: 'Configurazioni e prodotti consigliati per demo, ricerca e utilizzi semplici.'
