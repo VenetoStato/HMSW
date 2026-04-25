@@ -12,7 +12,8 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hmsw.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
     title: "Robotics Shop",
-    description: "Shop di robot e accessori con prezzi e richiesta preventivo.",
+    description: "Shop di robot e accessori con prezzi e richiesta preventivo." ,
+    // deploy trigger
     openGraph: {
       type: "website",
       url: SITE_URL,
