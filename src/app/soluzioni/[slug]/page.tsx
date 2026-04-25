@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 export default async function SolutionPage({ params }: { params: { slug: string } }) {
   const slug = params.slug;
-  const solution = SOLUTIONS.find((s) => s.slug) ?? null;
+  const solution = SOLUTIONS.find((s) => s.slug === slug) ?? null;
 
   const products = await getProducts();
   const matched = solution ? matchProductsForSolution(solution, products) : products.slice(0, 12);
