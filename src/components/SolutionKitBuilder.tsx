@@ -1,12 +1,16 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Product } from '@/lib/types';
 import { useCart } from '@/lib/cart';
 import { formatEur } from '@/lib/price';
 import { pickUniqueImages } from '@/lib/imageUtils';
 
 type Scenario = 'demo' | 'rd' | 'integrato';
+
+function clamp(n: number, min: number, max: number) {
+  return Math.max(min, Math.min(max, n));
+}
 
 function pickBaseAndAccessories(products: Product[], accessoryCount: number, contextTitle: string) {
   const priced = products.filter((p) => (p.priceEur ?? 0) > 0);
@@ -111,8 +115,69 @@ export function SolutionKitBuilder({
         ? { a: '168 85 247', b: '99 102 241', c: '56 189 248' }
         : { a: '251 191 36', b: '244 63 94', c: '59 130 246' };
 
+  const rootRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const el = rootRef.current;
+    if (!el) return;
+
+    const reduced =
+      typeof window !== 'undefined' &&
+      window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) return;
+
+    let tx = 55;
+    let ty = 35;
+
+    const onPointerMove = (e: PointerEvent) => {
+      const r = el.getBoundingClientRect();
+      const x = (e.clientX - r.left) / Math.max(1, r.width);
+      const y = (e.clientY - r.top) / Math.max(1, r.height);
+      tx = clamp(x * 100, 0, 100);
+      ty = clamp(y * 100, 0, 100);
+    };
+
+    window.addEventListener('pointermove', onPointerMove, { passive: true });
+
+    const speed = scenario === 'demo' ? 0.35 : scenario === 'rd' ? 0.45 : 0.55;
+
+    let raf = 0;
+    const start = performance.now();
+
+    const tick = (t: number) => {
+      const s = (t - start) / 1000;
+
+      const sx1 = 12 + Math.sin(s * speed) * 18;
+      const sy1 = 22 + Math.cos(s * (speed * 0.9)) * 16;
+
+      const sx2 = 88 + Math.cos(s * (speed * 0.7)) * 14;
+      const sy2 = 26 + Math.sin(s * (speed * 0.8)) * 12;
+
+      const gx1 = 0.6 * sx1 + 0.4 * tx;
+      const gy1 = 0.6 * sy1 + 0.4 * ty;
+      const gx2 = 0.6 * sx2 + 0.4 * (100 - tx);
+      const gy2 = 0.6 * sy2 + 0.4 * ty;
+
+      el.style.setProperty('--gx1', `${clamp(gx1, 0, 100)}%`);
+      el.style.setProperty('--gy1', `${clamp(gy1, 0, 100)}%`);
+      el.style.setProperty('--gx2', `${clamp(gx2, 0, 100)}%`);
+      el.style.setProperty('--gy2', `${clamp(gy2, 0, 100)}%`);
+
+      raf = requestAnimationFrame(tick);
+    };
+
+    raf = requestAnimationFrame(tick);
+
+    return () => {
+      window.removeEventListener('pointermove', onPointerMove);
+      cancelAnimationFrame(raf);
+    };
+  }, [scenario]);
+
   return (
     <div
+      ref={rootRef}
       className="rounded-2xl border p-4 md:p-5 accent-surface backdrop-blur"
       style={{
         ['--acc-a' as any]: scenarioAccents.a,

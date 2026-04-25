@@ -4,6 +4,7 @@ import { matchProductsForSolution, SOLUTIONS } from '@/lib/solutions';
 import { pickUniqueImages } from '@/lib/imageUtils';
 import { ProductGrid } from '@/components/ProductGrid';
 import { SolutionKitBuilder } from '@/components/SolutionKitBuilder';
+import { DynamicAccentGradient } from '@/components/DynamicAccentGradient';
 
 export function generateStaticParams() {
   return SOLUTIONS.map((s) => ({ slug: s.slug }));
@@ -178,7 +179,7 @@ export default async function SolutionPage({ params }: { params: { slug: string 
               <div className="h-full w-full bg-gray-100" />
             )}
 
-            <div className="absolute inset-0 accent-hero-overlay" />
+            <DynamicAccentGradient className="absolute inset-0" />
 
             <div className="relative p-6 md:p-8">
               <SolutionKitBuilder contextTitle={solution?.title ?? slug} products={matched} imagePool={matched} />
