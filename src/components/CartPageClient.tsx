@@ -20,14 +20,33 @@ export function CartPageClient({ products }: { products: Product[] }) {
   const hasUnknownPrice = useMemo(() => lines.some((l) => (l.product.priceEur ?? 0) <= 0), [lines]);
   const knownLines = useMemo(() => lines.filter((l) => (l.product.priceEur ?? 0) > 0), [lines]);
 
-  const subtotalKnownEur = useMemo(
-    () => knownLines.reduce((sum, l) => sum + l.product.priceEur * l.qty, 0),
-    [knownLines]
-  );
+  const subtotalKnownEur = useMemo(() => knownLines.reduce((sum, l) => sum + l.product.priceEur * l.qty, 0), [knownLines]);
   const totalKnownEur = subtotalKnownEur;
 
   const [form, setForm] = useState({ name: '', email: '', phone: '', notes: '' });
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
+
+  // Paliativo PayPal: link “invia soldi” (no verifica webhook).
+  const PAYPAL_BUSINESS = 'Giovanni.pitton2@gmail.com';
+  const [paypalCustom] = useState(() => {
+    try {
+      const c = crypto as unknown as { randomUUID?: () => string };
+      if (c?.randomUUID) return c.randomUUID();
+    } catch {
+      // ignore
+    }
+    return String(Date.now());
+  });
+
+  const paypalAmountEur = subtotalKnownEur;
+  const paypalEnabled = paypalAmountEur > 0;
+  const paypalAmountStr = paypalAmountEur.toFixed(2);
+
+  const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=${encodeURIComponent(
+    PAYPAL_BUSINESS
+  )}&amount=${encodeURIComponent(paypalAmountStr)}&currency_code=EUR&item_name=${encodeURIComponent(
+    'Richiesta Robotics Shop (acconto/pagamento)'
+  )}&custom=${encodeURIComponent(paypalCustom)}`;
 
   async function submitOrder(e: React.FormEvent) {
     e.preventDefault();
@@ -68,13 +87,15 @@ export function CartPageClient({ products }: { products: Product[] }) {
         {lines.map(({ product, qty }) => (
           <div key={product.id} className="rounded-2xl border bg-white p-4">
             <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
-                <div>
-                  <div className="text-sm text-gray-500">{product.brand} • {product.category}</div>
-                  <div className="mt-1 font-semibold">{product.name}</div>
-                  <div className="mt-2 text-sm font-bold">
-                    {product.priceEur > 0 ? `${formatEur(product.priceEur)} cadauno` : 'Prezzo su richiesta'}
-                  </div>
+              <div>
+                <div className="text-sm text-gray-500">
+                  {product.brand} • {product.category}
                 </div>
+                <div className="mt-1 font-semibold">{product.name}</div>
+                <div className="mt-2 text-sm font-bold">
+                  {product.priceEur > 0 ? `${formatEur(product.priceEur)} cadauno` : 'Prezzo su richiesta'}
+                </div>
+              </div>
 
               <div className="flex flex-wrap items-center gap-3">
                 <div>
@@ -111,54 +132,88 @@ export function CartPageClient({ products }: { products: Product[] }) {
           </div>
           <div className="mt-1 flex items-center justify-between text-sm">
             <span>Totale</span>
-            {hasUnknownPrice ? (
-              <span className="text-base font-bold">Su richiesta</span>
-            ) : (
-              <span className="text-base font-bold">{formatEur(totalKnownEur)}</span>
-            )}
+            {hasUnknownPrice ? <span className="text-base font-bold">Su richiesta</span> : <span className="text-base font-bold">{formatEur(totalKnownEur)}</span>}
           </div>
 
-          <form onSubmit={submitOrder} className="mt-5 space-y-3">
-            <input
-              required
-              value={form.name}
-              onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))}
-              placeholder="Nome e cognome"
-              className="w-full rounded-lg border px-3 py-2 text-sm"
-            />
-            <input
-              required
-              type="email"
-              value={form.email}
-              onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))}
-              placeholder="Email"
-              className="w-full rounded-lg border px-3 py-2 text-sm"
-            />
-            <input
-              value={form.phone}
-              onChange={(e) => setForm((p) => ({ ...p, phone: e.target.value }))}
-              placeholder="Telefono (opzionale)"
-              className="w-full rounded-lg border px-3 py-2 text-sm"
-            />
-            <textarea
-              value={form.notes}
-              onChange={(e) => setForm((p) => ({ ...p, notes: e.target.value }))}
-              placeholder="Note / richieste"
-              className="min-h-24 w-full rounded-lg border px-3 py-2 text-sm"
-            />
+          <div className="mt-5 space-y-3">
+            <div className="rounded-xl border bg-gray-50 p-4">
+              <div className="text-sm font-semibold">Pagamento PayPal (paliativo)</div>
+              <div className="mt-1 text-xs text-gray-600">
+                {hasUnknownPrice ? (
+                  <>Stai pagando solo la parte con prezzo confermato (acconto parziale).</>
+                ) : (
+                  <>Stai pagando il totale prezzi confermati.</>
+                )}
+              </div>
+              <div className="mt-3 flex items-center justify-between">
+                <div className="text-xs text-gray-600">Importo</div>
+                <div className="text-sm font-bold">{paypalEnabled ? formatEur(paypalAmountEur) : '—'}</div>
+              </div>
 
-            <button
-              type="submit"
-              disabled={status === 'sending' || status === 'sent'}
-              className="w-full rounded-lg bg-black px-4 py-3 text-sm font-semibold text-white hover:bg-gray-900 disabled:opacity-60"
-            >
-              {status === 'sent' ? 'Richiesta inviata ✅' : status === 'sending' ? 'Invio...' : 'Invia richiesta'}
-            </button>
+              <a
+                href={paypalUrl}
+                target="_blank"
+                rel="noreferrer"
+                className={`mt-3 inline-flex w-full items-center justify-center rounded-lg px-4 py-3 text-sm font-semibold ${
+                  paypalEnabled
+                    ? 'bg-[#0A0A0A] text-white hover:bg-black'
+                    : 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                }`}
+                aria-disabled={!paypalEnabled}
+                onClick={(e) => {
+                  if (!paypalEnabled) e.preventDefault();
+                }}
+              >
+                Paga su PayPal
+              </a>
 
-            <p className="text-xs text-gray-500">
-              Nessun pagamento online: inviamo la richiesta per confermare disponibilità e spedizione.
-            </p>
-          </form>
+              <div className="mt-2 text-[11px] text-gray-500">
+                Nota: questo link invia denaro tramite PayPal. La conferma automatica sul sito non è gestita in questo paliativo.
+              </div>
+            </div>
+
+            <form onSubmit={submitOrder} className="space-y-3">
+              <input
+                required
+                value={form.name}
+                onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))}
+                placeholder="Nome e cognome"
+                className="w-full rounded-lg border px-3 py-2 text-sm"
+              />
+              <input
+                required
+                type="email"
+                value={form.email}
+                onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))}
+                placeholder="Email"
+                className="w-full rounded-lg border px-3 py-2 text-sm"
+              />
+              <input
+                value={form.phone}
+                onChange={(e) => setForm((p) => ({ ...p, phone: e.target.value }))}
+                placeholder="Telefono (opzionale)"
+                className="w-full rounded-lg border px-3 py-2 text-sm"
+              />
+              <textarea
+                value={form.notes}
+                onChange={(e) => setForm((p) => ({ ...p, notes: e.target.value }))}
+                placeholder="Note / richieste"
+                className="min-h-24 w-full rounded-lg border px-3 py-2 text-sm"
+              />
+
+              <button
+                type="submit"
+                disabled={status === 'sending' || status === 'sent'}
+                className="w-full rounded-lg bg-black px-4 py-3 text-sm font-semibold text-white hover:bg-gray-900 disabled:opacity-60"
+              >
+                {status === 'sent' ? 'Richiesta inviata ✅' : status === 'sending' ? 'Invio...' : 'Invia richiesta'}
+              </button>
+
+              <p className="text-xs text-gray-500">
+                Nessun pagamento online: inviamo la richiesta per confermare disponibilità e spedizione.
+              </p>
+            </form>
+          </div>
         </div>
       </div>
     </div>
