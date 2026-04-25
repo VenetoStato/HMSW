@@ -116,7 +116,7 @@ export function SolutionKitBuilder({
         </div>
         <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-gray-200">
           <div
-            className="h-full rounded-full bg-black"
+            className="h-full rounded-full bg-black transition-all duration-700 ease-out"
             style={{ width: `${progress}%` }}
           />
         </div>
@@ -185,7 +185,10 @@ export function SolutionKitBuilder({
 
           <div className="mt-4">
             <div className="text-sm font-semibold">2) Componenti nel kit</div>
-            <ul className="mt-2 space-y-2 text-sm text-gray-700">
+            <ul
+              key={scenario}
+              className="mt-2 space-y-2 text-sm text-gray-700 motion-kit-swap"
+            >
               {kit.map((p) => (
                 <li key={p.id} className="flex items-start justify-between gap-3">
                   <span className="min-w-0 flex-1">{p.name}</span>

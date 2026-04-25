@@ -6,7 +6,7 @@ export default async function Home() {
 
   return (
     <main className="py-8">
-      <section className="rounded-2xl border bg-gradient-to-br from-sky-50 via-white to-white p-6">
+      <section className="rounded-2xl border p-6 motion-gradient-hero bg-white">
         <h1 className="text-3xl font-bold tracking-tight">UNITREE Shop + Accessori</h1>
         <p className="mt-2 text-gray-700">
           Scegli la soluzione, esplora i prodotti con prezzi trasparenti e costruisci il tuo kit.

@@ -171,7 +171,7 @@ export default async function SolutionPage({ params }: { params: { slug: string 
               <div className="h-full w-full bg-gray-100" />
             )}
 
-            <div className="absolute inset-0 bg-gradient-to-br from-sky-50/60 via-white/30 to-white/95" />
+            <div className="absolute inset-0 motion-gradient-hero" />
 
             <div className="relative p-6 md:p-8">
               <SolutionKitBuilder contextTitle={solution?.title ?? slug} products={matched} imagePool={matched} />
