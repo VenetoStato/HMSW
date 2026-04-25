@@ -4,9 +4,13 @@ import { useEffect, useMemo, useState } from 'react';
 import type { Product } from '@/lib/types';
 import { useCart } from '@/lib/cart';
 import { formatEur } from '@/lib/price';
+import { t, type Locale } from '@/lib/i18n';
+import { getLocaleClient } from '@/lib/localeClient';
 
 export function CartPageClient({ products }: { products: Product[] }) {
   const NOTES_KEY = 'unitree_shop_cart_note_v1';
+  const locale: Locale = getLocaleClient();
+
   const { items, setQty, removeFromCart, clearCart } = useCart();
   const productsById = useMemo(() => Object.fromEntries(products.map((p) => [p.id, p])), [products]);
 
@@ -42,6 +46,7 @@ export function CartPageClient({ products }: { products: Product[] }) {
 
   // Paliativo PayPal: link “invia soldi” (no verifica webhook).
   const PAYPAL_BUSINESS = 'Giovanni.pitton2@gmail.com';
+
   const [paypalCustom] = useState(() => {
     try {
       const c = crypto as unknown as { randomUUID?: () => string };
@@ -59,7 +64,7 @@ export function CartPageClient({ products }: { products: Product[] }) {
   const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=${encodeURIComponent(
     PAYPAL_BUSINESS
   )}&amount=${encodeURIComponent(paypalAmountStr)}&currency_code=EUR&item_name=${encodeURIComponent(
-    'Richiesta Robotics Shop (acconto/pagamento)'
+    'Robotics Shop request'
   )}&custom=${encodeURIComponent(paypalCustom)}`;
 
   async function submitOrder(e: React.FormEvent) {
@@ -67,6 +72,7 @@ export function CartPageClient({ products }: { products: Product[] }) {
     if (!lines.length) return;
 
     setStatus('sending');
+
     const res = await fetch('/api/orders', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -77,27 +83,27 @@ export function CartPageClient({ products }: { products: Product[] }) {
     });
 
     if (!res.ok) {
-    setStatus('idle');
-    alert('Errore invio ordine. Riprova.');
-    return;
-  }
+      setStatus('idle');
+      alert('Errore invio ordine. Riprova.');
+      return;
+    }
 
-  // Clear local note on success
-  try {
-    localStorage.removeItem(NOTES_KEY);
-  } catch {
-    // ignore
-  }
+    // Clear local note on success
+    try {
+      localStorage.removeItem(NOTES_KEY);
+    } catch {
+      // ignore
+    }
 
-  clearCart();
-  setStatus('sent');
+    clearCart();
+    setStatus('sent');
   }
 
   if (!lines.length) {
     return (
       <div className="mt-6 rounded-2xl border bg-white p-6">
-        <h2 className="text-lg font-semibold">Carrello vuoto</h2>
-        <p className="mt-2 text-sm text-gray-600">Aggiungi prodotti per vedere il totale.</p>
+        <h2 className="text-lg font-semibold">{t(locale, 'cartEmptyTitle')}</h2>
+        <p className="mt-2 text-sm text-gray-600">{t(locale, 'cartEmptyBody')}</p>
       </div>
     );
   }
@@ -114,7 +120,7 @@ export function CartPageClient({ products }: { products: Product[] }) {
                 </div>
                 <div className="mt-1 font-semibold">{product.name}</div>
                 <div className="mt-2 text-sm font-bold">
-                  {product.priceEur > 0 ? `${formatEur(product.priceEur)} cadauno` : 'Prezzo su richiesta'}
+                  {product.priceEur > 0 ? `${formatEur(product.priceEur)} cadauno` : t(locale, 'priceOnRequest')}
                 </div>
               </div>
 
@@ -129,14 +135,16 @@ export function CartPageClient({ products }: { products: Product[] }) {
                     className="mt-1 w-24 rounded-lg border px-2 py-1 text-sm"
                   />
                 </div>
+
                 <div className="text-sm font-bold">
-                  {product.priceEur > 0 ? formatEur(product.priceEur * qty) : 'Su richiesta'}
+                  {product.priceEur > 0 ? formatEur(product.priceEur * qty) : t(locale, 'priceOnRequest')}
                 </div>
+
                 <button
                   onClick={() => removeFromCart(product.id)}
                   className="rounded-lg border px-3 py-2 text-sm hover:bg-gray-50"
                 >
-                  Rimuovi
+                  {t(locale, 'remove')}
                 </button>
               </div>
             </div>
@@ -146,28 +154,31 @@ export function CartPageClient({ products }: { products: Product[] }) {
 
       <div className="lg:col-span-1">
         <div className="rounded-2xl border bg-white p-5">
-          <h2 className="text-lg font-semibold">Totale</h2>
+          <h2 className="text-lg font-semibold">{t(locale, 'total')}</h2>
+
           <div className="mt-2 flex items-center justify-between text-sm">
-            <span>Subtotale (solo prezzi confermati)</span>
+            <span>{t(locale, 'subtotalConfirmed')}</span>
             <span className="font-semibold">{formatEur(subtotalKnownEur)}</span>
           </div>
+
           <div className="mt-1 flex items-center justify-between text-sm">
-            <span>Totale</span>
-            {hasUnknownPrice ? <span className="text-base font-bold">Su richiesta</span> : <span className="text-base font-bold">{formatEur(totalKnownEur)}</span>}
+            <span>{t(locale, 'total')}</span>
+            {hasUnknownPrice ? (
+              <span className="text-base font-bold">{t(locale, 'priceOnRequest')}</span>
+            ) : (
+              <span className="text-base font-bold">{formatEur(totalKnownEur)}</span>
+            )}
           </div>
 
           <div className="mt-5 space-y-3">
             <div className="rounded-xl border bg-gray-50 p-4">
-              <h3 className="text-sm font-semibold">Pagamento PayPal</h3>
-
+              <h3 className="text-sm font-semibold">{t(locale, 'payPal')}</h3>
               <div className="mt-1 text-xs text-gray-600">
-                {hasUnknownPrice
-                  ? 'Stai inviando un acconto sulla parte con prezzo confermato.'
-                  : 'Stai inviando il pagamento sulla base dei prezzi confermati.'}
+                {hasUnknownPrice ? t(locale, 'payPalDescriptionDeposit') : t(locale, 'payPalDescriptionConfirmed')}
               </div>
 
               <div className="mt-3 flex items-center justify-between">
-                <div className="text-xs text-gray-600">Importo</div>
+                <div className="text-xs text-gray-600">{t(locale, 'payPalAmount')}</div>
                 <div className="text-sm font-bold">{paypalEnabled ? formatEur(paypalAmountEur) : '—'}</div>
               </div>
 
@@ -176,21 +187,17 @@ export function CartPageClient({ products }: { products: Product[] }) {
                 target="_blank"
                 rel="noreferrer"
                 className={`mt-3 inline-flex w-full items-center justify-center rounded-lg px-4 py-3 text-sm font-semibold ${
-                  paypalEnabled
-                    ? 'bg-[#0A0A0A] text-white hover:bg-black'
-                    : 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                  paypalEnabled ? 'bg-[#0A0A0A] text-white hover:bg-black' : 'bg-gray-200 text-gray-500 cursor-not-allowed'
                 }`}
                 aria-disabled={!paypalEnabled}
                 onClick={(e) => {
                   if (!paypalEnabled) e.preventDefault();
                 }}
               >
-                Paga su PayPal
+                {t(locale, 'payPal')}
               </a>
 
-              <div className="mt-2 text-[11px] text-gray-500">
-                Dopo il pagamento apri la richiesta dal form: serve per confermare disponibilità, spedizione e i dettagli finali.
-              </div>
+              <div className="mt-2 text-[11px] text-gray-500">{t(locale, 'noOnlinePayment')}</div>
             </div>
 
             <form onSubmit={submitOrder} className="space-y-3">
@@ -198,7 +205,7 @@ export function CartPageClient({ products }: { products: Product[] }) {
                 required
                 value={form.name}
                 onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))}
-                placeholder="Nome e cognome"
+                placeholder={t(locale, 'name')}
                 className="w-full rounded-lg border px-3 py-2 text-sm"
               />
               <input
@@ -206,19 +213,20 @@ export function CartPageClient({ products }: { products: Product[] }) {
                 type="email"
                 value={form.email}
                 onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))}
-                placeholder="Email"
+                placeholder={t(locale, 'email')}
                 className="w-full rounded-lg border px-3 py-2 text-sm"
               />
               <input
                 value={form.phone}
                 onChange={(e) => setForm((p) => ({ ...p, phone: e.target.value }))}
-                placeholder="Telefono (opzionale)"
+                placeholder={t(locale, 'phone')}
                 className="w-full rounded-lg border px-3 py-2 text-sm"
               />
+
               <textarea
                 value={form.notes}
                 onChange={(e) => setForm((p) => ({ ...p, notes: e.target.value }))}
-                placeholder="Note / richieste"
+                placeholder={t(locale, 'notes')}
                 className="min-h-24 w-full rounded-lg border px-3 py-2 text-sm"
               />
 
@@ -227,12 +235,8 @@ export function CartPageClient({ products }: { products: Product[] }) {
                 disabled={status === 'sending' || status === 'sent'}
                 className="w-full rounded-lg bg-black px-4 py-3 text-sm font-semibold text-white hover:bg-gray-900 disabled:opacity-60"
               >
-                {status === 'sent' ? 'Richiesta inviata ✅' : status === 'sending' ? 'Invio...' : 'Invia richiesta'}
+                {status === 'sent' ? t(locale, 'sent') : status === 'sending' ? t(locale, 'sending') : t(locale, 'sendRequest')}
               </button>
-
-              <p className="text-xs text-gray-500">
-                Nessun pagamento online: inviamo la richiesta per confermare disponibilità e spedizione.
-              </p>
             </form>
           </div>
         </div>

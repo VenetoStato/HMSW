@@ -5,7 +5,8 @@ import { getProductBySlug } from '@/lib/catalog';
 import { formatEur } from '@/lib/price';
 import { ProductGallery } from '@/components/ProductGallery';
 import { AddToCartButton } from '@/components/AddToCartButton';
-import type { Product } from '@/lib/types';
+import { getLocaleServer } from '@/lib/localeServer';
+import { t, type Locale } from '@/lib/i18n';
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const product = await getProductBySlug(params.slug);
@@ -19,15 +20,22 @@ export default async function ProductPage({ params }: { params: { slug: string }
   const product = await getProductBySlug(params.slug);
   if (!product) notFound();
 
-    const desc = product.description?.trim() ?? '';
-    const short = product.shortDescription?.trim() ?? '';
-    const nameLower = product.name.trim().toLowerCase();
-    const descLower = desc.toLowerCase();
-    const shortLower = short.toLowerCase();
-    const showDesc = desc && descLower !== nameLower ? desc : short && shortLower !== nameLower ? short : '';
+  const locale: Locale = getLocaleServer();
 
-    return (
-      <main className="py-8">
+  const desc = product.description?.trim() ?? '';
+  const short = product.shortDescription?.trim() ?? '';
+
+  const nameLower = product.name.trim().toLowerCase();
+  const descLower = desc.toLowerCase();
+  const shortLower = short.toLowerCase();
+
+  const showDescRaw =
+    desc && descLower !== nameLower ? desc : short && shortLower !== nameLower ? short : '';
+
+  const showDesc = showDescRaw?.toUpperCase() === 'RICHIEDI INFORMAZIONI' ? t(locale, 'requestInfo') : showDescRaw;
+
+  return (
+    <main className="py-8">
       <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-10">
         <div className="w-full md:flex-1">
           <ProductGallery images={product.images} name={product.name} />
@@ -41,18 +49,17 @@ export default async function ProductPage({ params }: { params: { slug: string }
           </div>
 
           <h1 className="mt-2 text-2xl font-bold">{product.name}</h1>
-          {showDesc ? (
-            <p className="mt-3 text-sm text-gray-600">{showDesc}</p>
-          ) : null}
+
+          {showDesc ? <p className="mt-3 text-sm text-gray-600">{showDesc}</p> : null}
 
           <div className="mt-4 rounded-2xl border bg-white p-4">
             {product.priceEur > 0 ? (
               <div className="text-2xl font-bold">{formatEur(product.priceEur)}</div>
             ) : (
-              <div className="text-2xl font-bold">Prezzo su richiesta</div>
+              <div className="text-2xl font-bold">{t(locale, 'priceOnRequest')}</div>
             )}
             <div className="mt-1 text-xs text-gray-500">
-              {product.priceEur > 0 ? 'IVA inclusa' : 'Prezzo su richiesta (IVA inclusa)'}
+              {product.priceEur > 0 ? 'IVA inclusa' : t(locale, 'priceOnRequest') + ' (incl. VAT)'}
             </div>
 
             <div className="mt-4">
@@ -73,7 +80,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
 
           <div className="mt-6 text-sm text-gray-600">
             <Link className="underline" href={`/soluzioni/${product.solutionSlug}`}>
-              Vedi la soluzione correlata
+              {t(locale, 'viewRelatedSolution')}
             </Link>
           </div>
         </div>

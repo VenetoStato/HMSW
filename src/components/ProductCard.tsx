@@ -1,12 +1,23 @@
+'use client';
+
 import type { Product } from '@/lib/types';
 import { formatEur } from '@/lib/price';
 import Link from 'next/link';
 import Image from 'next/image';
 import { AddToCartButton } from '@/components/AddToCartButton';
+import { t, type Locale } from '@/lib/i18n';
+import { getLocaleClient } from '@/lib/localeClient';
 
 export function ProductCard({ product }: { product: Product }) {
+  const locale: Locale = getLocaleClient();
   const cover = product.images[0];
   const cover2 = product.images[1];
+
+  const short = (product.shortDescription ?? '').trim();
+  const shortTranslated =
+    short.toUpperCase() === 'RICHIEDI INFORMAZIONI'
+      ? t(locale, 'requestInfoShort')
+      : product.shortDescription;
 
   return (
     <div className="group overflow-hidden rounded-2xl border bg-white transition-shadow hover:shadow-sm">
@@ -42,16 +53,12 @@ export function ProductCard({ product }: { product: Product }) {
 
         <div className="p-4 pb-3">
           <div className="text-xs text-gray-500">{product.brand} • {product.category}</div>
-          <h3 className="mt-1 text-base font-semibold leading-snug line-clamp-2">
-            {product.name}
-          </h3>
-          <p className="mt-2 line-clamp-2 text-sm text-gray-600">
-            {product.shortDescription}
-          </p>
+          <h3 className="mt-1 text-base font-semibold leading-snug line-clamp-2">{product.name}</h3>
+          <p className="mt-2 line-clamp-2 text-sm text-gray-600">{shortTranslated}</p>
           {product.priceEur > 0 ? (
             <div className="mt-3 text-sm font-bold">{formatEur(product.priceEur)}</div>
           ) : (
-            <div className="mt-3 text-sm font-bold">Prezzo su richiesta</div>
+            <div className="mt-3 text-sm font-bold">{t(locale, 'priceOnRequest')}</div>
           )}
         </div>
       </Link>
@@ -62,4 +69,3 @@ export function ProductCard({ product }: { product: Product }) {
     </div>
   );
 }
-
