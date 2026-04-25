@@ -37,8 +37,14 @@ export default async function ProductPage({ params }: { params: { slug: string }
           <p className="mt-3 text-sm text-gray-600">{product.description}</p>
 
           <div className="mt-4 rounded-2xl border bg-white p-4">
-            <div className="text-2xl font-bold">{formatEur(product.priceEur)}</div>
-            <div className="mt-1 text-xs text-gray-500">IVA inclusa (esempio)</div>
+            {product.priceEur > 0 ? (
+              <div className="text-2xl font-bold">{formatEur(product.priceEur)}</div>
+            ) : (
+              <div className="text-2xl font-bold">Prezzo su richiesta</div>
+            )}
+            <div className="mt-1 text-xs text-gray-500">
+              {product.priceEur > 0 ? 'IVA inclusa (esempio)' : 'Richiedi preventivo (IVA inclusa su richiesta)'}
+            </div>
 
             <div className="mt-4">
               <AddToCartButton product={product} />
