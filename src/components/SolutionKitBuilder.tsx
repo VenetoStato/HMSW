@@ -110,8 +110,8 @@ export function SolutionKitBuilder({
               onClick={() => setScenario('demo')}
               className={
                 scenario === 'demo'
-                  ? 'rounded-lg bg-black px-3 py-2 text-sm font-semibold text-white'
-                  : 'rounded-lg border px-3 py-2 text-sm font-semibold hover:bg-gray-50'
+                  ? 'rounded-lg bg-gradient-to-r from-black via-neutral-900 to-zinc-800 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:shadow-md hover:-translate-y-[1px] transition'
+                  : 'rounded-lg border border-black/20 bg-white/70 px-3 py-2 text-sm font-semibold hover:bg-black/5 hover:border-black/30 transition'
               }
             >
               Demo
@@ -121,8 +121,8 @@ export function SolutionKitBuilder({
               onClick={() => setScenario('rd')}
               className={
                 scenario === 'rd'
-                  ? 'rounded-lg bg-black px-3 py-2 text-sm font-semibold text-white'
-                  : 'rounded-lg border px-3 py-2 text-sm font-semibold hover:bg-gray-50'
+                  ? 'rounded-lg bg-gradient-to-r from-black via-neutral-900 to-zinc-800 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:shadow-md hover:-translate-y-[1px] transition'
+                  : 'rounded-lg border border-black/20 bg-white/70 px-3 py-2 text-sm font-semibold hover:bg-black/5 hover:border-black/30 transition'
               }
             >
               Ricerca
@@ -132,8 +132,8 @@ export function SolutionKitBuilder({
               onClick={() => setScenario('integrato')}
               className={
                 scenario === 'integrato'
-                  ? 'rounded-lg bg-black px-3 py-2 text-sm font-semibold text-white'
-                  : 'rounded-lg border px-3 py-2 text-sm font-semibold hover:bg-gray-50'
+                  ? 'rounded-lg bg-gradient-to-r from-black via-neutral-900 to-zinc-800 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:shadow-md hover:-translate-y-[1px] transition'
+                  : 'rounded-lg border border-black/20 bg-white/70 px-3 py-2 text-sm font-semibold hover:bg-black/5 hover:border-black/30 transition'
               }
             >
               Integrazione
@@ -185,21 +185,60 @@ export function SolutionKitBuilder({
           </div>
         </div>
 
-        <div className="md:w-[320px]">
+        <div className="md:w-[340px]">
           <div className="rounded-2xl border bg-gray-50 p-3">
-            {effectiveImg ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={effectiveImg}
-                alt={`Immagine ${contextTitle}`}
-                className="h-52 w-full rounded-xl object-cover"
-              />
-            ) : (
-              <div className="h-52 w-full rounded-xl bg-gray-200" />
-            )}
+            <div className="relative">
+              {effectiveImg ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={effectiveImg}
+                  alt={`Immagine ${contextTitle}`}
+                  className="h-52 w-full rounded-xl object-cover transition-transform duration-300 hover:scale-[1.02]"
+                />
+              ) : (
+                <div className="h-52 w-full rounded-xl bg-gray-200" />
+              )}
+
+              {thumbImages.length > 1 ? (
+                <div className="pointer-events-none absolute inset-0 flex items-end justify-between px-2 pb-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const cur = selectedImg ?? heroImage;
+                      const idx = thumbImages.findIndex((x) => x === cur);
+                      const next = thumbImages[(idx - 1 + thumbImages.length) % thumbImages.length];
+                      setSelectedImg(next);
+                    }}
+                    className="pointer-events-auto inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white backdrop-blur hover:bg-black"
+                    aria-label="Immagine precedente"
+                  >
+                    ‹
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const cur = selectedImg ?? heroImage;
+                      const idx = thumbImages.findIndex((x) => x === cur);
+                      const next = thumbImages[(idx + 1) % thumbImages.length];
+                      setSelectedImg(next);
+                    }}
+                    className="pointer-events-auto inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white backdrop-blur hover:bg-black"
+                    aria-label="Immagine successiva"
+                  >
+                    ›
+                  </button>
+                </div>
+              ) : null}
+
+              {thumbImages.length ? (
+                <div className="absolute left-3 top-3 rounded-full bg-white/80 px-2 py-1 text-xs font-semibold text-gray-800 backdrop-blur">
+                  {(thumbImages.findIndex((x) => x === (selectedImg ?? heroImage)) + 1) || 1}/{thumbImages.length}
+                </div>
+              ) : null}
+            </div>
 
             {thumbImages.length > 1 ? (
-              <div className="mt-3 flex flex-wrap gap-2">
+              <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
                 {thumbImages.slice(0, 10).map((src) => (
                   <button
                     key={src}
@@ -207,8 +246,8 @@ export function SolutionKitBuilder({
                     onClick={() => setSelectedImg(src)}
                     className={
                       (selectedImg ?? heroImage) === src
-                        ? 'h-12 w-12 overflow-hidden rounded-lg border-2 border-black'
-                        : 'h-12 w-12 overflow-hidden rounded-lg border hover:border-black/50'
+                        ? 'h-12 w-12 shrink-0 overflow-hidden rounded-lg border-2 border-black'
+                        : 'h-12 w-12 shrink-0 overflow-hidden rounded-lg border hover:border-black/50'
                     }
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}

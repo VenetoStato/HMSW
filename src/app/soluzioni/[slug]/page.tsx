@@ -42,7 +42,7 @@ export default async function SolutionPage({ params }: { params: { slug: string 
               <div className="inline-flex items-center rounded-full border bg-white px-3 py-1 text-xs font-semibold text-gray-700">
                 {solution?.familyLabel ?? 'Soluzione'}
               </div>
-              <div className="text-xs text-gray-500">Landing ottimizzata per mobile</div>
+              <div className="text-xs text-gray-500">Kit configurabile • carrello con richiesta</div>
             </div>
 
             <h1 className="mt-3 text-2xl md:text-3xl font-bold">{solution?.title ?? slug}</h1>
@@ -132,15 +132,32 @@ export default async function SolutionPage({ params }: { params: { slug: string 
             </div>
 
             <div className="mt-6">
-              <div className="text-sm font-semibold">Immagini inerenti alla soluzione</div>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {gallery.map((src, idx) => (
-                  <div key={src + idx} className="h-14 w-14 overflow-hidden rounded-lg border bg-gray-50">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={src} alt={solution?.title ?? 'immagine'} className="h-full w-full object-cover" loading="lazy" />
-                  </div>
-                ))}
+              <div className="mt-3 flex items-center justify-between gap-3">
+                <div>
+                  <div className="text-sm font-semibold">Ispirazioni visive</div>
+                  <div className="text-xs text-gray-500">Immagini e riferimenti coerenti con la soluzione scelta</div>
+                </div>
+                <div className="text-xs text-gray-500">{matched.length} selezionati</div>
               </div>
+
+              {gallery.length ? (
+                <div className="mt-3 flex items-center gap-2 overflow-x-auto pb-1">
+                  {gallery.map((src, idx) => (
+                    <div
+                      key={src + idx}
+                      className="h-14 w-14 shrink-0 overflow-hidden rounded-xl border bg-gray-50"
+                    >
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={src}
+                        alt={solution?.title ?? 'immagine'}
+                        className="h-full w-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ) : null}
             </div>
 
           </div>

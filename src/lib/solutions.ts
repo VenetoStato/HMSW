@@ -614,6 +614,17 @@ function includesAny(haystack: string, needles: string[]) {
 }
 
 export function matchProductsForSolution(solution: SolutionDefinition, products: Product[]): Product[] {
+  // First: trust the explicit taxonomy from products.json (fix “wrong images”)
+  const explicit = products.filter((p) => p.solutionSlug === solution.slug);
+  if (explicit.length) {
+    // keep ordering stable: prefer priced items first, then fallback to name
+    return explicit
+      .slice()
+      .sort((a, b) => (b.priceEur ?? 0) - (a.priceEur ?? 0) || a.name.localeCompare(b.name))
+      .slice(0, 12);
+  }
+
+  // Fallback: keyword scoring (legacy)
   const keywords = [...solution.keywordHints, ...solution.imageSearchHints].map(normalize).filter(Boolean);
   const fallbacks = new Set(solution.fallbackCategories);
 
@@ -638,13 +649,10 @@ export function matchProductsForSolution(solution: SolutionDefinition, products:
     })
     .sort((a, b) => b.score - a.score);
 
-  // Ensure we have enough images/components
   const picked = scored.map((x) => x.p);
-
   const minCount = 9;
   if (picked.length >= minCount) return picked.slice(0, 12);
 
-  // fallback: by category
   const expanded = products
     .filter((p) => fallbacks.has(p.category))
     .concat(products.filter((p) => !fallbacks.has(p.category)))
