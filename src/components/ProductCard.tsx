@@ -48,7 +48,11 @@ export function ProductCard({ product }: { product: Product }) {
           <p className="mt-2 line-clamp-2 text-sm text-gray-600">
             {product.shortDescription}
           </p>
-          <div className="mt-3 text-sm font-bold">{formatEur(product.priceEur)}</div>
+          {product.priceEur > 0 ? (
+            <div className="mt-3 text-sm font-bold">{formatEur(product.priceEur)}</div>
+          ) : (
+            <div className="mt-3 text-sm font-bold">Prezzo su richiesta</div>
+          )}
         </div>
       </Link>
 

@@ -17,8 +17,14 @@ export function CartPageClient({ products }: { products: Product[] }) {
     })
     .filter(Boolean) as Array<{ product: Product; qty: number }>;
 
-  const subtotalEur = useMemo(() => lines.reduce((sum, l) => sum + l.product.priceEur * l.qty, 0), [lines]);
-  const totalEur = subtotalEur;
+  const hasUnknownPrice = useMemo(() => lines.some((l) => (l.product.priceEur ?? 0) <= 0), [lines]);
+  const knownLines = useMemo(() => lines.filter((l) => (l.product.priceEur ?? 0) > 0), [lines]);
+
+  const subtotalKnownEur = useMemo(
+    () => knownLines.reduce((sum, l) => sum + l.product.priceEur * l.qty, 0),
+    [knownLines]
+  );
+  const totalKnownEur = subtotalKnownEur;
 
   const [form, setForm] = useState({ name: '', email: '', phone: '', notes: '' });
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
@@ -62,11 +68,13 @@ export function CartPageClient({ products }: { products: Product[] }) {
         {lines.map(({ product, qty }) => (
           <div key={product.id} className="rounded-2xl border bg-white p-4">
             <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
-              <div>
-                <div className="text-sm text-gray-500">{product.brand} • {product.category}</div>
-                <div className="mt-1 font-semibold">{product.name}</div>
-                <div className="mt-2 text-sm font-bold">{formatEur(product.priceEur)} cadauno</div>
-              </div>
+                <div>
+                  <div className="text-sm text-gray-500">{product.brand} • {product.category}</div>
+                  <div className="mt-1 font-semibold">{product.name}</div>
+                  <div className="mt-2 text-sm font-bold">
+                    {product.priceEur > 0 ? `${formatEur(product.priceEur)} cadauno` : 'Prezzo su richiesta'}
+                  </div>
+                </div>
 
               <div className="flex flex-wrap items-center gap-3">
                 <div>
@@ -80,7 +88,7 @@ export function CartPageClient({ products }: { products: Product[] }) {
                   />
                 </div>
                 <div className="text-sm font-bold">
-                  {formatEur(product.priceEur * qty)}
+                  {product.priceEur > 0 ? formatEur(product.priceEur * qty) : 'Su richiesta'}
                 </div>
                 <button
                   onClick={() => removeFromCart(product.id)}
@@ -98,12 +106,16 @@ export function CartPageClient({ products }: { products: Product[] }) {
         <div className="rounded-2xl border bg-white p-5">
           <h2 className="text-lg font-semibold">Totale</h2>
           <div className="mt-2 flex items-center justify-between text-sm">
-            <span>Subtotale</span>
-            <span className="font-semibold">{formatEur(subtotalEur)}</span>
+            <span>Subtotale (solo prezzi confermati)</span>
+            <span className="font-semibold">{formatEur(subtotalKnownEur)}</span>
           </div>
           <div className="mt-1 flex items-center justify-between text-sm">
             <span>Totale</span>
-            <span className="text-base font-bold">{formatEur(totalEur)}</span>
+            {hasUnknownPrice ? (
+              <span className="text-base font-bold">Su richiesta</span>
+            ) : (
+              <span className="text-base font-bold">{formatEur(totalKnownEur)}</span>
+            )}
           </div>
 
           <form onSubmit={submitOrder} className="mt-5 space-y-3">
