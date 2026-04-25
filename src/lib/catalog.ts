@@ -23,24 +23,24 @@ export async function getProductBySlug(slug: string): Promise<Product | null> {
 export async function getSolutions(): Promise<Array<{ slug: string; title: string; description: string }>> {
   const solutionsMap: Record<string, { title: string; description: string }> = {
     quadrupedi: {
-      title: 'Quadrupedi Unitree: GO2/B2/GO1 + accessori (kit pronto)',
+      title: 'Quadruped robots + accessori (kit pronto)',
       description:
-        'Una soluzione “pronta all’integrazione” per demo, R&D e automazione su quadrupedi. Scegli il modello (GO2/B2/GO1) in base alle tue esigenze di mobilità e autonomia, poi aggiungi accessori come batterie, docking e componenti di supporto: meno tempo di setup, più tempo di test.'
+        'Una soluzione pensata per arrivare subito operativi: scegli il robot quadrupede e completa con le parti che fanno davvero la differenza (energia, docking e componenti di supporto). Meno setup, più test.'
     },
     braccia: {
-      title: 'Braccia & Gripper Unitree (Z1) + accessori (kit pronto)',
+      title: 'Robot arms & gripper + accessori (kit pronto)',
       description:
-        'Riduci i tempi di integrazione di presa, assemblaggio e manipolazione: parti da Z1 e completa con gli accessori compatibili. Perfetto per prototipi, demo e linee di test dove conta soprattutto la coerenza dei componenti.'
+        'Riduci i tempi di integrazione di presa, assemblaggio e manipolazione. Seleziona il braccio/robot di base e aggiungi gli accessori compatibili per ottenere una configurazione coerente e pronta all’uso.'
     },
     umanoidi: {
-      title: 'Umanoidi Unitree (H2) + accessori (kit pronto)',
+      title: 'Humanoid robots + accessori (kit pronto)',
       description:
-        'Quando serve educazione, training o una demo credibile, H2 ti fa partire subito. Seleziona la configurazione di base e completa con accessori e componenti di supporto: test più rapidi, meno colli di bottiglia.'
+        'Per educazione, training e dimostrazioni: parti da un sistema base e completa con accessori e componenti essenziali. Più velocità nei test, meno colli di bottiglia.'
     },
     accessori: {
-      title: 'Accessori & Componenti chiave (kit pronto)',
+      title: 'Accessori & componenti chiave (kit pronto)',
       description:
-        'Non è solo “il robot”: sono energia, controlli e supporti a rendere il setup stabile e operativo. Completa la tua soluzione con batterie, charger, controller e componenti essenziali, con prezzi trasparenti dove disponibili.'
+        'Non è solo “il robot”: sono energia, controlli e supporti a rendere il setup stabile, scalabile e operativo. Completa la tua soluzione con batterie, charger, controller e componenti essenziali con prezzi trasparenti dove disponibili.'
     },
     'robot-per-uso-quotidiano': {
       title: 'Robot per uso quotidiano',

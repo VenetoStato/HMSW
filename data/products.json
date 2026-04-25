@@ -1,2043 +1,1532 @@
 [
   {
-    "id": "quadruped-a1",
-    "slug": "quadruped-a1",
-    "name": "QUADRUPED A1 VIERBEINIGER ROBOTER",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 14875.0,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED A1 VIERBEINIGER ROBOTER",
-    "description": "QUADRUPED A1 VIERBEINIGER ROBOTER",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/11/lg/quadruped-a1.jpg",
-      "https://www.quadruped.de/media/image/product/11/xs/quadruped-a1.webp",
-      "https://www.quadruped.de/media/image/product/11/sm/quadruped-a1.webp",
-      "https://www.quadruped.de/media/image/product/11/md/quadruped-a1.webp",
-      "https://www.quadruped.de/media/image/product/11/lg/quadruped-a1.webp",
-      "https://www.quadruped.de/media/image/product/11/xs/quadruped-a1.jpg"
-    ],
-    "createdAt": "2026-04-25T06:39:03Z"
-  },
-  {
-    "id": "quadruped-a1-battery",
-    "slug": "quadruped-a1-battery",
-    "name": "QUADRUPED A1 BATTERY, 650,00 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 773.5,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED A1 BATTERY, 650,00 &EURO;",
-    "description": "QUADRUPED A1 BATTERY, 650,00 &EURO;",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/37/lg/quadruped-a1-battery.jpg",
-      "https://www.quadruped.de/media/image/product/37/xs/quadruped-a1-battery.webp",
-      "https://www.quadruped.de/media/image/product/37/sm/quadruped-a1-battery.webp",
-      "https://www.quadruped.de/media/image/product/37/md/quadruped-a1-battery.webp",
-      "https://www.quadruped.de/media/image/product/37/lg/quadruped-a1-battery.webp",
-      "https://www.quadruped.de/media/image/product/37/xs/quadruped-a1-battery.jpg"
-    ],
-    "createdAt": "2026-04-25T06:39:03Z"
-  },
-  {
-    "id": "quadruped-a1-charger",
-    "slug": "quadruped-a1-charger",
-    "name": "QUADRUPED A1 CHARGER, 200,00 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 238.0,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED A1 CHARGER, 200,00 &EURO;",
-    "description": "QUADRUPED A1 CHARGER, 200,00 &EURO;",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1152/lg/quadruped-a1-charger.png",
-      "https://www.quadruped.de/media/image/product/1152/xs/quadruped-a1-charger.webp",
-      "https://www.quadruped.de/media/image/product/1152/sm/quadruped-a1-charger.webp",
-      "https://www.quadruped.de/media/image/product/1152/md/quadruped-a1-charger.webp",
-      "https://www.quadruped.de/media/image/product/1152/lg/quadruped-a1-charger.webp",
-      "https://www.quadruped.de/media/image/product/1152/xs/quadruped-a1-charger.png"
-    ],
-    "createdAt": "2026-04-25T06:39:04Z"
-  },
-  {
-    "id": "quadruped-a1-explorer-upgrade-package",
-    "slug": "quadruped-a1-explorer-upgrade-package",
-    "name": "A1 EXPLORER UPGRADE PACKAGE",
-    "brand": "Unitree",
-    "category": "Unitree",
+    "id": "401514",
+    "slug": "baxter-research-robot-used-robot-401514",
+    "name": "Baxter Research Robot (Used robot)",
+    "brand": "Generation Robots",
+    "category": "Robotic arms",
     "solutionSlug": "braccia",
-    "priceEur": 4165.0,
+    "priceEur": 10000.0,
     "currency": "EUR",
-    "shortDescription": "A1 EXPLORER UPGRADE PACKAGE",
-    "description": "A1 EXPLORER UPGRADE PACKAGE",
+    "shortDescription": "Baxter Research Robot (Used robot)",
+    "description": "Baxter Research Robot (Used robot)",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/35/lg/quadruped-a1-explorer-upgrade-package.png",
-      "https://www.quadruped.de/media/image/product/35/xs/quadruped-a1-explorer-upgrade-package.webp",
-      "https://www.quadruped.de/media/image/product/35/sm/quadruped-a1-explorer-upgrade-package.webp",
-      "https://www.quadruped.de/media/image/product/35/md/quadruped-a1-explorer-upgrade-package.webp",
-      "https://www.quadruped.de/media/image/product/35/lg/quadruped-a1-explorer-upgrade-package.webp",
-      "https://www.quadruped.de/media/image/product/35/xs/quadruped-a1-explorer-upgrade-package.png"
+      "https://www.generationrobots.com/18749-large_default/baxter-robot-research-prototype.jpg"
     ],
-    "createdAt": "2026-04-25T06:39:06Z"
+    "createdAt": "2026-04-25T09:01:26.686813Z"
   },
   {
-    "id": "quadruped-a1-leihstellung",
-    "slug": "quadruped-a1-leihstellung",
-    "name": "QUADRUPED A1 VIERBEINIGER ROBOTER",
-    "brand": "Unitree",
-    "category": "Unitree",
+    "id": "401792",
+    "slug": "widowx-robot-arm-without-servomotors-401792",
+    "name": "WidowX Robot Arm (without servomotors)",
+    "brand": "Trossen Robotics",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 524.08,
+    "currency": "EUR",
+    "shortDescription": "WidowX Robot Arm (without servomotors)",
+    "description": "WidowX Robot Arm (without servomotors)",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/18748-large_default/widowx-robot-arm-without-servomotors.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:27.966464Z"
+  },
+  {
+    "id": "402759",
+    "slug": "robotis-openmanipulator-pro-robotic-arm-402759",
+    "name": "ROBOTIS OpenManipulator-Pro robotic arm",
+    "brand": "Robotis",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 17272.96,
+    "currency": "EUR",
+    "shortDescription": "ROBOTIS OpenManipulator-Pro robotic arm",
+    "description": "ROBOTIS OpenManipulator-Pro robotic arm",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19099-large_default/robotis-openmanipulator-pro-robotic-arm.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:29.493440Z"
+  },
+  {
+    "id": "402948",
+    "slug": "robotis-rh-p12-rn-hand-402948",
+    "name": "Robotis RH-P12-RN Hand",
+    "brand": "Robotis",
+    "category": "Robotic gripper",
+    "solutionSlug": "braccia",
+    "priceEur": 3912.36,
+    "currency": "EUR",
+    "shortDescription": "Robotis RH-P12-RN Hand",
+    "description": "Robotis RH-P12-RN Hand",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19220-large_default/robotis-rh-p12-rn-hand.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:32.000635Z"
+  },
+  {
+    "id": "403050",
+    "slug": "robotis-fp04-f51-f52-structural-components-403050",
+    "name": "Robotis FP04-F51/F52 Structural Components",
+    "brand": "Robotis",
+    "category": "Humanoid robots",
+    "solutionSlug": "umanoidi",
+    "priceEur": 6.5,
+    "currency": "EUR",
+    "shortDescription": "Robotis FP04-F51/F52 Structural Components",
+    "description": "Robotis FP04-F51/F52 Structural Components",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19134-large_default/robotis-fp04-f51f52-structural-components.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:33.361463Z"
+  },
+  {
+    "id": "403055",
+    "slug": "robotis-fp04-f53-structural-components-x4-403055",
+    "name": "Robotis FP04-F53 Structural Components (x4)",
+    "brand": "Robotis",
+    "category": "Humanoid robots",
+    "solutionSlug": "umanoidi",
+    "priceEur": 2.82,
+    "currency": "EUR",
+    "shortDescription": "Robotis FP04-F53 Structural Components (x4)",
+    "description": "Robotis FP04-F53 Structural Components (x4)",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19133-large_default/robotis-fp04-f53-structural-components-x4.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:34.674152Z"
+  },
+  {
+    "id": "403056",
+    "slug": "robotis-fp04-f54-structural-components-x4-403056",
+    "name": "Robotis FP04-F54 Structural Components (x4)",
+    "brand": "Robotis",
+    "category": "Humanoid robots",
+    "solutionSlug": "umanoidi",
+    "priceEur": 2.82,
+    "currency": "EUR",
+    "shortDescription": "Robotis FP04-F54 Structural Components (x4)",
+    "description": "Robotis FP04-F54 Structural Components (x4)",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19135-large_default/robotis-fp04-f54-structural-components-x4.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:36.008192Z"
+  },
+  {
+    "id": "403057",
+    "slug": "robotis-fp04-f6-structural-components-x12-403057",
+    "name": "Robotis FP04-F6 Structural Components (x12)",
+    "brand": "Robotis",
+    "category": "Humanoid robots",
+    "solutionSlug": "umanoidi",
+    "priceEur": 10.07,
+    "currency": "EUR",
+    "shortDescription": "Robotis FP04-F6 Structural Components (x12)",
+    "description": "Robotis FP04-F6 Structural Components (x12)",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19126-large_default/robotis-fp04-f6-structural-components-x12.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:37.259648Z"
+  },
+  {
+    "id": "403058",
+    "slug": "robotis-fp04-f7-structural-components-x6-403058",
+    "name": "Robotis FP04-F7 Structural Components (x6)",
+    "brand": "Robotis",
+    "category": "Humanoid robots",
+    "solutionSlug": "umanoidi",
+    "priceEur": 5.77,
+    "currency": "EUR",
+    "shortDescription": "Robotis FP04-F7 Structural Components (x6)",
+    "description": "Robotis FP04-F7 Structural Components (x6)",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19127-large_default/robotis-fp04-f7-structural-components-x6.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:38.597417Z"
+  },
+  {
+    "id": "403059",
+    "slug": "robotis-fp04-f10-structural-components-x10-403059",
+    "name": "Robotis FP04-F10 Structural Components (x10)",
+    "brand": "Robotis",
+    "category": "Humanoid robots",
+    "solutionSlug": "umanoidi",
+    "priceEur": 7.13,
+    "currency": "EUR",
+    "shortDescription": "Robotis FP04-F10 Structural Components (x10)",
+    "description": "Robotis FP04-F10 Structural Components (x10)",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19129-large_default/robotis-fp04-f10-structural-components-x10.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:39.912924Z"
+  },
+  {
+    "id": "403100",
+    "slug": "programmable-humanoid-robot-nao-v6-403100",
+    "name": "Programmable Humanoid Robot   NAO V6",
+    "brand": "Maxtronics",
+    "category": "Humanoid robots",
+    "solutionSlug": "umanoidi",
+    "priceEur": 10020.0,
+    "currency": "EUR",
+    "shortDescription": "Programmable Humanoid Robot   NAO V6",
+    "description": "Programmable Humanoid Robot   NAO V6",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19239-large_default/programmable-humanoid-robot-nao-v6.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:41.149604Z"
+  },
+  {
+    "id": "403343",
+    "slug": "openmanipulator-rm-x52-robotic-arm-without-servo-motors-403343",
+    "name": "OpenManipulator RM-X52 robotic arm (without servo motors)",
+    "brand": "Robotis",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 336.1,
+    "currency": "EUR",
+    "shortDescription": "OpenManipulator RM-X52 robotic arm (without servo motors)",
+    "description": "OpenManipulator RM-X52 robotic arm (without servo motors)",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19313-large_default/openmanipulator-rm-x52-robotic-arm-without-servo-motors.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:42.544481Z"
+  },
+  {
+    "id": "403344",
+    "slug": "openmanipulator-rm-x52-tnm-robot-arm-with-servo-motors-403344",
+    "name": "OpenManipulator RM-X52-TNM robot arm (with servo motors)",
+    "brand": "Robotis",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 1739.56,
+    "currency": "EUR",
+    "shortDescription": "OpenManipulator RM-X52-TNM robot arm (with servo motors)",
+    "description": "OpenManipulator RM-X52-TNM robot arm (with servo motors)",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19314-large_default/openmanipulator-rm-x52-tnm-robot-arm-with-servo-motors.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:44.005047Z"
+  },
+  {
+    "id": "403345",
+    "slug": "base-plate-02-for-openmanipulator-403345",
+    "name": "Base Plate-02 for OpenManipulator",
+    "brand": "Robotis",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 210.0,
+    "currency": "EUR",
+    "shortDescription": "Base Plate-02 for OpenManipulator",
+    "description": "Base Plate-02 for OpenManipulator",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19318-large_default/base-plate-02-for-openmanipulator.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:45.232763Z"
+  },
+  {
+    "id": "403347",
+    "slug": "poppy-humanoid-robot-with-3d-parts-403347",
+    "name": "Poppy Humanoid Robot  (with 3D parts)",
+    "brand": "Poppy",
+    "category": "Humanoid robots",
+    "solutionSlug": "umanoidi",
+    "priceEur": 9971.52,
+    "currency": "EUR",
+    "shortDescription": "Poppy Humanoid Robot  (with 3D parts)",
+    "description": "Poppy Humanoid Robot  (with 3D parts)",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19291-large_default/poppy-humanoid-robot-raspberry-pi-version-with-3d-parts.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:46.490365Z"
+  },
+  {
+    "id": "403348",
+    "slug": "poppy-humanoid-robot-without-3d-printed-parts-403348",
+    "name": "Poppy Humanoid Robot  (without 3D printed parts)",
+    "brand": "Poppy",
+    "category": "Humanoid robots",
+    "solutionSlug": "umanoidi",
+    "priceEur": 7862.4,
+    "currency": "EUR",
+    "shortDescription": "Poppy Humanoid Robot  (without 3D printed parts)",
+    "description": "Poppy Humanoid Robot  (without 3D printed parts)",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19294-large_default/robot-poppy-humanoid-version-raspberry-sans-impressions-3d.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:47.712424Z"
+  },
+  {
+    "id": "403349",
+    "slug": "poppy-torso-robot-with-3d-printed-parts-403349",
+    "name": "Poppy Torso Robot  (with 3D printed parts)",
+    "brand": "Poppy",
+    "category": "Humanoid robots",
+    "solutionSlug": "umanoidi",
+    "priceEur": 6427.2,
+    "currency": "EUR",
+    "shortDescription": "Poppy Torso Robot  (with 3D printed parts)",
+    "description": "Poppy Torso Robot  (with 3D printed parts)",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19298-large_default/poppy-torso-robot-raspberry-version-with-3d-printed-parts.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:48.890555Z"
+  },
+  {
+    "id": "403350",
+    "slug": "poppy-torso-robot-without-3d-printed-parts-403350",
+    "name": "Poppy Torso Robot  (without 3D printed parts)",
+    "brand": "Poppy",
+    "category": "Humanoid robots",
+    "solutionSlug": "umanoidi",
+    "priceEur": 4867.2,
+    "currency": "EUR",
+    "shortDescription": "Poppy Torso Robot  (without 3D printed parts)",
+    "description": "Poppy Torso Robot  (without 3D printed parts)",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19300-large_default/poppy-torso-robot-raspberry-pi-version-without-3d-printed-parts.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:50.083169Z"
+  },
+  {
+    "id": "403358",
+    "slug": "base-plate-01-for-openmanipulator-pro-403358",
+    "name": "Base Plate-01 for OpenManipulator-Pro",
+    "brand": "Robotis",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 809.95,
+    "currency": "EUR",
+    "shortDescription": "Base Plate-01 for OpenManipulator-Pro",
+    "description": "Base Plate-01 for OpenManipulator-Pro",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19101-large_default/plateau-de-fixation-pour-manipulator-h.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:51.296307Z"
+  },
+  {
+    "id": "403413",
+    "slug": "doosan-m1013-robotic-arm-403413",
+    "name": "Doosan M1013 Robotic Arm",
+    "brand": "Doosan Robotics",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 39936.0,
+    "currency": "EUR",
+    "shortDescription": "Doosan M1013 Robotic Arm",
+    "description": "Doosan M1013 Robotic Arm",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19391-large_default/doosan-m1013-robotic-arm.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:52.804846Z"
+  },
+  {
+    "id": "403477",
+    "slug": "doosan-m0609-robotic-arm-403477",
+    "name": "Doosan M0609 Robotic Arm",
+    "brand": "Doosan Robotics",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 34944.0,
+    "currency": "EUR",
+    "shortDescription": "Doosan M0609 Robotic Arm",
+    "description": "Doosan M0609 Robotic Arm",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19468-large_default/doosan-m0609-robotic-arm.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:54.341380Z"
+  },
+  {
+    "id": "403479",
+    "slug": "doosan-m1509-robotic-arm-403479",
+    "name": "Doosan M1509 Robotic Arm",
+    "brand": "Doosan Robotics",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 44928.0,
+    "currency": "EUR",
+    "shortDescription": "Doosan M1509 Robotic Arm",
+    "description": "Doosan M1509 Robotic Arm",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19471-large_default/doosan-m1509-robotic-arm.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:55.870265Z"
+  },
+  {
+    "id": "403519",
+    "slug": "robotis-engineer-kit-1-403519",
+    "name": "Robotis Engineer Kit 1",
+    "brand": "Robotis",
+    "category": "Humanoid robots",
+    "solutionSlug": "umanoidi",
+    "priceEur": 1454.86,
+    "currency": "EUR",
+    "shortDescription": "Robotis Engineer Kit 1",
+    "description": "Robotis Engineer Kit 1",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19454-large_default/robotis-engineer-kit-1.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:57.233732Z"
+  },
+  {
+    "id": "403610",
+    "slug": "robotis-engineer-kit-2-403610",
+    "name": "Robotis Engineer - kit 2",
+    "brand": "Robotis",
+    "category": "Humanoid robots",
+    "solutionSlug": "umanoidi",
+    "priceEur": 933.14,
+    "currency": "EUR",
+    "shortDescription": "Robotis Engineer - kit 2",
+    "description": "Robotis Engineer - kit 2",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19542-large_default/robotis-engineer-kit-2.jpg"
+    ],
+    "createdAt": "2026-04-25T09:01:58.629609Z"
+  },
+  {
+    "id": "403937",
+    "slug": "ned2-6-axis-robot-arm-403937",
+    "name": "Ned2 6-Axis Robot Arm",
+    "brand": "Niryo",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 4788.0,
+    "currency": "EUR",
+    "shortDescription": "Ned2 6-Axis Robot Arm",
+    "description": "Ned2 6-Axis Robot Arm",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/20573-large_default/ned2-6-axis-robot-arm.jpg"
+    ],
+    "createdAt": "2026-04-25T09:02:00.104332Z"
+  },
+  {
+    "id": "403938",
+    "slug": "electromagnet-for-the-niryo-ned2-6-axis-robot-arm-403938",
+    "name": "Electromagnet for the Niryo Ned2 6-Axis Robot Arm",
+    "brand": "Niryo",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 202.8,
+    "currency": "EUR",
+    "shortDescription": "Electromagnet for the Niryo Ned2 6-Axis Robot Arm",
+    "description": "Electromagnet for the Niryo Ned2 6-Axis Robot Arm",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/20548-large_default/electromagnet-for-the-niryo-ned2-6-axis-robot-arm.jpg"
+    ],
+    "createdAt": "2026-04-25T09:02:01.519512Z"
+  },
+  {
+    "id": "403939",
+    "slug": "large-gripper-for-the-niryo-ned2-6-axis-robot-arm-403939",
+    "name": "Large Gripper for the Niryo Ned2 6-Axis Robot Arm",
+    "brand": "Niryo",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 202.8,
+    "currency": "EUR",
+    "shortDescription": "Large Gripper for the Niryo Ned2 6-Axis Robot Arm",
+    "description": "Large Gripper for the Niryo Ned2 6-Axis Robot Arm",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/20536-large_default/gripper-large-pour-bras-robotique-6-axes-niryo-ned2.jpg"
+    ],
+    "createdAt": "2026-04-25T09:02:02.967229Z"
+  },
+  {
+    "id": "403940",
+    "slug": "adaptive-gripper-for-the-niryo-ned2-6-axis-robot-arm-403940",
+    "name": "Adaptive Gripper for the Niryo Ned2 6-Axis Robot Arm",
+    "brand": "Niryo",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 202.8,
+    "currency": "EUR",
+    "shortDescription": "Adaptive Gripper for the Niryo Ned2 6-Axis Robot Arm",
+    "description": "Adaptive Gripper for the Niryo Ned2 6-Axis Robot Arm",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/20540-large_default/adaptive-gripper-for-the-niryo-ned2-6-axis-robot-arm.jpg"
+    ],
+    "createdAt": "2026-04-25T09:02:04.373964Z"
+  },
+  {
+    "id": "403941",
+    "slug": "vacuum-pump-for-the-niryo-ned2-6-axis-robot-arm-403941",
+    "name": "Vacuum Pump for the Niryo Ned2 6-Axis Robot Arm",
+    "brand": "Niryo",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 418.8,
+    "currency": "EUR",
+    "shortDescription": "Vacuum Pump for the Niryo Ned2 6-Axis Robot Arm",
+    "description": "Vacuum Pump for the Niryo Ned2 6-Axis Robot Arm",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/20541-large_default/vacuum-pump-for-the-niryo-ned2-6-axis-robot-arm.jpg"
+    ],
+    "createdAt": "2026-04-25T09:02:05.782331Z"
+  },
+  {
+    "id": "403942",
+    "slug": "conveyor-belt-compatible-with-niryo-ned-2-403942",
+    "name": "Conveyor Belt (compatible with Niryo Ned 2)",
+    "brand": "Niryo",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 1198.8,
+    "currency": "EUR",
+    "shortDescription": "Conveyor Belt (compatible with Niryo Ned 2)",
+    "description": "Conveyor Belt (compatible with Niryo Ned 2)",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/20553-large_default/conveyor-belt-compatible-with-ned2-ned-and-niryo-one.jpg"
+    ],
+    "createdAt": "2026-04-25T09:02:11.191462Z"
+  },
+  {
+    "id": "403943",
+    "slug": "vision-kit-for-the-ned2-robot-arm-403943",
+    "name": "Vision Kit for the Ned2 Robot Arm",
+    "brand": "Niryo",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 958.8,
+    "currency": "EUR",
+    "shortDescription": "Vision Kit for the Ned2 Robot Arm",
+    "description": "Vision Kit for the Ned2 Robot Arm",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/20551-large_default/vision-set-for-the-ned2-robot-arm.jpg"
+    ],
+    "createdAt": "2026-04-25T09:02:12.664243Z"
+  },
+  {
+    "id": "403992",
+    "slug": "7-axis-franka-research-3-robotic-arm-403992",
+    "name": "7-axis Franka Research 3 Robotic Arm",
+    "brand": "Franka Robotics",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 33180.0,
+    "currency": "EUR",
+    "shortDescription": "7-axis Franka Research 3 Robotic Arm",
+    "description": "7-axis Franka Research 3 Robotic Arm",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/20467-large_default/7-axis-franka-research-3-robotic-arm-fci-licence.jpg"
+    ],
+    "createdAt": "2026-04-25T09:02:14.250286Z"
+  },
+  {
+    "id": "403999",
+    "slug": "doosan-robotics-h2515-robot-arm-403999",
+    "name": "Doosan Robotics H2515 Robot Arm",
+    "brand": "Doosan Robotics",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 63024.0,
+    "currency": "EUR",
+    "shortDescription": "Doosan Robotics H2515 Robot Arm",
+    "description": "Doosan Robotics H2515 Robot Arm",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/19894-large_default/doosan-robotics-h2515-robot-arm.jpg"
+    ],
+    "createdAt": "2026-04-25T09:02:15.737512Z"
+  },
+  {
+    "id": "404127-2076",
+    "slug": "unitree-go2-edu-plus-quadruped-robot-404127-2076",
+    "name": "Unitree Go2 Edu Plus quadruped robot",
+    "brand": "Unitree Robotics",
+    "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
-    "priceEur": 0.0,
+    "priceEur": 10800.0,
     "currency": "EUR",
-    "shortDescription": "QUADRUPED A1 VIERBEINIGER ROBOTER",
-    "description": "QUADRUPED A1 VIERBEINIGER ROBOTER",
+    "shortDescription": "Unitree Go2 Edu Plus quadruped robot",
+    "description": "Unitree Go2 Edu Plus quadruped robot",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/43/lg/quadruped-a1-leihstellung.jpg",
-      "https://www.quadruped.de/media/image/product/43/xs/quadruped-a1-leihstellung.webp",
-      "https://www.quadruped.de/media/image/product/43/sm/quadruped-a1-leihstellung.webp",
-      "https://www.quadruped.de/media/image/product/43/md/quadruped-a1-leihstellung.webp",
-      "https://www.quadruped.de/media/image/product/43/lg/quadruped-a1-leihstellung.webp",
-      "https://www.quadruped.de/media/image/product/43/xs/quadruped-a1-leihstellung.jpg"
+      "https://www.generationrobots.com/21224-large_default/go2-quadruped-robot-edu-plus.jpg"
     ],
-    "createdAt": "2026-04-25T06:39:06Z"
+    "createdAt": "2026-04-25T09:02:17.198450Z"
   },
   {
-    "id": "quadruped-a1-lending-position",
-    "slug": "quadruped-a1-lending-position",
-    "name": "QUADRUPED A1 MULTI-LEGGED ROBOT",
-    "brand": "Unitree",
-    "category": "Unitree",
+    "id": "404128",
+    "slug": "unitree-go2-air-quadruped-robot-404128",
+    "name": "Unitree Go2 Air quadruped robot",
+    "brand": "Unitree Robotics",
+    "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
-    "priceEur": 0.0,
+    "priceEur": 3090.0,
     "currency": "EUR",
-    "shortDescription": "QUADRUPED A1 MULTI-LEGGED ROBOT",
-    "description": "QUADRUPED A1 MULTI-LEGGED ROBOT",
+    "shortDescription": "Unitree Go2 Air quadruped robot",
+    "description": "Unitree Go2 Air quadruped robot",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/43/lg/quadruped-a1-leihstellung.jpg",
-      "https://www.quadruped.de/media/image/product/43/xs/quadruped-a1-leihstellung.webp",
-      "https://www.quadruped.de/media/image/product/43/sm/quadruped-a1-leihstellung.webp",
-      "https://www.quadruped.de/media/image/product/43/md/quadruped-a1-leihstellung.webp",
-      "https://www.quadruped.de/media/image/product/43/lg/quadruped-a1-leihstellung.webp",
-      "https://www.quadruped.de/media/image/product/43/xs/quadruped-a1-leihstellung.jpg"
+      "https://www.generationrobots.com/20157-large_default/unitree-go2-air-quadruped-robot.jpg"
     ],
-    "createdAt": "2026-04-25T06:39:08Z"
+    "createdAt": "2026-04-25T09:02:18.690941Z"
   },
   {
-    "id": "quadruped-a1-smart-actuator",
-    "slug": "quadruped-a1-smart-actuator",
-    "name": "QUADRUPED A1 SMART ACTUATOR, 800,00 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
+    "id": "404129",
+    "slug": "unitree-go2-pro-quadruped-robot-404129",
+    "name": "Unitree Go2 Pro quadruped robot",
+    "brand": "Unitree Robotics",
+    "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
-    "priceEur": 952.0,
+    "priceEur": 3900.0,
     "currency": "EUR",
-    "shortDescription": "QUADRUPED A1 SMART ACTUATOR, 800,00 &EURO;",
-    "description": "QUADRUPED A1 SMART ACTUATOR, 800,00 &EURO;",
+    "shortDescription": "Unitree Go2 Pro quadruped robot",
+    "description": "Unitree Go2 Pro quadruped robot",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/36/lg/quadruped-a1-smart-actuator.jpg",
-      "https://www.quadruped.de/media/image/product/36/xs/quadruped-a1-smart-actuator.webp",
-      "https://www.quadruped.de/media/image/product/36/sm/quadruped-a1-smart-actuator.webp",
-      "https://www.quadruped.de/media/image/product/36/md/quadruped-a1-smart-actuator.webp",
-      "https://www.quadruped.de/media/image/product/36/lg/quadruped-a1-smart-actuator.webp",
-      "https://www.quadruped.de/media/image/product/36/xs/quadruped-a1-smart-actuator.jpg"
+      "https://www.generationrobots.com/20162-large_default/unitree-go2-pro-quadruped-robot.jpg"
     ],
-    "createdAt": "2026-04-25T06:39:08Z"
+    "createdAt": "2026-04-25T09:02:20.118306Z"
   },
   {
-    "id": "quadruped-a2",
-    "slug": "quadruped-a2",
-    "name": "QUADRUPED A2 VIERBEINIGER ROBOTER",
-    "brand": "Unitree",
-    "category": "Unitree",
+    "id": "404130",
+    "slug": "servo-d1-robotic-arm-for-unitree-go2-404130",
+    "name": "Servo D1 robotic arm for Unitree Go2",
+    "brand": "Unitree Robotics",
+    "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
-    "priceEur": 27370.0,
+    "priceEur": 5400.0,
     "currency": "EUR",
-    "shortDescription": "QUADRUPED A2 VIERBEINIGER ROBOTER",
-    "description": "QUADRUPED A2 VIERBEINIGER ROBOTER",
+    "shortDescription": "Servo D1 robotic arm for Unitree Go2",
+    "description": "Servo D1 robotic arm for Unitree Go2",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/1372/lg/quadruped-a2.jpg",
-      "https://www.quadruped.de/media/image/product/1372/xs/quadruped-a2.webp",
-      "https://www.quadruped.de/media/image/product/1372/sm/quadruped-a2.webp",
-      "https://www.quadruped.de/media/image/product/1372/md/quadruped-a2.webp",
-      "https://www.quadruped.de/media/image/product/1372/lg/quadruped-a2.webp",
-      "https://www.quadruped.de/media/image/product/1372/xs/quadruped-a2.jpg"
+      "https://www.generationrobots.com/20168-large_default/go2-servo-robotic-arm.jpg"
     ],
-    "createdAt": "2026-04-25T06:39:09Z"
+    "createdAt": "2026-04-25T09:02:21.542712Z"
   },
   {
-    "id": "quadruped-a2-battery",
-    "slug": "quadruped-a2-battery",
-    "name": "QUADRUPED A2 BATTERY",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 1499.0,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED A2 BATTERY",
-    "description": "QUADRUPED A2 BATTERY",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1484/lg/quadruped-a2-battery.png",
-      "https://www.quadruped.de/media/image/product/1484/xs/quadruped-a2-battery.webp",
-      "https://www.quadruped.de/media/image/product/1484/sm/quadruped-a2-battery.webp",
-      "https://www.quadruped.de/media/image/product/1484/md/quadruped-a2-battery.webp",
-      "https://www.quadruped.de/media/image/product/1484/lg/quadruped-a2-battery.webp",
-      "https://www.quadruped.de/media/image/product/1484/xs/quadruped-a2-battery.png"
-    ],
-    "createdAt": "2026-04-25T06:39:09Z"
-  },
-  {
-    "id": "quadruped-aliengo",
-    "slug": "quadruped-aliengo",
-    "name": "QUADRUPED ALIENGO, 40.235,00 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
+    "id": "404141",
+    "slug": "panther-mobile-robot-ugv-404141",
+    "name": "Panther Mobile Robot (UGV)",
+    "brand": "Husarion",
+    "category": "Mobile robots",
     "solutionSlug": "accessori",
-    "priceEur": 47879.65,
+    "priceEur": 24000.0,
     "currency": "EUR",
-    "shortDescription": "QUADRUPED ALIENGO, 40.235,00 &EURO;",
-    "description": "QUADRUPED ALIENGO, 40.235,00 &EURO;",
+    "shortDescription": "Panther Mobile Robot (UGV)",
+    "description": "Panther Mobile Robot (UGV)",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/34/lg/quadruped-aliengo.jpg",
-      "https://www.quadruped.de/media/image/product/34/xs/quadruped-aliengo.webp",
-      "https://www.quadruped.de/media/image/product/34/sm/quadruped-aliengo.webp",
-      "https://www.quadruped.de/media/image/product/34/md/quadruped-aliengo.webp",
-      "https://www.quadruped.de/media/image/product/34/lg/quadruped-aliengo.webp",
-      "https://www.quadruped.de/media/image/product/34/xs/quadruped-aliengo.jpg"
+      "https://www.generationrobots.com/20200-large_default/panther-mobile-robot-ugv.jpg"
     ],
-    "createdAt": "2026-04-25T06:39:10Z"
+    "createdAt": "2026-04-25T09:02:22.721093Z"
   },
   {
-    "id": "quadruped-aliengo-battery",
-    "slug": "quadruped-aliengo-battery",
-    "name": "QUADRUPED ALIENGO BATTERY, 1.500,00 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 1785.0,
+    "id": "404171",
+    "slug": "kinova-gen3-lite-robotic-arm-404171",
+    "name": "Kinova Gen3 Lite Robotic Arm",
+    "brand": "Kinova",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 18720.0,
     "currency": "EUR",
-    "shortDescription": "QUADRUPED ALIENGO BATTERY, 1.500,00 &EURO;",
-    "description": "QUADRUPED ALIENGO BATTERY, 1.500,00 &EURO;",
+    "shortDescription": "Kinova Gen3 Lite Robotic Arm",
+    "description": "Kinova Gen3 Lite Robotic Arm",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/38/lg/quadruped-aliengo-battery.png",
-      "https://www.quadruped.de/media/image/product/38/xs/quadruped-aliengo-battery.webp",
-      "https://www.quadruped.de/media/image/product/38/sm/quadruped-aliengo-battery.webp",
-      "https://www.quadruped.de/media/image/product/38/md/quadruped-aliengo-battery.webp",
-      "https://www.quadruped.de/media/image/product/38/lg/quadruped-aliengo-battery.webp",
-      "https://www.quadruped.de/media/image/product/38/xs/quadruped-aliengo-battery.png"
+      "https://www.generationrobots.com/20289-large_default/bras-robotique-gen-3-lite-kinova.jpg"
     ],
-    "createdAt": "2026-04-25T06:39:10Z"
+    "createdAt": "2026-04-25T09:02:24.231683Z"
   },
   {
-    "id": "quadruped-b-w",
-    "slug": "quadruped-b-w",
-    "name": "QUADRUPED B-W",
-    "brand": "Unitree",
-    "category": "Unitree",
+    "id": "404206-1760",
+    "slug": "kit-r-d-ros-2-404206-1760",
+    "name": "Kit R&D ROS 2",
+    "brand": "Generation Robots",
+    "category": "Mobile robots",
     "solutionSlug": "accessori",
-    "priceEur": 80920.0,
+    "priceEur": 11040.0,
     "currency": "EUR",
-    "shortDescription": "QUADRUPED B-W",
-    "description": "QUADRUPED B-W",
+    "shortDescription": "Kit R&D ROS 2",
+    "description": "Kit R&D ROS 2",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/1153/lg/quadruped-b-w.jpg",
-      "https://www.quadruped.de/media/image/product/1153/xs/quadruped-b-w.webp",
-      "https://www.quadruped.de/media/image/product/1153/sm/quadruped-b-w.webp",
-      "https://www.quadruped.de/media/image/product/1153/md/quadruped-b-w.webp",
-      "https://www.quadruped.de/media/image/product/1153/lg/quadruped-b-w.webp",
-      "https://www.quadruped.de/media/image/product/1153/xs/quadruped-b-w.jpg"
+      "https://www.generationrobots.com/21098-large_default/rd-ros-kit-agilex-robotics-compatible.jpg"
     ],
-    "createdAt": "2026-04-25T06:39:11Z"
+    "createdAt": "2026-04-25T09:02:25.489479Z"
   },
   {
-    "id": "quadruped-b1",
-    "slug": "quadruped-b1",
-    "name": "QUADRUPED B1",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 75600.7,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED B1",
-    "description": "QUADRUPED B1",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/50/lg/quadruped-b1.png",
-      "https://www.quadruped.de/media/image/product/50/xs/quadruped-b1.webp",
-      "https://www.quadruped.de/media/image/product/50/sm/quadruped-b1.webp",
-      "https://www.quadruped.de/media/image/product/50/md/quadruped-b1.webp",
-      "https://www.quadruped.de/media/image/product/50/lg/quadruped-b1.webp",
-      "https://www.quadruped.de/media/image/product/50/xs/quadruped-b1.png"
-    ],
-    "createdAt": "2026-04-25T06:39:12Z"
-  },
-  {
-    "id": "quadruped-b1-bldc-actuator",
-    "slug": "quadruped-b1-bldc-actuator",
-    "name": "QUADRUPED B1",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 4760.0,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED B1",
-    "description": "QUADRUPED B1",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/62/lg/quadruped-b1-bldc-actuator.png",
-      "https://www.quadruped.de/media/image/product/62/xs/quadruped-b1-bldc-actuator.webp",
-      "https://www.quadruped.de/media/image/product/62/sm/quadruped-b1-bldc-actuator.webp",
-      "https://www.quadruped.de/media/image/product/62/md/quadruped-b1-bldc-actuator.webp",
-      "https://www.quadruped.de/media/image/product/62/lg/quadruped-b1-bldc-actuator.webp",
-      "https://www.quadruped.de/media/image/product/62/xs/quadruped-b1-bldc-actuator.png"
-    ],
-    "createdAt": "2026-04-25T06:39:12Z"
-  },
-  {
-    "id": "quadruped-b1-ouster-mapping-upgrade",
-    "slug": "quadruped-b1-ouster-mapping-upgrade",
-    "name": "QUADRUPED B1 OUSTER MAPPING UPGRADE",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED B1 OUSTER MAPPING UPGRADE",
-    "description": "QUADRUPED B1 OUSTER MAPPING UPGRADE",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1141/lg/quadruped-b1-ouster-mapping-upgrade.jpg",
-      "https://www.quadruped.de/media/image/product/1141/xs/quadruped-b1-ouster-mapping-upgrade.webp",
-      "https://www.quadruped.de/media/image/product/1141/sm/quadruped-b1-ouster-mapping-upgrade.webp",
-      "https://www.quadruped.de/media/image/product/1141/md/quadruped-b1-ouster-mapping-upgrade.webp",
-      "https://www.quadruped.de/media/image/product/1141/lg/quadruped-b1-ouster-mapping-upgrade.webp",
-      "https://www.quadruped.de/media/image/product/1141/xs/quadruped-b1-ouster-mapping-upgrade.jpg"
-    ],
-    "createdAt": "2026-04-25T06:39:13Z"
-  },
-  {
-    "id": "quadruped-b2",
-    "slug": "quadruped-b2",
-    "name": "QUADRUPED B1",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED B1",
-    "description": "QUADRUPED B1",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1180/lg/quadruped-b2.png",
-      "https://www.quadruped.de/media/image/product/1180/xs/quadruped-b2.webp",
-      "https://www.quadruped.de/media/image/product/1180/sm/quadruped-b2.webp",
-      "https://www.quadruped.de/media/image/product/1180/md/quadruped-b2.webp",
-      "https://www.quadruped.de/media/image/product/1180/lg/quadruped-b2.webp",
-      "https://www.quadruped.de/media/image/product/1180/xs/quadruped-b2.png"
-    ],
-    "createdAt": "2026-04-25T06:39:13Z"
-  },
-  {
-    "id": "quadruped-b2-battery",
-    "slug": "quadruped-b2-battery",
-    "name": "QUADRUPED B2 BATTERY",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 4284.0,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED B2 BATTERY",
-    "description": "QUADRUPED B2 BATTERY",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1184/lg/quadruped-b2-battery.png",
-      "https://www.quadruped.de/media/image/product/1184/xs/quadruped-b2-battery.webp",
-      "https://www.quadruped.de/media/image/product/1184/sm/quadruped-b2-battery.webp",
-      "https://www.quadruped.de/media/image/product/1184/md/quadruped-b2-battery.webp",
-      "https://www.quadruped.de/media/image/product/1184/lg/quadruped-b2-battery.webp",
-      "https://www.quadruped.de/media/image/product/1184/xs/quadruped-b2-battery.png"
-    ],
-    "createdAt": "2026-04-25T06:39:14Z"
-  },
-  {
-    "id": "quadruped-b2-charger",
-    "slug": "quadruped-b2-charger",
-    "name": "QUADRUPED B2 CHARGER",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 1094.8,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED B2 CHARGER",
-    "description": "QUADRUPED B2 CHARGER",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/gfx/keinBild.gif"
-    ],
-    "createdAt": "2026-04-25T06:39:14Z"
-  },
-  {
-    "id": "quadruped-b2-self-charging-station",
-    "slug": "quadruped-b2-self-charging-station",
-    "name": "QUADRUPED B2 SELF-CHARGING STATION, 4.800,00 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 5712.0,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED B2 SELF-CHARGING STATION, 4.800,00 &EURO;",
-    "description": "QUADRUPED B2 SELF-CHARGING STATION, 4.800,00 &EURO;",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/gfx/keinBild.gif"
-    ],
-    "createdAt": "2026-04-25T06:39:15Z"
-  },
-  {
-    "id": "quadruped-edu-plus-mid360-upgrade-kit",
-    "slug": "quadruped-edu-plus-mid360-upgrade-kit",
-    "name": "QUADRUPED EDU PLUS MID360 UPGRADE KIT",
-    "brand": "Unitree",
-    "category": "Unitree",
+    "id": "404221-1855",
+    "slug": "temi-3-reception-and-telepresence-robot-404221-1855",
+    "name": "Temi 3 reception and telepresence robot",
+    "brand": "Temi",
+    "category": "Service robots",
     "solutionSlug": "accessori",
-    "priceEur": 2856.0,
+    "priceEur": 9810.0,
     "currency": "EUR",
-    "shortDescription": "QUADRUPED EDU PLUS MID360 UPGRADE KIT",
-    "description": "QUADRUPED EDU PLUS MID360 UPGRADE KIT",
+    "shortDescription": "Temi 3 reception and telepresence robot",
+    "description": "Temi 3 reception and telepresence robot",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/1317/lg/quadruped-edu-plus-mid360-upgrade-kit.png",
-      "https://www.quadruped.de/media/image/product/1317/xs/quadruped-edu-plus-mid360-upgrade-kit.webp",
-      "https://www.quadruped.de/media/image/product/1317/sm/quadruped-edu-plus-mid360-upgrade-kit.webp",
-      "https://www.quadruped.de/media/image/product/1317/md/quadruped-edu-plus-mid360-upgrade-kit.webp",
-      "https://www.quadruped.de/media/image/product/1317/lg/quadruped-edu-plus-mid360-upgrade-kit.webp",
-      "https://www.quadruped.de/media/image/product/1317/xs/quadruped-edu-plus-mid360-upgrade-kit.png"
+      "https://www.generationrobots.com/20650-large_default/temi-3-service-robot.jpg"
     ],
-    "createdAt": "2026-04-25T06:39:15Z"
+    "createdAt": "2026-04-25T09:02:26.702181Z"
   },
   {
-    "id": "quadruped-go1-charger",
-    "slug": "quadruped-go1-charger",
-    "name": "QUADRUPED GO1 CHARGER, 200,00 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 238.0,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED GO1 CHARGER, 200,00 &EURO;",
-    "description": "QUADRUPED GO1 CHARGER, 200,00 &EURO;",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1149/lg/quadruped-go1-charger.png",
-      "https://www.quadruped.de/media/image/product/1149/xs/quadruped-go1-charger.webp",
-      "https://www.quadruped.de/media/image/product/1149/sm/quadruped-go1-charger.webp",
-      "https://www.quadruped.de/media/image/product/1149/md/quadruped-go1-charger.webp",
-      "https://www.quadruped.de/media/image/product/1149/lg/quadruped-go1-charger.webp",
-      "https://www.quadruped.de/media/image/product/1149/xs/quadruped-go1-charger.png"
-    ],
-    "createdAt": "2026-04-25T06:39:16Z"
-  },
-  {
-    "id": "quadruped-go1-go2-mobile-manipulation",
-    "slug": "quadruped-go1-go2-mobile-manipulation",
-    "name": "QUADRUPED GO1 / GO2 MOBILE MANIPULATION",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 7140.0,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED GO1 / GO2 MOBILE MANIPULATION",
-    "description": "QUADRUPED GO1 / GO2 MOBILE MANIPULATION",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1208/lg/quadruped-go1-go2-mobile-manipulation.png",
-      "https://www.quadruped.de/media/image/product/1208/xs/quadruped-go1-go2-mobile-manipulation.webp",
-      "https://www.quadruped.de/media/image/product/1208/sm/quadruped-go1-go2-mobile-manipulation.webp",
-      "https://www.quadruped.de/media/image/product/1208/md/quadruped-go1-go2-mobile-manipulation.webp",
-      "https://www.quadruped.de/media/image/product/1208/lg/quadruped-go1-go2-mobile-manipulation.webp",
-      "https://www.quadruped.de/media/image/product/1208/xs/quadruped-go1-go2-mobile-manipulation.png"
-    ],
-    "createdAt": "2026-04-25T06:39:16Z"
-  },
-  {
-    "id": "quadruped-go1-go2-mobile-manipulator",
-    "slug": "quadruped-go1-go2-mobile-manipulator",
-    "name": "QUADRUPED GO1 / GO2 MOBILE MANIPULATION",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 7140.0,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED GO1 / GO2 MOBILE MANIPULATION",
-    "description": "QUADRUPED GO1 / GO2 MOBILE MANIPULATION",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1208/lg/quadruped-go1-go2-mobile-manipulation.png",
-      "https://www.quadruped.de/media/image/product/1208/xs/quadruped-go1-go2-mobile-manipulation.webp",
-      "https://www.quadruped.de/media/image/product/1208/sm/quadruped-go1-go2-mobile-manipulation.webp",
-      "https://www.quadruped.de/media/image/product/1208/md/quadruped-go1-go2-mobile-manipulation.webp",
-      "https://www.quadruped.de/media/image/product/1208/lg/quadruped-go1-go2-mobile-manipulation.webp",
-      "https://www.quadruped.de/media/image/product/1208/xs/quadruped-go1-go2-mobile-manipulation.png"
-    ],
-    "createdAt": "2026-04-25T06:39:17Z"
-  },
-  {
-    "id": "quadruped-go1-smart-actuator",
-    "slug": "quadruped-go1-smart-actuator",
-    "name": "QUADRUPED GO1 SMART ACTUATOR",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 952.0,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED GO1 SMART ACTUATOR",
-    "description": "QUADRUPED GO1 SMART ACTUATOR",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1146/lg/quadruped-go1-smart-actuator.png",
-      "https://www.quadruped.de/media/image/product/1146/xs/quadruped-go1-smart-actuator.webp",
-      "https://www.quadruped.de/media/image/product/1146/sm/quadruped-go1-smart-actuator.webp",
-      "https://www.quadruped.de/media/image/product/1146/md/quadruped-go1-smart-actuator.webp",
-      "https://www.quadruped.de/media/image/product/1146/lg/quadruped-go1-smart-actuator.webp",
-      "https://www.quadruped.de/media/image/product/1146/xs/quadruped-go1-smart-actuator.png"
-    ],
-    "createdAt": "2026-04-25T06:39:17Z"
-  },
-  {
-    "id": "quadruped-go1-spare-battery",
-    "slug": "quadruped-go1-spare-battery",
-    "name": "QUADRUPED GO1 SPARE BATTERY",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 833.0,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED GO1 SPARE BATTERY",
-    "description": "QUADRUPED GO1 SPARE BATTERY",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1129/lg/quadruped-go1-spare-battery.jpg",
-      "https://www.quadruped.de/media/image/product/1129/xs/quadruped-go1-spare-battery.webp",
-      "https://www.quadruped.de/media/image/product/1129/sm/quadruped-go1-spare-battery.webp",
-      "https://www.quadruped.de/media/image/product/1129/md/quadruped-go1-spare-battery.webp",
-      "https://www.quadruped.de/media/image/product/1129/lg/quadruped-go1-spare-battery.webp",
-      "https://www.quadruped.de/media/image/product/1129/xs/quadruped-go1-spare-battery.jpg"
-    ],
-    "createdAt": "2026-04-25T06:39:18Z"
-  },
-  {
-    "id": "quadruped-go2",
-    "slug": "quadruped-go2",
-    "name": "QUADRUPED GO2",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 2618.0,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED GO2",
-    "description": "QUADRUPED GO2",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1154/lg/quadruped-go2.png",
-      "https://www.quadruped.de/media/image/product/1154/xs/quadruped-go2.webp",
-      "https://www.quadruped.de/media/image/product/1154/sm/quadruped-go2.webp",
-      "https://www.quadruped.de/media/image/product/1154/md/quadruped-go2.webp",
-      "https://www.quadruped.de/media/image/product/1154/lg/quadruped-go2.webp",
-      "https://www.quadruped.de/media/image/product/1154/xs/quadruped-go2.png"
-    ],
-    "createdAt": "2026-04-25T06:39:19Z"
-  },
-  {
-    "id": "quadruped-go2-charger",
-    "slug": "quadruped-go2-charger",
-    "name": "QUADRUPED GO2 CHARGER, 60,00 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 71.4,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED GO2 CHARGER, 60,00 &EURO;",
-    "description": "QUADRUPED GO2 CHARGER, 60,00 &EURO;",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1159/lg/quadruped-go2-ladegeraet.png",
-      "https://www.quadruped.de/media/image/product/1159/xs/quadruped-go2-ladegeraet.webp",
-      "https://www.quadruped.de/media/image/product/1159/sm/quadruped-go2-ladegeraet.webp",
-      "https://www.quadruped.de/media/image/product/1159/md/quadruped-go2-ladegeraet.webp",
-      "https://www.quadruped.de/media/image/product/1159/lg/quadruped-go2-ladegeraet.webp",
-      "https://www.quadruped.de/media/image/product/1159/xs/quadruped-go2-ladegeraet.png"
-    ],
-    "createdAt": "2026-04-25T06:39:19Z"
-  },
-  {
-    "id": "quadruped-go2-charger-fast-charging",
-    "slug": "quadruped-go2-charger-fast-charging",
-    "name": "QUADRUPED GO2 CHARGER (FAST CHARGING)",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 142.8,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED GO2 CHARGER (FAST CHARGING)",
-    "description": "QUADRUPED GO2 CHARGER (FAST CHARGING)",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1160/lg/quadruped-go2-ladegeraet-fast-charging.png",
-      "https://www.quadruped.de/media/image/product/1160/xs/quadruped-go2-ladegeraet-fast-charging.webp",
-      "https://www.quadruped.de/media/image/product/1160/sm/quadruped-go2-ladegeraet-fast-charging.webp",
-      "https://www.quadruped.de/media/image/product/1160/md/quadruped-go2-ladegeraet-fast-charging.webp",
-      "https://www.quadruped.de/media/image/product/1160/lg/quadruped-go2-ladegeraet-fast-charging.webp",
-      "https://www.quadruped.de/media/image/product/1160/xs/quadruped-go2-ladegeraet-fast-charging.png"
-    ],
-    "createdAt": "2026-04-25T06:39:20Z"
-  },
-  {
-    "id": "quadruped-go2-docking-station-100-tops",
-    "slug": "quadruped-go2-docking-station-100-tops",
-    "name": "QUADRUPED GO2 DOCKING STATION 100 TOPS",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 3449.95,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED GO2 DOCKING STATION 100 TOPS",
-    "description": "QUADRUPED GO2 DOCKING STATION 100 TOPS",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1210/lg/quadruped-go2-docking-station-100-tops.png",
-      "https://www.quadruped.de/media/image/product/1210/xs/quadruped-go2-docking-station-100-tops.webp",
-      "https://www.quadruped.de/media/image/product/1210/sm/quadruped-go2-docking-station-100-tops.webp",
-      "https://www.quadruped.de/media/image/product/1210/md/quadruped-go2-docking-station-100-tops.webp",
-      "https://www.quadruped.de/media/image/product/1210/lg/quadruped-go2-docking-station-100-tops.webp",
-      "https://www.quadruped.de/media/image/product/1210/xs/quadruped-go2-docking-station-100-tops.png"
-    ],
-    "createdAt": "2026-04-25T06:39:20Z"
-  },
-  {
-    "id": "quadruped-go2-docking-station-40-tops",
-    "slug": "quadruped-go2-docking-station-40-tops",
-    "name": "QUADRUPED GO2 DOCKING STATION 40 TOPS",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 1749.95,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED GO2 DOCKING STATION 40 TOPS",
-    "description": "QUADRUPED GO2 DOCKING STATION 40 TOPS",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1209/lg/quadruped-go2-docking-station-40-tops.png",
-      "https://www.quadruped.de/media/image/product/1209/xs/quadruped-go2-docking-station-40-tops.webp",
-      "https://www.quadruped.de/media/image/product/1209/sm/quadruped-go2-docking-station-40-tops.webp",
-      "https://www.quadruped.de/media/image/product/1209/md/quadruped-go2-docking-station-40-tops.webp",
-      "https://www.quadruped.de/media/image/product/1209/lg/quadruped-go2-docking-station-40-tops.webp",
-      "https://www.quadruped.de/media/image/product/1209/xs/quadruped-go2-docking-station-40-tops.png"
-    ],
-    "createdAt": "2026-04-25T06:39:21Z"
-  },
-  {
-    "id": "quadruped-go2-ladegeraet",
-    "slug": "quadruped-go2-ladegeraet",
-    "name": "QUADRUPED GO2 LADEGER&AUML;T, 60,00 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 71.4,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED GO2 LADEGER&AUML;T, 60,00 &EURO;",
-    "description": "QUADRUPED GO2 LADEGER&AUML;T, 60,00 &EURO;",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1159/lg/quadruped-go2-ladegeraet.png",
-      "https://www.quadruped.de/media/image/product/1159/xs/quadruped-go2-ladegeraet.webp",
-      "https://www.quadruped.de/media/image/product/1159/sm/quadruped-go2-ladegeraet.webp",
-      "https://www.quadruped.de/media/image/product/1159/md/quadruped-go2-ladegeraet.webp",
-      "https://www.quadruped.de/media/image/product/1159/lg/quadruped-go2-ladegeraet.webp",
-      "https://www.quadruped.de/media/image/product/1159/xs/quadruped-go2-ladegeraet.png"
-    ],
-    "createdAt": "2026-04-25T06:39:21Z"
-  },
-  {
-    "id": "quadruped-go2-ladegeraet-fast-charging",
-    "slug": "quadruped-go2-ladegeraet-fast-charging",
-    "name": "QUADRUPED GO2 CHARGER (FAST CHARGING)",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 142.8,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED GO2 CHARGER (FAST CHARGING)",
-    "description": "QUADRUPED GO2 CHARGER (FAST CHARGING)",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1160/lg/quadruped-go2-ladegeraet-fast-charging.png",
-      "https://www.quadruped.de/media/image/product/1160/xs/quadruped-go2-ladegeraet-fast-charging.webp",
-      "https://www.quadruped.de/media/image/product/1160/sm/quadruped-go2-ladegeraet-fast-charging.webp",
-      "https://www.quadruped.de/media/image/product/1160/md/quadruped-go2-ladegeraet-fast-charging.webp",
-      "https://www.quadruped.de/media/image/product/1160/lg/quadruped-go2-ladegeraet-fast-charging.webp",
-      "https://www.quadruped.de/media/image/product/1160/xs/quadruped-go2-ladegeraet-fast-charging.png"
-    ],
-    "createdAt": "2026-04-25T06:39:22Z"
-  },
-  {
-    "id": "quadruped-go2-self-charging-station",
-    "slug": "quadruped-go2-self-charging-station",
-    "name": "QUADRUPED GO2 SELF-CHARGING BOARD",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 952.0,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED GO2 SELF-CHARGING BOARD",
-    "description": "QUADRUPED GO2 SELF-CHARGING BOARD",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1156/lg/quadruped-go2-self-charging-station.png",
-      "https://www.quadruped.de/media/image/product/1156/xs/quadruped-go2-self-charging-station.webp",
-      "https://www.quadruped.de/media/image/product/1156/sm/quadruped-go2-self-charging-station.webp",
-      "https://www.quadruped.de/media/image/product/1156/md/quadruped-go2-self-charging-station.webp",
-      "https://www.quadruped.de/media/image/product/1156/lg/quadruped-go2-self-charging-station.webp",
-      "https://www.quadruped.de/media/image/product/1156/xs/quadruped-go2-self-charging-station.png"
-    ],
-    "createdAt": "2026-04-25T06:39:23Z"
-  },
-  {
-    "id": "quadruped-go2-self-charging-board",
-    "slug": "quadruped-go2-self-charging-board",
-    "name": "QUADRUPED GO2 SELF-CHARGING BOARD, 800,00 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 952.0,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED GO2 SELF-CHARGING BOARD, 800,00 &EURO;",
-    "description": "QUADRUPED GO2 SELF-CHARGING BOARD, 800,00 &EURO;",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1156/lg/quadruped-go2-self-charging-station.png",
-      "https://www.quadruped.de/media/image/product/1156/xs/quadruped-go2-self-charging-station.webp",
-      "https://www.quadruped.de/media/image/product/1156/sm/quadruped-go2-self-charging-station.webp",
-      "https://www.quadruped.de/media/image/product/1156/md/quadruped-go2-self-charging-station.webp",
-      "https://www.quadruped.de/media/image/product/1156/lg/quadruped-go2-self-charging-station.webp",
-      "https://www.quadruped.de/media/image/product/1156/xs/quadruped-go2-self-charging-station.png"
-    ],
-    "createdAt": "2026-04-25T06:39:23Z"
-  },
-  {
-    "id": "quadruped-go2-servo-robotic-arm",
-    "slug": "quadruped-go2-servo-robotic-arm",
-    "name": "QUADRUPED GO2 SERVO ROBOTIC ARM",
-    "brand": "Unitree",
-    "category": "Unitree",
+    "id": "404223",
+    "slug": "cobot-magic-remotely-operated-platform-404223",
+    "name": "Cobot Magic - remotely operated platform",
+    "brand": "AgileX",
+    "category": "Robotic arms",
     "solutionSlug": "braccia",
-    "priceEur": 4498.2,
+    "priceEur": 62400.0,
     "currency": "EUR",
-    "shortDescription": "QUADRUPED GO2 SERVO ROBOTIC ARM",
-    "description": "QUADRUPED GO2 SERVO ROBOTIC ARM",
+    "shortDescription": "Cobot Magic - remotely operated platform",
+    "description": "Cobot Magic - remotely operated platform",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/1167/lg/quadruped-go2-servo-robotic-arm.png",
-      "https://www.quadruped.de/media/image/product/1167/xs/quadruped-go2-servo-robotic-arm.webp",
-      "https://www.quadruped.de/media/image/product/1167/sm/quadruped-go2-servo-robotic-arm.webp",
-      "https://www.quadruped.de/media/image/product/1167/md/quadruped-go2-servo-robotic-arm.webp",
-      "https://www.quadruped.de/media/image/product/1167/lg/quadruped-go2-servo-robotic-arm.webp",
-      "https://www.quadruped.de/media/image/product/1167/xs/quadruped-go2-servo-robotic-arm.png"
+      "https://www.generationrobots.com/20603-large_default/cobot-magic-remotely-operated-platform.jpg"
     ],
-    "createdAt": "2026-04-25T06:39:24Z"
+    "createdAt": "2026-04-25T09:02:28.026520Z"
   },
   {
-    "id": "quadruped-go2-spare-battery-15000mah",
-    "slug": "quadruped-go2-spare-battery-15000mah",
-    "name": "QUADRUPED GO2 SPARE BATTERY 15000MAH",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 773.5,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED GO2 SPARE BATTERY 15000MAH",
-    "description": "QUADRUPED GO2 SPARE BATTERY 15000MAH",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1158/lg/quadruped-go2-spare-battery-15000mah.png",
-      "https://www.quadruped.de/media/image/product/1158/xs/quadruped-go2-spare-battery-15000mah.webp",
-      "https://www.quadruped.de/media/image/product/1158/sm/quadruped-go2-spare-battery-15000mah.webp",
-      "https://www.quadruped.de/media/image/product/1158/md/quadruped-go2-spare-battery-15000mah.webp",
-      "https://www.quadruped.de/media/image/product/1158/lg/quadruped-go2-spare-battery-15000mah.webp",
-      "https://www.quadruped.de/media/image/product/1158/xs/quadruped-go2-spare-battery-15000mah.png"
-    ],
-    "createdAt": "2026-04-25T06:39:25Z"
-  },
-  {
-    "id": "quadruped-go2-spare-battery-8000mah",
-    "slug": "quadruped-go2-spare-battery-8000mah",
-    "name": "QUADRUPED GO2 SPARE BATTERY 8000MAH, 450,00 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 535.5,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED GO2 SPARE BATTERY 8000MAH, 450,00 &EURO;",
-    "description": "QUADRUPED GO2 SPARE BATTERY 8000MAH, 450,00 &EURO;",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1157/lg/quadruped-go2-spare-battery-8000mah.png",
-      "https://www.quadruped.de/media/image/product/1157/xs/quadruped-go2-spare-battery-8000mah.webp",
-      "https://www.quadruped.de/media/image/product/1157/sm/quadruped-go2-spare-battery-8000mah.webp",
-      "https://www.quadruped.de/media/image/product/1157/md/quadruped-go2-spare-battery-8000mah.webp",
-      "https://www.quadruped.de/media/image/product/1157/lg/quadruped-go2-spare-battery-8000mah.webp",
-      "https://www.quadruped.de/media/image/product/1157/xs/quadruped-go2-spare-battery-8000mah.png"
-    ],
-    "createdAt": "2026-04-25T06:39:25Z"
-  },
-  {
-    "id": "quadruped-go2-w",
-    "slug": "quadruped-go2-w",
-    "name": "QUADRUPED GO2-W",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 20230.0,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED GO2-W",
-    "description": "QUADRUPED GO2-W",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1284/lg/quadruped-go2w.png",
-      "https://www.quadruped.de/media/image/product/1284/xs/quadruped-go2w.webp",
-      "https://www.quadruped.de/media/image/product/1284/sm/quadruped-go2w.webp",
-      "https://www.quadruped.de/media/image/product/1284/md/quadruped-go2w.webp",
-      "https://www.quadruped.de/media/image/product/1284/lg/quadruped-go2w.webp",
-      "https://www.quadruped.de/media/image/product/1284/xs/quadruped-go2w.png"
-    ],
-    "createdAt": "2026-04-25T06:39:26Z"
-  },
-  {
-    "id": "quadruped-go2w",
-    "slug": "quadruped-go2w",
-    "name": "QUADRUPED GO2-W",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 20230.0,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED GO2-W",
-    "description": "QUADRUPED GO2-W",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1284/lg/quadruped-go2w.png",
-      "https://www.quadruped.de/media/image/product/1284/xs/quadruped-go2w.webp",
-      "https://www.quadruped.de/media/image/product/1284/sm/quadruped-go2w.webp",
-      "https://www.quadruped.de/media/image/product/1284/md/quadruped-go2w.webp",
-      "https://www.quadruped.de/media/image/product/1284/lg/quadruped-go2w.webp",
-      "https://www.quadruped.de/media/image/product/1284/xs/quadruped-go2w.png"
-    ],
-    "createdAt": "2026-04-25T06:39:26Z"
-  },
-  {
-    "id": "quadruped-remote-controller",
-    "slug": "quadruped-remote-controller",
-    "name": "QUADRUPED REMOTE CONTROLLER",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "QUADRUPED REMOTE CONTROLLER",
-    "description": "QUADRUPED REMOTE CONTROLLER",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1155/lg/unitree-remote-controller.png",
-      "https://www.quadruped.de/media/image/product/1155/xs/unitree-remote-controller.webp",
-      "https://www.quadruped.de/media/image/product/1155/sm/unitree-remote-controller.webp",
-      "https://www.quadruped.de/media/image/product/1155/md/unitree-remote-controller.webp",
-      "https://www.quadruped.de/media/image/product/1155/lg/unitree-remote-controller.webp",
-      "https://www.quadruped.de/media/image/product/1155/xs/unitree-remote-controller.png"
-    ],
-    "createdAt": "2026-04-25T06:39:27Z"
-  },
-  {
-    "id": "quadruped-unitree-z1",
-    "slug": "quadruped-unitree-z1",
-    "name": "QUADRUPED UNITREE Z1",
-    "brand": "Unitree",
-    "category": "Unitree",
+    "id": "404225",
+    "slug": "ufactory-lite-6-robotic-arm-404225",
+    "name": "UFactory Lite 6 robotic arm",
+    "brand": "UFactory",
+    "category": "Robotic arms",
     "solutionSlug": "braccia",
-    "priceEur": 10710.0,
+    "priceEur": 3600.0,
     "currency": "EUR",
-    "shortDescription": "QUADRUPED UNITREE Z1",
-    "description": "QUADRUPED UNITREE Z1",
+    "shortDescription": "UFactory Lite 6 robotic arm",
+    "description": "UFactory Lite 6 robotic arm",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/55/lg/quadruped-unitree-z1.jpg",
-      "https://www.quadruped.de/media/image/product/55/xs/quadruped-unitree-z1.webp",
-      "https://www.quadruped.de/media/image/product/55/sm/quadruped-unitree-z1.webp",
-      "https://www.quadruped.de/media/image/product/55/md/quadruped-unitree-z1.webp",
-      "https://www.quadruped.de/media/image/product/55/lg/quadruped-unitree-z1.webp",
-      "https://www.quadruped.de/media/image/product/55/xs/quadruped-unitree-z1.jpg"
+      "https://www.generationrobots.com/20392-large_default/lite-6-robotic-arm.jpg"
     ],
-    "createdAt": "2026-04-25T06:39:28Z"
+    "createdAt": "2026-04-25T09:02:29.612952Z"
   },
   {
-    "id": "quadruped-unitree-z1-gripper",
-    "slug": "quadruped-unitree-z1-gripper",
-    "name": "QUADRUPED UNITREE Z1-GRIPPER",
-    "brand": "Unitree",
-    "category": "Unitree",
+    "id": "404226",
+    "slug": "ufactory-850-robotic-arm-404226",
+    "name": "UFactory 850 Robotic Arm",
+    "brand": "UFactory",
+    "category": "Robotic arms",
     "solutionSlug": "braccia",
-    "priceEur": 2231.25,
+    "priceEur": 10800.0,
     "currency": "EUR",
-    "shortDescription": "QUADRUPED UNITREE Z1-GRIPPER",
-    "description": "QUADRUPED UNITREE Z1-GRIPPER",
+    "shortDescription": "UFactory 850 Robotic Arm",
+    "description": "UFactory 850 Robotic Arm",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/1125/lg/quadruped-unitree-z1-gripper.png",
-      "https://www.quadruped.de/media/image/product/1125/xs/quadruped-unitree-z1-gripper.webp",
-      "https://www.quadruped.de/media/image/product/1125/sm/quadruped-unitree-z1-gripper.webp",
-      "https://www.quadruped.de/media/image/product/1125/md/quadruped-unitree-z1-gripper.webp",
-      "https://www.quadruped.de/media/image/product/1125/lg/quadruped-unitree-z1-gripper.webp",
-      "https://www.quadruped.de/media/image/product/1125/xs/quadruped-unitree-z1-gripper.png"
+      "https://www.generationrobots.com/20395-large_default/850-robotic-arm.jpg"
     ],
-    "createdAt": "2026-04-25T06:39:28Z"
+    "createdAt": "2026-04-25T09:02:31.118842Z"
   },
   {
-    "id": "unitree-4d-lidar-l1",
-    "slug": "unitree-4d-lidar-l1",
-    "name": "UNITREE 4D-LIDAR L1",
-    "brand": "Unitree",
-    "category": "Unitree",
+    "id": "404231",
+    "slug": "charging-station-for-unitree-go2-404231",
+    "name": "Charging station for Unitree Go2",
+    "brand": "Unitree Robotics",
+    "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
-    "priceEur": 392.7,
+    "priceEur": 1200.0,
     "currency": "EUR",
-    "shortDescription": "UNITREE 4D-LIDAR L1",
-    "description": "UNITREE 4D-LIDAR L1",
+    "shortDescription": "Charging station for Unitree Go2",
+    "description": "Charging station for Unitree Go2",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/1169/lg/unitree-4d-lidar-l1.png",
-      "https://www.quadruped.de/media/image/product/1169/xs/unitree-4d-lidar-l1.webp",
-      "https://www.quadruped.de/media/image/product/1169/sm/unitree-4d-lidar-l1.webp",
-      "https://www.quadruped.de/media/image/product/1169/md/unitree-4d-lidar-l1.webp",
-      "https://www.quadruped.de/media/image/product/1169/lg/unitree-4d-lidar-l1.webp",
-      "https://www.quadruped.de/media/image/product/1169/xs/unitree-4d-lidar-l1.png"
+      "https://www.generationrobots.com/20415-large_default/go2-docking-station.jpg"
     ],
-    "createdAt": "2026-04-25T06:39:29Z"
+    "createdAt": "2026-04-25T09:02:32.549214Z"
   },
   {
-    "id": "unitree-4d-lidar-l2",
-    "slug": "unitree-4d-lidar-l2",
-    "name": "UNITREE 4D LIDAR L2 LIDAR",
-    "brand": "Unitree",
-    "category": "Unitree",
+    "id": "404259",
+    "slug": "bundle-discovery-educational-robotic-solution-404259",
+    "name": "Bundle Discovery - Educational Robotic Solution",
+    "brand": "Niryo",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 7918.8,
+    "currency": "EUR",
+    "shortDescription": "Bundle Discovery - Educational Robotic Solution",
+    "description": "Bundle Discovery - Educational Robotic Solution",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/20531-large_default/bundle-discovery-educational-robotic-solution.jpg"
+    ],
+    "createdAt": "2026-04-25T09:02:33.953528Z"
+  },
+  {
+    "id": "404261",
+    "slug": "custom-gripper-for-the-niryo-ned2-6-axis-robot-arm-404261",
+    "name": "Custom Gripper for the Niryo Ned2 6-Axis Robot Arm",
+    "brand": "Niryo",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 202.8,
+    "currency": "EUR",
+    "shortDescription": "Custom Gripper for the Niryo Ned2 6-Axis Robot Arm",
+    "description": "Custom Gripper for the Niryo Ned2 6-Axis Robot Arm",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/20576-large_default/custom-gripper-for-the-niryo-ned2-6-axis-robot-arm.jpg"
+    ],
+    "createdAt": "2026-04-25T09:02:35.340859Z"
+  },
+  {
+    "id": "404272",
+    "slug": "widowx-aloha-set-404272",
+    "name": "WidowX Aloha Set",
+    "brand": "Trossen Robotics",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 11918.4,
+    "currency": "EUR",
+    "shortDescription": "WidowX Aloha Set",
+    "description": "WidowX Aloha Set",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/20616-large_default/widowx-aloha-set.jpg"
+    ],
+    "createdAt": "2026-04-25T09:02:36.650883Z"
+  },
+  {
+    "id": "404277",
+    "slug": "x30-pro-quadruped-robot-404277",
+    "name": "X30 Pro quadruped robot",
+    "brand": "Deep Robotics",
+    "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
-    "priceEur": 599.95,
+    "priceEur": 114000.0,
     "currency": "EUR",
-    "shortDescription": "UNITREE 4D LIDAR L2 LIDAR",
-    "description": "UNITREE 4D LIDAR L2 LIDAR",
+    "shortDescription": "X30 Pro quadruped robot",
+    "description": "X30 Pro quadruped robot",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/1321/lg/unitree-4d-lidar-l2.png",
-      "https://www.quadruped.de/media/image/product/1321/xs/unitree-4d-lidar-l2.webp",
-      "https://www.quadruped.de/media/image/product/1321/sm/unitree-4d-lidar-l2.webp",
-      "https://www.quadruped.de/media/image/product/1321/md/unitree-4d-lidar-l2.webp",
-      "https://www.quadruped.de/media/image/product/1321/lg/unitree-4d-lidar-l2.webp",
-      "https://www.quadruped.de/media/image/product/1321/xs/unitree-4d-lidar-l2.png"
+      "https://www.generationrobots.com/20631-large_default/x30-quadruped-robot.jpg"
     ],
-    "createdAt": "2026-04-25T06:39:29Z"
+    "createdAt": "2026-04-25T09:02:37.849783Z"
   },
   {
-    "id": "unitree-4d-lidar-l2-lidar",
-    "slug": "unitree-4d-lidar-l2-lidar",
-    "name": "UNITREE 4D LIDAR L2 LIDAR",
-    "brand": "Unitree",
-    "category": "Unitree",
+    "id": "404278-1849",
+    "slug": "booster-t1-humanoid-robot-404278-1849",
+    "name": "Booster T1 humanoid robot",
+    "brand": "Booster Robotics",
+    "category": "Humanoid robots",
+    "solutionSlug": "umanoidi",
+    "priceEur": 39000.0,
+    "currency": "EUR",
+    "shortDescription": "Booster T1 humanoid robot",
+    "description": "Booster T1 humanoid robot",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/20637-large_default/booster-t1-humanoid-robot.jpg"
+    ],
+    "createdAt": "2026-04-25T09:02:39.105124Z"
+  },
+  {
+    "id": "404279",
+    "slug": "ned3-pro-6-axis-robot-arm-404279",
+    "name": "Ned3 Pro 6-axis Robot Arm",
+    "brand": "Niryo",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 8280.0,
+    "currency": "EUR",
+    "shortDescription": "Ned3 Pro 6-axis Robot Arm",
+    "description": "Ned3 Pro 6-axis Robot Arm",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/20665-large_default/bras-robotique-6-axes-ned3-pro.jpg"
+    ],
+    "createdAt": "2026-04-25T09:02:40.453072Z"
+  },
+  {
+    "id": "404293",
+    "slug": "nao-activities-404293",
+    "name": "Nao Activities",
+    "brand": "Maxtronics",
+    "category": "Humanoid robots",
+    "solutionSlug": "umanoidi",
+    "priceEur": 1200.0,
+    "currency": "EUR",
+    "shortDescription": "Nao Activities",
+    "description": "Nao Activities",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/20701-large_default/nao-activities.jpg"
+    ],
+    "createdAt": "2026-04-25T09:02:41.643207Z"
+  },
+  {
+    "id": "404312",
+    "slug": "lynx-m20-pro-quadruped-robot-404312",
+    "name": "LYNX M20 Pro Quadruped Robot",
+    "brand": "Deep Robotics",
+    "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
-    "priceEur": 599.95,
+    "priceEur": 53988.0,
     "currency": "EUR",
-    "shortDescription": "UNITREE 4D LIDAR L2 LIDAR",
-    "description": "UNITREE 4D LIDAR L2 LIDAR",
+    "shortDescription": "LYNX M20 Pro Quadruped Robot",
+    "description": "LYNX M20 Pro Quadruped Robot",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/1321/lg/unitree-4d-lidar-l2.png",
-      "https://www.quadruped.de/media/image/product/1321/xs/unitree-4d-lidar-l2.webp",
-      "https://www.quadruped.de/media/image/product/1321/sm/unitree-4d-lidar-l2.webp",
-      "https://www.quadruped.de/media/image/product/1321/md/unitree-4d-lidar-l2.webp",
-      "https://www.quadruped.de/media/image/product/1321/lg/unitree-4d-lidar-l2.webp",
-      "https://www.quadruped.de/media/image/product/1321/xs/unitree-4d-lidar-l2.png"
+      "https://www.generationrobots.com/20845-large_default/puma-pro-quadruped-robot.jpg"
     ],
-    "createdAt": "2026-04-25T06:39:30Z"
+    "createdAt": "2026-04-25T09:02:42.813220Z"
   },
   {
-    "id": "unitree-as2",
-    "slug": "unitree-as2",
-    "name": "UNITREE AS2",
-    "brand": "Unitree",
-    "category": "Unitree",
+    "id": "404337",
+    "slug": "stem-ranging-bundle-crazyflie-2-1-brushless-404337",
+    "name": "STEM ranging bundle - Crazyflie 2.1 Brushless",
+    "brand": "bitcraze",
+    "category": "Programmable drones",
     "solutionSlug": "accessori",
-    "priceEur": 0.0,
+    "priceEur": 822.0,
     "currency": "EUR",
-    "shortDescription": "UNITREE AS2",
-    "description": "UNITREE AS2",
+    "shortDescription": "STEM ranging bundle - Crazyflie 2.1 Brushless",
+    "description": "STEM ranging bundle - Crazyflie 2.1 Brushless",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/1551/lg/unitree-as2.png",
-      "https://www.quadruped.de/media/image/product/1551/xs/unitree-as2.webp",
-      "https://www.quadruped.de/media/image/product/1551/sm/unitree-as2.webp",
-      "https://www.quadruped.de/media/image/product/1551/md/unitree-as2.webp",
-      "https://www.quadruped.de/media/image/product/1551/lg/unitree-as2.webp",
-      "https://www.quadruped.de/media/image/product/1551/xs/unitree-as2.png"
+      "https://www.generationrobots.com/20850-large_default/stem-ranging-bundle-crazyflie-21-brushless.jpg"
     ],
-    "createdAt": "2026-04-25T06:39:31Z"
+    "createdAt": "2026-04-25T09:02:44.299389Z"
   },
   {
-    "id": "unitree-as2-batterie",
-    "slug": "unitree-as2-batterie",
-    "name": "UNITREE AS2 BATTERIE",
-    "brand": "Unitree",
-    "category": "Unitree",
+    "id": "404338",
+    "slug": "the-ai-bundle-crazyflie-2-1-brushless-404338",
+    "name": "The AI bundle - Crazyflie 2.1 Brushless",
+    "brand": "bitcraze",
+    "category": "Programmable drones",
     "solutionSlug": "accessori",
-    "priceEur": 374.85,
+    "priceEur": 946.8,
     "currency": "EUR",
-    "shortDescription": "UNITREE AS2 BATTERIE",
-    "description": "UNITREE AS2 BATTERIE",
+    "shortDescription": "The AI bundle - Crazyflie 2.1 Brushless",
+    "description": "The AI bundle - Crazyflie 2.1 Brushless",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/1562/lg/unitree-as2-batterie.png",
-      "https://www.quadruped.de/media/image/product/1562/xs/unitree-as2-batterie.webp",
-      "https://www.quadruped.de/media/image/product/1562/sm/unitree-as2-batterie.webp",
-      "https://www.quadruped.de/media/image/product/1562/md/unitree-as2-batterie.webp",
-      "https://www.quadruped.de/media/image/product/1562/lg/unitree-as2-batterie.webp",
-      "https://www.quadruped.de/media/image/product/1562/xs/unitree-as2-batterie.png"
+      "https://www.generationrobots.com/20851-large_default/the-ai-bundle-crazyflie-21-brushless.jpg"
     ],
-    "createdAt": "2026-04-25T06:39:31Z"
+    "createdAt": "2026-04-25T09:02:45.878388Z"
   },
   {
-    "id": "unitree-b2-fire-rescue",
-    "slug": "unitree-b2-fire-rescue",
-    "name": "UNITREE B2 FIRE RESCUE",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 98395.15,
-    "currency": "EUR",
-    "shortDescription": "UNITREE B2 FIRE RESCUE",
-    "description": "UNITREE B2 FIRE RESCUE",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1511/lg/unitree-b2-fire-rescue.png",
-      "https://www.quadruped.de/media/image/product/1511/xs/unitree-b2-fire-rescue.webp",
-      "https://www.quadruped.de/media/image/product/1511/sm/unitree-b2-fire-rescue.webp",
-      "https://www.quadruped.de/media/image/product/1511/md/unitree-b2-fire-rescue.webp",
-      "https://www.quadruped.de/media/image/product/1511/lg/unitree-b2-fire-rescue.webp",
-      "https://www.quadruped.de/media/image/product/1511/xs/unitree-b2-fire-rescue.png"
-    ],
-    "createdAt": "2026-04-25T06:39:32Z"
-  },
-  {
-    "id": "unitree-dex5-1-hand",
-    "slug": "unitree-dex5-1-hand",
-    "name": "UNITREE DEX5-1 HAND",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "braccia",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE DEX5-1 HAND",
-    "description": "UNITREE DEX5-1 HAND",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1380/lg/unitree-dex5-1-hand.png",
-      "https://www.quadruped.de/media/image/product/1380/xs/unitree-dex5-1-hand.webp",
-      "https://www.quadruped.de/media/image/product/1380/sm/unitree-dex5-1-hand.webp",
-      "https://www.quadruped.de/media/image/product/1380/md/unitree-dex5-1-hand.webp",
-      "https://www.quadruped.de/media/image/product/1380/lg/unitree-dex5-1-hand.webp",
-      "https://www.quadruped.de/media/image/product/1380/xs/unitree-dex5-1-hand.png"
-    ],
-    "createdAt": "2026-04-25T06:39:32Z"
-  },
-  {
-    "id": "unitree-g1",
-    "slug": "unitree-g1",
-    "name": "UNITREE G1",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE G1",
-    "description": "UNITREE G1",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1229/lg/unitree-g1.png",
-      "https://www.quadruped.de/media/image/product/1229/xs/unitree-g1.webp",
-      "https://www.quadruped.de/media/image/product/1229/sm/unitree-g1.webp",
-      "https://www.quadruped.de/media/image/product/1229/md/unitree-g1.webp",
-      "https://www.quadruped.de/media/image/product/1229/lg/unitree-g1.webp",
-      "https://www.quadruped.de/media/image/product/1229/xs/unitree-g1.png"
-    ],
-    "createdAt": "2026-04-25T06:39:33Z"
-  },
-  {
-    "id": "unitree-g1-arm-spare-part",
-    "slug": "unitree-g1-arm-spare-part",
-    "name": "UNITREE G1 ARM SPARE PART",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "braccia",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE G1 ARM SPARE PART",
-    "description": "UNITREE G1 ARM SPARE PART",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1587/lg/unitree-g1-arm-spare-part.png",
-      "https://www.quadruped.de/media/image/product/1587/xs/unitree-g1-arm-spare-part.webp",
-      "https://www.quadruped.de/media/image/product/1587/sm/unitree-g1-arm-spare-part.webp",
-      "https://www.quadruped.de/media/image/product/1587/md/unitree-g1-arm-spare-part.webp",
-      "https://www.quadruped.de/media/image/product/1587/lg/unitree-g1-arm-spare-part.webp",
-      "https://www.quadruped.de/media/image/product/1587/xs/unitree-g1-arm-spare-part.png"
-    ],
-    "createdAt": "2026-04-25T06:39:34Z"
-  },
-  {
-    "id": "unitree-g1-back-neck-rubber-cover",
-    "slug": "unitree-g1-back-neck-rubber-cover",
-    "name": "UNITREE G1 BACK NECK RUBBER COVER",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE G1 BACK NECK RUBBER COVER",
-    "description": "UNITREE G1 BACK NECK RUBBER COVER",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1573/lg/unitree-g1-back-neck-rubber-cover.png",
-      "https://www.quadruped.de/media/image/product/1573/xs/unitree-g1-back-neck-rubber-cover.webp",
-      "https://www.quadruped.de/media/image/product/1573/sm/unitree-g1-back-neck-rubber-cover.webp",
-      "https://www.quadruped.de/media/image/product/1573/md/unitree-g1-back-neck-rubber-cover.webp",
-      "https://www.quadruped.de/media/image/product/1573/lg/unitree-g1-back-neck-rubber-cover.webp",
-      "https://www.quadruped.de/media/image/product/1573/xs/unitree-g1-back-neck-rubber-cover.png"
-    ],
-    "createdAt": "2026-04-25T06:39:34Z"
-  },
-  {
-    "id": "unitree-g1-back-neck-shell",
-    "slug": "unitree-g1-back-neck-shell",
-    "name": "UNITREE G1 BACK NECK SHELL",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE G1 BACK NECK SHELL",
-    "description": "UNITREE G1 BACK NECK SHELL",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1574/lg/unitree-g1-back-neck-shell.png",
-      "https://www.quadruped.de/media/image/product/1574/xs/unitree-g1-back-neck-shell.webp",
-      "https://www.quadruped.de/media/image/product/1574/sm/unitree-g1-back-neck-shell.webp",
-      "https://www.quadruped.de/media/image/product/1574/md/unitree-g1-back-neck-shell.webp",
-      "https://www.quadruped.de/media/image/product/1574/lg/unitree-g1-back-neck-shell.webp",
-      "https://www.quadruped.de/media/image/product/1574/xs/unitree-g1-back-neck-shell.png"
-    ],
-    "createdAt": "2026-04-25T06:39:35Z"
-  },
-  {
-    "id": "unitree-g1-battery-9000-mah",
-    "slug": "unitree-g1-battery-9000-mah",
-    "name": "UNITREE G1 BATTERY 9000 MAH",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE G1 BATTERY 9000 MAH",
-    "description": "UNITREE G1 BATTERY 9000 MAH",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1236/lg/unitree-g1-battery-9000-mah.png",
-      "https://www.quadruped.de/media/image/product/1236/xs/unitree-g1-battery-9000-mah.webp",
-      "https://www.quadruped.de/media/image/product/1236/sm/unitree-g1-battery-9000-mah.webp",
-      "https://www.quadruped.de/media/image/product/1236/md/unitree-g1-battery-9000-mah.webp",
-      "https://www.quadruped.de/media/image/product/1236/lg/unitree-g1-battery-9000-mah.webp",
-      "https://www.quadruped.de/media/image/product/1236/xs/unitree-g1-battery-9000-mah.png"
-    ],
-    "createdAt": "2026-04-25T06:39:35Z"
-  },
-  {
-    "id": "unitree-g1-battery-charger",
-    "slug": "unitree-g1-battery-charger",
-    "name": "UNITREE G1 BATTERY CHARGER",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE G1 BATTERY CHARGER",
-    "description": "UNITREE G1 BATTERY CHARGER",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1237/lg/unitree-g1-battery-charger.png",
-      "https://www.quadruped.de/media/image/product/1237/xs/unitree-g1-battery-charger.webp",
-      "https://www.quadruped.de/media/image/product/1237/sm/unitree-g1-battery-charger.webp",
-      "https://www.quadruped.de/media/image/product/1237/md/unitree-g1-battery-charger.webp",
-      "https://www.quadruped.de/media/image/product/1237/lg/unitree-g1-battery-charger.webp",
-      "https://www.quadruped.de/media/image/product/1237/xs/unitree-g1-battery-charger.png"
-    ],
-    "createdAt": "2026-04-25T06:39:36Z"
-  },
-  {
-    "id": "unitree-g1-camera-fixed-plate",
-    "slug": "unitree-g1-camera-fixed-plate",
-    "name": "UNITREE G1 CAMERA FIXED PLATE",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE G1 CAMERA FIXED PLATE",
-    "description": "UNITREE G1 CAMERA FIXED PLATE",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1586/lg/unitree-g1-camera-fixed-plate.png",
-      "https://www.quadruped.de/media/image/product/1586/xs/unitree-g1-camera-fixed-plate.webp",
-      "https://www.quadruped.de/media/image/product/1586/sm/unitree-g1-camera-fixed-plate.webp",
-      "https://www.quadruped.de/media/image/product/1586/md/unitree-g1-camera-fixed-plate.webp",
-      "https://www.quadruped.de/media/image/product/1586/lg/unitree-g1-camera-fixed-plate.webp",
-      "https://www.quadruped.de/media/image/product/1586/xs/unitree-g1-camera-fixed-plate.png"
-    ],
-    "createdAt": "2026-04-25T06:39:37Z"
-  },
-  {
-    "id": "unitree-g1-comp-head-incl-d455-realsense",
-    "slug": "unitree-g1-comp-head-incl-d455-realsense",
-    "name": "UNITREE G1 COMP HEAD (INCL. D455 REALSENSE), 1.259,66 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE G1 COMP HEAD (INCL. D455 REALSENSE), 1.259,66 &EURO;",
-    "description": "UNITREE G1 COMP HEAD (INCL. D455 REALSENSE), 1.259,66 &EURO;",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1378/lg/unitree-g1-comp-head-incl-d455-realsense.webp",
-      "https://www.quadruped.de/media/image/product/1378/xs/unitree-g1-comp-head-incl-d455-realsense.webp",
-      "https://www.quadruped.de/media/image/product/1378/sm/unitree-g1-comp-head-incl-d455-realsense.webp",
-      "https://www.quadruped.de/media/image/product/1378/md/unitree-g1-comp-head-incl-d455-realsense.webp",
-      "https://www.quadruped.de/media/image/product/1539/xs/g1-head-upper-cover.webp",
-      "https://www.quadruped.de/media/image/product/1539/sm/g1-head-upper-cover.webp"
-    ],
-    "createdAt": "2026-04-25T06:39:37Z"
-  },
-  {
-    "id": "unitree-g1-dex3-1-force-control-three-finger-agile-hand-tactile-version",
-    "slug": "unitree-g1-dex3-1-force-control-three-finger-agile-hand-tactile-version",
-    "name": "UNITREE G1 DEX3-1 FORCE CONTROL THREE FINGER AGILE HAND (TACTILE VERS",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "braccia",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE G1 DEX3-1 FORCE CONTROL THREE FINGER AGILE HAND (TACTILE VERS",
-    "description": "UNITREE G1 DEX3-1 FORCE CONTROL THREE FINGER AGILE HAND (TACTILE VERS",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1585/xs/unitree-g1-radar-fixed-plate.webp",
-      "https://www.quadruped.de/media/image/product/1585/sm/unitree-g1-radar-fixed-plate.webp",
-      "https://www.quadruped.de/media/image/product/1585/md/unitree-g1-radar-fixed-plate.webp",
-      "https://www.quadruped.de/media/image/product/1585/lg/unitree-g1-radar-fixed-plate.webp",
-      "https://www.quadruped.de/media/image/product/1585/sm/unitree-g1-radar-fixed-plate.png",
-      "https://www.quadruped.de/media/image/product/1585/xs/unitree-g1-radar-fixed-plate.png"
-    ],
-    "createdAt": "2026-04-25T06:39:38Z"
-  },
-  {
-    "id": "unitree-g1-dex3-1-force-controlled-three-finger-dexterous-hand",
-    "slug": "unitree-g1-dex3-1-force-controlled-three-finger-dexterous-hand",
-    "name": "UNITREE G1 DEX3-1 FORCE CONTROLLED THREE FINGER HAND",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "braccia",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE G1 DEX3-1 FORCE CONTROLLED THREE FINGER HAND",
-    "description": "UNITREE G1 DEX3-1 FORCE CONTROLLED THREE FINGER HAND",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1242/lg/unitree-g1-dex3-1-force-controlled-three-finger-dexterous-hand~2.png",
-      "https://www.quadruped.de/media/image/product/1242/xs/unitree-g1-dex3-1-force-controlled-three-finger-dexterous-hand~2.webp",
-      "https://www.quadruped.de/media/image/product/1242/sm/unitree-g1-dex3-1-force-controlled-three-finger-dexterous-hand~2.webp",
-      "https://www.quadruped.de/media/image/product/1242/md/unitree-g1-dex3-1-force-controlled-three-finger-dexterous-hand~2.webp",
-      "https://www.quadruped.de/media/image/product/1242/lg/unitree-g1-dex3-1-force-controlled-three-finger-dexterous-hand~2.webp",
-      "https://www.quadruped.de/media/image/product/1242/xs/unitree-g1-dex3-1-force-controlled-three-finger-dexterous-hand~2.png"
-    ],
-    "createdAt": "2026-04-25T06:39:39Z"
-  },
-  {
-    "id": "unitree-g1-forearm",
-    "slug": "unitree-g1-forearm",
-    "name": "UNITREE G1 FOREARM",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "braccia",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE G1 FOREARM",
-    "description": "UNITREE G1 FOREARM",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1241/lg/unitree-g1-forearm~2.png",
-      "https://www.quadruped.de/media/image/product/1241/xs/unitree-g1-forearm~2.webp",
-      "https://www.quadruped.de/media/image/product/1241/sm/unitree-g1-forearm~2.webp",
-      "https://www.quadruped.de/media/image/product/1241/md/unitree-g1-forearm~2.webp",
-      "https://www.quadruped.de/media/image/product/1241/lg/unitree-g1-forearm~2.webp",
-      "https://www.quadruped.de/media/image/product/1241/xs/unitree-g1-forearm~2.png"
-    ],
-    "createdAt": "2026-04-25T06:39:39Z"
-  },
-  {
-    "id": "unitree-g1-head",
-    "slug": "unitree-g1-head",
-    "name": "UNITREE G1 HEAD",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE G1 HEAD",
-    "description": "UNITREE G1 HEAD",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1575/lg/unitree-g1-head.png",
-      "https://www.quadruped.de/media/image/product/1575/xs/unitree-g1-head.webp",
-      "https://www.quadruped.de/media/image/product/1575/sm/unitree-g1-head.webp",
-      "https://www.quadruped.de/media/image/product/1575/md/unitree-g1-head.webp",
-      "https://www.quadruped.de/media/image/product/1575/lg/unitree-g1-head.webp",
-      "https://www.quadruped.de/media/image/product/1575/xs/unitree-g1-head.png"
-    ],
-    "createdAt": "2026-04-25T06:39:40Z"
-  },
-  {
-    "id": "unitree-g1-oberarm",
-    "slug": "unitree-g1-oberarm",
-    "name": "UNITREE G1 OBERARM",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "braccia",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE G1 OBERARM",
-    "description": "UNITREE G1 OBERARM",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1595/lg/unitree-g1-oberarm.png",
-      "https://www.quadruped.de/media/image/product/1595/xs/unitree-g1-oberarm.webp",
-      "https://www.quadruped.de/media/image/product/1595/sm/unitree-g1-oberarm.webp",
-      "https://www.quadruped.de/media/image/product/1595/md/unitree-g1-oberarm.webp",
-      "https://www.quadruped.de/media/image/product/1595/lg/unitree-g1-oberarm.webp",
-      "https://www.quadruped.de/media/image/product/1595/xs/unitree-g1-oberarm.png"
-    ],
-    "createdAt": "2026-04-25T06:39:41Z"
-  },
-  {
-    "id": "unitree-g1-radar-fixed-plate",
-    "slug": "unitree-g1-radar-fixed-plate",
-    "name": "UNITREE G1 RADAR FIXED PLATE",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE G1 RADAR FIXED PLATE",
-    "description": "UNITREE G1 RADAR FIXED PLATE",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1585/lg/unitree-g1-radar-fixed-plate.png",
-      "https://www.quadruped.de/media/image/product/1585/xs/unitree-g1-radar-fixed-plate.webp",
-      "https://www.quadruped.de/media/image/product/1585/sm/unitree-g1-radar-fixed-plate.webp",
-      "https://www.quadruped.de/media/image/product/1585/md/unitree-g1-radar-fixed-plate.webp",
-      "https://www.quadruped.de/media/image/product/1585/lg/unitree-g1-radar-fixed-plate.webp",
-      "https://www.quadruped.de/media/image/product/1585/xs/unitree-g1-radar-fixed-plate.png"
-    ],
-    "createdAt": "2026-04-25T06:39:41Z"
-  },
-  {
-    "id": "unitree-g1-shoulder",
-    "slug": "unitree-g1-shoulder",
-    "name": "UNITREE G1 SHOULDER",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE G1 SHOULDER",
-    "description": "UNITREE G1 SHOULDER",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1592/lg/unitree-g1-shoulder.png",
-      "https://www.quadruped.de/media/image/product/1592/xs/unitree-g1-shoulder.webp",
-      "https://www.quadruped.de/media/image/product/1592/sm/unitree-g1-shoulder.webp",
-      "https://www.quadruped.de/media/image/product/1592/md/unitree-g1-shoulder.webp",
-      "https://www.quadruped.de/media/image/product/1592/lg/unitree-g1-shoulder.webp",
-      "https://www.quadruped.de/media/image/product/1592/xs/unitree-g1-shoulder.png"
-    ],
-    "createdAt": "2026-04-25T06:39:42Z"
-  },
-  {
-    "id": "unitree-g1-upper-arm",
-    "slug": "unitree-g1-upper-arm",
-    "name": "UNITREE G1 UPPER ARM",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "braccia",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE G1 UPPER ARM",
-    "description": "UNITREE G1 UPPER ARM",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1595/lg/unitree-g1-oberarm.png",
-      "https://www.quadruped.de/media/image/product/1595/xs/unitree-g1-oberarm.webp",
-      "https://www.quadruped.de/media/image/product/1595/sm/unitree-g1-oberarm.webp",
-      "https://www.quadruped.de/media/image/product/1595/md/unitree-g1-oberarm.webp",
-      "https://www.quadruped.de/media/image/product/1595/lg/unitree-g1-oberarm.webp",
-      "https://www.quadruped.de/media/image/product/1595/xs/unitree-g1-oberarm.png"
-    ],
-    "createdAt": "2026-04-25T06:39:43Z"
-  },
-  {
-    "id": "unitree-g1d",
-    "slug": "unitree-g1d",
-    "name": "UNITREE G1-D HUMANOIDER ROBOTER, 25.900,00 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "umanoidi",
-    "priceEur": 30821.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE G1-D HUMANOIDER ROBOTER, 25.900,00 &EURO;",
-    "description": "UNITREE G1-D HUMANOIDER ROBOTER, 25.900,00 &EURO;",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1485/lg/unitree-g1d.png",
-      "https://www.quadruped.de/media/image/product/1485/xs/unitree-g1d.webp",
-      "https://www.quadruped.de/media/image/product/1485/sm/unitree-g1d.webp",
-      "https://www.quadruped.de/media/image/product/1485/md/unitree-g1d.webp",
-      "https://www.quadruped.de/media/image/product/1485/lg/unitree-g1d.webp",
-      "https://www.quadruped.de/media/image/product/1485/xs/unitree-g1d.png"
-    ],
-    "createdAt": "2026-04-25T06:39:43Z"
-  },
-  {
-    "id": "unitree-go1-go2-g1-xt30-22-connector",
-    "slug": "unitree-go1-go2-g1-xt30-22-connector",
-    "name": "UNITREE GO1 / GO2 / G1 XT30 2+2 CONNECTOR",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE GO1 / GO2 / G1 XT30 2+2 CONNECTOR",
-    "description": "UNITREE GO1 / GO2 / G1 XT30 2+2 CONNECTOR",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1415/lg/unitree-go1-go2-g1-xt30-22-stecker.jpg",
-      "https://www.quadruped.de/media/image/product/1415/xs/unitree-go1-go2-g1-xt30-22-stecker.webp",
-      "https://www.quadruped.de/media/image/product/1415/sm/unitree-go1-go2-g1-xt30-22-stecker.webp",
-      "https://www.quadruped.de/media/image/product/1415/md/unitree-go1-go2-g1-xt30-22-stecker.webp",
-      "https://www.quadruped.de/media/image/product/1415/lg/unitree-go1-go2-g1-xt30-22-stecker.webp",
-      "https://www.quadruped.de/media/image/product/1415/xs/unitree-go1-go2-g1-xt30-22-stecker.jpg"
-    ],
-    "createdAt": "2026-04-25T06:39:44Z"
-  },
-  {
-    "id": "unitree-go1-go2-g1-xt30-22-stecker",
-    "slug": "unitree-go1-go2-g1-xt30-22-stecker",
-    "name": "UNITREE GO1 / GO2 / G1 XT30 2+2 STECKER",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE GO1 / GO2 / G1 XT30 2+2 STECKER",
-    "description": "UNITREE GO1 / GO2 / G1 XT30 2+2 STECKER",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1415/lg/unitree-go1-go2-g1-xt30-22-stecker.jpg",
-      "https://www.quadruped.de/media/image/product/1415/xs/unitree-go1-go2-g1-xt30-22-stecker.webp",
-      "https://www.quadruped.de/media/image/product/1415/sm/unitree-go1-go2-g1-xt30-22-stecker.webp",
-      "https://www.quadruped.de/media/image/product/1415/md/unitree-go1-go2-g1-xt30-22-stecker.webp",
-      "https://www.quadruped.de/media/image/product/1415/lg/unitree-go1-go2-g1-xt30-22-stecker.webp",
-      "https://www.quadruped.de/media/image/product/1415/xs/unitree-go1-go2-g1-xt30-22-stecker.jpg"
-    ],
-    "createdAt": "2026-04-25T06:39:44Z"
-  },
-  {
-    "id": "unitree-go1-go2-g1-xt30-kabel",
-    "slug": "unitree-go1-go2-g1-xt30-kabel",
-    "name": "UNITREE GO1 / GO2 / G1 XT30 KABEL",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE GO1 / GO2 / G1 XT30 KABEL",
-    "description": "UNITREE GO1 / GO2 / G1 XT30 KABEL",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1496/lg/unitree-go1-go2-g1-xt30-kabel.jpg",
-      "https://www.quadruped.de/media/image/product/1496/xs/unitree-go1-go2-g1-xt30-kabel.webp",
-      "https://www.quadruped.de/media/image/product/1496/sm/unitree-go1-go2-g1-xt30-kabel.webp",
-      "https://www.quadruped.de/media/image/product/1496/md/unitree-go1-go2-g1-xt30-kabel.webp",
-      "https://www.quadruped.de/media/image/product/1496/lg/unitree-go1-go2-g1-xt30-kabel.webp",
-      "https://www.quadruped.de/media/image/product/1496/xs/unitree-go1-go2-g1-xt30-kabel.jpg"
-    ],
-    "createdAt": "2026-04-25T06:39:45Z"
-  },
-  {
-    "id": "unitree-go1-go2-g1-xt30-cable",
-    "slug": "unitree-go1-go2-g1-xt30-cable",
-    "name": "UNITREE GO1 / GO2 / G1 XT30 CABLE",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE GO1 / GO2 / G1 XT30 CABLE",
-    "description": "UNITREE GO1 / GO2 / G1 XT30 CABLE",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1496/lg/unitree-go1-go2-g1-xt30-kabel.jpg",
-      "https://www.quadruped.de/media/image/product/1496/xs/unitree-go1-go2-g1-xt30-kabel.webp",
-      "https://www.quadruped.de/media/image/product/1496/sm/unitree-go1-go2-g1-xt30-kabel.webp",
-      "https://www.quadruped.de/media/image/product/1496/md/unitree-go1-go2-g1-xt30-kabel.webp",
-      "https://www.quadruped.de/media/image/product/1496/lg/unitree-go1-go2-g1-xt30-kabel.webp",
-      "https://www.quadruped.de/media/image/product/1496/xs/unitree-go1-go2-g1-xt30-kabel.jpg"
-    ],
-    "createdAt": "2026-04-25T06:39:47Z"
-  },
-  {
-    "id": "unitree-go2-m8-auf-m12-adapterkabel-livox-mid-360",
-    "slug": "unitree-go2-m8-auf-m12-adapterkabel-livox-mid-360",
-    "name": "UNITREE GO2 M8 AUF M12 ADAPTERKABEL (LIVOX MID 360), 67,18 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 79.95,
-    "currency": "EUR",
-    "shortDescription": "UNITREE GO2 M8 AUF M12 ADAPTERKABEL (LIVOX MID 360), 67,18 &EURO;",
-    "description": "UNITREE GO2 M8 AUF M12 ADAPTERKABEL (LIVOX MID 360), 67,18 &EURO;",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1379/lg/unitree-go2-m8-auf-m12-adapterkabel-livox-mid-360.webp",
-      "https://www.quadruped.de/media/image/product/1379/xs/unitree-go2-m8-auf-m12-adapterkabel-livox-mid-360.webp",
-      "https://www.quadruped.de/media/image/product/1379/sm/unitree-go2-m8-auf-m12-adapterkabel-livox-mid-360.webp",
-      "https://www.quadruped.de/media/image/product/1379/md/unitree-go2-m8-auf-m12-adapterkabel-livox-mid-360.webp"
-    ],
-    "createdAt": "2026-04-25T06:39:47Z"
-  },
-  {
-    "id": "unitree-go2-motor-go-m8010-6-motor",
-    "slug": "unitree-go2-motor-go-m8010-6-motor",
-    "name": "UNITREE GO2 MOTOR GO-M8010-6 MOTOR, 700,00 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 833.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE GO2 MOTOR GO-M8010-6 MOTOR, 700,00 &EURO;",
-    "description": "UNITREE GO2 MOTOR GO-M8010-6 MOTOR, 700,00 &EURO;",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1322/lg/unitree-go2-motor-go-m8010-6-motor.webp",
-      "https://www.quadruped.de/media/image/product/1322/xs/unitree-go2-motor-go-m8010-6-motor.webp",
-      "https://www.quadruped.de/media/image/product/1322/sm/unitree-go2-motor-go-m8010-6-motor.webp",
-      "https://www.quadruped.de/media/image/product/1322/md/unitree-go2-motor-go-m8010-6-motor.webp",
-      "https://www.quadruped.de/media/image/product/1322/xs/unitree-go2-motor-go-m8010-6-motor~2.webp",
-      "https://www.quadruped.de/media/image/product/1322/sm/unitree-go2-motor-go-m8010-6-motor~2.webp"
-    ],
-    "createdAt": "2026-04-25T06:39:48Z"
-  },
-  {
-    "id": "unitree-h1-accessories-electric-cylinder",
-    "slug": "unitree-h1-accessories-electric-cylinder",
-    "name": "H1 ACCESSORIES - ELECTRIC CYLINDER",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "umanoidi",
-    "priceEur": 416.5,
-    "currency": "EUR",
-    "shortDescription": "H1 ACCESSORIES - ELECTRIC CYLINDER",
-    "description": "H1 ACCESSORIES - ELECTRIC CYLINDER",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1292/lg/unitree-h1-accessories-electric-cylinder.png",
-      "https://www.quadruped.de/media/image/product/1292/xs/unitree-h1-accessories-electric-cylinder.webp",
-      "https://www.quadruped.de/media/image/product/1292/sm/unitree-h1-accessories-electric-cylinder.webp",
-      "https://www.quadruped.de/media/image/product/1292/md/unitree-h1-accessories-electric-cylinder.webp",
-      "https://www.quadruped.de/media/image/product/1292/lg/unitree-h1-accessories-electric-cylinder.webp",
-      "https://www.quadruped.de/media/image/product/1292/xs/unitree-h1-accessories-electric-cylinder.png"
-    ],
-    "createdAt": "2026-04-25T06:39:49Z"
-  },
-  {
-    "id": "unitree-h1-arm",
-    "slug": "unitree-h1-arm",
-    "name": "UNITREE H1 ARM",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "braccia",
-    "priceEur": 9520.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE H1 ARM",
-    "description": "UNITREE H1 ARM",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1201/lg/unitree-h1-arm.png",
-      "https://www.quadruped.de/media/image/product/1201/xs/unitree-h1-arm.webp",
-      "https://www.quadruped.de/media/image/product/1201/sm/unitree-h1-arm.webp",
-      "https://www.quadruped.de/media/image/product/1201/md/unitree-h1-arm.webp",
-      "https://www.quadruped.de/media/image/product/1201/lg/unitree-h1-arm.webp",
-      "https://www.quadruped.de/media/image/product/1201/xs/unitree-h1-arm.png"
-    ],
-    "createdAt": "2026-04-25T06:39:49Z"
-  },
-  {
-    "id": "unitree-h1-g1-crane",
-    "slug": "unitree-h1-g1-crane",
-    "name": "UNITREE H1 / G1 CRANE, 1.399,00 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "umanoidi",
-    "priceEur": 1664.81,
-    "currency": "EUR",
-    "shortDescription": "UNITREE H1 / G1 CRANE, 1.399,00 &EURO;",
-    "description": "UNITREE H1 / G1 CRANE, 1.399,00 &EURO;",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1318/lg/unitree-h1-g1-kran.png",
-      "https://www.quadruped.de/media/image/product/1318/xs/unitree-h1-g1-kran.webp",
-      "https://www.quadruped.de/media/image/product/1318/sm/unitree-h1-g1-kran.webp",
-      "https://www.quadruped.de/media/image/product/1318/md/unitree-h1-g1-kran.webp",
-      "https://www.quadruped.de/media/image/product/1318/lg/unitree-h1-g1-kran.webp",
-      "https://www.quadruped.de/media/image/product/1318/xs/unitree-h1-g1-kran.png"
-    ],
-    "createdAt": "2026-04-25T06:39:50Z"
-  },
-  {
-    "id": "unitree-h1-g1-kran",
-    "slug": "unitree-h1-g1-kran",
-    "name": "UNITREE H1 / G1 KRAN, 1.399,00 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "umanoidi",
-    "priceEur": 1664.81,
-    "currency": "EUR",
-    "shortDescription": "UNITREE H1 / G1 KRAN, 1.399,00 &EURO;",
-    "description": "UNITREE H1 / G1 KRAN, 1.399,00 &EURO;",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1318/lg/unitree-h1-g1-kran.png",
-      "https://www.quadruped.de/media/image/product/1318/xs/unitree-h1-g1-kran.webp",
-      "https://www.quadruped.de/media/image/product/1318/sm/unitree-h1-g1-kran.webp",
-      "https://www.quadruped.de/media/image/product/1318/md/unitree-h1-g1-kran.webp",
-      "https://www.quadruped.de/media/image/product/1318/lg/unitree-h1-g1-kran.webp",
-      "https://www.quadruped.de/media/image/product/1318/xs/unitree-h1-g1-kran.png"
-    ],
-    "createdAt": "2026-04-25T06:39:50Z"
-  },
-  {
-    "id": "unitree-h1-leg",
-    "slug": "unitree-h1-leg",
-    "name": "UNITREE H1 BEIN",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "umanoidi",
-    "priceEur": 35700.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE H1 BEIN",
-    "description": "UNITREE H1 BEIN",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1202/lg/unitree-h1-leg.png",
-      "https://www.quadruped.de/media/image/product/1202/xs/unitree-h1-leg.webp",
-      "https://www.quadruped.de/media/image/product/1202/sm/unitree-h1-leg.webp",
-      "https://www.quadruped.de/media/image/product/1202/md/unitree-h1-leg.webp",
-      "https://www.quadruped.de/media/image/product/1202/lg/unitree-h1-leg.webp",
-      "https://www.quadruped.de/media/image/product/1202/xs/unitree-h1-leg.png"
-    ],
-    "createdAt": "2026-04-25T06:39:51Z"
-  },
-  {
-    "id": "unitree-h1-m-humanoid-robot",
-    "slug": "unitree-h1-m-humanoid-robot",
-    "name": "UNITREE H1-M (HUMANOID ROBOT)",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "umanoidi",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE H1-M (HUMANOID ROBOT)",
-    "description": "UNITREE H1-M (HUMANOID ROBOT)",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1291/lg/unitree-h1-m-humanoid-robot.png",
-      "https://www.quadruped.de/media/image/product/1291/xs/unitree-h1-m-humanoid-robot.webp",
-      "https://www.quadruped.de/media/image/product/1291/sm/unitree-h1-m-humanoid-robot.webp",
-      "https://www.quadruped.de/media/image/product/1291/md/unitree-h1-m-humanoid-robot.webp",
-      "https://www.quadruped.de/media/image/product/1291/lg/unitree-h1-m-humanoid-robot.webp",
-      "https://www.quadruped.de/media/image/product/1291/xs/unitree-h1-m-humanoid-robot.png"
-    ],
-    "createdAt": "2026-04-25T06:39:54Z"
-  },
-  {
-    "id": "unitree-h1-quick-charger",
-    "slug": "unitree-h1-quick-charger",
-    "name": "UNITREE H1 QUICK CHARGER",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "umanoidi",
-    "priceEur": 319.95,
-    "currency": "EUR",
-    "shortDescription": "UNITREE H1 QUICK CHARGER",
-    "description": "UNITREE H1 QUICK CHARGER",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/gfx/keinBild.gif"
-    ],
-    "createdAt": "2026-04-25T06:39:54Z"
-  },
-  {
-    "id": "unitree-h1-s-humanoid-robot",
-    "slug": "unitree-h1-s-humanoid-robot",
-    "name": "UNITREE H1 (HUMANOID ROBOT)",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "umanoidi",
-    "priceEur": 0.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE H1 (HUMANOID ROBOT)",
-    "description": "UNITREE H1 (HUMANOID ROBOT)",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1168/lg/unitree-h1-s-humanoid-robot.png",
-      "https://www.quadruped.de/media/image/product/1168/xs/unitree-h1-s-humanoid-robot.webp",
-      "https://www.quadruped.de/media/image/product/1168/sm/unitree-h1-s-humanoid-robot.webp",
-      "https://www.quadruped.de/media/image/product/1168/md/unitree-h1-s-humanoid-robot.webp",
-      "https://www.quadruped.de/media/image/product/1168/lg/unitree-h1-s-humanoid-robot.webp",
-      "https://www.quadruped.de/media/image/product/1168/xs/unitree-h1-s-humanoid-robot.png"
-    ],
-    "createdAt": "2026-04-25T06:39:55Z"
-  },
-  {
-    "id": "unitree-h1-battery",
-    "slug": "unitree-h1-battery",
-    "name": "UNITREE H1 BATTERY",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "umanoidi",
-    "priceEur": 1428.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE H1 BATTERY",
-    "description": "UNITREE H1 BATTERY",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1197/lg/unitree-h1-battery.png",
-      "https://www.quadruped.de/media/image/product/1197/xs/unitree-h1-battery.webp",
-      "https://www.quadruped.de/media/image/product/1197/sm/unitree-h1-battery.webp",
-      "https://www.quadruped.de/media/image/product/1197/md/unitree-h1-battery.webp",
-      "https://www.quadruped.de/media/image/product/1197/lg/unitree-h1-battery.webp",
-      "https://www.quadruped.de/media/image/product/1197/xs/unitree-h1-battery.png"
-    ],
-    "createdAt": "2026-04-25T06:39:55Z"
-  },
-  {
-    "id": "unitree-h1-dedicated-computing-power-module",
-    "slug": "unitree-h1-dedicated-computing-power-module",
-    "name": "UNITREE H1 DEDICATED COMPUTING POWER MODULE",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "umanoidi",
-    "priceEur": 4998.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE H1 DEDICATED COMPUTING POWER MODULE",
-    "description": "UNITREE H1 DEDICATED COMPUTING POWER MODULE",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1297/lg/unitree-h1-dedicated-computing-power-module.png",
-      "https://www.quadruped.de/media/image/product/1297/xs/unitree-h1-dedicated-computing-power-module.webp",
-      "https://www.quadruped.de/media/image/product/1297/sm/unitree-h1-dedicated-computing-power-module.webp",
-      "https://www.quadruped.de/media/image/product/1297/md/unitree-h1-dedicated-computing-power-module.webp",
-      "https://www.quadruped.de/media/image/product/1297/lg/unitree-h1-dedicated-computing-power-module.webp",
-      "https://www.quadruped.de/media/image/product/1297/xs/unitree-h1-dedicated-computing-power-module.png"
-    ],
-    "createdAt": "2026-04-25T06:39:56Z"
-  },
-  {
-    "id": "unitree-h1-dexterous-hand",
-    "slug": "unitree-h1-dexterous-hand",
-    "name": "UNITREE H1 DEXTEROUS HAND",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "braccia",
-    "priceEur": 15470.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE H1 DEXTEROUS HAND",
-    "description": "UNITREE H1 DEXTEROUS HAND",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/gfx/keinBild.gif"
-    ],
-    "createdAt": "2026-04-25T06:39:57Z"
-  },
-  {
-    "id": "unitree-h1-dexterous-hand-single-handed",
-    "slug": "unitree-h1-dexterous-hand-single-handed",
-    "name": "UNITREE H1 DEXTEROUS HAND",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "braccia",
-    "priceEur": 15470.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE H1 DEXTEROUS HAND",
-    "description": "UNITREE H1 DEXTEROUS HAND",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/gfx/keinBild.gif"
-    ],
-    "createdAt": "2026-04-25T06:39:57Z"
-  },
-  {
-    "id": "unitree-h1-foot-end",
-    "slug": "unitree-h1-foot-end",
-    "name": "UNITREE H1 FOOT END",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "umanoidi",
-    "priceEur": 595.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE H1 FOOT END",
-    "description": "UNITREE H1 FOOT END",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1200/lg/unitree-h1-foot-end.png",
-      "https://www.quadruped.de/media/image/product/1200/xs/unitree-h1-foot-end.webp",
-      "https://www.quadruped.de/media/image/product/1200/sm/unitree-h1-foot-end.webp",
-      "https://www.quadruped.de/media/image/product/1200/md/unitree-h1-foot-end.webp",
-      "https://www.quadruped.de/media/image/product/1200/lg/unitree-h1-foot-end.webp",
-      "https://www.quadruped.de/media/image/product/1200/xs/unitree-h1-foot-end.png"
-    ],
-    "createdAt": "2026-04-25T06:39:59Z"
-  },
-  {
-    "id": "unitree-h2-humanoid-robot",
-    "slug": "unitree-h2-humanoid-robot",
-    "name": "UNITREE H2 (HUMANOID ROBOT)",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "umanoidi",
-    "priceEur": 49980.0,
-    "currency": "EUR",
-    "shortDescription": "UNITREE H2 (HUMANOID ROBOT)",
-    "description": "UNITREE H2 (HUMANOID ROBOT)",
-    "features": [],
-    "images": [
-      "https://www.quadruped.de/media/image/product/1419/lg/unitree-h2-humanoid-robot.png",
-      "https://www.quadruped.de/media/image/product/1419/xs/unitree-h2-humanoid-robot.webp",
-      "https://www.quadruped.de/media/image/product/1419/sm/unitree-h2-humanoid-robot.webp",
-      "https://www.quadruped.de/media/image/product/1419/md/unitree-h2-humanoid-robot.webp",
-      "https://www.quadruped.de/media/image/product/1419/lg/unitree-h2-humanoid-robot.webp",
-      "https://www.quadruped.de/media/image/product/1419/xs/unitree-h2-humanoid-robot.png"
-    ],
-    "createdAt": "2026-04-25T06:39:59Z"
-  },
-  {
-    "id": "unitree-led-board",
-    "slug": "unitree-led-board",
-    "name": "UNITREE LED BOARD",
-    "brand": "Unitree",
-    "category": "Unitree",
+    "id": "404339",
+    "slug": "lighthouse-explorer-bundle-crazyflie-2-1-brushless-404339",
+    "name": "Lighthouse explorer bundle - Crazyflie 2.1 Brushless",
+    "brand": "bitcraze",
+    "category": "Programmable drones",
     "solutionSlug": "accessori",
-    "priceEur": 47.6,
+    "priceEur": 1560.0,
     "currency": "EUR",
-    "shortDescription": "UNITREE LED BOARD",
-    "description": "UNITREE LED BOARD",
+    "shortDescription": "Lighthouse explorer bundle - Crazyflie 2.1 Brushless",
+    "description": "Lighthouse explorer bundle - Crazyflie 2.1 Brushless",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/1584/lg/unitree-led-board.png",
-      "https://www.quadruped.de/media/image/product/1584/xs/unitree-led-board.webp",
-      "https://www.quadruped.de/media/image/product/1584/sm/unitree-led-board.webp",
-      "https://www.quadruped.de/media/image/product/1584/md/unitree-led-board.webp",
-      "https://www.quadruped.de/media/image/product/1584/lg/unitree-led-board.webp",
-      "https://www.quadruped.de/media/image/product/1584/xs/unitree-led-board.png"
+      "https://www.generationrobots.com/20852-large_default/lighthouse-explorer-bundle-crazyflie-21-brushless.jpg"
     ],
-    "createdAt": "2026-04-25T06:40:00Z"
+    "createdAt": "2026-04-25T09:02:47.444761Z"
   },
   {
-    "id": "unitree-led-tape-lights",
-    "slug": "unitree-led-tape-lights",
-    "name": "UNITREE LED TAPE LIGHTS",
-    "brand": "Unitree",
-    "category": "Unitree",
+    "id": "404340",
+    "slug": "stem-bundle-crazyflie-2-1-brushless-404340",
+    "name": "STEM bundle - Crazyflie 2.1 Brushless",
+    "brand": "bitcraze",
+    "category": "Programmable drones",
     "solutionSlug": "accessori",
-    "priceEur": 71.4,
+    "priceEur": 720.0,
     "currency": "EUR",
-    "shortDescription": "UNITREE LED TAPE LIGHTS",
-    "description": "UNITREE LED TAPE LIGHTS",
+    "shortDescription": "STEM bundle - Crazyflie 2.1 Brushless",
+    "description": "STEM bundle - Crazyflie 2.1 Brushless",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/1583/lg/unitree-led-tape-lights.png",
-      "https://www.quadruped.de/media/image/product/1583/xs/unitree-led-tape-lights.webp",
-      "https://www.quadruped.de/media/image/product/1583/sm/unitree-led-tape-lights.webp",
-      "https://www.quadruped.de/media/image/product/1583/md/unitree-led-tape-lights.webp",
-      "https://www.quadruped.de/media/image/product/1583/lg/unitree-led-tape-lights.webp",
-      "https://www.quadruped.de/media/image/product/1583/xs/unitree-led-tape-lights.png"
+      "https://www.generationrobots.com/21101-large_default/stem-bundle-crazyflie-21-brushless.jpg"
     ],
-    "createdAt": "2026-04-25T06:40:00Z"
+    "createdAt": "2026-04-25T09:02:48.907977Z"
   },
   {
-    "id": "unitree-r1",
-    "slug": "unitree-r1",
-    "name": "UNITREE R1, 8.400,00 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
+    "id": "404341",
+    "slug": "happy-hacker-bundle-crazyflie-2-1-brushless-404341",
+    "name": "Happy hacker bundle - Crazyflie 2.1 Brushless",
+    "brand": "bitcraze",
+    "category": "Programmable drones",
     "solutionSlug": "accessori",
-    "priceEur": 9996.0,
+    "priceEur": 720.0,
     "currency": "EUR",
-    "shortDescription": "UNITREE R1, 8.400,00 &EURO;",
-    "description": "UNITREE R1, 8.400,00 &EURO;",
+    "shortDescription": "Happy hacker bundle - Crazyflie 2.1 Brushless",
+    "description": "Happy hacker bundle - Crazyflie 2.1 Brushless",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/1356/lg/unitree-r1.png",
-      "https://www.quadruped.de/media/image/product/1356/xs/unitree-r1.webp",
-      "https://www.quadruped.de/media/image/product/1356/sm/unitree-r1.webp",
-      "https://www.quadruped.de/media/image/product/1356/md/unitree-r1.webp",
-      "https://www.quadruped.de/media/image/product/1356/lg/unitree-r1.webp",
-      "https://www.quadruped.de/media/image/product/1356/xs/unitree-r1.png"
+      "https://www.generationrobots.com/20854-large_default/happy-hacker-bundle-crazyflie-21-brushless.jpg"
     ],
-    "createdAt": "2026-04-25T06:40:03Z"
+    "createdAt": "2026-04-25T09:02:50.494278Z"
   },
   {
-    "id": "unitree-r1-battery-6000-mah",
-    "slug": "unitree-r1-battery-6000-mah",
-    "name": "UNITREE R1 BATTERY 6000 MAH, 700,00 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 833.0,
+    "id": "404342",
+    "slug": "loco-swarm-bundle-crazyflie-2-1-brushless-404342",
+    "name": "Loco Swarm bundle - Crazyflie 2.1 Brushless",
+    "brand": "bitcraze",
+    "category": "Programmable drones",
+    "solutionSlug": "braccia",
+    "priceEur": 8394.0,
     "currency": "EUR",
-    "shortDescription": "UNITREE R1 BATTERY 6000 MAH, 700,00 &EURO;",
-    "description": "UNITREE R1 BATTERY 6000 MAH, 700,00 &EURO;",
+    "shortDescription": "Loco Swarm bundle - Crazyflie 2.1 Brushless",
+    "description": "Loco Swarm bundle - Crazyflie 2.1 Brushless",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/1366/lg/unitree-r1-battery-6000-mah.png",
-      "https://www.quadruped.de/media/image/product/1366/xs/unitree-r1-battery-6000-mah.webp",
-      "https://www.quadruped.de/media/image/product/1366/sm/unitree-r1-battery-6000-mah.webp",
-      "https://www.quadruped.de/media/image/product/1366/md/unitree-r1-battery-6000-mah.webp",
-      "https://www.quadruped.de/media/image/product/1366/lg/unitree-r1-battery-6000-mah.webp",
-      "https://www.quadruped.de/media/image/product/1366/xs/unitree-r1-battery-6000-mah.png"
+      "https://www.generationrobots.com/20855-large_default/loco-swarm-bundle-crazyflie-21-brushless.jpg"
     ],
-    "createdAt": "2026-04-25T06:40:03Z"
+    "createdAt": "2026-04-25T09:02:51.947118Z"
   },
   {
-    "id": "unitree-r1-battery-charger",
-    "slug": "unitree-r1-battery-charger",
-    "name": "UNITREE R1 BATTERY CHARGER, 120,00 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 142.8,
+    "id": "404343",
+    "slug": "loco-explorer-bundle-crazyflie-2-1-brushless-404343",
+    "name": "Loco explorer bundle - Crazyflie 2.1 Brushless",
+    "brand": "bitcraze",
+    "category": "Programmable drones",
+    "solutionSlug": "accessori",
+    "priceEur": 2351.88,
     "currency": "EUR",
-    "shortDescription": "UNITREE R1 BATTERY CHARGER, 120,00 &EURO;",
-    "description": "UNITREE R1 BATTERY CHARGER, 120,00 &EURO;",
+    "shortDescription": "Loco explorer bundle - Crazyflie 2.1 Brushless",
+    "description": "Loco explorer bundle - Crazyflie 2.1 Brushless",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/1367/lg/unitree-r1-battery-charger.png",
-      "https://www.quadruped.de/media/image/product/1367/xs/unitree-r1-battery-charger.webp",
-      "https://www.quadruped.de/media/image/product/1367/sm/unitree-r1-battery-charger.webp",
-      "https://www.quadruped.de/media/image/product/1367/md/unitree-r1-battery-charger.webp",
-      "https://www.quadruped.de/media/image/product/1367/lg/unitree-r1-battery-charger.webp",
-      "https://www.quadruped.de/media/image/product/1367/xs/unitree-r1-battery-charger.png"
+      "https://www.generationrobots.com/20856-large_default/loco-explorer-bundle-crazyflie-21-brushless.jpg"
     ],
-    "createdAt": "2026-04-25T06:40:04Z"
+    "createdAt": "2026-04-25T09:02:53.492505Z"
   },
   {
-    "id": "unitree-r1-battery",
-    "slug": "unitree-r1-battery",
-    "name": "UNITREE R1 BATTERY, 700,00 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 833.0,
+    "id": "404346",
+    "slug": "pika-package-gripper-sense-station-404346",
+    "name": "Pika Package (Gripper, Sense & Station)",
+    "brand": "AgileX",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 6000.0,
     "currency": "EUR",
-    "shortDescription": "UNITREE R1 BATTERY, 700,00 &EURO;",
-    "description": "UNITREE R1 BATTERY, 700,00 &EURO;",
+    "shortDescription": "Pika Package (Gripper, Sense & Station)",
+    "description": "Pika Package (Gripper, Sense & Station)",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/1366/lg/unitree-r1-battery-6000-mah.png",
-      "https://www.quadruped.de/media/image/product/1366/xs/unitree-r1-battery-6000-mah.webp",
-      "https://www.quadruped.de/media/image/product/1366/sm/unitree-r1-battery-6000-mah.webp",
-      "https://www.quadruped.de/media/image/product/1366/md/unitree-r1-battery-6000-mah.webp",
-      "https://www.quadruped.de/media/image/product/1366/lg/unitree-r1-battery-6000-mah.webp",
-      "https://www.quadruped.de/media/image/product/1366/xs/unitree-r1-battery-6000-mah.png"
+      "https://www.generationrobots.com/20873-large_default/pika-package-gripper-sense-station.jpg"
     ],
-    "createdAt": "2026-04-25T06:40:04Z"
+    "createdAt": "2026-04-25T09:02:54.629680Z"
   },
   {
-    "id": "unitree-r1-charger",
-    "slug": "unitree-r1-charger",
-    "name": "UNITREE R1 CHARGER, 120,00 &EURO;",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 142.8,
+    "id": "404347",
+    "slug": "bunker-pro-2-0-tracked-mobile-robot-ugv-404347",
+    "name": "Bunker Pro 2.0 Tracked Mobile Robot (UGV)",
+    "brand": "AgileX",
+    "category": "Mobile robots",
+    "solutionSlug": "accessori",
+    "priceEur": 22200.0,
     "currency": "EUR",
-    "shortDescription": "UNITREE R1 CHARGER, 120,00 &EURO;",
-    "description": "UNITREE R1 CHARGER, 120,00 &EURO;",
+    "shortDescription": "Bunker Pro 2.0 Tracked Mobile Robot (UGV)",
+    "description": "Bunker Pro 2.0 Tracked Mobile Robot (UGV)",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/1367/lg/unitree-r1-battery-charger.png",
-      "https://www.quadruped.de/media/image/product/1367/xs/unitree-r1-battery-charger.webp",
-      "https://www.quadruped.de/media/image/product/1367/sm/unitree-r1-battery-charger.webp",
-      "https://www.quadruped.de/media/image/product/1367/md/unitree-r1-battery-charger.webp",
-      "https://www.quadruped.de/media/image/product/1367/lg/unitree-r1-battery-charger.webp",
-      "https://www.quadruped.de/media/image/product/1367/xs/unitree-r1-battery-charger.png"
+      "https://www.generationrobots.com/20877-large_default/bunker-pro-20-tracked-mobile-robot-ugv.jpg"
     ],
-    "createdAt": "2026-04-25T06:40:05Z"
+    "createdAt": "2026-04-25T09:02:55.977057Z"
   },
   {
-    "id": "unitree-remote-controller",
-    "slug": "unitree-remote-controller",
-    "name": "QUADRUPED REMOTE CONTROLLER",
-    "brand": "Unitree",
-    "category": "Unitree",
-    "solutionSlug": "quadrupedi",
-    "priceEur": 0.0,
+    "id": "404349",
+    "slug": "niryo-transport-case-404349",
+    "name": "Niryo Transport Case",
+    "brand": "Niryo",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 898.8,
     "currency": "EUR",
-    "shortDescription": "QUADRUPED REMOTE CONTROLLER",
-    "description": "QUADRUPED REMOTE CONTROLLER",
+    "shortDescription": "Niryo Transport Case",
+    "description": "Niryo Transport Case",
     "features": [],
     "images": [
-      "https://www.quadruped.de/media/image/product/1155/lg/unitree-remote-controller.png",
-      "https://www.quadruped.de/media/image/product/1155/xs/unitree-remote-controller.webp",
-      "https://www.quadruped.de/media/image/product/1155/sm/unitree-remote-controller.webp",
-      "https://www.quadruped.de/media/image/product/1155/md/unitree-remote-controller.webp",
-      "https://www.quadruped.de/media/image/product/1155/lg/unitree-remote-controller.webp",
-      "https://www.quadruped.de/media/image/product/1155/xs/unitree-remote-controller.png"
+      "https://www.generationrobots.com/20899-large_default/niryo-transport-case.jpg"
     ],
-    "createdAt": "2026-04-25T06:40:06Z"
+    "createdAt": "2026-04-25T09:02:57.333410Z"
+  },
+  {
+    "id": "404350",
+    "slug": "niryo-stem-pack-404350",
+    "name": "Niryo STEM Pack",
+    "brand": "Niryo",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 7798.8,
+    "currency": "EUR",
+    "shortDescription": "Niryo STEM Pack",
+    "description": "Niryo STEM Pack",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/20903-large_default/stem-pack.jpg"
+    ],
+    "createdAt": "2026-04-25T09:02:58.554741Z"
+  },
+  {
+    "id": "404351",
+    "slug": "stem-bundle-niryo-404351",
+    "name": "STEM Bundle Niryo",
+    "brand": "Niryo",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 7438.8,
+    "currency": "EUR",
+    "shortDescription": "STEM Bundle Niryo",
+    "description": "STEM Bundle Niryo",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/20906-large_default/stem-bundle-niryo.jpg"
+    ],
+    "createdAt": "2026-04-25T09:02:59.850163Z"
+  },
+  {
+    "id": "404352",
+    "slug": "introduction-pack-to-robotics-and-block-based-programming-404352",
+    "name": "Introduction Pack to Robotics and Block-Based Programming",
+    "brand": "Niryo",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 8158.8,
+    "currency": "EUR",
+    "shortDescription": "Introduction Pack to Robotics and Block-Based Programming",
+    "description": "Introduction Pack to Robotics and Block-Based Programming",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/20909-large_default/introduction-pack-to-robotics-and-block-based-programming.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:01.311963Z"
+  },
+  {
+    "id": "404354",
+    "slug": "gripper-for-piper-robotic-arm-agilex-404354",
+    "name": "Gripper for PiPER Robotic Arm (AgileX)",
+    "brand": "AgileX",
+    "category": "Robotic gripper",
+    "solutionSlug": "braccia",
+    "priceEur": 300.0,
+    "currency": "EUR",
+    "shortDescription": "Gripper for PiPER Robotic Arm (AgileX)",
+    "description": "Gripper for PiPER Robotic Arm (AgileX)",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/20951-large_default/gripper-for-piper-robotic-arm-agilex.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:02.651087Z"
+  },
+  {
+    "id": "404376",
+    "slug": "leo-rover-power-box-404376",
+    "name": "Leo Rover Power box",
+    "brand": "Fictionlab",
+    "category": "Mobile robots",
+    "solutionSlug": "accessori",
+    "priceEur": 264.0,
+    "currency": "EUR",
+    "shortDescription": "Leo Rover Power box",
+    "description": "Leo Rover Power box",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21023-large_default/leo-rover-power-box.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:03.894082Z"
+  },
+  {
+    "id": "404377",
+    "slug": "high-capacity-battery-for-leo-rover-404377",
+    "name": "High-Capacity Battery for Leo Rover",
+    "brand": "Fictionlab",
+    "category": "Mobile robots",
+    "solutionSlug": "accessori",
+    "priceEur": 912.0,
+    "currency": "EUR",
+    "shortDescription": "High-Capacity Battery for Leo Rover",
+    "description": "High-Capacity Battery for Leo Rover",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21027-large_default/high-capacity-battery-for-leo-rover.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:05.096673Z"
+  },
+  {
+    "id": "404378",
+    "slug": "universal-camera-mast-404378",
+    "name": "Universal Camera Mast",
+    "brand": "Fictionlab",
+    "category": "Mobile robots",
+    "solutionSlug": "accessori",
+    "priceEur": 396.0,
+    "currency": "EUR",
+    "shortDescription": "Universal Camera Mast",
+    "description": "Universal Camera Mast",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21031-large_default/universal-camera-mast.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:06.356718Z"
+  },
+  {
+    "id": "404379",
+    "slug": "sandwich-plate-for-leo-rover-404379",
+    "name": "Sandwich plate for Leo Rover",
+    "brand": "Fictionlab",
+    "category": "Mobile robots",
+    "solutionSlug": "accessori",
+    "priceEur": 108.0,
+    "currency": "EUR",
+    "shortDescription": "Sandwich plate for Leo Rover",
+    "description": "Sandwich plate for Leo Rover",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21042-large_default/sandwich-plate-for-leo-rover.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:07.585879Z"
+  },
+  {
+    "id": "404380",
+    "slug": "mecanum-wheel-set-for-leo-rover-404380",
+    "name": "Mecanum Wheel Set for Leo Rover",
+    "brand": "Fictionlab",
+    "category": "Mobile robots",
+    "solutionSlug": "accessori",
+    "priceEur": 618.0,
+    "currency": "EUR",
+    "shortDescription": "Mecanum Wheel Set for Leo Rover",
+    "description": "Mecanum Wheel Set for Leo Rover",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21048-large_default/mecanum-wheel-set-for-leo-rover.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:08.848417Z"
+  },
+  {
+    "id": "404389",
+    "slug": "totl-workstation-404389",
+    "name": "TOTL Workstation",
+    "brand": "Trossen Robotics",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 11454.0,
+    "currency": "EUR",
+    "shortDescription": "TOTL Workstation",
+    "description": "TOTL Workstation",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21161-large_default/totl-workstation.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:10.149323Z"
+  },
+  {
+    "id": "404390",
+    "slug": "mini-drone-programmable-crazyflie-2-1-404390",
+    "name": "Mini-drone programmable Crazyflie 2.1+",
+    "brand": "bitcraze",
+    "category": "Programmable drones",
+    "solutionSlug": "accessori",
+    "priceEur": 321.6,
+    "currency": "EUR",
+    "shortDescription": "Mini-drone programmable Crazyflie 2.1+",
+    "description": "Mini-drone programmable Crazyflie 2.1+",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21163-large_default/crazyflie-21.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:11.731449Z"
+  },
+  {
+    "id": "404391",
+    "slug": "crazyflie-2-1-brushless-programmable-mini-drone-404391",
+    "name": "Crazyflie 2.1 Brushless Programmable Mini Drone",
+    "brand": "bitcraze",
+    "category": "Programmable drones",
+    "solutionSlug": "accessori",
+    "priceEur": 600.0,
+    "currency": "EUR",
+    "shortDescription": "Crazyflie 2.1 Brushless Programmable Mini Drone",
+    "description": "Crazyflie 2.1 Brushless Programmable Mini Drone",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21168-large_default/crazyflie-21-brushless.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:13.013806Z"
+  },
+  {
+    "id": "404392",
+    "slug": "nero-7-axis-robotic-arm-404392",
+    "name": "Nero 7-Axis Robotic Arm",
+    "brand": "AgileX",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 2520.0,
+    "currency": "EUR",
+    "shortDescription": "Nero 7-Axis Robotic Arm",
+    "description": "Nero 7-Axis Robotic Arm",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21170-large_default/nero-7-axis-robotic-arm.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:14.494148Z"
+  },
+  {
+    "id": "404393",
+    "slug": "rb-summit-mobile-manipulator-robot-404393",
+    "name": "RB-SUMMIT+ Mobile Manipulator Robot",
+    "brand": "Robotnik",
+    "category": "Mobile robots",
+    "solutionSlug": "braccia",
+    "priceEur": 40800.0,
+    "currency": "EUR",
+    "shortDescription": "RB-SUMMIT+ Mobile Manipulator Robot",
+    "description": "RB-SUMMIT+ Mobile Manipulator Robot",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21180-large_default/rb-summit-mobile-manipulator-robot.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:15.799966Z"
+  },
+  {
+    "id": "404395",
+    "slug": "rb-fiqus-autonomous-mobile-robot-404395",
+    "name": "RB-FIQUS Autonomous Mobile Robot",
+    "brand": "Robotnik",
+    "category": "Mobile robots",
+    "solutionSlug": "accessori",
+    "priceEur": 132000.0,
+    "currency": "EUR",
+    "shortDescription": "RB-FIQUS Autonomous Mobile Robot",
+    "description": "RB-FIQUS Autonomous Mobile Robot",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21191-large_default/rb-fiqus-autonomous-mobile-robot.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:16.984550Z"
+  },
+  {
+    "id": "404397",
+    "slug": "rb-robout-indoor-autonomous-mobile-robot-404397",
+    "name": "RB-ROBOUT Indoor Autonomous Mobile Robot",
+    "brand": "Robotnik",
+    "category": "Mobile robots",
+    "solutionSlug": "accessori",
+    "priceEur": 112800.0,
+    "currency": "EUR",
+    "shortDescription": "RB-ROBOUT Indoor Autonomous Mobile Robot",
+    "description": "RB-ROBOUT Indoor Autonomous Mobile Robot",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21196-large_default/rb-robout-indoor-autonomous-mobile-robot.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:18.182775Z"
+  },
+  {
+    "id": "404398",
+    "slug": "rb-robout-indoor-mobile-manipulator-404398",
+    "name": "RB-ROBOUT+ Indoor Mobile Manipulator",
+    "brand": "Robotnik",
+    "category": "Mobile robots",
+    "solutionSlug": "braccia",
+    "priceEur": 126000.0,
+    "currency": "EUR",
+    "shortDescription": "RB-ROBOUT+ Indoor Mobile Manipulator",
+    "description": "RB-ROBOUT+ Indoor Mobile Manipulator",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21200-large_default/rb-robout-indoor-mobile-manipulator.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:19.452872Z"
+  },
+  {
+    "id": "404399",
+    "slug": "rb-watcher-autonomous-surveillance-robot-404399",
+    "name": "RB-WATCHER Autonomous Surveillance Robot",
+    "brand": "Robotnik",
+    "category": "Mobile robots",
+    "solutionSlug": "accessori",
+    "priceEur": 64800.0,
+    "currency": "EUR",
+    "shortDescription": "RB-WATCHER Autonomous Surveillance Robot",
+    "description": "RB-WATCHER Autonomous Surveillance Robot",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21203-large_default/rb-watcher-autonomous-surveillance-robot.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:20.671510Z"
+  },
+  {
+    "id": "404400",
+    "slug": "rb-watcher-xl-autonomous-surveillance-robot-404400",
+    "name": "RB-WATCHER XL Autonomous Surveillance Robot",
+    "brand": "Robotnik",
+    "category": "Mobile robots",
+    "solutionSlug": "accessori",
+    "priceEur": 72600.0,
+    "currency": "EUR",
+    "shortDescription": "RB-WATCHER XL Autonomous Surveillance Robot",
+    "description": "RB-WATCHER XL Autonomous Surveillance Robot",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21205-large_default/rb-watcher-xl-autonomous-surveillance-robot.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:21.874830Z"
+  },
+  {
+    "id": "404402",
+    "slug": "unitree-go2x-quadruped-robot-404402",
+    "name": "Unitree Go2X quadruped robot",
+    "brand": "Unitree Robotics",
+    "category": "Mobile robots",
+    "solutionSlug": "quadrupedi",
+    "priceEur": 7200.0,
+    "currency": "EUR",
+    "shortDescription": "Unitree Go2X quadruped robot",
+    "description": "Unitree Go2X quadruped robot",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21221-large_default/unitree-go2x-quadruped-roboter.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:23.319492Z"
+  },
+  {
+    "id": "404409",
+    "slug": "io-adapter-for-niryo-robot-arms-404409",
+    "name": "IO Adapter for Niryo robot arms",
+    "brand": "Niryo",
+    "category": "Robotic arms",
+    "solutionSlug": "braccia",
+    "priceEur": 378.0,
+    "currency": "EUR",
+    "shortDescription": "IO Adapter for Niryo robot arms",
+    "description": "IO Adapter for Niryo robot arms",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21246-large_default/io-adapter-for-niryo-robot-arms.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:24.741374Z"
+  },
+  {
+    "id": "404413",
+    "slug": "raph-rover-mobile-robot-assembled-404413",
+    "name": "Raph Rover Mobile Robot - Assembled",
+    "brand": "FictionLab",
+    "category": "Mobile robots",
+    "solutionSlug": "accessori",
+    "priceEur": 16800.0,
+    "currency": "EUR",
+    "shortDescription": "Raph Rover Mobile Robot - Assembled",
+    "description": "Raph Rover Mobile Robot - Assembled",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21255-large_default/raph-rover-mobile-robot-assembled.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:26.115485Z"
+  },
+  {
+    "id": "404424",
+    "slug": "crazyflie-color-led-deck-bottom-mounted-404424",
+    "name": "Crazyflie Color LED Deck – Bottom Mounted",
+    "brand": "bitcraze",
+    "category": "Programmable drones",
+    "solutionSlug": "accessori",
+    "priceEur": 28.2,
+    "currency": "EUR",
+    "shortDescription": "Crazyflie Color LED Deck – Bottom Mounted",
+    "description": "Crazyflie Color LED Deck – Bottom Mounted",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21328-large_default/crazyflie-color-led-deck-bottom-mounted.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:27.631207Z"
+  },
+  {
+    "id": "404425",
+    "slug": "crazyflie-color-led-deck-top-mounted-404425",
+    "name": "Crazyflie Color LED Deck – Top Mounted",
+    "brand": "bitcraze",
+    "category": "Programmable drones",
+    "solutionSlug": "accessori",
+    "priceEur": 28.2,
+    "currency": "EUR",
+    "shortDescription": "Crazyflie Color LED Deck – Top Mounted",
+    "description": "Crazyflie Color LED Deck – Top Mounted",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21332-large_default/crazyflie-color-led-deck-top-mounted.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:29.243276Z"
+  },
+  {
+    "id": "404429",
+    "slug": "loco-explorer-bundle-crazyflie-2-1-404429",
+    "name": "Loco Explorer Bundle - Crazyflie 2.1+",
+    "brand": "bitcraze",
+    "category": "Programmable drones",
+    "solutionSlug": "accessori",
+    "priceEur": 2310.0,
+    "currency": "EUR",
+    "shortDescription": "Loco Explorer Bundle - Crazyflie 2.1+",
+    "description": "Loco Explorer Bundle - Crazyflie 2.1+",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21348-large_default/loco-explorer-bundle-crazyflie-21.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:30.794322Z"
+  },
+  {
+    "id": "404435",
+    "slug": "dobot-rover-x1-quadruped-robot-404435",
+    "name": "DOBOT Rover X1 Quadruped Robot",
+    "brand": "Dobot",
+    "category": "Mobile robots",
+    "solutionSlug": "quadrupedi",
+    "priceEur": 2638.8,
+    "currency": "EUR",
+    "shortDescription": "DOBOT Rover X1 Quadruped Robot",
+    "description": "DOBOT Rover X1 Quadruped Robot",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21368-large_default/dobot-rover-x1-quadruped-robot.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:31.917625Z"
+  },
+  {
+    "id": "404436",
+    "slug": "agibot-x2-ultra-humanoid-robot-404436",
+    "name": "Agibot X2 Ultra Humanoid Robot",
+    "brand": "Agibot",
+    "category": "Humanoid robots",
+    "solutionSlug": "umanoidi",
+    "priceEur": 56400.0,
+    "currency": "EUR",
+    "shortDescription": "Agibot X2 Ultra Humanoid Robot",
+    "description": "Agibot X2 Ultra Humanoid Robot",
+    "features": [],
+    "images": [
+      "https://www.generationrobots.com/21375-large_default/agibot-x2-ultra-humanoid-robot.jpg"
+    ],
+    "createdAt": "2026-04-25T09:03:33.073615Z"
   }
 ]

@@ -13,7 +13,7 @@ export function Header() {
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3">
         <div className="flex items-center gap-3">
           <Link href="/" className="text-lg font-bold">
-            UNITREE Shop
+            Robotics Shop
           </Link>
         </div>
 

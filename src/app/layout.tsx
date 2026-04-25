@@ -11,22 +11,22 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hmsw.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "UNITREE Shop",
-  description: "Shop prodotti UNITREE e accessori.",
-  openGraph: {
-    type: "website",
-    url: SITE_URL,
-    title: "UNITREE Shop",
-    description: "Shop prodotti UNITREE e accessori.",
-    siteName: "UNITREE Shop",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "UNITREE Shop",
-    description: "Shop prodotti UNITREE e accessori.",
-    // 'site' is twitter handle; we use siteName to avoid wrong value.
-    site: "UNITREE Shop",
-  },
+    title: "Robotics Shop",
+    description: "Shop di robot e accessori con prezzi e richiesta preventivo.",
+    openGraph: {
+      type: "website",
+      url: SITE_URL,
+      title: "Robotics Shop",
+      description: "Shop di robot e accessori con prezzi e richiesta preventivo.",
+      siteName: "Robotics Shop",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Robotics Shop",
+      description: "Shop di robot e accessori con prezzi e richiesta preventivo.",
+      // 'site' is twitter handle; we use siteName to avoid wrong value.
+      site: "Robotics Shop",
+    },
 };
 
 export default function RootLayout({
