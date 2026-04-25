@@ -26,7 +26,7 @@ export default async function SolutionsIndexPage() {
   return (
     <main className="py-8">
       <section
-        className="overflow-hidden rounded-2xl border bg-white/65 accent-surface"
+        className="overflow-hidden rounded-2xl border bg-white/65 accent-surface overflow-x-hidden"
         style={{
           ['--acc-a' as any]: defaultAcc.a,
           ['--acc-b' as any]: defaultAcc.b,
@@ -44,7 +44,7 @@ export default async function SolutionsIndexPage() {
         </div>
       </section>
 
-      <section className="mt-8">
+      <section className="mt-8 overflow-x-hidden">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {cards.map((c) => (
             <div
@@ -72,8 +72,8 @@ export default async function SolutionsIndexPage() {
                 </div>
                 <div className="p-5">
                   <div className="text-xs text-gray-500">{c.familyLabel}</div>
-                  <h2 className="mt-1 text-base font-semibold leading-snug">{c.title}</h2>
-                  <p className="mt-2 text-sm text-gray-600 line-clamp-2">{c.description}</p>
+                  <h2 className="mt-1 text-base font-semibold leading-snug tracking-tight break-words">{c.title}</h2>
+                  <p className="mt-2 text-sm text-gray-600 leading-relaxed line-clamp-2 break-words">{c.description}</p>
                   <div className="mt-4 flex items-center justify-between">
                     <span className="text-sm text-gray-600">Componenti: {c.matchedCount}</span>
                     <span className="text-sm font-semibold">Apri →</span>

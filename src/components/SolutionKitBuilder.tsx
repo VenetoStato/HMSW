@@ -79,7 +79,30 @@ export function SolutionKitBuilder({
     return 'Integrazione pronta';
   }, [scenario]);
 
+  const NOTES_KEY = 'unitree_shop_cart_note_v1';
+  const [note, setNote] = useState<string>('');
+
+  useEffect(() => {
+    try {
+      const v = localStorage.getItem(NOTES_KEY);
+      if (typeof v === 'string' && v.trim()) setNote(v);
+    } catch {
+      // ignore
+    }
+  }, []);
+
+  function persistNote(nextNote: string) {
+    try {
+      const cleaned = (nextNote ?? '').toString();
+      localStorage.setItem(NOTES_KEY, cleaned);
+    } catch {
+      // ignore
+    }
+  }
+
   function addKit() {
+    persistNote(note);
+
     kit.forEach((p) => addToCart(p, 1));
     setStatus('added');
     setTimeout(() => setStatus('idle'), 2200);
@@ -285,12 +308,24 @@ export function SolutionKitBuilder({
               onClick={addKit}
               className="w-full rounded-lg bg-black px-4 py-3 text-sm font-semibold text-white hover:bg-gray-900"
             >
-              {status === 'added' ? 'Kit aggiunto ✅' : 'Aggiungi kit al carrello'}
+              {status === 'added' ? 'Kit aggiunto ✅ (nota salvata)' : 'Aggiungi kit al carrello'}
             </button>
           </div>
 
-          <div className="mt-3 text-xs text-gray-500">
-            3) Apri il carrello e invia la richiesta: nessun pagamento online.
+          <div className="mt-4">
+            <div className="text-sm font-semibold">3) Scrivi la tua richiesta (opzionale)</div>
+            <textarea
+              value={note}
+              onChange={(e) => {
+                setNote(e.target.value);
+              }}
+              placeholder="Esempio: conferma compatibilità, tempi di spedizione, accessori aggiuntivi..."
+              className="mt-2 min-h-24 w-full resize-y rounded-lg border bg-white/70 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-black/10"
+            />
+            <div className="mt-2 text-xs text-gray-500">
+              La nota viene salvata e precompila il form nel carrello.
+              Nessun pagamento online.
+            </div>
           </div>
         </div>
 
@@ -347,7 +382,7 @@ export function SolutionKitBuilder({
             </div>
 
             {thumbImages.length > 1 ? (
-              <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
+              <div className="mt-3 w-full max-w-full flex gap-2 overflow-x-auto pb-1">
                 {thumbImages.slice(0, 10).map((src) => (
                   <button
                     key={src}

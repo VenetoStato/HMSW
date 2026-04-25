@@ -150,7 +150,7 @@ export default async function SolutionPage({ params }: { params: { slug: string 
               </div>
 
               {gallery.length ? (
-                <div className="mt-3 flex items-center gap-2 overflow-x-auto pb-1">
+          <div className="mt-3 w-full max-w-full flex items-center gap-2 overflow-x-auto pb-1">
                   {gallery.map((src, idx) => (
                     <div
                       key={src + idx}

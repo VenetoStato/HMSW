@@ -1,11 +1,12 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import type { Product } from '@/lib/types';
 import { useCart } from '@/lib/cart';
 import { formatEur } from '@/lib/price';
 
 export function CartPageClient({ products }: { products: Product[] }) {
+  const NOTES_KEY = 'unitree_shop_cart_note_v1';
   const { items, setQty, removeFromCart, clearCart } = useCart();
   const productsById = useMemo(() => Object.fromEntries(products.map((p) => [p.id, p])), [products]);
 
@@ -24,6 +25,19 @@ export function CartPageClient({ products }: { products: Product[] }) {
   const totalKnownEur = subtotalKnownEur;
 
   const [form, setForm] = useState({ name: '', email: '', phone: '', notes: '' });
+
+  // Prefill note from solution page
+  useEffect(() => {
+    try {
+      const v = localStorage.getItem(NOTES_KEY);
+      if (typeof v === 'string' && v.trim()) {
+        setForm((p) => ({ ...p, notes: v }));
+      }
+    } catch {
+      // ignore
+    }
+  }, []);
+
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
 
   // Paliativo PayPal: link “invia soldi” (no verifica webhook).
@@ -63,13 +77,20 @@ export function CartPageClient({ products }: { products: Product[] }) {
     });
 
     if (!res.ok) {
-      setStatus('idle');
-      alert('Errore invio ordine. Riprova.');
-      return;
-    }
+    setStatus('idle');
+    alert('Errore invio ordine. Riprova.');
+    return;
+  }
 
-    clearCart();
-    setStatus('sent');
+  // Clear local note on success
+  try {
+    localStorage.removeItem(NOTES_KEY);
+  } catch {
+    // ignore
+  }
+
+  clearCart();
+  setStatus('sent');
   }
 
   if (!lines.length) {
