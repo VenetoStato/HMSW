@@ -61,6 +61,64 @@ export default async function SolutionPage({ params }: { params: { slug: string 
               </div>
             ) : null}
 
+            {solution?.include?.bullets?.length ? (
+              <section className="mt-7">
+                <h2 className="text-lg font-semibold">{solution.include.title}</h2>
+                <ul className="mt-3 space-y-2 text-sm text-gray-700">
+                  {solution.include.bullets.map((b, idx) => (
+                    <li key={idx} className="flex gap-2">
+                      <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-black" />
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
+
+            {solution?.audience?.bullets?.length ? (
+              <section className="mt-7">
+                <h2 className="text-lg font-semibold">{solution.audience.title}</h2>
+                <ul className="mt-3 space-y-2 text-sm text-gray-700">
+                  {solution.audience.bullets.map((b, idx) => (
+                    <li key={idx} className="flex gap-2">
+                      <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-black" />
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
+
+            {solution?.integration?.bullets?.length ? (
+              <section className="mt-7">
+                <h2 className="text-lg font-semibold">{solution.integration.title}</h2>
+                <ul className="mt-3 space-y-2 text-sm text-gray-700">
+                  {solution.integration.bullets.map((b, idx) => (
+                    <li key={idx} className="flex gap-2">
+                      <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-black" />
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
+
+            {solution?.faq?.length ? (
+              <section className="mt-7">
+                <h2 className="text-lg font-semibold">FAQ</h2>
+                <div className="mt-3 space-y-3">
+                  {solution.faq.map((item, idx) => (
+                    <details key={idx} className="rounded-xl border bg-white p-4">
+                      <summary className="cursor-pointer text-sm font-semibold text-gray-900">
+                        {item.q}
+                      </summary>
+                      <div className="mt-2 text-sm text-gray-600">{item.a}</div>
+                    </details>
+                  ))}
+                </div>
+              </section>
+            ) : null}
+
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <Link
                 href="/shop"
@@ -85,9 +143,6 @@ export default async function SolutionPage({ params }: { params: { slug: string 
               </div>
             </div>
 
-            <div className="mt-4 text-xs text-gray-500">
-              Suggerimento: usa il configuratore JS qui a destra per aggiungere rapidamente i componenti al carrello.
-            </div>
           </div>
 
           <div className="relative bg-gray-50">

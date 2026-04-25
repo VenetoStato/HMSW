@@ -34,22 +34,22 @@ export function ShopFilters({ products }: { products: Product[] }) {
   }, [products, brand, category, q, sort]);
 
   return (
-    <div className="mt-6">
-      <div className="flex flex-wrap items-center gap-3 rounded-2xl border bg-white p-4">
-        <div className="min-w-[220px] flex-1">
+      <div className="mt-6">
+      <div className="flex flex-col gap-3 rounded-2xl border bg-white p-4 sm:flex-row sm:flex-wrap sm:items-end sm:justify-between">
+        <div className="w-full sm:min-w-[220px] sm:flex-1">
           <label className="block text-xs font-medium text-gray-600">Cerca</label>
           <input
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="Es: GO2, B2, H2, Z1..."
-            className="mt-1 w-full rounded-lg border bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-black/10"
+            className="mt-1 w-full rounded-lg border bg-white px-3 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 min-h-[44px]"
           />
         </div>
 
         <div>
           <label className="block text-xs font-medium text-gray-600">Brand</label>
           <select
-            className="mt-1 rounded-lg border bg-white px-3 py-2 text-sm"
+            className="mt-1 w-full sm:w-auto rounded-lg border bg-white px-3 py-3 text-sm min-h-[44px]"
             value={brand}
             onChange={(e) => setBrand(e.target.value)}
           >
@@ -65,7 +65,7 @@ export function ShopFilters({ products }: { products: Product[] }) {
         <div>
           <label className="block text-xs font-medium text-gray-600">Categoria</label>
           <select
-            className="mt-1 rounded-lg border bg-white px-3 py-2 text-sm"
+            className="mt-1 w-full sm:w-auto rounded-lg border bg-white px-3 py-3 text-sm min-h-[44px]"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
           >
@@ -81,7 +81,7 @@ export function ShopFilters({ products }: { products: Product[] }) {
         <div>
           <label className="block text-xs font-medium text-gray-600">Ordina</label>
           <select
-            className="mt-1 rounded-lg border bg-white px-3 py-2 text-sm"
+            className="mt-1 w-full sm:w-auto rounded-lg border bg-white px-3 py-3 text-sm min-h-[44px]"
             value={sort}
             onChange={(e) => setSort(e.target.value as any)}
           >

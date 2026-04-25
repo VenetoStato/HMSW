@@ -137,14 +137,14 @@ export function CartPageClient({ products }: { products: Product[] }) {
 
           <div className="mt-5 space-y-3">
             <div className="rounded-xl border bg-gray-50 p-4">
-              <div className="text-sm font-semibold">Pagamento PayPal (paliativo)</div>
+              <h3 className="text-sm font-semibold">Pagamento PayPal</h3>
+
               <div className="mt-1 text-xs text-gray-600">
-                {hasUnknownPrice ? (
-                  <>Stai pagando solo la parte con prezzo confermato (acconto parziale).</>
-                ) : (
-                  <>Stai pagando il totale prezzi confermati.</>
-                )}
+                {hasUnknownPrice
+                  ? 'Stai inviando un acconto sulla parte con prezzo confermato.'
+                  : 'Stai inviando il pagamento sulla base dei prezzi confermati.'}
               </div>
+
               <div className="mt-3 flex items-center justify-between">
                 <div className="text-xs text-gray-600">Importo</div>
                 <div className="text-sm font-bold">{paypalEnabled ? formatEur(paypalAmountEur) : '—'}</div>
@@ -168,7 +168,7 @@ export function CartPageClient({ products }: { products: Product[] }) {
               </a>
 
               <div className="mt-2 text-[11px] text-gray-500">
-                Nota: questo link invia denaro tramite PayPal. La conferma automatica sul sito non è gestita in questo paliativo.
+                Dopo il pagamento apri la richiesta dal form: serve per confermare disponibilità, spedizione e i dettagli finali.
               </div>
             </div>
 

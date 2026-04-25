@@ -36,6 +36,7 @@ export default function AdminProductsClient() {
   const [loading, setLoading] = useState(true);
   const [form, setForm] = useState<FormState>(emptyForm);
   const [files, setFiles] = useState<FileList | null>(null);
+  const [previews, setPreviews] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   async function refresh() {
@@ -51,6 +52,21 @@ export default function AdminProductsClient() {
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    if (!files || files.length === 0) {
+      setPreviews([]);
+      return;
+    }
+
+    const arr = Array.from(files);
+    const urls = arr.map((f) => URL.createObjectURL(f));
+    setPreviews(urls);
+
+    return () => {
+      urls.forEach((u) => URL.revokeObjectURL(u));
+    };
+  }, [files]);
 
   const editing = !!form.id;
 
@@ -234,6 +250,20 @@ export default function AdminProductsClient() {
                 className="mt-1 block w-full text-sm"
               />
               <p className="mt-1 text-xs text-gray-500">Se modifichi, le nuove immagini vengono aggiunte.</p>
+
+              {previews.length ? (
+                <div className="mt-3">
+                  <div className="text-xs font-semibold text-gray-700">Anteprima</div>
+                  <div className="mt-2 flex gap-2 overflow-x-auto">
+                    {previews.map((src, idx) => (
+                      <div key={src + idx} className="relative h-16 w-16 flex-none overflow-hidden rounded-md border bg-gray-50">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={src} alt="anteprima immagine" className="h-full w-full object-cover" />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
             </div>
 
             {error ? <p className="text-sm text-red-600">{error}</p> : null}

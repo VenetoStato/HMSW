@@ -15,9 +15,246 @@ export type SolutionDefinition = {
     rd: string;
     integrato: string;
   };
+  // Sezioni copy-conversion per landing "macro" (opzionali per non rompere le definizioni esistenti)
+  include?: {
+    title: string;
+    bullets: string[];
+  };
+  audience?: {
+    title: string;
+    bullets: string[];
+  };
+  integration?: {
+    title: string;
+    bullets: string[];
+  };
+  faq?: {
+    q: string;
+    a: string;
+  }[];
 };
 
 export const SOLUTIONS: SolutionDefinition[] = [
+  {
+    slug: 'quadrupedi',
+    title: 'Quadrupedi Unitree',
+    seoDescription:
+      'Soluzione Quadrupedi per mobilità, demo e ricerca: scegli il modello e completa il setup con accessori compatibili per rendere i test più rapidi e ripetibili.',
+    heroCopy:
+      'Quando ti serve autonomia e movimento in scenari dinamici: configura un kit Quadrupedi pensato per demo, R&D e iterazioni veloci.',
+    familyLabel: 'Mobile robots / Quadrupedi',
+    bullets: [
+      'Mobilità e gestione dei percorsi in scenari variabili',
+      'Kit configurabile per ricerca e dimostrazioni',
+      'Selezione di componenti di supporto in base al tuo scenario',
+    ],
+    fallbackCategories: ['Mobile robots'],
+    keywordHints: ['go2', 'go1', 'b2', 'b2w', 'quadruped', 'self-charging', 'charger', 'battery', 'lidar', 'remote-controller'],
+    imageSearchHints: ['quadruped', 'go2', 'robot', 'self-charging', 'mobile robot'],
+    kitScenarioLabels: {
+      demo: 'Demo & mobilità',
+      rd: 'R&D e test',
+      integrato: 'Setup pronto',
+    },
+    include: {
+      title: 'Cosa include',
+      bullets: [
+        'Un quadrupede selezionato dal catalogo in base alla compatibilità',
+        'Componenti di supporto per rendere il setup operativo (quando disponibili)',
+        'Configurazione guidata dal configuratore a scenario (Demo/Ricerca/Integrazione)',
+      ],
+    },
+    audience: {
+      title: 'Per chi è',
+      bullets: [
+        'Team R&D e prototipazione di robot mobili',
+        'Ricerca su locomozione, sensing e interazione in campo',
+        'Demo, formazione e proof-of-concept',
+      ],
+    },
+    integration: {
+      title: 'Integrazione',
+      bullets: [
+        'Selezione componenti coerenti con la soluzione scelta',
+        'Prezzi trasparenti dove presenti, altrimenti “su richiesta”',
+        'Carrello e richiesta per conferma disponibilità e spedizione',
+      ],
+    },
+    faq: [
+      {
+        q: 'Come scelgo tra GO2, B2 e GO1?',
+        a: 'Parti dallo scenario (Demo, Ricerca o Integrazione) e dalla compatibilità nel tuo setup. Poi completa con gli accessori nel configuratore e verifica i componenti disponibili nel carrello.',
+      },
+      {
+        q: 'I prezzi sono definitivi?',
+        a: 'Nel carrello vedi i prezzi confermati dove disponibili; per componenti “su richiesta” il totale viene gestito in fase di conferma dell’ordine.',
+      },
+      {
+        q: 'Posso usare solo il robot senza accessori?',
+        a: 'Sì: puoi aggiungere dal configuratore solo i componenti necessari. Il carrello ti permette comunque di inviare la richiesta e finalizzare la configurazione.',
+      },
+    ],
+  },
+  {
+    slug: 'braccia',
+    title: 'Braccia & Gripper Unitree',
+    seoDescription:
+      'Soluzione braccia e gripper per presa, assemblaggio e manipolazione: seleziona un sistema e completa con accessori compatibili per integrare più velocemente.',
+    heroCopy:
+      'Presa e posizionamento per applicazioni di manipolazione: imposta un kit Braccia/Gripper e costruisci la configurazione step-by-step.',
+    familyLabel: 'Manipolazione / Robotic arms',
+    bullets: [
+      'Presa e manipolazione orientate al task',
+      'Kit configurabile con componenti compatibili',
+      'Integrazione più rapida grazie a una selezione guidata',
+    ],
+    fallbackCategories: ['Robotic arms', 'Robotic gripper'],
+    keywordHints: ['arm', 'gripper', 'z1', 'dex', 'tactile', 'robotic-arm', 'd405', 'd435'],
+    imageSearchHints: ['robot arm', 'gripper', 'dex', 'tactile', 'end effector'],
+    kitScenarioLabels: {
+      demo: 'Demo di manipolazione',
+      rd: 'Ricerca & prove',
+      integrato: 'Integrazione pronta',
+    },
+    include: {
+      title: 'Cosa include',
+      bullets: [
+        'Un braccio/gripper come base del kit',
+        'Accessori compatibili selezionati in base allo scenario',
+        'Configurazione guidata per aggiungere al carrello i componenti scelti',
+      ],
+    },
+    audience: {
+      title: 'Per chi è',
+      bullets: [
+        'Integrazione di celle robotiche e prototipi',
+        'Progetti di presa, assemblaggio e manipolazione',
+        'Team che vogliono ridurre tempi di setup e test',
+      ],
+    },
+    integration: {
+      title: 'Integrazione',
+      bullets: [
+        'Selezione componenti coerenti con la soluzione scelta',
+        'Prezzi confermati dove disponibili, altrimenti “su richiesta”',
+        'Richiesta dal carrello per confermare disponibilità e spedizione',
+      ],
+    },
+    faq: [
+      {
+        q: 'Posso cambiare la composizione del kit?',
+        a: 'Sì: nel configuratore puoi selezionare lo scenario e aggiungere i componenti al carrello. Da lì finalizzi la richiesta con i dettagli necessari.',
+      },
+      {
+        q: 'Come gestite la compatibilità?',
+        a: 'La landing usa matching per categorie e keyword e ti mostra i componenti nel carrello. La conferma finale avviene in fase di gestione richiesta.',
+      },
+    ],
+  },
+  {
+    slug: 'umanoidi',
+    title: 'Umanoidi Unitree',
+    seoDescription:
+      'Soluzione Umanoidi per educazione, R&D e dimostrazioni: scegli lo scenario e completa il setup con componenti compatibili per partire più velocemente con i test.',
+    heroCopy:
+      'Quando serve flessibilità: un umanoide pensato per iterazioni, training e demo. Configura il kit e aggiungilo al carrello in pochi passaggi.',
+    familyLabel: 'Humanoid robots',
+    bullets: [
+      'Task ripetibili per prove e dimostrazioni',
+      'Setup orientato a iterazioni rapide',
+      'Kit selezionato in base a scenario e disponibilità',
+    ],
+    fallbackCategories: ['Humanoid robots'],
+    keywordHints: ['h2', 'humanoid', 'unitree', 'dex', 'dex-1', 'revo', 'brainco', 'umano'],
+    imageSearchHints: ['humanoid robot', 'unitree', 'h2', 'dex'],
+    kitScenarioLabels: {
+      demo: 'Demo & training',
+      rd: 'Ricerca & prove',
+      integrato: 'Integrazione pronta',
+    },
+    include: {
+      title: 'Cosa include',
+      bullets: [
+        'Umanoide selezionato come base del kit',
+        'Componenti compatibili selezionati dal configuratore',
+        'Stima totale: prezzi confermati dove disponibili, altrimenti “su richiesta”',
+      ],
+    },
+    audience: {
+      title: 'Per chi è',
+      bullets: [
+        'Educazione e formazione tecnica',
+        'R&D e prototipazione',
+        'Demo e proof-of-concept in contesti controllati',
+      ],
+    },
+    integration: {
+      title: 'Integrazione',
+      bullets: [
+        'Selezione componenti coerenti con lo scenario scelto',
+        'Carrello per inviare la richiesta e completare la configurazione',
+        'Supporto nella gestione disponibilità/spedizione in fase di conferma',
+      ],
+    },
+    faq: [
+      {
+        q: 'Questa soluzione è adatta a R&D?',
+        a: 'Sì: la configurazione è pensata per iterazioni rapide. Nel carrello vedi i componenti selezionati e puoi inviare la richiesta per la conferma finale.',
+      },
+    ],
+  },
+  {
+    slug: 'accessori',
+    title: 'Accessori per il tuo setup robotico',
+    seoDescription:
+      'Non solo il robot: accessori e componenti chiave per alimentazione, supporto e completamento del setup. Completa la configurazione con un kit guidato dallo scenario.',
+    heroCopy:
+      'Per rendere il sistema operativo serve una base solida: scegli gli accessori compatibili e prepara un setup pronto all’uso.',
+    familyLabel: 'Accessori / alimentazione e supporto',
+    bullets: [
+      'Componenti di supporto per mantenere continuità operativa',
+      'Kit selezionato per completare la configurazione',
+      'Prezzi confermati dove disponibili, altrimenti su richiesta',
+    ],
+    fallbackCategories: ['Robotic arms', 'Mobile robots', 'Programmable drones', 'Service robots', 'Robotic gripper'],
+    keywordHints: ['battery', 'charger', 'dock', 'power', 'accessory', 'controller', 'cable', 'sensor', 'workstation'],
+    imageSearchHints: ['battery', 'charger', 'power supply', 'dock', 'accessories'],
+    kitScenarioLabels: {
+      demo: 'Demo operativo',
+      rd: 'Test e validazione',
+      integrato: 'Setup pronto all’uso',
+    },
+    include: {
+      title: 'Cosa include',
+      bullets: [
+        'Componenti di supporto selezionati per completare il tuo setup',
+        'Selezione guidata dal configuratore per scenario e disponibilità',
+        'Carrello per inviare la richiesta e confermare i dettagli finali',
+      ],
+    },
+    audience: {
+      title: 'Per chi è',
+      bullets: [
+        'Chi vuole completare il setup senza scegliere a tentativi',
+        'Team che preparano demo, test e prototipi',
+        'Ingegneri/tecnici che vogliono una configurazione coerente',
+      ],
+    },
+    integration: {
+      title: 'Integrazione',
+      bullets: [
+        'Matching per categorie e keyword per proporre componenti compatibili',
+        'Prezzi trasparenti dove disponibili, altrimenti “su richiesta”',
+        'Conferma disponibilità/spedizione tramite richiesta dal carrello',
+      ],
+    },
+    faq: [
+      {
+        q: 'Come faccio a sapere quali accessori mi servono?',
+        a: 'Inizia dallo scenario (Demo/Ricerca/Integrazione) e aggiungi al carrello i componenti suggeriti. La richiesta finale serve per verificare la configurazione.',
+      },
+    ],
+  },
   {
     slug: 'cobot-pick-and-place',
     title: 'Cobot Pick & Place',

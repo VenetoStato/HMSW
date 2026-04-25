@@ -16,6 +16,11 @@ export function ProductGallery({ images, name }: { images: string[]; name: strin
   return (
     <div className="">
       <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border bg-gray-50">
+        {safe.length > 1 ? (
+          <div className="absolute left-3 top-3 z-10 rounded-md bg-black/70 px-2 py-1 text-[11px] font-semibold text-white">
+            {activeIdx + 1}/{safe.length}
+          </div>
+        ) : null}
         <Image
           src={active}
           alt={name}
@@ -24,7 +29,6 @@ export function ProductGallery({ images, name }: { images: string[]; name: strin
           sizes="(max-width: 768px) 100vw, 60vw"
         />
       </div>
-
       <div className="mt-3 flex gap-2 overflow-x-auto">
         {safe.map((src) => (
           <button
@@ -37,7 +41,13 @@ export function ProductGallery({ images, name }: { images: string[]; name: strin
             }
           >
             <div className="relative h-16 w-16 overflow-hidden rounded-md bg-gray-50">
-              <Image src={src} alt={`${name} - thumbnail`} fill className="object-cover" sizes="64px" />
+              <Image
+                src={src}
+                alt={`${name} - thumbnail`}
+                fill
+                className="object-cover"
+                sizes="64px"
+              />
             </div>
           </button>
         ))}
