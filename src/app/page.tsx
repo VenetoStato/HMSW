@@ -1,9 +1,8 @@
 import Link from 'next/link';
-import { getSolutions } from '@/lib/catalog';
+import { SOLUTIONS } from '@/lib/solutions';
+import { DynamicAccentGradient } from '@/components/DynamicAccentGradient';
 
 export default async function Home() {
-  const solutions = await getSolutions();
-
   return (
     <main className="py-8">
       <section className="rounded-2xl border p-6 motion-gradient-hero bg-white">
@@ -19,7 +18,7 @@ export default async function Home() {
             Vai allo shop
           </Link>
           <Link
-            href={`/soluzioni/${solutions[0]?.slug ?? 'robot-per-uso-quotidiano'}`}
+            href={`/soluzioni/${SOLUTIONS[0]?.slug ?? 'robot-per-uso-quotidiano'}`}
             className="rounded-lg border px-4 py-2 hover:bg-gray-50"
           >
             Scopri una soluzione
@@ -31,22 +30,33 @@ export default async function Home() {
         <div className="flex items-end justify-between gap-4">
           <div>
             <h2 className="text-xl font-semibold">Soluzioni</h2>
-            <p className="mt-1 text-sm text-gray-600">
-              Landing dedicate (una per ogni soluzione) con prodotti consigliati.
-            </p>
+            <p className="mt-1 text-sm text-gray-600">Landing dedicate (una per ogni soluzione).</p>
           </div>
         </div>
 
         <div className="mt-4 grid gap-4 md:grid-cols-3">
-          {solutions.map((s) => (
+          {SOLUTIONS.map((s) => (
             <Link
               key={s.slug}
               href={`/soluzioni/${s.slug}`}
-              className="group rounded-2xl border p-4 hover:bg-gray-50"
+              className="group"
             >
-              <div className="text-sm text-gray-500">Soluzione</div>
-              <h3 className="mt-1 text-lg font-bold group-hover:underline">{s.title}</h3>
-              <p className="mt-2 text-sm text-gray-600">{s.description}</p>
+              <div
+                className="relative overflow-hidden rounded-2xl border bg-white/65 p-5 accent-surface backdrop-blur transition-shadow group-hover:shadow-sm"
+                style={{
+                  ['--acc-a' as any]: s.accentRgb?.a ?? '56 189 248',
+                  ['--acc-b' as any]: s.accentRgb?.b ?? '99 102 241',
+                  ['--acc-c' as any]: s.accentRgb?.c ?? '16 185 129',
+                }}
+              >
+                <DynamicAccentGradient className="absolute inset-0 opacity-90" />
+
+                <div className="relative z-10">
+                  <div className="text-xs text-gray-600">Soluzione</div>
+                  <h3 className="mt-1 text-lg font-bold group-hover:underline">{s.title}</h3>
+                  <p className="mt-2 text-sm text-gray-600">{s.seoDescription}</p>
+                </div>
+              </div>
             </Link>
           ))}
         </div>

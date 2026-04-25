@@ -27,15 +27,33 @@ export function DynamicAccentGradient({
     let tx = 55;
     let ty = 35;
 
-    const onPointerMove = (e: PointerEvent) => {
+    const setFromClient = (clientX: number, clientY: number) => {
       const r = el.getBoundingClientRect();
-      const x = (e.clientX - r.left) / Math.max(1, r.width);
-      const y = (e.clientY - r.top) / Math.max(1, r.height);
+      const x = (clientX - r.left) / Math.max(1, r.width);
+      const y = (clientY - r.top) / Math.max(1, r.height);
       tx = clamp(x * 100, 0, 100);
       ty = clamp(y * 100, 0, 100);
     };
 
-    window.addEventListener('pointermove', onPointerMove, { passive: true });
+    const onPointerMove = (e: PointerEvent) => {
+      setFromClient(e.clientX, e.clientY);
+    };
+
+    const onTouchStart = (e: TouchEvent) => {
+      const t = e.touches?.[0];
+      if (!t) return;
+      setFromClient(t.clientX, t.clientY);
+    };
+
+    const onTouchMove = (e: TouchEvent) => {
+      const t = e.touches?.[0];
+      if (!t) return;
+      setFromClient(t.clientX, t.clientY);
+    };
+
+    el.addEventListener('pointermove', onPointerMove, { passive: true });
+    el.addEventListener('touchstart', onTouchStart, { passive: true });
+    el.addEventListener('touchmove', onTouchMove, { passive: true });
 
     let raf = 0;
     const start = performance.now();
@@ -46,7 +64,7 @@ export function DynamicAccentGradient({
 
       const s = (t - start) / 1000;
 
-      // “26-ish tech” subtle drift + pointer influence
+      // subtle drift + touch/pointer influence
       const sx1 = 20 + Math.sin(s * 0.45) * 20;
       const sy1 = 20 + Math.cos(s * 0.38) * 18;
 
@@ -58,8 +76,10 @@ export function DynamicAccentGradient({
 
       const gx1 = 0.55 * sx1 + 0.45 * tx;
       const gy1 = 0.55 * sy1 + 0.45 * ty;
+
       const gx2 = 0.55 * sx2 + 0.45 * (100 - tx);
       const gy2 = 0.55 * sy2 + 0.45 * ty;
+
       const gx3 = 0.55 * sx3 + 0.45 * (tx * 0.6 + 20);
       const gy3 = 0.55 * sy3 + 0.45 * (ty * 0.4 + 55);
 
@@ -76,7 +96,9 @@ export function DynamicAccentGradient({
     raf = requestAnimationFrame(tick);
 
     return () => {
-      window.removeEventListener('pointermove', onPointerMove);
+      el.removeEventListener('pointermove', onPointerMove);
+      el.removeEventListener('touchstart', onTouchStart);
+      el.removeEventListener('touchmove', onTouchMove);
       cancelAnimationFrame(raf);
     };
   }, []);
