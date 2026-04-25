@@ -1,95 +1,137 @@
 import Link from 'next/link';
-import { getProducts, getSolutions } from '@/lib/catalog';
+import { getProducts } from '@/lib/catalog';
+import { matchProductsForSolution, SOLUTIONS } from '@/lib/solutions';
 import { ProductGrid } from '@/components/ProductGrid';
 import { SolutionKitBuilder } from '@/components/SolutionKitBuilder';
 
+export function generateStaticParams() {
+  return SOLUTIONS.map((s) => ({ slug: s.slug }));
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const slug = params.slug;
+  const solution = SOLUTIONS.find((s) => s.slug === slug);
+  const title = solution?.title ?? `Soluzione ${slug}`;
+  const description = solution?.seoDescription ?? 'Soluzione configurabile con prodotti e prezzi.';
+
+  return {
+    title,
+    description,
+    openGraph: { title, description },
+  };
+}
+
 export default async function SolutionPage({ params }: { params: { slug: string } }) {
   const slug = params.slug;
-  const solutions = await getSolutions();
-  const solution = solutions.find((s) => s.slug === slug);
+  const solution = SOLUTIONS.find((s) => s.slug) ?? null;
 
   const products = await getProducts();
-  const filtered = products.filter((p) => p.solutionSlug === slug);
+  const matched = solution ? matchProductsForSolution(solution, products) : products.slice(0, 12);
 
-  const heroImg = filtered[0]?.images?.[0];
+  const imagePool = matched.flatMap((p) => p.images ?? []).filter(Boolean);
+  const heroImages = Array.from(new Set(imagePool)).slice(0, 10);
+  const heroImg = heroImages[0] ?? null;
+  const gallery = heroImages.slice(0, 8);
 
   return (
-    <main className="py-8">
+    <main className="py-6 md:py-10">
       <section className="overflow-hidden rounded-2xl border bg-white">
         <div className="grid gap-6 md:grid-cols-2">
           <div className="p-6 md:p-8">
-            <div className="text-sm text-gray-500">Soluzione pronta</div>
-            <h1 className="mt-2 text-2xl font-bold">{solution?.title ?? slug}</h1>
-            {solution?.description ? (
-              <p className="mt-3 text-sm text-gray-600">{solution.description}</p>
+            <div className="flex flex-wrap items-center gap-2">
+              <div className="inline-flex items-center rounded-full border bg-white px-3 py-1 text-xs font-semibold text-gray-700">
+                {solution?.familyLabel ?? 'Soluzione'}
+              </div>
+              <div className="text-xs text-gray-500">Landing ottimizzata per mobile</div>
+            </div>
+
+            <h1 className="mt-3 text-2xl md:text-3xl font-bold">{solution?.title ?? slug}</h1>
+            <p className="mt-3 text-sm md:text-base text-gray-600">
+              {solution?.heroCopy ?? solution?.seoDescription ?? ''}
+            </p>
+
+            {(solution?.bullets ?? []).slice(0, 3).length ? (
+              <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                {(solution?.bullets ?? []).slice(0, 3).map((b, i) => (
+                  <div key={i} className="rounded-xl border bg-white p-4">
+                    <div className="text-xs font-semibold text-gray-700">{i + 1}</div>
+                    <div className="mt-1 text-sm text-gray-600">{b}</div>
+                  </div>
+                ))}
+              </div>
             ) : null}
 
-            <div className="mt-5 flex flex-wrap items-center gap-3">
-              <Link href="/shop" className="rounded-lg bg-black px-4 py-2 text-white hover:bg-gray-800">
-                Vai allo shop e completa il kit
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <Link
+                href="/shop"
+                className="rounded-lg bg-black px-4 py-2 text-white text-sm font-semibold hover:bg-gray-900"
+              >
+                Vai allo shop
               </Link>
-              <Link href="/carrello" className="rounded-lg border px-4 py-2 hover:bg-gray-50">
+              <Link href="/carrello" className="rounded-lg border px-4 py-2 text-sm hover:bg-gray-50">
                 Carrello
               </Link>
             </div>
 
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
-              <div className="rounded-xl border bg-white p-4">
-                <div className="text-sm font-semibold">1) Seleziona scenario</div>
-                <div className="mt-1 text-sm text-gray-600">Demo, Ricerca o Integrazione.</div>
-              </div>
-              <div className="rounded-xl border bg-white p-4">
-                <div className="text-sm font-semibold">2) Kit pronto</div>
-                <div className="mt-1 text-sm text-gray-600">Componenti coerenti + prezzi trasparenti.</div>
-              </div>
-              <div className="rounded-xl border bg-white p-4">
-                <div className="text-sm font-semibold">3) Aggiungi al carrello</div>
-                <div className="mt-1 text-sm text-gray-600">In 1 click, poi invii la richiesta.</div>
-              </div>
-              <div className="rounded-xl border bg-white p-4">
-                <div className="text-sm font-semibold">4) Ricevi conferma</div>
-                <div className="mt-1 text-sm text-gray-600">Niente pagamento online.</div>
+            <div className="mt-6">
+              <div className="text-sm font-semibold">Immagini inerenti alla soluzione</div>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {gallery.map((src, idx) => (
+                  <div key={src + idx} className="h-14 w-14 overflow-hidden rounded-lg border bg-gray-50">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={src} alt={solution?.title ?? 'immagine'} className="h-full w-full object-cover" loading="lazy" />
+                  </div>
+                ))}
               </div>
             </div>
 
-            <div className="mt-6 text-xs text-gray-500">
-              * Se un componente è “Prezzo su richiesta”, vedrai “Su richiesta” anche nel totale.
+            <div className="mt-4 text-xs text-gray-500">
+              Suggerimento: usa il configuratore JS qui a destra per aggiungere rapidamente i componenti al carrello.
             </div>
           </div>
 
-          <div className="relative min-h-[220px] bg-gray-50">
+          <div className="relative bg-gray-50">
             {heroImg ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={heroImg} alt="Immagine soluzione" className="h-full w-full object-cover" />
-            ) : null}
-            <div className="absolute inset-0 bg-gradient-to-br from-sky-50/60 via-white/60 to-white/90" />
+              <img src={heroImg} alt={solution?.title ?? 'Immagine soluzione'} className="h-full w-full object-cover" />
+            ) : (
+              <div className="h-full w-full bg-gray-100" />
+            )}
+
+            <div className="absolute inset-0 bg-gradient-to-br from-sky-50/60 via-white/30 to-white/95" />
+
             <div className="relative p-6 md:p-8">
-              <SolutionKitBuilder solutionSlug={slug} products={filtered} />
+              <SolutionKitBuilder contextTitle={solution?.title ?? slug} products={matched} imagePool={matched} />
+
+              <div className="mt-4 rounded-xl border bg-white/70 p-4 backdrop-blur">
+                <div className="flex items-center justify-between gap-3">
+                  <div>
+                    <div className="text-sm font-semibold">Componenti suggeriti</div>
+                    <div className="text-xs text-gray-600">Scelti con keyword + categoria</div>
+                  </div>
+                  <div className="text-sm text-gray-700">{matched.length} prodotti</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="mt-8">
+      <section className="mt-10">
         <div className="flex items-end justify-between gap-4">
           <div>
             <h2 className="text-xl font-semibold">Componenti consigliati</h2>
             <p className="mt-1 text-sm text-gray-600">
-              I prodotti che compongono la soluzione “{solution?.title ?? slug}”.
+              Prodotti compatibili con la landing: <span className="font-medium">{solution?.title ?? slug}</span>
             </p>
           </div>
-          <div className="text-sm text-gray-500">{filtered.length} prodotti</div>
+          <div className="text-sm text-gray-500">{matched.length} in evidenza</div>
         </div>
 
         <div className="mt-4">
-          <ProductGrid products={filtered} />
+          <ProductGrid products={matched} />
         </div>
       </section>
     </main>
   );
-}
-
-export async function generateStaticParams() {
-  const solutions = await getSolutions();
-  return solutions.map((s) => ({ slug: s.slug }));
 }

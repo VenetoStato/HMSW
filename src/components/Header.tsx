@@ -1,12 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { useCart } from '@/lib/cart';
 
 export function Header() {
   const { items } = useCart();
   const count = useMemo(() => items.reduce((a, b) => a + b.qty, 0), [items]);
+  const [open, setOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur">
@@ -17,22 +18,11 @@ export function Header() {
           </Link>
         </div>
 
-        <nav className="flex items-center gap-3 text-sm">
-          <Link href="/soluzioni/quadrupedi" className="rounded-md px-2 py-1 hover:bg-gray-100">
-            Quadrupedi
+        <nav className="hidden items-center gap-3 text-sm lg:flex">
+          <Link href="/soluzioni" className="rounded-md px-2 py-1 hover:bg-gray-100">
+            Soluzioni
           </Link>
-          <Link href="/soluzioni/braccia" className="rounded-md px-2 py-1 hover:bg-gray-100">
-            Braccia
-          </Link>
-          <Link href="/soluzioni/umanoidi" className="rounded-md px-2 py-1 hover:bg-gray-100">
-            Umanoidi
-          </Link>
-          <Link href="/soluzioni/accessori" className="rounded-md px-2 py-1 hover:bg-gray-100">
-            Accessori
-          </Link>
-
           <span className="mx-1 hidden h-5 w-px bg-gray-200 lg:block" />
-
           <Link href="/shop" className="rounded-md px-2 py-1 hover:bg-gray-100">
             Shop
           </Link>
@@ -46,7 +36,60 @@ export function Header() {
             Admin
           </Link>
         </nav>
+
+        <button
+          type="button"
+          aria-label="Apri menu"
+          onClick={() => setOpen((v) => !v)}
+          className="lg:hidden inline-flex items-center justify-center rounded-lg border bg-white px-3 py-2 text-sm"
+        >
+          {open ? 'Chiudi' : 'Menu'}
+        </button>
       </div>
+
+      {open ? (
+        <div className="lg:hidden border-t bg-white">
+          <div className="mx-auto max-w-6xl px-4 py-3">
+            <div className="grid gap-2 text-sm">
+              <Link
+                href="/soluzioni"
+                onClick={() => setOpen(false)}
+                className="rounded-lg border px-3 py-2 hover:bg-gray-50"
+              >
+                Soluzioni
+              </Link>
+              <Link
+                href="/shop"
+                onClick={() => setOpen(false)}
+                className="rounded-lg border px-3 py-2 hover:bg-gray-50"
+              >
+                Shop
+              </Link>
+              <Link
+                href="/blog"
+                onClick={() => setOpen(false)}
+                className="rounded-lg border px-3 py-2 hover:bg-gray-50"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/carrello"
+                onClick={() => setOpen(false)}
+                className="rounded-lg border px-3 py-2 hover:bg-gray-50"
+              >
+                Carrello{count > 0 ? ` (${count})` : ''}
+              </Link>
+              <Link
+                href="/admin"
+                onClick={() => setOpen(false)}
+                className="rounded-lg border px-3 py-2 hover:bg-gray-50"
+              >
+                Admin
+              </Link>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </header>
   );
 }

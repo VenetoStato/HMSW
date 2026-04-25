@@ -10,7 +10,6 @@ type Scenario = 'demo' | 'rd' | 'integrato';
 function pickBaseAndAccessories(products: Product[], accessoryCount: number) {
   const priced = products.filter((p) => (p.priceEur ?? 0) > 0);
   const base = priced.sort((a, b) => b.priceEur - a.priceEur)[0] ?? products[0];
-
   const accessories = products
     .filter((p) => p.id !== base?.id)
     .filter((p) => (p.priceEur ?? 0) > 0)
@@ -20,7 +19,15 @@ function pickBaseAndAccessories(products: Product[], accessoryCount: number) {
   return { base, chosen };
 }
 
-export function SolutionKitBuilder({ solutionSlug, products }: { solutionSlug: string; products: Product[] }) {
+export function SolutionKitBuilder({
+  contextTitle,
+  products,
+  imagePool,
+}: {
+  contextTitle: string;
+  products: Product[];
+  imagePool?: Product[];
+}) {
   const { addToCart } = useCart();
   const [scenario, setScenario] = useState<Scenario>('rd');
   const [status, setStatus] = useState<'idle' | 'added'>('idle');
@@ -40,8 +47,8 @@ export function SolutionKitBuilder({ solutionSlug, products }: { solutionSlug: s
   }, [kit]);
 
   const scenarioLabel = useMemo(() => {
-    if (scenario === 'demo') return 'Demo & Formazione';
-    if (scenario === 'rd') return 'Ricerca & Sviluppo';
+    if (scenario === 'demo') return 'Demo rapida';
+    if (scenario === 'rd') return 'Ricerca & prove';
     return 'Integrazione pronta';
   }, [scenario]);
 
@@ -51,31 +58,50 @@ export function SolutionKitBuilder({ solutionSlug, products }: { solutionSlug: s
     setTimeout(() => setStatus('idle'), 2200);
   }
 
-  const heroImage = kit[0]?.images?.[0];
+  const pool = imagePool ?? products;
   const thumbImages = useMemo(() => {
     const imgs: string[] = [];
-    for (const p of kit) {
+    for (const p of pool) {
       for (const img of p.images ?? []) {
         if (img && !imgs.includes(img)) imgs.push(img);
-        if (imgs.length >= 10) break;
+        if (imgs.length >= 12) break;
       }
-      if (imgs.length >= 10) break;
+      if (imgs.length >= 12) break;
     }
     return imgs;
-  }, [kit]);
+  }, [pool]);
 
+  const heroImage = thumbImages[0] ?? null;
   const [selectedImg, setSelectedImg] = useState<string | null>(null);
-  const effectiveImg = selectedImg ?? heroImage ?? (thumbImages[0] ?? null);
+  const effectiveImg = selectedImg ?? heroImage;
+
+  const progress = scenario === 'demo' ? 33 : scenario === 'rd' ? 66 : 100;
 
   return (
     <div className="rounded-2xl border bg-white p-4 md:p-5">
-      <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+      <div className="rounded-xl bg-black/[0.03] p-3">
+        <div className="flex items-center justify-between gap-3">
+          <div>
+            <div className="text-sm text-gray-500">Configuratore</div>
+            <div className="mt-0.5 text-sm font-bold">{contextTitle}</div>
+          </div>
+          <div className="text-xs text-gray-500">Progress {progress}%</div>
+        </div>
+        <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-gray-200">
+          <div
+            className="h-full rounded-full bg-black transition-[width]"
+            style={{ width: `${progress}%` }}
+          />
+        </div>
+      </div>
+
+      <div className="mt-4 flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
         <div className="min-w-0 flex-1">
-          <div className="text-sm text-gray-500">Crea il tuo kit</div>
+          <div className="text-sm font-semibold">1) Scenario</div>
           <h3 className="mt-1 text-xl font-bold">{scenarioLabel}</h3>
           <p className="mt-2 text-sm text-gray-600">
-            Selezioniamo automaticamente il componente “base” e gli accessori più utili per il tuo scenario.
-            Prezzi trasparenti dove disponibili, per il resto richiediamo il preventivo.
+            Selezioniamo automaticamente un componente “base” e accessori compatibili.
+            Prezzi trasparenti dove disponibili, altrimenti “su richiesta”.
           </p>
 
           <div className="mt-4 flex flex-wrap gap-2">
@@ -123,15 +149,15 @@ export function SolutionKitBuilder({ solutionSlug, products }: { solutionSlug: s
                 <div className="text-sm font-bold">{formatEur(pricing.knownSubtotal)}</div>
               )}
             </div>
-            {pricing.hasUnknown ? (
-              <div className="mt-1 text-xs text-gray-600">Almeno un componente è “prezzo su richiesta”.</div>
-            ) : (
-              <div className="mt-1 text-xs text-gray-600">Stima basata sui prezzi confermati.</div>
-            )}
+            <div className="mt-1 text-xs text-gray-600">
+              {pricing.hasUnknown
+                ? 'Almeno un componente è “prezzo su richiesta”.'
+                : 'Stima basata sui prezzi confermati.'}
+            </div>
           </div>
 
           <div className="mt-4">
-            <div className="text-sm font-semibold">Componenti nel kit</div>
+            <div className="text-sm font-semibold">2) Componenti nel kit</div>
             <ul className="mt-2 space-y-2 text-sm text-gray-700">
               {kit.map((p) => (
                 <li key={p.id} className="flex items-start justify-between gap-3">
@@ -153,6 +179,10 @@ export function SolutionKitBuilder({ solutionSlug, products }: { solutionSlug: s
               {status === 'added' ? 'Kit aggiunto ✅' : 'Aggiungi kit al carrello'}
             </button>
           </div>
+
+          <div className="mt-3 text-xs text-gray-500">
+            3) Apri il carrello e invia la richiesta: nessun pagamento online.
+          </div>
         </div>
 
         <div className="md:w-[320px]">
@@ -161,22 +191,22 @@ export function SolutionKitBuilder({ solutionSlug, products }: { solutionSlug: s
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={effectiveImg}
-                alt={`Immagine kit ${solutionSlug}`}
-                className="h-48 w-full rounded-xl object-cover"
+                alt={`Immagine ${contextTitle}`}
+                className="h-52 w-full rounded-xl object-cover"
               />
             ) : (
-              <div className="h-48 w-full rounded-xl bg-gray-200" />
+              <div className="h-52 w-full rounded-xl bg-gray-200" />
             )}
 
             {thumbImages.length > 1 ? (
               <div className="mt-3 flex flex-wrap gap-2">
-                {thumbImages.slice(0, 8).map((src) => (
+                {thumbImages.slice(0, 10).map((src) => (
                   <button
                     key={src}
                     type="button"
                     onClick={() => setSelectedImg(src)}
                     className={
-                      (selectedImg ?? effectiveImg) === src
+                      (selectedImg ?? heroImage) === src
                         ? 'h-12 w-12 overflow-hidden rounded-lg border-2 border-black'
                         : 'h-12 w-12 overflow-hidden rounded-lg border hover:border-black/50'
                     }
@@ -187,6 +217,8 @@ export function SolutionKitBuilder({ solutionSlug, products }: { solutionSlug: s
                 ))}
               </div>
             ) : null}
+
+            <div className="mt-3 text-xs text-gray-500">4) Galleria inerente alla soluzione</div>
           </div>
         </div>
       </div>

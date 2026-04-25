@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import type { Product } from './types';
+import { SOLUTIONS } from './solutions';
 
 const DATA_DIR = path.join(process.cwd(), 'data');
 
@@ -20,44 +21,11 @@ export async function getProductBySlug(slug: string): Promise<Product | null> {
   return products.find((p) => p.slug === slug) ?? null;
 }
 
+
 export async function getSolutions(): Promise<Array<{ slug: string; title: string; description: string }>> {
-  const solutionsMap: Record<string, { title: string; description: string }> = {
-    quadrupedi: {
-      title: 'Quadruped robots + accessori (kit pronto)',
-      description:
-        'Una soluzione pensata per arrivare subito operativi: scegli il robot quadrupede e completa con le parti che fanno davvero la differenza (energia, docking e componenti di supporto). Meno setup, più test.'
-    },
-    braccia: {
-      title: 'Robot arms & gripper + accessori (kit pronto)',
-      description:
-        'Riduci i tempi di integrazione di presa, assemblaggio e manipolazione. Seleziona il braccio/robot di base e aggiungi gli accessori compatibili per ottenere una configurazione coerente e pronta all’uso.'
-    },
-    umanoidi: {
-      title: 'Humanoid robots + accessori (kit pronto)',
-      description:
-        'Per educazione, training e dimostrazioni: parti da un sistema base e completa con accessori e componenti essenziali. Più velocità nei test, meno colli di bottiglia.'
-    },
-    accessori: {
-      title: 'Accessori & componenti chiave (kit pronto)',
-      description:
-        'Non è solo “il robot”: sono energia, controlli e supporti a rendere il setup stabile, scalabile e operativo. Completa la tua soluzione con batterie, charger, controller e componenti essenziali con prezzi trasparenti dove disponibili.'
-    },
-    'robot-per-uso-quotidiano': {
-      title: 'Robot per uso quotidiano',
-      description:
-        'Se cerchi un percorso semplice: prodotti consigliati per demo, ricerca e utilizzi pratici. Configura il tuo kit scegliendo i componenti essenziali.'
-    }
-  };
-
-  const products = await getProducts();
-  const slugs = Array.from(new Set(products.map((p) => p.solutionSlug)));
-
-  return slugs.map((s) => ({
-    slug: s,
-    title: solutionsMap[s]?.title ?? s,
-    description: solutionsMap[s]?.description ?? ''
-  }));
+  return SOLUTIONS.map((s) => ({ slug: s.slug, title: s.title, description: s.seoDescription }));
 }
+
 
 export type BlogPost = {
   slug: string;
@@ -127,7 +95,5 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
     }
   ];
 
-  // Ensure we only keep posts relevant to current solution slugs in the shop
-  const present = new Set(solutions.map((s) => s.slug));
-  return posts.filter((p) => !p.solutionSlug || present.has(p.solutionSlug));
+  return posts;
 }
