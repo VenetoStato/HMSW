@@ -1,13 +1,17 @@
 import Link from 'next/link';
 import { getProducts } from '@/lib/catalog';
 import { SOLUTIONS, matchProductsForSolution } from '@/lib/solutions';
+import { pickUniqueImages } from '@/lib/imageUtils';
 
 export default async function SolutionsIndexPage() {
   const products = await getProducts();
 
   const cards = SOLUTIONS.map((s) => {
     const matched = matchProductsForSolution(s, products);
-    const hero = matched.find((p) => p.images?.[0])?.images?.[0] ?? matched[0]?.images?.[0] ?? null;
+    const heroCandidates = matched.flatMap((p) => p.images ?? []).filter(Boolean);
+    const hero =
+      pickUniqueImages(heroCandidates, { limit: 1, minW: 500, minH: 250 })[0] ?? heroCandidates[0] ?? null;
+
     return {
       slug: s.slug,
       title: s.title,
@@ -40,7 +44,11 @@ export default async function SolutionsIndexPage() {
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-50">
                   {c.hero ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={c.hero} alt={c.title} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]" />
+                    <img
+                      src={c.hero}
+                      alt={c.title}
+                      className="h-full w-full object-cover"
+                    />
                   ) : (
                     <div className="h-full w-full bg-gray-100" />
                   )}

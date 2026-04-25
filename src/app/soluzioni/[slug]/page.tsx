@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { getProducts } from '@/lib/catalog';
 import { matchProductsForSolution, SOLUTIONS } from '@/lib/solutions';
+import { pickUniqueImages } from '@/lib/imageUtils';
 import { ProductGrid } from '@/components/ProductGrid';
 import { SolutionKitBuilder } from '@/components/SolutionKitBuilder';
 
@@ -29,7 +30,7 @@ export default async function SolutionPage({ params }: { params: { slug: string 
   const matched = solution ? matchProductsForSolution(solution, products) : products.slice(0, 12);
 
   const imagePool = matched.flatMap((p) => p.images ?? []).filter(Boolean);
-  const heroImages = Array.from(new Set(imagePool)).slice(0, 10);
+  const heroImages = pickUniqueImages(imagePool, { limit: 10, minW: 400, minH: 200 });
   const heroImg = heroImages[0] ?? null;
   const gallery = heroImages.slice(0, 8);
 

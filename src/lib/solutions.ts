@@ -39,9 +39,9 @@ export const SOLUTIONS: SolutionDefinition[] = [
     slug: 'quadrupedi',
     title: 'Quadrupedi Unitree',
     seoDescription:
-      'Soluzione Quadrupedi per mobilità, demo e ricerca: scegli il modello e completa il setup con accessori compatibili per rendere i test più rapidi e ripetibili.',
+      'Soluzione Quadrupedi per demo, ricerca e setup rapido: scegli il modello e completa la configurazione con accessori compatibili per partire subito.',
     heroCopy:
-      'Quando ti serve autonomia e movimento in scenari dinamici: configura un kit Quadrupedi pensato per demo, R&D e iterazioni veloci.',
+      'Se vuoi mobilità e autonomia in scenari dinamici, configura il tuo kit Quadrupedi e aggiungi i componenti necessari direttamente al carrello.',
     familyLabel: 'Mobile robots / Quadrupedi',
     bullets: [
       'Mobilità e gestione dei percorsi in scenari variabili',
@@ -99,9 +99,9 @@ export const SOLUTIONS: SolutionDefinition[] = [
     slug: 'braccia',
     title: 'Braccia & Gripper Unitree',
     seoDescription:
-      'Soluzione braccia e gripper per presa, assemblaggio e manipolazione: seleziona un sistema e completa con accessori compatibili per integrare più velocemente.',
+      'Soluzione Braccia & Gripper per presa, assemblaggio e manipolazione: scegli il sistema e completa con accessori compatibili per integrare più velocemente.',
     heroCopy:
-      'Presa e posizionamento per applicazioni di manipolazione: imposta un kit Braccia/Gripper e costruisci la configurazione step-by-step.',
+      'Costruisci il tuo kit Braccia/Gripper con componenti coerenti e aggiungili al carrello: poi invia la richiesta con la configurazione completa.',
     familyLabel: 'Manipolazione / Robotic arms',
     bullets: [
       'Presa e manipolazione orientate al task',
@@ -155,9 +155,9 @@ export const SOLUTIONS: SolutionDefinition[] = [
     slug: 'umanoidi',
     title: 'Umanoidi Unitree',
     seoDescription:
-      'Soluzione Umanoidi per educazione, R&D e dimostrazioni: scegli lo scenario e completa il setup con componenti compatibili per partire più velocemente con i test.',
+      'Soluzione Umanoidi per educazione, R&D e dimostrazioni: scegli lo scenario e completa il setup con componenti compatibili per partire subito.',
     heroCopy:
-      'Quando serve flessibilità: un umanoide pensato per iterazioni, training e demo. Configura il kit e aggiungilo al carrello in pochi passaggi.',
+      'Quando serve flessibilità per training, demo e sviluppo: configura un kit Umanoidi e aggiungilo al carrello con i componenti necessari.',
     familyLabel: 'Humanoid robots',
     bullets: [
       'Task ripetibili per prove e dimostrazioni',
@@ -207,9 +207,9 @@ export const SOLUTIONS: SolutionDefinition[] = [
     slug: 'accessori',
     title: 'Accessori per il tuo setup robotico',
     seoDescription:
-      'Non solo il robot: accessori e componenti chiave per alimentazione, supporto e completamento del setup. Completa la configurazione con un kit guidato dallo scenario.',
+      'Accessori e componenti chiave per alimentazione, supporto e completamento del setup: completa la configurazione con un kit guidato dallo scenario.',
     heroCopy:
-      'Per rendere il sistema operativo serve una base solida: scegli gli accessori compatibili e prepara un setup pronto all’uso.',
+      'Prepara un setup stabile e operativo: seleziona gli accessori compatibili e aggiungili al carrello per inviare la richiesta con i dettagli della configurazione.',
     familyLabel: 'Accessori / alimentazione e supporto',
     bullets: [
       'Componenti di supporto per mantenere continuità operativa',

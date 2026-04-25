@@ -4,18 +4,41 @@ import { useMemo, useState } from 'react';
 import type { Product } from '@/lib/types';
 import { useCart } from '@/lib/cart';
 import { formatEur } from '@/lib/price';
+import { pickUniqueImages } from '@/lib/imageUtils';
 
 type Scenario = 'demo' | 'rd' | 'integrato';
 
-function pickBaseAndAccessories(products: Product[], accessoryCount: number) {
+function pickBaseAndAccessories(products: Product[], accessoryCount: number, contextTitle: string) {
   const priced = products.filter((p) => (p.priceEur ?? 0) > 0);
-  const base = priced.sort((a, b) => b.priceEur - a.priceEur)[0] ?? products[0];
-  const accessories = products
-    .filter((p) => p.id !== base?.id)
-    .filter((p) => (p.priceEur ?? 0) > 0)
-    .sort((a, b) => a.priceEur - b.priceEur);
 
-  const chosen = accessories.slice(0, accessoryCount);
+  const ctx = contextTitle.toLowerCase();
+  const baseCategoryHints: string[] = [];
+  if (ctx.includes('quad') || ctx.includes('quadruped')) baseCategoryHints.push('mobile robots', 'quadruped');
+  if (ctx.includes('braccia') || ctx.includes('gripper') || ctx.includes('robotic arm')) {
+    baseCategoryHints.push('robotic arms', 'robotic gripper', 'arm', 'gripper', 'z1');
+  }
+  if (ctx.includes('umano')) baseCategoryHints.push('humanoid robots', 'humanoid');
+  if (ctx.includes('accessor')) baseCategoryHints.push('accessory', 'charger', 'battery', 'dock', 'controller');
+
+  const normalize = (s: string) => s.toLowerCase();
+  const matchesHint = (p: Product) => {
+    const hay = normalize([p.name, p.category, p.brand].filter(Boolean).join(' '));
+    return baseCategoryHints.some((h) => hay.includes(h));
+  };
+
+  const baseCandidates = priced.length ? priced.filter(matchesHint) : [];
+  const base =
+    baseCandidates
+      .sort((a, b) => b.priceEur - a.priceEur || a.name.localeCompare(b.name))[0] ??
+    priced.sort((a, b) => b.priceEur - a.priceEur || a.name.localeCompare(b.name))[0] ??
+    products[0];
+
+  const accessories = priced
+    .filter((p) => p.id !== base?.id)
+    .sort((a, b) => a.priceEur - b.priceEur)
+    .slice(0, accessoryCount);
+
+  const chosen = accessories;
   return { base, chosen };
 }
 
@@ -34,10 +57,10 @@ export function SolutionKitBuilder({
 
   const kit = useMemo(() => {
     const accessoryCount = scenario === 'demo' ? 1 : scenario === 'rd' ? 2 : 4;
-    const { base, chosen } = pickBaseAndAccessories(products, accessoryCount);
+    const { base, chosen } = pickBaseAndAccessories(products, accessoryCount, contextTitle);
     const items = [base, ...chosen].filter(Boolean) as Product[];
     return items;
-  }, [products, scenario]);
+  }, [products, scenario, contextTitle]);
 
   const pricing = useMemo(() => {
     const priced = kit.filter((p) => (p.priceEur ?? 0) > 0);
@@ -60,15 +83,13 @@ export function SolutionKitBuilder({
 
   const pool = imagePool ?? products;
   const thumbImages = useMemo(() => {
-    const imgs: string[] = [];
+    const all: string[] = [];
     for (const p of pool) {
       for (const img of p.images ?? []) {
-        if (img && !imgs.includes(img)) imgs.push(img);
-        if (imgs.length >= 12) break;
+        if (img) all.push(img);
       }
-      if (imgs.length >= 12) break;
     }
-    return imgs;
+    return pickUniqueImages(all, { limit: 12, minW: 120, minH: 60 });
   }, [pool]);
 
   const heroImage = thumbImages[0] ?? null;
@@ -89,7 +110,7 @@ export function SolutionKitBuilder({
         </div>
         <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-gray-200">
           <div
-            className="h-full rounded-full bg-black transition-[width]"
+            className="h-full rounded-full bg-black"
             style={{ width: `${progress}%` }}
           />
         </div>
@@ -110,8 +131,8 @@ export function SolutionKitBuilder({
               onClick={() => setScenario('demo')}
               className={
                 scenario === 'demo'
-                  ? 'rounded-lg bg-gradient-to-r from-black via-neutral-900 to-zinc-800 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:shadow-md hover:-translate-y-[1px] transition'
-                  : 'rounded-lg border border-black/20 bg-white/70 px-3 py-2 text-sm font-semibold hover:bg-black/5 hover:border-black/30 transition'
+                  ? 'rounded-lg bg-gradient-to-r from-black via-neutral-900 to-zinc-800 px-3 py-2 text-sm font-semibold text-white shadow-sm'
+                  : 'rounded-lg border border-black/20 bg-white/70 px-3 py-2 text-sm font-semibold hover:bg-black/5 hover:border-black/30'
               }
             >
               Demo
@@ -121,8 +142,8 @@ export function SolutionKitBuilder({
               onClick={() => setScenario('rd')}
               className={
                 scenario === 'rd'
-                  ? 'rounded-lg bg-gradient-to-r from-black via-neutral-900 to-zinc-800 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:shadow-md hover:-translate-y-[1px] transition'
-                  : 'rounded-lg border border-black/20 bg-white/70 px-3 py-2 text-sm font-semibold hover:bg-black/5 hover:border-black/30 transition'
+                  ? 'rounded-lg bg-gradient-to-r from-black via-neutral-900 to-zinc-800 px-3 py-2 text-sm font-semibold text-white shadow-sm'
+                  : 'rounded-lg border border-black/20 bg-white/70 px-3 py-2 text-sm font-semibold hover:bg-black/5 hover:border-black/30'
               }
             >
               Ricerca
@@ -132,8 +153,8 @@ export function SolutionKitBuilder({
               onClick={() => setScenario('integrato')}
               className={
                 scenario === 'integrato'
-                  ? 'rounded-lg bg-gradient-to-r from-black via-neutral-900 to-zinc-800 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:shadow-md hover:-translate-y-[1px] transition'
-                  : 'rounded-lg border border-black/20 bg-white/70 px-3 py-2 text-sm font-semibold hover:bg-black/5 hover:border-black/30 transition'
+                  ? 'rounded-lg bg-gradient-to-r from-black via-neutral-900 to-zinc-800 px-3 py-2 text-sm font-semibold text-white shadow-sm'
+                  : 'rounded-lg border border-black/20 bg-white/70 px-3 py-2 text-sm font-semibold hover:bg-black/5 hover:border-black/30'
               }
             >
               Integrazione
@@ -193,7 +214,7 @@ export function SolutionKitBuilder({
                 <img
                   src={effectiveImg}
                   alt={`Immagine ${contextTitle}`}
-                  className="h-52 w-full rounded-xl object-cover transition-transform duration-300 hover:scale-[1.02]"
+                  className="h-52 w-full rounded-xl object-cover"
                 />
               ) : (
                 <div className="h-52 w-full rounded-xl bg-gray-200" />
