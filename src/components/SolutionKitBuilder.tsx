@@ -82,17 +82,23 @@ export function SolutionKitBuilder({
   }
 
   const pool = imagePool ?? products;
-  const thumbImages = useMemo(() => {
+
+  const allImages = useMemo(() => {
     const all: string[] = [];
     for (const p of pool) {
       for (const img of p.images ?? []) {
         if (img) all.push(img);
       }
     }
-    return pickUniqueImages(all, { limit: 12, minW: 120, minH: 60 });
+    return all;
   }, [pool]);
+  const thumbImages = useMemo(() => {
+    return pickUniqueImages(allImages, { limit: 12, minW: 200, minH: 100 });
+  }, [allImages]);
 
-  const heroImage = thumbImages[0] ?? null;
+  const heroImage = useMemo(() => {
+    return pickUniqueImages(allImages, { limit: 1, minW: 500, minH: 250 })[0] ?? thumbImages[0] ?? null;
+  }, [allImages, thumbImages]);
   const [selectedImg, setSelectedImg] = useState<string | null>(null);
   const effectiveImg = selectedImg ?? heroImage;
 
