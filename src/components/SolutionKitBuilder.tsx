@@ -104,8 +104,22 @@ export function SolutionKitBuilder({
 
   const progress = scenario === 'demo' ? 33 : scenario === 'rd' ? 66 : 100;
 
+  const scenarioAccents =
+    scenario === 'demo'
+      ? { a: '56 189 248', b: '99 102 241', c: '16 185 129' }
+      : scenario === 'rd'
+        ? { a: '168 85 247', b: '99 102 241', c: '56 189 248' }
+        : { a: '251 191 36', b: '244 63 94', c: '59 130 246' };
+
   return (
-    <div className="rounded-2xl border bg-white p-4 md:p-5">
+    <div
+      className="rounded-2xl border p-4 md:p-5 accent-surface backdrop-blur"
+      style={{
+        ['--acc-a' as any]: scenarioAccents.a,
+        ['--acc-b' as any]: scenarioAccents.b,
+        ['--acc-c' as any]: scenarioAccents.c,
+      }}
+    >
       <div className="rounded-xl bg-black/[0.03] p-3">
         <div className="flex items-center justify-between gap-3">
           <div>
@@ -116,8 +130,8 @@ export function SolutionKitBuilder({
         </div>
         <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-gray-200">
           <div
-            className="h-full rounded-full bg-black transition-all duration-700 ease-out"
-            style={{ width: `${progress}%` }}
+            className="h-full rounded-full transition-all duration-700 ease-out"
+            style={{ backgroundColor: 'rgb(var(--acc-b) / 1)', width: `${progress}%` }}
           />
         </div>
       </div>

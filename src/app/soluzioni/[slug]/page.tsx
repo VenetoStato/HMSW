@@ -36,9 +36,16 @@ export default async function SolutionPage({ params }: { params: { slug: string 
 
   return (
     <main className="py-6 md:py-10">
-      <section className="overflow-hidden rounded-2xl border bg-white">
+      <section
+        className="overflow-hidden rounded-2xl border bg-white/65 accent-surface"
+        style={{
+          ['--acc-a' as any]: solution?.accentRgb?.a ?? '56 189 248',
+          ['--acc-b' as any]: solution?.accentRgb?.b ?? '99 102 241',
+          ['--acc-c' as any]: solution?.accentRgb?.c ?? '16 185 129',
+        }}
+      >
         <div className="grid gap-6 md:grid-cols-2">
-          <div className="p-6 md:p-8">
+            <div className="p-5 md:p-8">
             <div className="flex flex-wrap items-center gap-2">
               <div className="inline-flex items-center rounded-full border bg-white px-3 py-1 text-xs font-semibold text-gray-700">
                 {solution?.familyLabel ?? 'Soluzione'}
@@ -163,7 +170,7 @@ export default async function SolutionPage({ params }: { params: { slug: string 
 
           </div>
 
-          <div className="relative bg-gray-50">
+          <div className="relative bg-gray-50 aspect-[4/3] md:aspect-[16/10] overflow-hidden">
             {heroImg ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img src={heroImg} alt={solution?.title ?? 'Immagine soluzione'} className="h-full w-full object-cover" />
@@ -171,12 +178,12 @@ export default async function SolutionPage({ params }: { params: { slug: string 
               <div className="h-full w-full bg-gray-100" />
             )}
 
-            <div className="absolute inset-0 motion-gradient-hero" />
+            <div className="absolute inset-0 accent-hero-overlay" />
 
             <div className="relative p-6 md:p-8">
               <SolutionKitBuilder contextTitle={solution?.title ?? slug} products={matched} imagePool={matched} />
 
-              <div className="mt-4 rounded-xl border bg-white/70 p-4 backdrop-blur">
+              <div className="mt-4 rounded-xl border bg-white/55 p-4 backdrop-blur accent-surface">
                 <div className="flex items-center justify-between gap-3">
                   <div>
                     <div className="text-sm font-semibold">Componenti suggeriti</div>

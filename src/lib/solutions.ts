@@ -15,6 +15,14 @@ export type SolutionDefinition = {
     rd: string;
     integrato: string;
   };
+
+  // Accent gradient colors (RGB triplets without commas), used for dynamic section backgrounds
+  accentRgb?: {
+    a: string; // e.g. "56 189 248"
+    b: string;
+    c: string;
+  };
+
   // Sezioni copy-conversion per landing "macro" (opzionali per non rompere le definizioni esistenti)
   include?: {
     title: string;
@@ -43,6 +51,7 @@ export const SOLUTIONS: SolutionDefinition[] = [
     heroCopy:
       'Se vuoi mobilità e autonomia in scenari dinamici, configura il tuo kit Quadrupedi e aggiungi i componenti necessari direttamente al carrello.',
     familyLabel: 'Mobile robots / Quadrupedi',
+    accentRgb: { a: '56 189 248', b: '99 102 241', c: '16 185 129' },
     bullets: [
       'Mobilità e gestione dei percorsi in scenari variabili',
       'Kit configurabile per ricerca e dimostrazioni',
@@ -103,6 +112,7 @@ export const SOLUTIONS: SolutionDefinition[] = [
     heroCopy:
       'Costruisci il tuo kit Braccia/Gripper con componenti coerenti e aggiungili al carrello: poi invia la richiesta con la configurazione completa.',
     familyLabel: 'Manipolazione / Robotic arms',
+    accentRgb: { a: '236 72 153', b: '244 63 94', c: '99 102 241' },
     bullets: [
       'Presa e manipolazione orientate al task',
       'Kit configurabile con componenti compatibili',
@@ -159,6 +169,7 @@ export const SOLUTIONS: SolutionDefinition[] = [
     heroCopy:
       'Quando serve flessibilità per training, demo e sviluppo: configura un kit Umanoidi e aggiungilo al carrello con i componenti necessari.',
     familyLabel: 'Humanoid robots',
+    accentRgb: { a: '52 211 153', b: '20 184 166', c: '99 102 241' },
     bullets: [
       'Task ripetibili per prove e dimostrazioni',
       'Setup orientato a iterazioni rapide',
@@ -211,6 +222,7 @@ export const SOLUTIONS: SolutionDefinition[] = [
     heroCopy:
       'Prepara un setup stabile e operativo: seleziona gli accessori compatibili e aggiungili al carrello per inviare la richiesta con i dettagli della configurazione.',
     familyLabel: 'Accessori / alimentazione e supporto',
+    accentRgb: { a: '251 191 36', b: '59 130 246', c: '244 63 94' },
     bullets: [
       'Componenti di supporto per mantenere continuità operativa',
       'Kit selezionato per completare la configurazione',
