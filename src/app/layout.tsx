@@ -7,9 +7,26 @@ import { AppProviders } from "@/components/AppProviders";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hmsw.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "UNITREE Shop",
   description: "Shop prodotti UNITREE e accessori.",
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    title: "UNITREE Shop",
+    description: "Shop prodotti UNITREE e accessori.",
+    siteName: "UNITREE Shop",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "UNITREE Shop",
+    description: "Shop prodotti UNITREE e accessori.",
+    // 'site' is twitter handle; we use siteName to avoid wrong value.
+    site: "UNITREE Shop",
+  },
 };
 
 export default function RootLayout({
