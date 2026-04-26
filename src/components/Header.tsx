@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useMemo, useState } from 'react';
 import { useCart } from '@/lib/cart';
 import { t, type Locale } from '@/lib/i18n';
@@ -16,8 +17,19 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3">
         <div className="flex items-center gap-3">
-          <Link href="/" className="text-lg font-bold">
-            Robotics Shop
+          <Link
+            href="/"
+            aria-label="Robotics Shop"
+            className="flex items-center"
+          >
+            <Image
+              src="/logo.jpg"
+              alt="Robotics Shop"
+              width={160}
+              height={48}
+              className="h-8 w-auto"
+              priority
+            />
           </Link>
         </div>
 

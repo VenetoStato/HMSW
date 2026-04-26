@@ -3,6 +3,7 @@ import { SOLUTIONS } from '@/lib/solutions';
 import { DynamicAccentGradient } from '@/components/DynamicAccentGradient';
 import { getLocaleServer } from '@/lib/localeServer';
 import type { Locale } from '@/lib/i18n';
+import { FancyAnchor } from '@/components/FancyButton';
 
 const HOME_TEXT: Record<Locale, { 
   title: string;
@@ -132,22 +133,43 @@ export default async function Home() {
 
   return (
     <main className="py-8">
-      <section className="rounded-2xl border p-6 motion-gradient-hero bg-white">
-        <h1 className="text-3xl font-bold tracking-tight">{text.title}</h1>
-        <p className="mt-2 text-gray-700">{text.subtitle}</p>
-        <div className="mt-5 flex flex-wrap items-center gap-3">
-          <Link
-            href="/shop"
-            className="rounded-lg bg-black px-4 py-2 text-white hover:bg-gray-800"
-          >
-            {locale === 'it' ? 'Vai allo shop' : locale === 'de' ? 'Zum Shop' : locale === 'fr' ? 'Aller à la boutique' : locale === 'nl' ? 'Ga naar de winkel' : locale === 'no' ? 'Gå til butikken' : locale === 'es' ? 'Ir a la tienda' : 'Go to shop'}
-          </Link>
-          <Link
-            href={`/soluzioni/${SOLUTIONS[0]?.slug ?? 'robot-per-uso-quotidiano'}`}
-            className="rounded-lg border px-4 py-2 hover:bg-gray-50"
-          >
-            {text.discoverSolution}
-          </Link>
+      <section className="relative overflow-hidden rounded-2xl border border-black/10 bg-white/70 p-6 motion-gradient-hero backdrop-blur">
+        <div className="pointer-events-none absolute inset-0 accent-surface" />
+        <div className="relative">
+          <h1 className="text-3xl font-bold tracking-tight">
+            <span className="bg-gradient-to-r from-black via-black to-indigo-600 bg-clip-text text-transparent">
+              {text.title}
+            </span>
+          </h1>
+          <p className="mt-2 text-gray-700">{text.subtitle}</p>
+          <div className="mt-5 flex flex-wrap items-center gap-3">
+            <FancyAnchor
+              variant="primary"
+              href="/shop"
+              className="text-sm"
+            >
+              {locale === 'it'
+                ? 'Vai allo shop'
+                : locale === 'de'
+                  ? 'Zum Shop'
+                  : locale === 'fr'
+                    ? 'Aller à la boutique'
+                    : locale === 'nl'
+                      ? 'Ga naar de winkel'
+                      : locale === 'no'
+                        ? 'Gå til butikken'
+                        : locale === 'es'
+                          ? 'Ir a la tienda'
+                          : 'Go to shop'}
+            </FancyAnchor>
+            <FancyAnchor
+              variant="secondary"
+              href={`/soluzioni/${SOLUTIONS[0]?.slug ?? 'robot-per-uso-quotidiano'}`}
+              className="text-sm"
+            >
+              {text.discoverSolution}
+            </FancyAnchor>
+          </div>
         </div>
       </section>
 
@@ -167,7 +189,7 @@ export default async function Home() {
               className="group"
             >
               <div
-                className="relative overflow-hidden rounded-2xl border bg-white/65 p-5 accent-surface backdrop-blur transition-shadow group-hover:shadow-sm"
+                className="relative overflow-hidden rounded-2xl border border-black/10 bg-white/70 p-5 accent-surface backdrop-blur shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all duration-300 group-hover:shadow-[0_18px_60px_rgba(0,0,0,0.10)] group-hover:-translate-y-[2px]"
                 style={{
                   ['--acc-a' as any]: s.accentRgb?.a ?? '56 189 248',
                   ['--acc-b' as any]: s.accentRgb?.b ?? '99 102 241',
@@ -187,18 +209,18 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="mt-10 rounded-2xl border bg-white p-6">
+      <section className="mt-10 rounded-2xl border border-black/10 bg-white/65 p-6 accent-surface backdrop-blur">
         <h2 className="text-xl font-semibold">{text.howTitle}</h2>
         <div className="mt-4 grid gap-4 md:grid-cols-3">
-          <div className="rounded-xl bg-gray-50 p-4">
+          <div className="rounded-xl border border-black/5 bg-white/65 p-4 backdrop-blur shadow-sm">
             <div className="text-sm font-semibold">{text.step1Title}</div>
             <div className="mt-1 text-sm text-gray-600">{text.step1Body}</div>
           </div>
-          <div className="rounded-xl bg-gray-50 p-4">
+          <div className="rounded-xl border border-black/5 bg-white/65 p-4 backdrop-blur shadow-sm">
             <div className="text-sm font-semibold">{text.step2Title}</div>
             <div className="mt-1 text-sm text-gray-600">{text.step2Body}</div>
           </div>
-          <div className="rounded-xl bg-gray-50 p-4">
+          <div className="rounded-xl border border-black/5 bg-white/65 p-4 backdrop-blur shadow-sm">
             <div className="text-sm font-semibold">{text.step3Title}</div>
             <div className="mt-1 text-sm text-gray-600">{text.step3Body}</div>
           </div>
