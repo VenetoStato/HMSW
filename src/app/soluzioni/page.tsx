@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { getProducts } from '@/lib/catalog';
-import { SOLUTIONS, matchProductsForSolution } from '@/lib/solutions';
+import { SOLUTIONS, getLocalizedSolution, matchProductsForSolution } from '@/lib/solutions';
 import { pickUniqueImages } from '@/lib/imageUtils';
 import { getLocaleServer } from '@/lib/localeServer';
 import { t, type Locale } from '@/lib/i18n';
@@ -15,19 +15,18 @@ export default async function SolutionsIndexPage() {
   const cards = SOLUTIONS.map((s) => {
     const matched = matchProductsForSolution(s, products);
     const heroCandidates = matched.flatMap((p) => p.images ?? []).filter(Boolean);
-
+    const localized = getLocalizedSolution(s, locale);
     const hero =
       pickUniqueImages(heroCandidates, { limit: 1, minW: 500, minH: 250 })[0] ??
       heroCandidates[0] ??
       null;
-
     return {
       slug: s.slug,
-      title: s.title,
-      description: s.heroCopy,
+      title: localized.title,
+      description: localized.heroCopy,
       hero,
       matchedCount: matched.length,
-      familyLabel: s.familyLabel,
+      familyLabel: localized.familyLabel,
       accentRgb: s.accentRgb ?? defaultAcc,
     };
   });

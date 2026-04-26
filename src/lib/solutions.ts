@@ -1,4 +1,6 @@
 import type { Product } from './types';
+import type { Locale } from './i18n';
+import { SOLUTIONS_I18N } from './solutionsI18n';
 
 export type SolutionDefinition = {
   slug: string;
@@ -623,6 +625,25 @@ function includesAny(haystack: string, needles: string[]) {
     if (haystack.includes(n)) return true;
   }
   return false;
+}
+
+export function getLocalizedSolution(solution: SolutionDefinition, locale: Locale): SolutionDefinition {
+  const overrides =
+    SOLUTIONS_I18N[locale]?.[solution.slug] ?? SOLUTIONS_I18N.en?.[solution.slug];
+  if (!overrides) return solution;
+
+  return {
+    ...solution,
+    title: overrides.title ?? solution.title,
+    familyLabel: overrides.familyLabel ?? solution.familyLabel,
+    heroCopy: overrides.heroCopy ?? solution.heroCopy,
+    seoDescription: overrides.seoDescription ?? solution.seoDescription,
+    bullets: overrides.bullets ?? solution.bullets,
+    include: overrides.include ?? solution.include,
+    audience: overrides.audience ?? solution.audience,
+    integration: overrides.integration ?? solution.integration,
+    faq: overrides.faq ?? solution.faq,
+  } as SolutionDefinition;
 }
 
 export function matchProductsForSolution(solution: SolutionDefinition, products: Product[]): Product[] {

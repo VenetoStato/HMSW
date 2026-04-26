@@ -1,6 +1,6 @@
 import { FancyAnchor } from '@/components/FancyButton';
 import { getProducts } from '@/lib/catalog';
-import { matchProductsForSolution, SOLUTIONS } from '@/lib/solutions';
+import { matchProductsForSolution, SOLUTIONS, getLocalizedSolution } from '@/lib/solutions';
 import { pickUniqueImages } from '@/lib/imageUtils';
 import { ProductGrid } from '@/components/ProductGrid';
 import { SolutionKitBuilder } from '@/components/SolutionKitBuilder';
@@ -160,9 +160,12 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const slug = params.slug;
+  const locale = getLocaleServer();
   const solution = SOLUTIONS.find((s) => s.slug === slug);
-  const title = solution?.title ?? `Soluzione ${slug}`;
-  const description = solution?.seoDescription ?? 'Soluzione configurabile con prodotti e prezzi.';
+  const localized = solution ? getLocalizedSolution(solution, locale) : null;
+  const title = localized?.title ?? `Soluzione ${slug}`;
+  const description =
+    localized?.seoDescription ?? 'Soluzione configurabile con prodotti e prezzi.';
   return {
     title,
     description,
@@ -176,6 +179,7 @@ export default async function SolutionPage({ params }: { params: { slug: string 
 
   const slug = params.slug;
   const solution = SOLUTIONS.find((s) => s.slug === slug) ?? null;
+  const localizedSolution = solution ? getLocalizedSolution(solution, locale) : null;
 
   const products = await getProducts();
   const matched = solution ? matchProductsForSolution(solution, products) : products.slice(0, 12);
@@ -199,19 +203,19 @@ export default async function SolutionPage({ params }: { params: { slug: string 
           <div className="p-5 md:p-8">
             <div className="flex flex-wrap items-center gap-2">
               <div className="inline-flex items-center rounded-full border bg-white px-3 py-1 text-xs font-semibold text-gray-700">
-                {solution?.familyLabel ?? txt.solutionChipFallback}
+                {localizedSolution?.familyLabel ?? txt.solutionChipFallback}
               </div>
               <div className="text-xs text-gray-500">{txt.heroMeta}</div>
             </div>
 
-            <h1 className="mt-3 text-2xl md:text-3xl font-bold">{solution?.title ?? slug}</h1>
+            <h1 className="mt-3 text-2xl md:text-3xl font-bold">{localizedSolution?.title ?? slug}</h1>
             <p className="mt-3 text-sm md:text-base text-gray-600">
-              {solution?.heroCopy ?? solution?.seoDescription ?? ''}
+              {localizedSolution?.heroCopy ?? localizedSolution?.seoDescription ?? ''}
             </p>
 
-            {(solution?.bullets ?? []).slice(0, 3).length ? (
+            {(localizedSolution?.bullets ?? []).slice(0, 3).length ? (
               <div className="mt-5 grid gap-3 sm:grid-cols-3">
-                {(solution?.bullets ?? []).slice(0, 3).map((b, i) => (
+                {(localizedSolution?.bullets ?? []).slice(0, 3).map((b, i) => (
                   <div key={i} className="rounded-xl border bg-white p-4">
                     <div className="text-xs font-semibold text-gray-700">{i + 1}</div>
                     <div className="mt-1 text-sm text-gray-600">{b}</div>
@@ -220,11 +224,11 @@ export default async function SolutionPage({ params }: { params: { slug: string 
               </div>
             ) : null}
 
-            {solution?.include?.bullets?.length ? (
+            {localizedSolution?.include?.bullets?.length ? (
               <section className="mt-7">
-                <h2 className="text-lg font-semibold">{solution.include.title}</h2>
+                <h2 className="text-lg font-semibold">{localizedSolution.include.title}</h2>
                 <ul className="mt-3 space-y-2 text-sm text-gray-700">
-                  {solution.include.bullets.map((b, idx) => (
+                  {localizedSolution.include.bullets.map((b, idx) => (
                     <li key={idx} className="flex gap-2">
                       <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-black" />
                       <span>{b}</span>
@@ -234,11 +238,11 @@ export default async function SolutionPage({ params }: { params: { slug: string 
               </section>
             ) : null}
 
-            {solution?.audience?.bullets?.length ? (
+            {localizedSolution?.audience?.bullets?.length ? (
               <section className="mt-7">
-                <h2 className="text-lg font-semibold">{solution.audience.title}</h2>
+                <h2 className="text-lg font-semibold">{localizedSolution.audience.title}</h2>
                 <ul className="mt-3 space-y-2 text-sm text-gray-700">
-                  {solution.audience.bullets.map((b, idx) => (
+                  {localizedSolution.audience.bullets.map((b, idx) => (
                     <li key={idx} className="flex gap-2">
                       <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-black" />
                       <span>{b}</span>
@@ -248,11 +252,11 @@ export default async function SolutionPage({ params }: { params: { slug: string 
               </section>
             ) : null}
 
-            {solution?.integration?.bullets?.length ? (
+            {localizedSolution?.integration?.bullets?.length ? (
               <section className="mt-7">
-                <h2 className="text-lg font-semibold">{solution.integration.title}</h2>
+                <h2 className="text-lg font-semibold">{localizedSolution.integration.title}</h2>
                 <ul className="mt-3 space-y-2 text-sm text-gray-700">
-                  {solution.integration.bullets.map((b, idx) => (
+                  {localizedSolution.integration.bullets.map((b, idx) => (
                     <li key={idx} className="flex gap-2">
                       <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-black" />
                       <span>{b}</span>
@@ -262,11 +266,11 @@ export default async function SolutionPage({ params }: { params: { slug: string 
               </section>
             ) : null}
 
-            {solution?.faq?.length ? (
+            {localizedSolution?.faq?.length ? (
               <section className="mt-7">
                 <h2 className="text-lg font-semibold">{txt.faq}</h2>
                 <div className="mt-3 space-y-3">
-                  {solution.faq.map((item, idx) => (
+                  {localizedSolution.faq.map((item, idx) => (
                     <details key={idx} className="rounded-xl border bg-white p-4">
                       <summary className="cursor-pointer text-sm font-semibold text-gray-900">
                         {item.q}
@@ -306,7 +310,7 @@ export default async function SolutionPage({ params }: { params: { slug: string 
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={src}
-                        alt={solution?.title ?? txt.imageAltFallback}
+                        alt={localizedSolution?.title ?? txt.imageAltFallback}
                         className="h-full w-full object-cover"
                         loading="lazy"
                       />
@@ -322,7 +326,7 @@ export default async function SolutionPage({ params }: { params: { slug: string 
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={heroImg}
-                alt={solution?.title ?? txt.imageSolutionAlt}
+                alt={localizedSolution?.title ?? txt.imageSolutionAlt}
                 className="h-full w-full object-cover"
               />
             ) : (
@@ -352,7 +356,7 @@ export default async function SolutionPage({ params }: { params: { slug: string 
           <div>
             <h2 className="text-xl font-semibold">{txt.recommendedComponents}</h2>
             <p className="mt-1 text-sm text-gray-600">
-              {txt.compatibleLandingPrefix(solution?.title ?? slug)}
+              {txt.compatibleLandingPrefix(localizedSolution?.title ?? slug)}
             </p>
           </div>
           <div className="text-sm text-gray-500">{txt.recommendedCount(matched.length)}</div>
