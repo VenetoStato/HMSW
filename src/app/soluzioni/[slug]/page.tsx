@@ -6,7 +6,7 @@ import { ProductGrid } from '@/components/ProductGrid';
 import { SolutionKitBuilder } from '@/components/SolutionKitBuilder';
 import { DynamicAccentGradient } from '@/components/DynamicAccentGradient';
 import { getLocaleServer } from '@/lib/localeServer';
-import type { Locale } from '@/lib/i18n';
+import { t, type Locale, SUPPORTED_LOCALES } from '@/lib/i18n';
 
 export const dynamic = 'force-dynamic';
 
@@ -175,8 +175,17 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default async function SolutionPage({ params }: { params: { slug: string } }) {
-  const locale = getLocaleServer();
+export default async function SolutionPage({
+  params,
+  searchParams,
+}: {
+  params: { slug: string };
+  searchParams?: { lang?: string };
+}) {
+  const localeFromQuery = (searchParams?.lang ?? '').toString().toLowerCase();
+  const locale: Locale = SUPPORTED_LOCALES.includes(localeFromQuery as Locale)
+    ? (localeFromQuery as Locale)
+    : getLocaleServer();
   const txt = TEXT[locale] ?? TEXT.it;
 
   const slug = params.slug;
