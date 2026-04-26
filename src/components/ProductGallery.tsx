@@ -27,8 +27,8 @@ export function ProductGallery({ images, name }: { images: string[]; name: strin
   }
 
   return (
-    <div className="">
-      <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border bg-gray-50">
+    <div className="rounded-xl border border-black/10 bg-white/60 backdrop-blur">
+      <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-black/10 bg-white/55">
         {safe.length > 1 ? (
           <div className="absolute left-3 top-3 z-10 rounded-md bg-black/70 px-2 py-1 text-[11px] font-semibold text-white">
             {activeIdx + 1}/{safe.length}
@@ -49,11 +49,11 @@ export function ProductGallery({ images, name }: { images: string[]; name: strin
             onClick={() => setActive(src)}
             className={
               active === src
-                ? 'ring-2 ring-black rounded-md'
-                : 'rounded-md ring-1 ring-gray-200 hover:ring-gray-400'
+                ? 'ring-2 ring-black rounded-md bg-white/70 shadow-sm'
+                : 'rounded-md ring-1 ring-gray-200 bg-white/50 hover:ring-gray-400 hover:bg-white/70'
             }
           >
-            <div className="relative h-16 w-16 overflow-hidden rounded-md bg-gray-50">
+              <div className="relative h-16 w-16 overflow-hidden rounded-md bg-white/60">
               <Image
                 src={src}
                 alt={`${name} - thumbnail`}

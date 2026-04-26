@@ -20,8 +20,18 @@ export function ProductCard({ product }: { product: Product }) {
       : product.shortDescription;
 
   return (
-    <div className="group overflow-hidden rounded-2xl border bg-white transition-shadow hover:shadow-sm">
-      <Link href={`/prodotti/${product.slug}`} className="block">
+    <div className="group relative overflow-hidden rounded-2xl border border-black/10 bg-white/60 backdrop-blur shadow-[0_10px_30px_rgba(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_18px_60px_rgba(0,0,0,0.10)] hover:-translate-y-[2px]">
+      {/* subtle accent */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        style={{
+          background:
+            'radial-gradient(circle at 20% 0%, rgba(99,102,241,0.18), transparent 45%), radial-gradient(circle at 90% 30%, rgba(56,189,248,0.16), transparent 45%)',
+        }}
+      />
+
+      <Link href={`/prodotti/${product.slug}`} className="block relative z-10">
         {cover ? (
           <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-50">
             <div className="absolute inset-0">
@@ -52,18 +62,29 @@ export function ProductCard({ product }: { product: Product }) {
         )}
 
         <div className="p-4 pb-3">
-          <div className="text-xs text-gray-500">{product.brand} • {product.category}</div>
-          <h3 className="mt-1 text-base font-semibold leading-snug line-clamp-2">{product.name}</h3>
-          <p className="mt-2 line-clamp-2 text-sm text-gray-600">{shortTranslated}</p>
+          <div className="text-xs text-gray-600">
+            <span className="rounded-full bg-black/5 px-2 py-0.5">
+              {product.brand}
+            </span>{' '}
+            <span className="text-gray-400">•</span> {product.category}
+          </div>
+          <h3 className="mt-1 text-base font-semibold leading-snug line-clamp-2">
+            {product.name}
+          </h3>
+          <p className="mt-2 line-clamp-2 text-sm text-gray-600">
+            {shortTranslated}
+          </p>
           {product.priceEur > 0 ? (
-            <div className="mt-3 text-sm font-bold">{formatEur(product.priceEur)}</div>
+            <div className="mt-3 text-sm font-bold">
+              {formatEur(product.priceEur)}
+            </div>
           ) : (
             <div className="mt-3 text-sm font-bold">{t(locale, 'priceOnRequest')}</div>
           )}
         </div>
       </Link>
 
-      <div className="p-4 pt-0">
+      <div className="p-4 pt-0 relative z-10">
         <AddToCartButton product={product} />
       </div>
     </div>

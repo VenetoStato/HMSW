@@ -24,7 +24,50 @@ body {
     transparent,
     rgb(var(--background-end-rgb))
   )
-  rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb));
+}
+
+/* ===== Premium background texture (Akiflow-ish: subtle grid + soft glow) ===== */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.045) 1px, transparent 1px);
+  background-size: 52px 52px;
+  opacity: 0.35;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: -20%;
+  pointer-events: none;
+  z-index: -3;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(99, 102, 241, 0.2), transparent 45%),
+    radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.18), transparent 45%),
+    radial-gradient(circle at 55% 95%, rgba(16, 185, 129, 0.14), transparent 50%);
+  filter: saturate(1.05);
+  animation: pageGlow 12s ease-in-out infinite;
+}
+
+@keyframes pageGlow {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.95;
+  }
+  50% {
+    transform: translate3d(0, -1.5%, 0) scale(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.95;
+  }
 }
 
 @layer utilities {

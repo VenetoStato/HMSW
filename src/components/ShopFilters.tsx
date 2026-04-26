@@ -35,21 +35,21 @@ export function ShopFilters({ products }: { products: Product[] }) {
 
   return (
       <div className="mt-6">
-      <div className="flex flex-col gap-3 rounded-2xl border bg-white p-4 sm:flex-row sm:flex-wrap sm:items-end sm:justify-between">
+      <div className="flex flex-col gap-3 rounded-2xl border border-black/10 bg-white/65 p-4 backdrop-blur shadow-[0_10px_30px_rgba(0,0,0,0.04)] sm:flex-row sm:flex-wrap sm:items-end sm:justify-between">
         <div className="w-full sm:min-w-[220px] sm:flex-1">
           <label className="block text-xs font-medium text-gray-600">Cerca</label>
           <input
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="Es: GO2, B2, H2, Z1..."
-            className="mt-1 w-full rounded-lg border bg-white px-3 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 min-h-[44px]"
+              className="mt-1 w-full rounded-lg border border-black/10 bg-white/80 px-3 py-3 text-sm outline-none focus-visible:ring-2 focus-visible:ring-black/20 min-h-[44px]"
           />
         </div>
 
         <div>
           <label className="block text-xs font-medium text-gray-600">Brand</label>
           <select
-            className="mt-1 w-full sm:w-auto rounded-lg border bg-white px-3 py-3 text-sm min-h-[44px]"
+            className="mt-1 w-full sm:w-auto rounded-lg border border-black/10 bg-white/80 px-3 py-3 text-sm min-h-[44px] focus-visible:ring-2 focus-visible:ring-black/20"
             value={brand}
             onChange={(e) => setBrand(e.target.value)}
           >
@@ -65,7 +65,7 @@ export function ShopFilters({ products }: { products: Product[] }) {
         <div>
           <label className="block text-xs font-medium text-gray-600">Categoria</label>
           <select
-            className="mt-1 w-full sm:w-auto rounded-lg border bg-white px-3 py-3 text-sm min-h-[44px]"
+            className="mt-1 w-full sm:w-auto rounded-lg border border-black/10 bg-white/80 px-3 py-3 text-sm min-h-[44px] focus-visible:ring-2 focus-visible:ring-black/20"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
           >
@@ -81,7 +81,7 @@ export function ShopFilters({ products }: { products: Product[] }) {
         <div>
           <label className="block text-xs font-medium text-gray-600">Ordina</label>
           <select
-            className="mt-1 w-full sm:w-auto rounded-lg border bg-white px-3 py-3 text-sm min-h-[44px]"
+            className="mt-1 w-full sm:w-auto rounded-lg border border-black/10 bg-white/80 px-3 py-3 text-sm min-h-[44px] focus-visible:ring-2 focus-visible:ring-black/20"
             value={sort}
             onChange={(e) => setSort(e.target.value as any)}
           >
