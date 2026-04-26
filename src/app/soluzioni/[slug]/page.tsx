@@ -8,6 +8,8 @@ import { DynamicAccentGradient } from '@/components/DynamicAccentGradient';
 import { getLocaleServer } from '@/lib/localeServer';
 import type { Locale } from '@/lib/i18n';
 
+export const dynamic = 'force-dynamic';
+
 const TEXT: Record<Locale, {
   solutionChipFallback: string;
   heroMeta: string;
