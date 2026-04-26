@@ -10,10 +10,18 @@ async function readJsonFile<T>(filePath: string): Promise<T> {
   return JSON.parse(raw) as T;
 }
 
+const VISIBLE_BRANDS = new Set(['Unitree', 'Accessori']);
+
 export async function getProducts(): Promise<Product[]> {
   const filePath = path.join(DATA_DIR, 'products.json');
   const products = await readJsonFile<Product[]>(filePath);
-  return products;
+
+  // Nel dataset possono finire componenti di terze parti (es. MIR/UR). 
+  // Il sito deve però mostrare solo Unitree + Accessori.
+  return products.filter((p) => {
+    const b = (p.brand ?? '').trim();
+    return VISIBLE_BRANDS.has(b);
+  });
 }
 
 export async function getProductBySlug(slug: string): Promise<Product | null> {
