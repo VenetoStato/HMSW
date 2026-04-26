@@ -28,7 +28,16 @@ export function middleware(req: NextRequest) {
     return localeFromCountry(req.geo?.country);
   })();
 
-  const res = NextResponse.next();
+  const res = NextResponse.next({
+    request: {
+      headers: (() => {
+        const h = new Headers(req.headers);
+        h.set('x-locale', locale);
+        return h;
+      })(),
+    },
+  });
+
   // Persist for navigation
   res.cookies.set('locale', locale, {
     path: '/',
