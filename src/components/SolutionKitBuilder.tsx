@@ -5,6 +5,8 @@ import type { Product } from '@/lib/types';
 import { useCart } from '@/lib/cart';
 import { formatEur } from '@/lib/price';
 import { pickUniqueImages } from '@/lib/imageUtils';
+import { t, type Locale } from '@/lib/i18n';
+import { getLocaleClient } from '@/lib/localeClient';
 
 type Scenario = 'demo' | 'rd' | 'integrato';
 
@@ -73,11 +75,13 @@ export function SolutionKitBuilder({
     return { knownSubtotal, hasUnknown };
   }, [kit]);
 
+  const locale: Locale = getLocaleClient();
+
   const scenarioLabel = useMemo(() => {
-    if (scenario === 'demo') return 'Demo rapida';
-    if (scenario === 'rd') return 'Ricerca & prove';
-    return 'Integrazione pronta';
-  }, [scenario]);
+    if (scenario === 'demo') return t(locale, 'scenarioQuickLabel');
+    if (scenario === 'rd') return t(locale, 'scenarioResearchLabel');
+    return t(locale, 'scenarioIntegrationLabel');
+  }, [scenario, locale]);
 
   const NOTES_KEY = 'unitree_shop_cart_note_v1';
   const [note, setNote] = useState<string>('');
@@ -211,10 +215,12 @@ export function SolutionKitBuilder({
       <div className="rounded-xl bg-black/[0.03] p-3">
         <div className="flex items-center justify-between gap-3">
           <div>
-            <div className="text-sm text-gray-500">Configuratore</div>
+            <div className="text-sm text-gray-500">{t(locale, 'configurator')}</div>
             <div className="mt-0.5 text-sm font-bold">{contextTitle}</div>
           </div>
-          <div className="text-xs text-gray-500">Progress {progress}%</div>
+          <div className="text-xs text-gray-500">
+            {t(locale, 'progressLabel')} {progress}%
+          </div>
         </div>
         <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-gray-200">
           <div
@@ -226,12 +232,9 @@ export function SolutionKitBuilder({
 
       <div className="mt-4 flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
         <div className="min-w-0 flex-1">
-          <div className="text-sm font-semibold">1) Scenario</div>
+          <div className="text-sm font-semibold">{t(locale, 'step1Scenario')}</div>
           <h3 className="mt-1 text-xl font-bold">{scenarioLabel}</h3>
-          <p className="mt-2 text-sm text-gray-600">
-            Selezioniamo automaticamente un componente “base” e accessori compatibili.
-            Prezzi trasparenti dove disponibili, altrimenti “su richiesta”.
-          </p>
+          <p className="mt-2 text-sm text-gray-600">{t(locale, 'scenarioIntro')}</p>
 
           <div className="mt-4 flex flex-wrap gap-2">
             <button
@@ -243,7 +246,7 @@ export function SolutionKitBuilder({
                   : 'rounded-lg border border-black/20 bg-white/70 px-3 py-2 text-sm font-semibold hover:bg-black/5 hover:border-black/30'
               }
             >
-              Demo
+              {t(locale, 'scenarioDemoButton')}
             </button>
             <button
               type="button"
@@ -254,7 +257,7 @@ export function SolutionKitBuilder({
                   : 'rounded-lg border border-black/20 bg-white/70 px-3 py-2 text-sm font-semibold hover:bg-black/5 hover:border-black/30'
               }
             >
-              Ricerca
+              {t(locale, 'scenarioResearchButton')}
             </button>
             <button
               type="button"
@@ -265,28 +268,30 @@ export function SolutionKitBuilder({
                   : 'rounded-lg border border-black/20 bg-white/70 px-3 py-2 text-sm font-semibold hover:bg-black/5 hover:border-black/30'
               }
             >
-              Integrazione
+              {t(locale, 'scenarioIntegrationButton')}
             </button>
           </div>
 
           <div className="mt-4 rounded-xl bg-gray-50 p-4">
             <div className="flex items-center justify-between gap-3">
-              <div className="text-sm font-semibold">Totale stimato</div>
+              <div className="text-sm font-semibold">{t(locale, 'totalEstimated')}</div>
               {pricing.hasUnknown ? (
-                <div className="text-sm font-bold">Su richiesta</div>
+                <div className="text-sm font-bold">{t(locale, 'unknownPrices')}</div>
               ) : (
                 <div className="text-sm font-bold">{formatEur(pricing.knownSubtotal)}</div>
               )}
             </div>
             <div className="mt-1 text-xs text-gray-600">
-              {pricing.hasUnknown
-                ? 'Almeno un componente è “prezzo su richiesta”.'
-                : 'Stima basata sui prezzi confermati.'}
+              {pricing.hasUnknown ? (
+                <span>{t(locale, 'unknownPriceHint')}</span>
+              ) : (
+                <span>{t(locale, 'knownPricingHint')}</span>
+              )}
             </div>
           </div>
 
           <div className="mt-4">
-            <div className="text-sm font-semibold">2) Componenti nel kit</div>
+            <div className="text-sm font-semibold">{t(locale, 'step2KitComponents')}</div>
             <ul
               key={scenario}
               className="mt-2 space-y-2 text-sm text-gray-700 motion-kit-swap"
@@ -295,7 +300,7 @@ export function SolutionKitBuilder({
                 <li key={p.id} className="flex items-start justify-between gap-3">
                   <span className="min-w-0 flex-1">{p.name}</span>
                   <span className="flex-none font-semibold">
-                    {p.priceEur > 0 ? formatEur(p.priceEur) : 'Prezzo su richiesta'}
+                    {p.priceEur > 0 ? formatEur(p.priceEur) : t(locale, 'priceOnRequest')}
                   </span>
                 </li>
               ))}
@@ -308,23 +313,22 @@ export function SolutionKitBuilder({
               onClick={addKit}
               className="w-full rounded-lg bg-black px-4 py-3 text-sm font-semibold text-white hover:bg-gray-900"
             >
-              {status === 'added' ? 'Kit aggiunto ✅ (nota salvata)' : 'Aggiungi kit al carrello'}
+              {status === 'added' ? t(locale, 'kitAddedNotice') : t(locale, 'addKitToCart')}
             </button>
           </div>
 
           <div className="mt-4">
-            <div className="text-sm font-semibold">3) Scrivi la tua richiesta (opzionale)</div>
+            <div className="text-sm font-semibold">{t(locale, 'step3RequestOptional')}</div>
             <textarea
               value={note}
               onChange={(e) => {
                 setNote(e.target.value);
               }}
-              placeholder="Esempio: conferma compatibilità, tempi di spedizione, accessori aggiuntivi..."
+                placeholder={t(locale, 'notePlaceholder')}
               className="mt-2 min-h-24 w-full resize-y rounded-lg border bg-white/70 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-black/10"
             />
             <div className="mt-2 text-xs text-gray-500">
-              La nota viene salvata e precompila il form nel carrello.
-              Nessun pagamento online.
+              {t(locale, 'noteSavedText')} {t(locale, 'noOnlinePayment')}
             </div>
           </div>
         </div>
@@ -354,7 +358,7 @@ export function SolutionKitBuilder({
                       setSelectedImg(next);
                     }}
                     className="pointer-events-auto inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white backdrop-blur hover:bg-black"
-                    aria-label="Immagine precedente"
+                    aria-label={t(locale, 'imagePrev')}
                   >
                     ‹
                   </button>
@@ -367,7 +371,7 @@ export function SolutionKitBuilder({
                       setSelectedImg(next);
                     }}
                     className="pointer-events-auto inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white backdrop-blur hover:bg-black"
-                    aria-label="Immagine successiva"
+                    aria-label={t(locale, 'imageNext')}
                   >
                     ›
                   </button>
@@ -401,7 +405,7 @@ export function SolutionKitBuilder({
               </div>
             ) : null}
 
-            <div className="mt-3 text-xs text-gray-500">4) Galleria inerente alla soluzione</div>
+            <div className="mt-3 text-xs text-gray-500">{t(locale, 'step4Gallery')}</div>
           </div>
         </div>
       </div>

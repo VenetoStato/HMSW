@@ -38,7 +38,7 @@ export default function RootLayout({
   const locale = getLocaleServer();
 
   return (
-    <html lang={locale === 'en' ? 'en' : 'it'}>
+    <html lang={locale}>
       <body className={inter.className}>
         <AppProviders>
           <Header />

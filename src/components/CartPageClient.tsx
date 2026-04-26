@@ -84,7 +84,7 @@ export function CartPageClient({ products }: { products: Product[] }) {
 
     if (!res.ok) {
       setStatus('idle');
-      alert('Errore invio ordine. Riprova.');
+      alert(t(locale, 'orderSendError'));
       return;
     }
 
@@ -120,7 +120,7 @@ export function CartPageClient({ products }: { products: Product[] }) {
                 </div>
                 <div className="mt-1 font-semibold">{product.name}</div>
                 <div className="mt-2 text-sm font-bold">
-                  {product.priceEur > 0 ? `${formatEur(product.priceEur)} cadauno` : t(locale, 'priceOnRequest')}
+                  {product.priceEur > 0 ? `${formatEur(product.priceEur)} ${t(locale, 'perUnit')}` : t(locale, 'priceOnRequest')}
                 </div>
               </div>
 
