@@ -647,21 +647,36 @@ export function getLocalizedSolution(solution: SolutionDefinition, locale: Local
 }
 
 export function matchProductsForSolution(solution: SolutionDefinition, products: Product[]): Product[] {
-  // First: trust the explicit taxonomy from products.json (fix “wrong images”)
-  const explicit = products.filter((p) => p.solutionSlug === solution.slug);
+  // IMPORTANT: in products.json solutionSlug is broad (quadrupedi/braccia/umanoidi/accessori).
+  // The detailed /soluzioni/[slug] scenarios must be matched with stronger family restriction,
+  // otherwise the keyword fallback mixes wrong products/images.
+
+  const familySlugs = new Set<string>();
+  for (const c of solution.fallbackCategories) {
+    const lc = c.toLowerCase();
+    if (lc.includes('mobile')) familySlugs.add('quadrupedi');
+    else if (lc.includes('humanoid')) familySlugs.add('umanoidi');
+    else if (lc.includes('arm') || lc.includes('gripper')) familySlugs.add('braccia');
+    else if (lc.includes('drone') || lc.includes('service') || lc.includes('accessor') || lc.includes('charg')) familySlugs.add('accessori');
+  }
+  if (familySlugs.size === 0) familySlugs.add('accessori');
+
+  const familyCandidates = products.filter((p) => familySlugs.has(p.solutionSlug));
+
+  // If we have exact matches (rare, but keep deterministic behavior)
+  const explicit = familyCandidates.filter((p) => p.solutionSlug === solution.slug);
   if (explicit.length) {
-    // keep ordering stable: prefer priced items first, then fallback to name
     return explicit
       .slice()
       .sort((a, b) => (b.priceEur ?? 0) - (a.priceEur ?? 0) || a.name.localeCompare(b.name))
       .slice(0, 12);
   }
 
-  // Fallback: keyword scoring (legacy)
+  // Fallback: keyword scoring within the right family only
   const keywords = [...solution.keywordHints, ...solution.imageSearchHints].map(normalize).filter(Boolean);
   const fallbacks = new Set(solution.fallbackCategories);
 
-  const scored = products
+  const scored = familyCandidates
     .map((p) => {
       const hay = normalize([p.name, p.shortDescription, p.category, p.brand].filter(Boolean).join(' '));
       let score = 0;
@@ -686,9 +701,9 @@ export function matchProductsForSolution(solution: SolutionDefinition, products:
   const minCount = 9;
   if (picked.length >= minCount) return picked.slice(0, 12);
 
-  const expanded = products
+  const expanded = familyCandidates
     .filter((p) => fallbacks.has(p.category))
-    .concat(products.filter((p) => !fallbacks.has(p.category)))
+    .concat(familyCandidates.filter((p) => !fallbacks.has(p.category)))
     .filter((p, idx, arr) => arr.findIndex((q) => q.slug === p.slug) === idx);
 
   return expanded.slice(0, 12);

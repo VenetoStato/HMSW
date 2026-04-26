@@ -157,23 +157,12 @@ export function SolutionKitBuilder({
     let tx = 55;
     let ty = 35;
 
-    const onPointerMove = (e: PointerEvent) => {
-      const r = el.getBoundingClientRect();
-      const x = (e.clientX - r.left) / Math.max(1, r.width);
-      const y = (e.clientY - r.top) / Math.max(1, r.height);
-      tx = clamp(x * 100, 0, 100);
-      ty = clamp(y * 100, 0, 100);
-    };
-
-    window.addEventListener('pointermove', onPointerMove, { passive: true });
-
     const speed = scenario === 'demo' ? 0.35 : scenario === 'rd' ? 0.45 : 0.55;
-
-    let raf = 0;
     const start = performance.now();
 
-    const tick = (t: number) => {
-      const s = (t - start) / 1000;
+    let raf = 0;
+    const compute = () => {
+      const s = (performance.now() - start) / 1000;
 
       const sx1 = 12 + Math.sin(s * speed) * 18;
       const sy1 = 22 + Math.cos(s * (speed * 0.9)) * 16;
@@ -183,6 +172,7 @@ export function SolutionKitBuilder({
 
       const gx1 = 0.6 * sx1 + 0.4 * tx;
       const gy1 = 0.6 * sy1 + 0.4 * ty;
+
       const gx2 = 0.6 * sx2 + 0.4 * (100 - tx);
       const gy2 = 0.6 * sy2 + 0.4 * ty;
 
@@ -191,14 +181,42 @@ export function SolutionKitBuilder({
       el.style.setProperty('--gx2', `${clamp(gx2, 0, 100)}%`);
       el.style.setProperty('--gy2', `${clamp(gy2, 0, 100)}%`);
 
-      raf = requestAnimationFrame(tick);
+      raf = 0;
     };
 
-    raf = requestAnimationFrame(tick);
+    const scheduleFromClient = (clientX: number, clientY: number) => {
+      const r = el.getBoundingClientRect();
+      const x = (clientX - r.left) / Math.max(1, r.width);
+      const y = (clientY - r.top) / Math.max(1, r.height);
+      tx = clamp(x * 100, 0, 100);
+      ty = clamp(y * 100, 0, 100);
+      if (raf) return;
+      raf = requestAnimationFrame(compute);
+    };
+
+    const onPointerMove = (e: PointerEvent) => {
+      scheduleFromClient(e.clientX, e.clientY);
+    };
+
+    const onTouchMove = (e: TouchEvent) => {
+      const t = e.touches?.[0];
+      if (!t) return;
+      scheduleFromClient(t.clientX, t.clientY);
+    };
+
+    el.addEventListener('pointermove', onPointerMove, { passive: true });
+    el.addEventListener('touchstart', onTouchMove, { passive: true });
+    el.addEventListener('touchmove', onTouchMove, { passive: true });
+
+    // init (centered)
+    const r0 = el.getBoundingClientRect();
+    scheduleFromClient(r0.left + r0.width * 0.55, r0.top + r0.height * 0.35);
 
     return () => {
-      window.removeEventListener('pointermove', onPointerMove);
-      cancelAnimationFrame(raf);
+      el.removeEventListener('pointermove', onPointerMove);
+      el.removeEventListener('touchstart', onTouchMove);
+      el.removeEventListener('touchmove', onTouchMove);
+      if (raf) cancelAnimationFrame(raf);
     };
   }, [scenario]);
 
@@ -207,6 +225,7 @@ export function SolutionKitBuilder({
       ref={rootRef}
       className="rounded-2xl border p-4 md:p-5 accent-surface backdrop-blur"
       style={{
+        touchAction: 'pan-y',
         ['--acc-a' as any]: scenarioAccents.a,
         ['--acc-b' as any]: scenarioAccents.b,
         ['--acc-c' as any]: scenarioAccents.c,
@@ -298,7 +317,7 @@ export function SolutionKitBuilder({
             >
               {kit.map((p) => (
                 <li key={p.id} className="flex items-start justify-between gap-3">
-                  <span className="min-w-0 flex-1">{p.name}</span>
+                  <span className="min-w-0 flex-1 break-words whitespace-normal">{p.name}</span>
                   <span className="flex-none font-semibold">
                     {p.priceEur > 0 ? formatEur(p.priceEur) : t(locale, 'priceOnRequest')}
                   </span>

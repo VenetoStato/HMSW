@@ -21,11 +21,42 @@ export function DynamicAccentGradient({
       typeof window !== 'undefined' &&
       window.matchMedia &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
     if (reduced) return;
 
     let tx = 55;
     let ty = 35;
+
+    const start = performance.now();
+
+    const applyVars = () => {
+      // compute only on user interaction (no continuous RAF)
+      const s = (performance.now() - start) / 1000;
+
+      const sx1 = 20 + Math.sin(s * 0.45) * 20;
+      const sy1 = 20 + Math.cos(s * 0.38) * 18;
+
+      const sx2 = 80 + Math.cos(s * 0.33) * 16;
+      const sy2 = 18 + Math.sin(s * 0.41) * 16;
+
+      const sx3 = 55 + Math.sin(s * 0.29 + 1.2) * 18;
+      const sy3 = 92 + Math.cos(s * 0.27 + 0.6) * 12;
+
+      const gx1 = 0.55 * sx1 + 0.45 * tx;
+      const gy1 = 0.55 * sy1 + 0.45 * ty;
+
+      const gx2 = 0.55 * sx2 + 0.45 * (100 - tx);
+      const gy2 = 0.55 * sy2 + 0.45 * ty;
+
+      const gx3 = 0.55 * sx3 + 0.45 * (tx * 0.6 + 20);
+      const gy3 = 0.55 * sy3 + 0.45 * (ty * 0.4 + 55);
+
+      el.style.setProperty('--gx1', `${clamp(gx1, 0, 100)}%`);
+      el.style.setProperty('--gy1', `${clamp(gy1, 0, 100)}%`);
+      el.style.setProperty('--gx2', `${clamp(gx2, 0, 100)}%`);
+      el.style.setProperty('--gy2', `${clamp(gy2, 0, 100)}%`);
+      el.style.setProperty('--gx3', `${clamp(gx3, 0, 100)}%`);
+      el.style.setProperty('--gy3', `${clamp(gy3, 0, 100)}%`);
+    };
 
     const setFromClient = (clientX: number, clientY: number) => {
       const r = el.getBoundingClientRect();
@@ -33,6 +64,7 @@ export function DynamicAccentGradient({
       const y = (clientY - r.top) / Math.max(1, r.height);
       tx = clamp(x * 100, 0, 100);
       ty = clamp(y * 100, 0, 100);
+      applyVars();
     };
 
     const onPointerMove = (e: PointerEvent) => {
@@ -55,51 +87,14 @@ export function DynamicAccentGradient({
     el.addEventListener('touchstart', onTouchStart, { passive: true });
     el.addEventListener('touchmove', onTouchMove, { passive: true });
 
-    let raf = 0;
-    const start = performance.now();
-
-    const tick = (t: number) => {
-      const el2 = ref.current;
-      if (!el2) return;
-
-      const s = (t - start) / 1000;
-
-      // subtle drift + touch/pointer influence
-      const sx1 = 20 + Math.sin(s * 0.45) * 20;
-      const sy1 = 20 + Math.cos(s * 0.38) * 18;
-
-      const sx2 = 80 + Math.cos(s * 0.33) * 16;
-      const sy2 = 18 + Math.sin(s * 0.41) * 16;
-
-      const sx3 = 55 + Math.sin(s * 0.29 + 1.2) * 18;
-      const sy3 = 92 + Math.cos(s * 0.27 + 0.6) * 12;
-
-      const gx1 = 0.55 * sx1 + 0.45 * tx;
-      const gy1 = 0.55 * sy1 + 0.45 * ty;
-
-      const gx2 = 0.55 * sx2 + 0.45 * (100 - tx);
-      const gy2 = 0.55 * sy2 + 0.45 * ty;
-
-      const gx3 = 0.55 * sx3 + 0.45 * (tx * 0.6 + 20);
-      const gy3 = 0.55 * sy3 + 0.45 * (ty * 0.4 + 55);
-
-      el2.style.setProperty('--gx1', `${clamp(gx1, 0, 100)}%`);
-      el2.style.setProperty('--gy1', `${clamp(gy1, 0, 100)}%`);
-      el2.style.setProperty('--gx2', `${clamp(gx2, 0, 100)}%`);
-      el2.style.setProperty('--gy2', `${clamp(gy2, 0, 100)}%`);
-      el2.style.setProperty('--gx3', `${clamp(gx3, 0, 100)}%`);
-      el2.style.setProperty('--gy3', `${clamp(gy3, 0, 100)}%`);
-
-      raf = requestAnimationFrame(tick);
-    };
-
-    raf = requestAnimationFrame(tick);
+    // init once
+    const r0 = el.getBoundingClientRect();
+    setFromClient(r0.left + r0.width * 0.55, r0.top + r0.height * 0.35);
 
     return () => {
       el.removeEventListener('pointermove', onPointerMove);
       el.removeEventListener('touchstart', onTouchStart);
       el.removeEventListener('touchmove', onTouchMove);
-      cancelAnimationFrame(raf);
     };
   }, []);
 

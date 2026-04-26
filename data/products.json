@@ -2,7 +2,7 @@
   {
     "id": "2098e7",
     "slug": "arm-z1-pro-2098e7",
-    "name": "ARM Z1 PRO | MekoSrl",
+    "name": "ARM Z1 PRO",
     "brand": "Unitree",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -27,7 +27,7 @@
   {
     "id": "af7584",
     "slug": "b2-standard-battery-af7584",
-    "name": "B2 STANDARD BATTERY | MekoSrl",
+    "name": "B2 STANDARD BATTERY",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -53,7 +53,7 @@
   {
     "id": "57ac78",
     "slug": "b2-w-b2w-lidar-57ac78",
-    "name": "B2-W B2W + LIDAR | MekoSrl",
+    "name": "B2-W B2W + LIDAR",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -78,7 +78,7 @@
   {
     "id": "1d4b88",
     "slug": "b2-charging-board-1d4b88",
-    "name": "B2 CHARGING BOARD | MekoSrl",
+    "name": "B2 CHARGING BOARD",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -100,7 +100,7 @@
   {
     "id": "d0cf59",
     "slug": "copia-di-unitree-g1d-u2-d0cf59",
-    "name": "Unitree G1D-U2 Standard C | MekoSrl",
+    "name": "Unitree G1D-U2 Standard C",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -124,7 +124,7 @@
   {
     "id": "f55bc5",
     "slug": "b2-battery-high-temperature-f55bc5",
-    "name": "B2 BATTERY HIGH TEMPERATURE | MekoSrl",
+    "name": "B2 BATTERY HIGH TEMPERATURE",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -153,7 +153,7 @@
   {
     "id": "06c40b",
     "slug": "arm-z1-air-06c40b",
-    "name": "ARM Z1 AIR | MekoSrl",
+    "name": "ARM Z1 AIR",
     "brand": "Unitree",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -178,7 +178,7 @@
   {
     "id": "4f56b5",
     "slug": "b2-foot-pad-4f56b5",
-    "name": "B2 FOOT PAD | MekoSrl",
+    "name": "B2 FOOT PAD",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -202,7 +202,7 @@
   {
     "id": "498016",
     "slug": "b2-battery-low-temperature-498016",
-    "name": "B2 BATTERY LOW TEMPERATURE | MekoSrl",
+    "name": "B2 BATTERY LOW TEMPERATURE",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -228,7 +228,7 @@
   {
     "id": "529694",
     "slug": "copia-di-unitree-h1-m-529694",
-    "name": "Unitree H1-M | MekoSrl",
+    "name": "Unitree H1-M",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -255,7 +255,7 @@
   {
     "id": "d9e755",
     "slug": "d1-robotic-arm-d9e755",
-    "name": "Unitree Go2-Go2W D1 ROBOTIC ARM | MekoSrl",
+    "name": "Unitree Go2-Go2W D1 ROBOTIC ARM",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -280,7 +280,7 @@
   {
     "id": "bef5ee",
     "slug": "dex3-1-force-controlled-three-finger-dexterous-hand-bef5ee",
-    "name": "R1 Dex3-1 force-controlled three- finger dexterous hand | MekoSrl",
+    "name": "R1 Dex3-1 force-controlled three- finger dexterous hand",
     "brand": "Unitree",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -306,7 +306,7 @@
   {
     "id": "0e54ab",
     "slug": "h2-dedicated-brainco-bionic-dexterous-hand-revo-2-basic-edition-0e54ab",
-    "name": "H2 Dedicated BrainCo Bionic Dexterous Hand Revo 2 Basic Edition | MekoSrl",
+    "name": "H2 Dedicated BrainCo Bionic Dexterous Hand Revo 2 Basic Edition",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -328,7 +328,7 @@
   {
     "id": "f7a8f2",
     "slug": "h2-dedicated-brainco-bionic-dexterous-hand-revo-2-tactile-edition-f7a8f2",
-    "name": "H2 Dedicated BrainCo Bionic Dexterous Hand Revo 2 Tactile Edition | MekoSrl",
+    "name": "H2 Dedicated BrainCo Bionic Dexterous Hand Revo 2 Tactile Edition",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -350,7 +350,7 @@
   {
     "id": "b40167",
     "slug": "h2-dedicated-dex1-1-gripper-standard-edition-b40167",
-    "name": "H2 Dedicated Dex1-1 Gripper Standard Edition | MekoSrl",
+    "name": "H2 Dedicated Dex1-1 Gripper Standard Edition",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -372,7 +372,7 @@
   {
     "id": "a5f069",
     "slug": "h2-dedicated-dex1-1-gripper-advanced-edition-a5f069",
-    "name": "H2 Dedicated Dex1-1 Gripper Advanced Edition | MekoSrl",
+    "name": "H2 Dedicated Dex1-1 Gripper Advanced Edition",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -394,7 +394,7 @@
   {
     "id": "601fdc",
     "slug": "h2-dedicated-dex1-1-gripper-flagship-edition-601fdc",
-    "name": "H2 Dedicated Dex1-1 Gripper Flagship Edition | MekoSrl",
+    "name": "H2 Dedicated Dex1-1 Gripper Flagship Edition",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -416,7 +416,7 @@
   {
     "id": "d95c78",
     "slug": "h2-dedicated-dex3-1-force-control-three-finger-dexterous-hand-tactile-version-d95c78",
-    "name": "H2 Dedicated Dex3-1 Force-Control Three-Finger Dexterous Hand (Tactile Version) | MekoSrl",
+    "name": "H2 Dedicated Dex3-1 Force-Control Three-Finger Dexterous Hand (Tactile Version)",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -438,7 +438,7 @@
   {
     "id": "afcfa3",
     "slug": "h2-dedicated-inspier-dfq-series-dexterous-hand-afcfa3",
-    "name": "H2 Dedicated Inspier DFQ Series Dexterous Hand | MekoSrl",
+    "name": "H2 Dedicated Inspier DFQ Series Dexterous Hand",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -460,7 +460,7 @@
   {
     "id": "d973f0",
     "slug": "h2-dedicated-inspier-ftp-series-dexterous-hand-d973f0",
-    "name": "H2 Dedicated Inspier FTP Series Dexterous Hand | MekoSrl",
+    "name": "H2 Dedicated Inspier FTP Series Dexterous Hand",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -482,7 +482,7 @@
   {
     "id": "f1f958",
     "slug": "r1-brainco-bionic-dexterous-hand-revo-2-basic-version-f1f958",
-    "name": "R1 BrainCo Bionic Dexterous Hand Revo 2 Basic Version | MekoSrl",
+    "name": "R1 BrainCo Bionic Dexterous Hand Revo 2 Basic Version",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -506,7 +506,7 @@
   {
     "id": "9e311c",
     "slug": "h2-dedicated-intel-unitree-core-i8-computing-board-assembly-9e311c",
-    "name": "H2 Dedicated Intel Unitree Core i8 Computing Board Assembly | MekoSrl",
+    "name": "H2 Dedicated Intel Unitree Core i8 Computing Board Assembly",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -528,7 +528,7 @@
   {
     "id": "dcd572",
     "slug": "r1-brainco-bionic-dexterous-hand-revo-2-haptic-version-dcd572",
-    "name": "R1 BrainCo Bionic Dexterous Hand Revo 2 Haptic Version | MekoSrl",
+    "name": "R1 BrainCo Bionic Dexterous Hand Revo 2 Haptic Version",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -552,7 +552,7 @@
   {
     "id": "c66fb2",
     "slug": "r1-dex3-1-force-controlled-three-finger-dexterous-hand-haptic-version-c66fb2",
-    "name": "R1 Dex3-1 force-controlled three- finger dexterous hand (haptic version) | MekoSrl",
+    "name": "R1 Dex3-1 force-controlled three- finger dexterous hand (haptic version)",
     "brand": "Unitree",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -577,7 +577,7 @@
   {
     "id": "9620b6",
     "slug": "robot-umanoide-unitree-h1-s-9620b6",
-    "name": "Unitree H1-S | MekoSrl",
+    "name": "Unitree H1-S",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -603,7 +603,7 @@
   {
     "id": "21f29b",
     "slug": "unitree-a2-21f29b",
-    "name": "Unitree A2 | MekoSrl",
+    "name": "Unitree A2",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -634,7 +634,7 @@
   {
     "id": "401128",
     "slug": "unitree-a2-battery-single-battery-401128",
-    "name": "Unitree A2/A2-W battery (single battery) | MekoSrl",
+    "name": "Unitree A2/A2-W battery (single battery)",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -656,7 +656,7 @@
   {
     "id": "b0e174",
     "slug": "unitree-a2-charger-b0e174",
-    "name": "Unitree A2/A2-W charger | MekoSrl",
+    "name": "Unitree A2/A2-W charger",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -680,7 +680,7 @@
   {
     "id": "a1e9a9",
     "slug": "unitree-a2-standard-version-a1e9a9",
-    "name": "Unitree A2 Standard Version | MekoSrl",
+    "name": "Unitree A2 Standard Version",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -702,7 +702,7 @@
   {
     "id": "abb4ed",
     "slug": "unitree-a2-two-hand-remote-control-abb4ed",
-    "name": "Unitree A2/A2-W Two-hand remote control | MekoSrl",
+    "name": "Unitree A2/A2-W Two-hand remote control",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -726,7 +726,7 @@
   {
     "id": "75dad8",
     "slug": "unitree-a2-pro-75dad8",
-    "name": "Unitree A2 PRO | MekoSrl",
+    "name": "Unitree A2 PRO",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -748,7 +748,7 @@
   {
     "id": "005884",
     "slug": "unitree-a2-w-pro-005884",
-    "name": "Unitree A2-W Pro | MekoSrl",
+    "name": "Unitree A2-W Pro",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -770,7 +770,7 @@
   {
     "id": "d8d796",
     "slug": "unitree-a2-w-standard-version-d8d796",
-    "name": "Unitree A2-W Standard Version | MekoSrl",
+    "name": "Unitree A2-W Standard Version",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -796,7 +796,7 @@
   {
     "id": "d2a036",
     "slug": "unitree-as2-d2a036",
-    "name": "Unitree AS2 | MekoSrl",
+    "name": "Unitree AS2",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -817,7 +817,7 @@
   {
     "id": "7e11e9",
     "slug": "unitree-b2-b2-orin-nx-external-upgrade-7e11e9",
-    "name": "Unitree B2-B2 ORIN NX EXTERNAL UPGRADE | MekoSrl",
+    "name": "Unitree B2-B2 ORIN NX EXTERNAL UPGRADE",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -842,7 +842,7 @@
   {
     "id": "ed226d",
     "slug": "unitree-b2-b2w-protection-frame-ed226d",
-    "name": "Unitree B2-B2W PROTECTION FRAME | MekoSrl",
+    "name": "Unitree B2-B2W PROTECTION FRAME",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -864,7 +864,7 @@
   {
     "id": "c1bac0",
     "slug": "unitree-b2-b2whelios-5515-lidar-c1bac0",
-    "name": "Unitree B2-B2WHELIOS 5515 LIDAR | MekoSrl",
+    "name": "Unitree B2-B2WHELIOS 5515 LIDAR",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -888,7 +888,7 @@
   {
     "id": "f4c0d9",
     "slug": "unitree-b2-controller-f4c0d9",
-    "name": "Unitree B2 CONTROLLER | MekoSrl",
+    "name": "Unitree B2 CONTROLLER",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -912,7 +912,7 @@
   {
     "id": "d3cc2e",
     "slug": "unitree-b2-lidar-d3cc2e",
-    "name": "Unitree B2 + LIDAR | MekoSrl",
+    "name": "Unitree B2 + LIDAR",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -942,7 +942,7 @@
   {
     "id": "45071e",
     "slug": "unitree-b2w-45071e",
-    "name": "Unitree B2W | MekoSrl",
+    "name": "Unitree B2W",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -967,7 +967,7 @@
   {
     "id": "4ba289",
     "slug": "unitree-bionic-revo-2-basic-no-sensori-tattili-4ba289",
-    "name": "G1 BIONIC REVO 2 BASIC (no sensori tattili) | MekoSrl",
+    "name": "G1 BIONIC REVO 2 BASIC (no sensori tattili)",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -992,7 +992,7 @@
   {
     "id": "1d0ca7",
     "slug": "unitree-g1-air-1d0ca7",
-    "name": "Unitree G1 AIR | MekoSrl",
+    "name": "Unitree G1 AIR",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -1016,7 +1016,7 @@
   {
     "id": "ff28e0",
     "slug": "unitree-g1-battery-ff28e0",
-    "name": "Unitree G1 Battery | MekoSrl",
+    "name": "Unitree G1 Battery",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -1038,7 +1038,7 @@
   {
     "id": "60be52",
     "slug": "unitree-g1-battery-charger-60be52",
-    "name": "Unitree G1 Battery Charger | MekoSrl",
+    "name": "Unitree G1 Battery Charger",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -1062,7 +1062,7 @@
   {
     "id": "8281e3",
     "slug": "unitree-g1-dex3-1-force-controlled-three-finger-dexterous-hand-8281e3",
-    "name": "Unitree G1 Dex3-1 force-controlled three- finger dexterous hand | MekoSrl",
+    "name": "Unitree G1 Dex3-1 force-controlled three- finger dexterous hand",
     "brand": "Unitree",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -1086,7 +1086,7 @@
   {
     "id": "2a2cf5",
     "slug": "unitree-g1-u1-2a2cf5",
-    "name": "Unitree G1-U1 | MekoSrl",
+    "name": "Unitree G1-U1",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -1110,7 +1110,7 @@
   {
     "id": "3e9ef5",
     "slug": "unitree-g1-u3-3e9ef5",
-    "name": "Unitree G1-U3 | MekoSrl",
+    "name": "Unitree G1-U3",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -1134,7 +1134,7 @@
   {
     "id": "8e6c07",
     "slug": "unitree-g1-u2-8e6c07",
-    "name": "Unitree G1-U2 | MekoSrl",
+    "name": "Unitree G1-U2",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -1158,7 +1158,7 @@
   {
     "id": "c30b18",
     "slug": "unitree-g1-u4-c30b18",
-    "name": "Unitree G1-U4 | MekoSrl",
+    "name": "Unitree G1-U4",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -1182,7 +1182,7 @@
   {
     "id": "bb4d0c",
     "slug": "unitree-g1-u5-bb4d0c",
-    "name": "Unitree G1-U5 | MekoSrl",
+    "name": "Unitree G1-U5",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -1208,7 +1208,7 @@
   {
     "id": "3f288d",
     "slug": "unitree-g1-u6-3f288d",
-    "name": "Unitree G1-U6 | MekoSrl",
+    "name": "Unitree G1-U6",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -1232,7 +1232,7 @@
   {
     "id": "6f07d5",
     "slug": "unitree-g1-u7-6f07d5",
-    "name": "Unitree G1-U7 | MekoSrl",
+    "name": "Unitree G1-U7",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -1256,7 +1256,7 @@
   {
     "id": "feda71",
     "slug": "copia-di-unitree-g1d-u5-feda71",
-    "name": "Unitree G1D-U5 Standard E | MekoSrl",
+    "name": "Unitree G1D-U5 Standard E",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -1282,7 +1282,7 @@
   {
     "id": "726e6e",
     "slug": "unitree-g1-u9-726e6e",
-    "name": "Unitree G1-U9 | MekoSrl",
+    "name": "Unitree G1-U9",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -1306,7 +1306,7 @@
   {
     "id": "5b8a82",
     "slug": "unitree-g1d-u1-5b8a82",
-    "name": "Unitree G1D-U1 Standard A | MekoSrl",
+    "name": "Unitree G1D-U1 Standard A",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -1339,7 +1339,7 @@
   {
     "id": "cf0d18",
     "slug": "unitree-dexterous-hand-5-fingers-whit-tactile-sensors-single-cf0d18",
-    "name": "G1 DEXTEROUS HAND 5 FINGERS WHIT TACTILE SENSORS (SINGLE) | MekoSrl",
+    "name": "G1 DEXTEROUS HAND 5 FINGERS WHIT TACTILE SENSORS (SINGLE)",
     "brand": "Unitree",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -1363,7 +1363,7 @@
   {
     "id": "d54366",
     "slug": "unitree-dexterous-hand-5-fingers-whitout-tactile-sensors-single-d54366",
-    "name": "G1 DEXTEROUS HAND 5 FINGERS WHITOUT TACTILE SENSORS (SINGLE) | MekoSrl",
+    "name": "G1 DEXTEROUS HAND 5 FINGERS WHITOUT TACTILE SENSORS (SINGLE)",
     "brand": "Unitree",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -1385,7 +1385,7 @@
   {
     "id": "aef57f",
     "slug": "unitree-g1-remote-aef57f",
-    "name": "Unitree G1 Remote | MekoSrl",
+    "name": "Unitree G1 Remote",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -1409,7 +1409,7 @@
   {
     "id": "e3dc4c",
     "slug": "unitree-dex3-1-force-controlled-three-finger-dexterous-hand-tactile-version-e3dc4c",
-    "name": "G1 Dex3-1 force-controlled three- finger dexterous hand (tactile version) | MekoSrl",
+    "name": "G1 Dex3-1 force-controlled three- finger dexterous hand (tactile version)",
     "brand": "Unitree",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -1433,7 +1433,7 @@
   {
     "id": "3e7b23",
     "slug": "unitree-g1-u10-3e7b23",
-    "name": "Unitree G1-U10 | MekoSrl",
+    "name": "Unitree G1-U10",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -1457,7 +1457,7 @@
   {
     "id": "58f849",
     "slug": "unitree-g1d-u9-flagship-d-58f849",
-    "name": "Unitree G1D-U9 Flagship D | MekoSrl",
+    "name": "Unitree G1D-U9 Flagship D",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -1481,7 +1481,7 @@
   {
     "id": "4b6788",
     "slug": "unitree-go2-air-4b6788",
-    "name": "Unitree GO2 AIR PACKAGE | MekoSrl",
+    "name": "Unitree GO2 AIR PACKAGE",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -1505,7 +1505,7 @@
   {
     "id": "86fcfe",
     "slug": "unitree-g1d-u10-flagship-e-86fcfe",
-    "name": "Unitree G1D-U10 Flagship E | MekoSrl",
+    "name": "Unitree G1D-U10 Flagship E",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -1531,7 +1531,7 @@
   {
     "id": "9d56ac",
     "slug": "unitree-go2-edu-laser-smart-version-9d56ac",
-    "name": "Unitree Go2 Edu Laser Smart Version | MekoSrl",
+    "name": "Unitree Go2 Edu Laser Smart Version",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -1553,7 +1553,7 @@
   {
     "id": "2cdef2",
     "slug": "unitree-go2-edu-smart-version-2cdef2",
-    "name": "Unitree Go2 Edu Smart Version | MekoSrl",
+    "name": "Unitree Go2 Edu Smart Version",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -1575,7 +1575,7 @@
   {
     "id": "9966f5",
     "slug": "unitree-go2-edu-standard-version-9966f5",
-    "name": "Unitree Go2 Edu Standard Version | MekoSrl",
+    "name": "Unitree Go2 Edu Standard Version",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -1597,7 +1597,7 @@
   {
     "id": "b34253",
     "slug": "unitree-go2-edu-ultimate-version-b34253",
-    "name": "Unitree Go2 Edu Ultimate Version | MekoSrl",
+    "name": "Unitree Go2 Edu Ultimate Version",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -1619,7 +1619,7 @@
   {
     "id": "47cefb",
     "slug": "unitree-g1d-u1-1-47cefb",
-    "name": "Unitree G1D-U2 Standard B | MekoSrl",
+    "name": "Unitree G1D-U2 Standard B",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -1643,7 +1643,7 @@
   {
     "id": "2b51b0",
     "slug": "unitree-g1d-u4-2b51b0",
-    "name": "Unitree G1D-U4 Standard D | MekoSrl",
+    "name": "Unitree G1D-U4 Standard D",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -1667,7 +1667,7 @@
   {
     "id": "a3e4f2",
     "slug": "unitree-go2-go2w-standard-battery-a3e4f2",
-    "name": "Unitree GO2/GO2W Standard Battery | MekoSrl",
+    "name": "Unitree GO2/GO2W Standard Battery",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -1689,7 +1689,7 @@
   {
     "id": "ece3f7",
     "slug": "unitree-g1d-u6-flagship-a-ece3f7",
-    "name": "Unitree G1D-U6 Flagship A | MekoSrl",
+    "name": "Unitree G1D-U6 Flagship A",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -1721,7 +1721,7 @@
   {
     "id": "9685f0",
     "slug": "unitree-go2-go2w-standard-charger-9685f0",
-    "name": "Unitree GO2/GO2W Standard Charger | MekoSrl",
+    "name": "Unitree GO2/GO2W Standard Charger",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -1745,7 +1745,7 @@
   {
     "id": "b7243f",
     "slug": "unitree-go2-pro-b7243f",
-    "name": "Unitree Go2 PRO | MekoSrl",
+    "name": "Unitree Go2 PRO",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -1769,7 +1769,7 @@
   {
     "id": "5414b2",
     "slug": "unitree-g1d-u8-flagship-c-5414b2",
-    "name": "Unitree G1D-U8 Flagship C | MekoSrl",
+    "name": "Unitree G1D-U8 Flagship C",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -1793,7 +1793,7 @@
   {
     "id": "0d83d0",
     "slug": "unitree-go2-self-charging-board-0d83d0",
-    "name": "Unitree GO2 SELF-CHARGING BOARD | MekoSrl",
+    "name": "Unitree GO2 SELF-CHARGING BOARD",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -1822,7 +1822,7 @@
   {
     "id": "9403a4",
     "slug": "unitree-go2-two-hand-remote-control-9403a4",
-    "name": "Unitree GO2/GO2W Two-hand remote control | MekoSrl",
+    "name": "Unitree GO2/GO2W Two-hand remote control",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -1846,7 +1846,7 @@
   {
     "id": "4bd903",
     "slug": "unitree-g1d-u7-flagship-b-4bd903",
-    "name": "Unitree G1D-U7 Flagship B | MekoSrl",
+    "name": "Unitree G1D-U7 Flagship B",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -1870,7 +1870,7 @@
   {
     "id": "bb1149",
     "slug": "unitree-go2w-u2-bb1149",
-    "name": "Unitree Go2W-U2 | MekoSrl",
+    "name": "Unitree Go2W-U2",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -1896,7 +1896,7 @@
   {
     "id": "7ffa94",
     "slug": "unitree-go2w-u1-7ffa94",
-    "name": "Unitree Go2W-U1 | MekoSrl",
+    "name": "Unitree Go2W-U1",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -1918,7 +1918,7 @@
   {
     "id": "105db6",
     "slug": "unitree-go2w-u3-105db6",
-    "name": "Unitree Go2W-U3 | MekoSrl",
+    "name": "Unitree Go2W-U3",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -1940,7 +1940,7 @@
   {
     "id": "1232b6",
     "slug": "unitree-go2w-u4-1232b6",
-    "name": "Unitree Go2W-U4 | MekoSrl",
+    "name": "Unitree Go2W-U4",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -1962,7 +1962,7 @@
   {
     "id": "fc1658",
     "slug": "unitree-go2-go2w-go2-long-lasting-battery-fc1658",
-    "name": "Unitree GO2/GO2W Go2 long-lasting battery | MekoSrl",
+    "name": "Unitree GO2/GO2W Go2 long-lasting battery",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -1984,7 +1984,7 @@
   {
     "id": "3ae5e4",
     "slug": "unitree-go2w-u5-3ae5e4",
-    "name": "Unitree Go2W-U5 | MekoSrl",
+    "name": "Unitree Go2W-U5",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -2006,7 +2006,7 @@
   {
     "id": "97e2bb",
     "slug": "unitree-h1-100-tflop-computing-module-97e2bb",
-    "name": "Unitree H1 100 TFLOP COMPUTING MODULE | MekoSrl",
+    "name": "Unitree H1 100 TFLOP COMPUTING MODULE",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -2028,7 +2028,7 @@
   {
     "id": "d39d90",
     "slug": "unitree-h1-200tflop-computing-module-d39d90",
-    "name": "Unitree H1 200TFLOP COMPUTING MODULE | MekoSrl",
+    "name": "Unitree H1 200TFLOP COMPUTING MODULE",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -2050,7 +2050,7 @@
   {
     "id": "45f78a",
     "slug": "unitree-go2-go2w-foot-end-1-pair-left-right-45f78a",
-    "name": "Unitree GO2/GO2W foot end (1 pair, left/right) | MekoSrl",
+    "name": "Unitree GO2/GO2W foot end (1 pair, left/right)",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -2074,7 +2074,7 @@
   {
     "id": "e0b614",
     "slug": "unitree-h1-fast-charger-e0b614",
-    "name": "Unitree H1 FAST CHARGER | MekoSrl",
+    "name": "Unitree H1 FAST CHARGER",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -2102,7 +2102,7 @@
   {
     "id": "360c59",
     "slug": "unitree-h1-battery-single-360c59",
-    "name": "Unitree H1 BATTERY (SINGLE) | MekoSrl",
+    "name": "Unitree H1 BATTERY (SINGLE)",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -2131,7 +2131,7 @@
   {
     "id": "d44eaa",
     "slug": "unitree-h1-m-dexterous-hand-single-top-d44eaa",
-    "name": "Unitree H1-M DEXTEROUS HAND (SINGLE) TOP | MekoSrl",
+    "name": "Unitree H1-M DEXTEROUS HAND (SINGLE) TOP",
     "brand": "Unitree",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -2168,7 +2168,7 @@
   {
     "id": "7f2f40",
     "slug": "unitree-h1-protection-frame-7f2f40",
-    "name": "Unitree H1 PROTECTION FRAME | MekoSrl",
+    "name": "Unitree H1 PROTECTION FRAME",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -2190,7 +2190,7 @@
   {
     "id": "d47d8f",
     "slug": "unitree-h1-remote-control-d47d8f",
-    "name": "Unitree H1 Remote Control | MekoSrl",
+    "name": "Unitree H1 Remote Control",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -2219,7 +2219,7 @@
   {
     "id": "268b71",
     "slug": "unitree-h2-dedicated-dex3-1-force-control-three-finger-dexterous-hand-268b71",
-    "name": "Unitree H2 Dedicated Dex3-1 Force-Control Three-Finger Dexterous Hand | MekoSrl",
+    "name": "Unitree H2 Dedicated Dex3-1 Force-Control Three-Finger Dexterous Hand",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -2241,7 +2241,7 @@
   {
     "id": "1462f9",
     "slug": "unitree-go2-go2w-fast-charger-1462f9",
-    "name": "Unitree GO2/GO2W Fast Charger | MekoSrl",
+    "name": "Unitree GO2/GO2W Fast Charger",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -2265,7 +2265,7 @@
   {
     "id": "9822a0",
     "slug": "unitree-h2-battery-single-9822a0",
-    "name": "Unitree H2 BATTERY (SINGLE) | MekoSrl",
+    "name": "Unitree H2 BATTERY (SINGLE)",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -2289,7 +2289,7 @@
   {
     "id": "850681",
     "slug": "unitree-h2-dedicated-dex5-1p-five-finger-dexterous-hand-850681",
-    "name": "Unitree H2 Dedicated Dex5-1P Five-Finger Dexterous Hand | MekoSrl",
+    "name": "Unitree H2 Dedicated Dex5-1P Five-Finger Dexterous Hand",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -2311,7 +2311,7 @@
   {
     "id": "a00383",
     "slug": "unitree-h1-s-dexterous-hand-single-top-a00383",
-    "name": "Unitree H1-S DEXTEROUS HAND (SINGLE) TOP | MekoSrl",
+    "name": "Unitree H1-S DEXTEROUS HAND (SINGLE) TOP",
     "brand": "Unitree",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -2333,7 +2333,7 @@
   {
     "id": "6da372",
     "slug": "unitree-h2-dedicated-dex5-1-five-finger-dexterous-hand-6da372",
-    "name": "Unitree H2 Dedicated Dex5-1 Five-Finger Dexterous Hand | MekoSrl",
+    "name": "Unitree H2 Dedicated Dex5-1 Five-Finger Dexterous Hand",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -2355,7 +2355,7 @@
   {
     "id": "028372",
     "slug": "unitree-h2-dedicated-nvidia-jetson-nx-orin-computing-board-assembly-028372",
-    "name": "Unitree H2 Dedicated Nvidia Jetson NX Orin Computing Board Assembly | MekoSrl",
+    "name": "Unitree H2 Dedicated Nvidia Jetson NX Orin Computing Board Assembly",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -2377,7 +2377,7 @@
   {
     "id": "bb0cbf",
     "slug": "unitree-h2-dedicated-nvidia-jetson-agx-orin-computing-board-assembly-bb0cbf",
-    "name": "Unitree H2 Dedicated Nvidia Jetson AGX Orin Computing Board Assembly | MekoSrl",
+    "name": "Unitree H2 Dedicated Nvidia Jetson AGX Orin Computing Board Assembly",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -2399,7 +2399,7 @@
   {
     "id": "3f9e5f",
     "slug": "unitree-h2-dedicated-nvidia-jetson-agx-thor-computing-board-assembly-3f9e5f",
-    "name": "Unitree H2 Dedicated Nvidia Jetson AGX Thor Computing Board Assembly | MekoSrl",
+    "name": "Unitree H2 Dedicated Nvidia Jetson AGX Thor Computing Board Assembly",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -2421,7 +2421,7 @@
   {
     "id": "e8e289",
     "slug": "unitree-h2-edu-e8e289",
-    "name": "Unitree H2 Edu | MekoSrl",
+    "name": "Unitree H2 Edu",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -2447,7 +2447,7 @@
   {
     "id": "daa82a",
     "slug": "unitree-h2-fast-charger-daa82a",
-    "name": "Unitree H2 FAST CHARGER | MekoSrl",
+    "name": "Unitree H2 FAST CHARGER",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -2474,7 +2474,7 @@
   {
     "id": "d76666",
     "slug": "unitree-r1-air-d76666",
-    "name": "Unitree R1 AIR | MekoSrl",
+    "name": "Unitree R1 AIR",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -2498,7 +2498,7 @@
   {
     "id": "f05231",
     "slug": "unitree-h2-remote-control-f05231",
-    "name": "Unitree H2 Remote Control | MekoSrl",
+    "name": "Unitree H2 Remote Control",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -2527,7 +2527,7 @@
   {
     "id": "64b660",
     "slug": "unitree-r1-battery-64b660",
-    "name": "Unitree R1 Battery (SINGLE) | MekoSrl",
+    "name": "Unitree R1 Battery (SINGLE)",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -2549,7 +2549,7 @@
   {
     "id": "f93ddb",
     "slug": "unitree-r1-edu-u1-f93ddb",
-    "name": "Unitree R1 Edu U1 | MekoSrl",
+    "name": "Unitree R1 Edu U1",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -2573,7 +2573,7 @@
   {
     "id": "2ff49c",
     "slug": "unitree-r1-edu-u2-2ff49c",
-    "name": "Unitree R1 Edu U2 | MekoSrl",
+    "name": "Unitree R1 Edu U2",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -2599,7 +2599,7 @@
   {
     "id": "170fa9",
     "slug": "unitree-r1-edu-u5-170fa9",
-    "name": "Unitree R1 Edu U5 | MekoSrl",
+    "name": "Unitree R1 Edu U5",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -2625,7 +2625,7 @@
   {
     "id": "eafc59",
     "slug": "unitree-r1-edu-u6-eafc59",
-    "name": "Unitree R1 Edu U6 | MekoSrl",
+    "name": "Unitree R1 Edu U6",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -2651,7 +2651,7 @@
   {
     "id": "b1c70a",
     "slug": "unitree-r1-two-hand-remote-control-b1c70a",
-    "name": "Unitree R1 Two-hand remote control | MekoSrl",
+    "name": "Unitree R1 Two-hand remote control",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -2675,7 +2675,7 @@
   {
     "id": "e8c445",
     "slug": "unitree-r1-protection-frame-compreso-nelle-versioni-edu-e8c445",
-    "name": "Unitree R1 PROTECTION FRAME (compreso nelle versioni EDU) | MekoSrl",
+    "name": "Unitree R1 PROTECTION FRAME (compreso nelle versioni EDU)",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -2697,7 +2697,7 @@
   {
     "id": "74156d",
     "slug": "z1-gripper-d405-camera-74156d",
-    "name": "Z1 GRIPPER + D405 CAMERA | MekoSrl",
+    "name": "Z1 GRIPPER + D405 CAMERA",
     "brand": "Unitree",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -2726,7 +2726,7 @@
   {
     "id": "93c62f",
     "slug": "z1-gripper-d435i-camera-93c62f",
-    "name": "Z1 GRIPPER + D435i CAMERA | MekoSrl",
+    "name": "Z1 GRIPPER + D435i CAMERA",
     "brand": "Unitree",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -2748,7 +2748,7 @@
   {
     "id": "283219",
     "slug": "z1-standard-gripper-283219",
-    "name": "Z1 STANDARD GRIPPER | MekoSrl",
+    "name": "Z1 STANDARD GRIPPER",
     "brand": "Unitree",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -2770,7 +2770,7 @@
   {
     "id": "69cc0a",
     "slug": "unitree-h2-air-69cc0a",
-    "name": "Unitree H2 Air | MekoSrl",
+    "name": "Unitree H2 Air",
     "brand": "Unitree",
     "category": "Humanoid robots",
     "solutionSlug": "umanoidi",
@@ -2796,7 +2796,7 @@
   {
     "id": "a1eff4",
     "slug": "unitree-r1-a1eff4",
-    "name": "Unitree R1 | MekoSrl",
+    "name": "Unitree R1",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -2826,7 +2826,7 @@
   {
     "id": "a7d6cd",
     "slug": "unitree-r1-battery-1-a7d6cd",
-    "name": "Unitree R1 charger | MekoSrl",
+    "name": "Unitree R1 charger",
     "brand": "Unitree",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -2850,7 +2850,7 @@
   {
     "id": "d64cb6",
     "slug": "unitree-r1-edu-u3-d64cb6",
-    "name": "Unitree R1 Edu U3 | MekoSrl",
+    "name": "Unitree R1 Edu U3",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -2876,7 +2876,7 @@
   {
     "id": "bf5e9e",
     "slug": "unitree-r1-edu-u4-bf5e9e",
-    "name": "Unitree R1 Edu U4 | MekoSrl",
+    "name": "Unitree R1 Edu U4",
     "brand": "Unitree",
     "category": "Robotic gripper",
     "solutionSlug": "accessori",
@@ -2902,7 +2902,7 @@
   {
     "id": "81d6b0",
     "slug": "ai-accelerator",
-    "name": "AI Accelerator | MekoSrl",
+    "name": "AI Accelerator",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -2930,7 +2930,7 @@
   {
     "id": "38994b",
     "slug": "base-mounting-plate-ur3e-with-6m-std",
-    "name": "Base Mounting Plate UR3e with 6m std. | MekoSrl",
+    "name": "Base Mounting Plate UR3e with 6m std.",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -2961,7 +2961,7 @@
   {
     "id": "3cb4e9",
     "slug": "base-mounting-plate-ur3e-no-cable",
-    "name": "Base Mounting Plate UR3e - no cable | MekoSrl",
+    "name": "Base Mounting Plate UR3e - no cable",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -2987,7 +2987,7 @@
   {
     "id": "d0bae0",
     "slug": "alca-palletizer",
-    "name": "ALCA PALLETIZER | MekoSrl",
+    "name": "ALCA PALLETIZER",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3020,7 +3020,7 @@
   {
     "id": "905854",
     "slug": "joint-size-0-wrist-2-ur3e",
-    "name": "Joint Size 0 Wrist 2 UR3e | MekoSrl",
+    "name": "Joint Size 0 Wrist 2 UR3e",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3046,7 +3046,7 @@
   {
     "id": "7af008",
     "slug": "joint-size-0-wrist-3-ur3e",
-    "name": "Joint Size 0 Wrist 3 UR3e | MekoSrl",
+    "name": "Joint Size 0 Wrist 3 UR3e",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3072,7 +3072,7 @@
   {
     "id": "1cd332",
     "slug": "joint-size-2-base-shoulder-ur3e",
-    "name": "Joint Size 2 Base/Shoulder UR3e | MekoSrl",
+    "name": "Joint Size 2 Base/Shoulder UR3e",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3098,7 +3098,7 @@
   {
     "id": "9739be",
     "slug": "occasione-ur10e-series",
-    "name": "OCCASIONE UR10e Series ANNO 2021 | MekoSrl",
+    "name": "OCCASIONE UR10e Series ANNO 2021",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3124,7 +3124,7 @@
   {
     "id": "1838e1",
     "slug": "occasione-ur3-cb3",
-    "name": "OCCASIONE: UR10 CB3 ANNO 2017 | MekoSrl",
+    "name": "OCCASIONE: UR10 CB3 ANNO 2017",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3150,7 +3150,7 @@
   {
     "id": "fc254f",
     "slug": "occasione-ur3-cb3-1",
-    "name": "OCCASIONE: UR3 CB3 ANNO 2019 | MekoSrl",
+    "name": "OCCASIONE: UR3 CB3 ANNO 2019",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3175,7 +3175,7 @@
   {
     "id": "9a2f8a",
     "slug": "mir-mc600",
-    "name": "MiR MC600 | MekoSrl",
+    "name": "MiR MC600",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3206,7 +3206,7 @@
   {
     "id": "4fc844",
     "slug": "occasione-ur5-cb3",
-    "name": "OCCASIONE: UR5 CB3 ANNO 2017 | MekoSrl",
+    "name": "OCCASIONE: UR5 CB3 ANNO 2017",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3232,7 +3232,7 @@
   {
     "id": "5302ed",
     "slug": "ur10e",
-    "name": "UR10e | MekoSrl",
+    "name": "UR10e",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3258,7 +3258,7 @@
   {
     "id": "3f8cf0",
     "slug": "ur12e",
-    "name": "UR12e | MekoSrl",
+    "name": "UR12e",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3284,7 +3284,7 @@
   {
     "id": "6a8dd6",
     "slug": "ur18",
-    "name": "UR18 | MekoSrl",
+    "name": "UR18",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3310,7 +3310,7 @@
   {
     "id": "9b8644",
     "slug": "ur16e",
-    "name": "UR16e | MekoSrl",
+    "name": "UR16e",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3341,7 +3341,7 @@
   {
     "id": "8ac647",
     "slug": "ur3e",
-    "name": "UR3e | MekoSrl",
+    "name": "UR3e",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3367,7 +3367,7 @@
   {
     "id": "196381",
     "slug": "joint-size-0-wrist-1-ur3e",
-    "name": "Joint Size 0 Wrist 1 UR3e | MekoSrl",
+    "name": "Joint Size 0 Wrist 1 UR3e",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3393,7 +3393,7 @@
   {
     "id": "c964f9",
     "slug": "ur7e",
-    "name": "UR7e | MekoSrl",
+    "name": "UR7e",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3419,7 +3419,7 @@
   {
     "id": "f126db",
     "slug": "flexipall-xl-pallettizzatore-depallettizzatore-collaborativo",
-    "name": "Flexipall XL – Pallettizzatore / Depallettizzatore collaborativo | MekoSrl",
+    "name": "Flexipall XL – Pallettizzatore / Depallettizzatore collaborativo",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3452,7 +3452,7 @@
   {
     "id": "335f00",
     "slug": "ur8-long",
-    "name": "UR8 Long | MekoSrl",
+    "name": "UR8 Long",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3478,7 +3478,7 @@
   {
     "id": "325500",
     "slug": "flexipall-pallettizzatore-depallettizzatore-collaborativo",
-    "name": "Flexipall – Pallettizzatore / Depallettizzatore collaborativo | MekoSrl",
+    "name": "Flexipall – Pallettizzatore / Depallettizzatore collaborativo",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3511,7 +3511,7 @@
   {
     "id": "2c4590",
     "slug": "ur15",
-    "name": "UR15 | MekoSrl",
+    "name": "UR15",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3536,7 +3536,7 @@
   {
     "id": "deb300",
     "slug": "ur20",
-    "name": "UR20 | MekoSrl",
+    "name": "UR20",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3566,7 +3566,7 @@
   {
     "id": "93f2d5",
     "slug": "ur30",
-    "name": "UR30 | MekoSrl",
+    "name": "UR30",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3597,7 +3597,7 @@
   {
     "id": "39b70d",
     "slug": "joint-size-1-elbow-ur3e",
-    "name": "Joint Size 1 Elbow UR3e | MekoSrl",
+    "name": "Joint Size 1 Elbow UR3e",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3623,7 +3623,7 @@
   {
     "id": "50a6f7",
     "slug": "ur5e",
-    "name": "UR5e | MekoSrl",
+    "name": "UR5e",
     "brand": "Universal Robots",
     "category": "Robotic arms",
     "solutionSlug": "braccia",
@@ -3654,7 +3654,7 @@
   {
     "id": "401922",
     "slug": "ethernet-digital-i-o-module-wise-4050-l",
-    "name": "Ethernet Digital I/O Module, WISE-4050 L | MekoSrl",
+    "name": "Ethernet Digital I/O Module, WISE-4050 L",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -3682,7 +3682,7 @@
   {
     "id": "849750",
     "slug": "ethernet-relay-module-wise-4060-lan",
-    "name": "Ethernet Relay Module, WISE-4060/LAN | MekoSrl",
+    "name": "Ethernet Relay Module, WISE-4060/LAN",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -3710,7 +3710,7 @@
   {
     "id": "5700b5",
     "slug": "mc250-12-mobile-cobots-mir",
-    "name": "MC250-12 Mobile Cobots MIR | MekoSrl",
+    "name": "MC250-12 Mobile Cobots MIR",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -3736,7 +3736,7 @@
   {
     "id": "8f457b",
     "slug": "mc250-15-esd-mobile-cobots-mir",
-    "name": "MC250-15 ESD Mobile Cobots MIR | MekoSrl",
+    "name": "MC250-15 ESD Mobile Cobots MIR",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -3762,7 +3762,7 @@
   {
     "id": "441b83",
     "slug": "mc250-16-esd-mobile-cobots-mir",
-    "name": "MC250-16 ESD Mobile Cobots MIR | MekoSrl",
+    "name": "MC250-16 ESD Mobile Cobots MIR",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -3788,7 +3788,7 @@
   {
     "id": "ca4e71",
     "slug": "mc250-16-mobile-cobots-mir",
-    "name": "MC250-16 Mobile Cobots MIR | MekoSrl",
+    "name": "MC250-16 Mobile Cobots MIR",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -3814,7 +3814,7 @@
   {
     "id": "c80590",
     "slug": "mc600-20-mobile-cobots-mir",
-    "name": "MC600-20 Mobile Cobots MIR | MekoSrl",
+    "name": "MC600-20 Mobile Cobots MIR",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -3841,7 +3841,7 @@
   {
     "id": "b05c09",
     "slug": "mc600-30-mobile-cobots-mir",
-    "name": "MC600-30 Mobile Cobots MIR | MekoSrl",
+    "name": "MC600-30 Mobile Cobots MIR",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -3868,7 +3868,7 @@
   {
     "id": "ec4ea5",
     "slug": "mir-charge-24v",
-    "name": "MiR Charge 24V | MekoSrl",
+    "name": "MiR Charge 24V",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -3895,7 +3895,7 @@
   {
     "id": "e6a169",
     "slug": "mir-charge-48v",
-    "name": "MiR Charge 48V | MekoSrl",
+    "name": "MiR Charge 48V",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -3921,7 +3921,7 @@
   {
     "id": "ceb05e",
     "slug": "mc250-7-mobile-cobots-mir",
-    "name": "MC250-7 Mobile Cobots MIR | MekoSrl",
+    "name": "MC250-7 Mobile Cobots MIR",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -3947,7 +3947,7 @@
   {
     "id": "86ebe4",
     "slug": "mir-eu-pallet-rack",
-    "name": "MiR EU Pallet Rack | MekoSrl",
+    "name": "MiR EU Pallet Rack",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -3973,7 +3973,7 @@
   {
     "id": "467768",
     "slug": "mc250-15-mobile-cobots-mir",
-    "name": "MC250-15 Mobile Cobots MIR | MekoSrl",
+    "name": "MC250-15 Mobile Cobots MIR",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -3999,7 +3999,7 @@
   {
     "id": "33f8cf",
     "slug": "mc250-7-esd-mobile-cobots-mir",
-    "name": "MC250-7 ESD Mobile Cobots MIR | MekoSrl",
+    "name": "MC250-7 ESD Mobile Cobots MIR",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4025,7 +4025,7 @@
   {
     "id": "6fc7eb",
     "slug": "mir-eu-pallet-lift-1350-top-modules",
-    "name": "MiR EU Pallet Lift 1350 Top Modules | MekoSrl",
+    "name": "MiR EU Pallet Lift 1350 Top Modules",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4051,7 +4051,7 @@
   {
     "id": "003b01",
     "slug": "mir-fleet-for-download-only",
-    "name": "MiR Fleet for download only | MekoSrl",
+    "name": "MiR Fleet for download only",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4077,7 +4077,7 @@
   {
     "id": "ab3388",
     "slug": "mir-fleet-enterprise-software",
-    "name": "MiR Fleet Enterprise Software | MekoSrl",
+    "name": "MiR Fleet Enterprise Software",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4103,7 +4103,7 @@
   {
     "id": "0c0877",
     "slug": "mir-fleet-w-pc",
-    "name": "MiR Fleet w PC | MekoSrl",
+    "name": "MiR Fleet w PC",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4129,7 +4129,7 @@
   {
     "id": "68835b",
     "slug": "mc250-12-esd-mobile-cobots-mir",
-    "name": "MC250-12 ESD Mobile Cobots MIR | MekoSrl",
+    "name": "MC250-12 ESD Mobile Cobots MIR",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4155,7 +4155,7 @@
   {
     "id": "7743c8",
     "slug": "mir-hook-250",
-    "name": "MiR Hook 250 | MekoSrl",
+    "name": "MiR Hook 250",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4185,7 +4185,7 @@
   {
     "id": "2d6e3b",
     "slug": "mir-fleet-software-on-usb-stick",
-    "name": "MiR Fleet Software on USB stick | MekoSrl",
+    "name": "MiR Fleet Software on USB stick",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4211,7 +4211,7 @@
   {
     "id": "9a2f8a",
     "slug": "mir-mc600-9a2f8a",
-    "name": "MiR MC600 | MekoSrl",
+    "name": "MiR MC600",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4242,7 +4242,7 @@
   {
     "id": "c359d2",
     "slug": "mir-pallet-lift-600-top-modules",
-    "name": "MiR Pallet Lift 600 Top Modules | MekoSrl",
+    "name": "MiR Pallet Lift 600 Top Modules",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4268,7 +4268,7 @@
   {
     "id": "3860be",
     "slug": "mir-eu-pallet-lift-600-top-modules",
-    "name": "MiR EU Pallet Lift 600 Top Modules | MekoSrl",
+    "name": "MiR EU Pallet Lift 600 Top Modules",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4294,7 +4294,7 @@
   {
     "id": "a1a3ac",
     "slug": "mir-shelf-250-carrier-top-module",
-    "name": "MiR Shelf 250 Carrier | MekoSrl",
+    "name": "MiR Shelf 250 Carrier",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4325,7 +4325,7 @@
   {
     "id": "d36be2",
     "slug": "mir-shelf-carrier-250-top-modules",
-    "name": "MiR Shelf Carrier 250 Top Modules | MekoSrl",
+    "name": "MiR Shelf Carrier 250 Top Modules",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4356,7 +4356,7 @@
   {
     "id": "53e125",
     "slug": "mir-hook-250-top-modules",
-    "name": "MiR Hook 250 Top Modules | MekoSrl",
+    "name": "MiR Hook 250 Top Modules",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4382,7 +4382,7 @@
   {
     "id": "bd204a",
     "slug": "mir-shelf-lift-top-modules-1",
-    "name": "MiR Shelf Lift Top Modules | MekoSrl",
+    "name": "MiR Shelf Lift Top Modules",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4408,7 +4408,7 @@
   {
     "id": "93f8eb",
     "slug": "copia-di-roeq-tms-c1500",
-    "name": "Roeq TR600 | MekoSrl",
+    "name": "Roeq TR600",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4434,7 +4434,7 @@
   {
     "id": "2a3ae1",
     "slug": "copia-di-roeq-tml1200-us-pallet-lift",
-    "name": "Roeq TLR1190 EU | MekoSrl",
+    "name": "Roeq TLR1190 EU",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4460,7 +4460,7 @@
   {
     "id": "50f4b5",
     "slug": "mir1350-eu-pallet-lift",
-    "name": "MiR1350 EU Pallet Lift | MekoSrl",
+    "name": "MiR1350 EU Pallet Lift",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4486,7 +4486,7 @@
   {
     "id": "48adb0",
     "slug": "mir-pallet-lift-1350-top-modules",
-    "name": "MiR Pallet Lift 1350 Top Modules | MekoSrl",
+    "name": "MiR Pallet Lift 1350 Top Modules",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4512,7 +4512,7 @@
   {
     "id": "df4b91",
     "slug": "mir-pallet-rack",
-    "name": "MiR Pallet Rack | MekoSrl",
+    "name": "MiR Pallet Rack",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4538,7 +4538,7 @@
   {
     "id": "d3707c",
     "slug": "mir250",
-    "name": "MiR250 Base Robot | MekoSrl",
+    "name": "MiR250 Base Robot",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4568,7 +4568,7 @@
   {
     "id": "336670",
     "slug": "mir250-esd-base-robot",
-    "name": "MiR250 ESD Base Robot | MekoSrl",
+    "name": "MiR250 ESD Base Robot",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4598,7 +4598,7 @@
   {
     "id": "e523b5",
     "slug": "mir-shelf-lift-top-modules",
-    "name": "MiR Shelf Lift Top Modules | MekoSrl",
+    "name": "MiR Shelf Lift Top Modules",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4624,7 +4624,7 @@
   {
     "id": "094892",
     "slug": "mir-pallet-jack-1200",
-    "name": "MiR Pallet Jack 1200 | MekoSrl",
+    "name": "MiR Pallet Jack 1200",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4651,7 +4651,7 @@
   {
     "id": "8861dc",
     "slug": "mir1350-shelf-lift",
-    "name": "MiR1350 Shelf Lift | MekoSrl",
+    "name": "MiR1350 Shelf Lift",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4677,7 +4677,7 @@
   {
     "id": "6496e0",
     "slug": "mir1350-pallet-lift",
-    "name": "MiR1350 Pallet Lift | MekoSrl",
+    "name": "MiR1350 Pallet Lift",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4703,7 +4703,7 @@
   {
     "id": "c7a3b7",
     "slug": "mir600-pallet-lift",
-    "name": "MiR600 Pallet Lift | MekoSrl",
+    "name": "MiR600 Pallet Lift",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4730,7 +4730,7 @@
   {
     "id": "e651fb",
     "slug": "mir1350",
-    "name": "MiR1350 Base Robot | MekoSrl",
+    "name": "MiR1350 Base Robot",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4756,7 +4756,7 @@
   {
     "id": "eb16b1",
     "slug": "mir-traction-kit-mir250",
-    "name": "MIR Traction kit MiR250 | MekoSrl",
+    "name": "MIR Traction kit MiR250",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4782,7 +4782,7 @@
   {
     "id": "cdc011",
     "slug": "mir600",
-    "name": "MiR600 Base Robot | MekoSrl",
+    "name": "MiR600 Base Robot",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4810,7 +4810,7 @@
   {
     "id": "389fdf",
     "slug": "mir250-esd-shelf-carrier",
-    "name": "MiR250 ESD Shelf Carrier | MekoSrl",
+    "name": "MiR250 ESD Shelf Carrier",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4841,7 +4841,7 @@
   {
     "id": "43eaf6",
     "slug": "mir600-eu-pallet-lift",
-    "name": "MiR600 EU Pallet Lift | MekoSrl",
+    "name": "MiR600 EU Pallet Lift",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4868,7 +4868,7 @@
   {
     "id": "8795b3",
     "slug": "occasione-mir-shelf-250-carrier-esd-top-module",
-    "name": "OCCASIONE : MiR Shelf 250 Carrier ESD Top Module ANNO 2021 | MekoSrl",
+    "name": "OCCASIONE : MiR Shelf 250 Carrier ESD Top Module ANNO 2021",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4898,7 +4898,7 @@
   {
     "id": "38f685",
     "slug": "roeq-tml1210-eu-pallet-lift",
-    "name": "Roeq TML1210 EU Pallet Lift | MekoSrl",
+    "name": "Roeq TML1210 EU Pallet Lift",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4925,7 +4925,7 @@
   {
     "id": "39df9d",
     "slug": "mir250-hook",
-    "name": "MiR250 Hook | MekoSrl",
+    "name": "MiR250 Hook",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4952,7 +4952,7 @@
   {
     "id": "fa507e",
     "slug": "mir600-shelf-lift",
-    "name": "MiR600 Shelf Lift | MekoSrl",
+    "name": "MiR600 Shelf Lift",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -4978,7 +4978,7 @@
   {
     "id": "ddff3c",
     "slug": "roeq-tms-c1500",
-    "name": "Roeq TMS-C1500 | MekoSrl",
+    "name": "Roeq TMS-C1500",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -5004,7 +5004,7 @@
   {
     "id": "84e86f",
     "slug": "roeq-tms-c800",
-    "name": "Roeq TMS-C800 | MekoSrl",
+    "name": "Roeq TMS-C800",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -5030,7 +5030,7 @@
   {
     "id": "8ea6f6",
     "slug": "roeq-tlr-us-version-pre-release",
-    "name": "Roeq TLR US version (pre-release) | MekoSrl",
+    "name": "Roeq TLR US version (pre-release)",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -5056,7 +5056,7 @@
   {
     "id": "1be6f6",
     "slug": "sick-s300-mini-remote-scanner-kit",
-    "name": "SICK S300 Mini remote scanner kit | MekoSrl",
+    "name": "SICK S300 Mini remote scanner kit",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -5081,7 +5081,7 @@
   {
     "id": "c0e7e0",
     "slug": "wireless-digital-i-o-module-wise-4050",
-    "name": "Wireless Digital I/O Module, WISE-4050 | MekoSrl",
+    "name": "Wireless Digital I/O Module, WISE-4050",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -5107,7 +5107,7 @@
   {
     "id": "d252e0",
     "slug": "roeq-tml1200-us-pallet-lift",
-    "name": "Roeq TML1200 US Pallet Lift | MekoSrl",
+    "name": "Roeq TML1200 US Pallet Lift",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -5133,7 +5133,7 @@
   {
     "id": "ddab7f",
     "slug": "roeq-tml200",
-    "name": "Roeq TML200 | MekoSrl",
+    "name": "Roeq TML200",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -5158,7 +5158,7 @@
   {
     "id": "ae13cb",
     "slug": "roeq-tml800-hs",
-    "name": "Roeq TML800 HS | MekoSrl",
+    "name": "Roeq TML800 HS",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -5188,7 +5188,7 @@
   {
     "id": "875ccd",
     "slug": "roeq-tms-c300-ext",
-    "name": "ROEQ TMS C300 Ext | MekoSrl",
+    "name": "ROEQ TMS C300 Ext",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -5214,7 +5214,7 @@
   {
     "id": "df64c6",
     "slug": "roeq-tms-c500-ext",
-    "name": "Roeq TMS-C500 Ext | MekoSrl",
+    "name": "Roeq TMS-C500 Ext",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -5240,7 +5240,7 @@
   {
     "id": "eff578",
     "slug": "roeq-tml120",
-    "name": "Roeq TML120 | MekoSrl",
+    "name": "Roeq TML120",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -5266,7 +5266,7 @@
   {
     "id": "677ee1",
     "slug": "roeq-tr1150",
-    "name": "Roeq TR1150 | MekoSrl",
+    "name": "Roeq TR1150",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
@@ -5292,7 +5292,7 @@
   {
     "id": "bf84cc",
     "slug": "wireless-relay-module-wise-4060",
-    "name": "Wireless Relay Module, WISE-4060 | MekoSrl",
+    "name": "Wireless Relay Module, WISE-4060",
     "brand": "MIR",
     "category": "Mobile robots",
     "solutionSlug": "quadrupedi",
