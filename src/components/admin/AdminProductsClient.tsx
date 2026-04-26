@@ -116,6 +116,25 @@ export default function AdminProductsClient() {
     await refresh();
   }
 
+  async function removeImage(productId: string, imageUrl: string) {
+    if (!confirm('Rimuovere questa immagine dal prodotto?')) return;
+    setError(null);
+
+    const res = await fetch(`/api/admin/products/${productId}/images/remove`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ images: [imageUrl] }),
+    });
+
+    const data = await res.json().catch(() => null);
+    if (!res.ok || !data?.ok) {
+      setError(data?.error ?? 'Errore rimozione immagine');
+      return;
+    }
+
+    await refresh();
+  }
+
   const brandOptions = useMemo(() => ['Unitree', 'Accessori'], []);
 
   return (
@@ -339,13 +358,30 @@ export default function AdminProductsClient() {
                 </div>
 
                 {p.images?.length ? (
-                  <div className="mt-3 flex gap-2 overflow-x-auto">
-                    {p.images.slice(0, 5).map((src) => (
-                      <div key={src} className="relative h-16 w-16 flex-none overflow-hidden rounded-md bg-gray-50">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={src} alt="thumb" className="h-full w-full object-cover" />
-                      </div>
-                    ))}
+                  <div className="mt-3">
+                    <div className="text-xs font-semibold text-gray-600">Immagini</div>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      {p.images.slice(0, 12).map((src, idx) => (
+                        <div
+                          key={src + idx}
+                          className="relative h-16 w-16 overflow-hidden rounded-md border bg-gray-50"
+                        >
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img src={src} alt="thumb" className="h-full w-full object-cover" />
+                          <button
+                            type="button"
+                            onClick={() => removeImage(p.id, src)}
+                            className="absolute right-1 top-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-black/70 text-xs font-bold text-white hover:bg-black"
+                            aria-label="Rimuovi immagine"
+                          >
+                            ×
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                    {p.images.length > 12 ? (
+                      <div className="mt-1 text-xs text-gray-500">Mostrate 12/{p.images.length}</div>
+                    ) : null}
                   </div>
                 ) : null}
 

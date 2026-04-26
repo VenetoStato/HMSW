@@ -1,13 +1,26 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 
+import { isProbablyGoodImageUrl } from '@/lib/imageUtils';
+
 export function ProductGallery({ images, name }: { images: string[]; name: string }) {
-  const safe = images?.length ? images : [];
+  const safe = useMemo(() => {
+    const arr = Array.isArray(images) ? images : [];
+    return arr
+      .filter(Boolean)
+      .filter((u) => isProbablyGoodImageUrl(u, { minW: 200, minH: 100 }));
+  }, [images]);
+
   const [active, setActive] = useState(safe[0] ?? '');
 
   const activeIdx = useMemo(() => Math.max(0, safe.indexOf(active)), [active, safe]);
+
+  useEffect(() => {
+    if (!safe.length) return;
+    if (!active || !safe.includes(active)) setActive(safe[0]);
+  }, [safe, active]);
 
   if (!safe.length) {
     return <div className="aspect-[16/10] w-full rounded-xl border bg-gray-50" />;
