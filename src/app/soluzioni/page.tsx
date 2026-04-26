@@ -56,7 +56,7 @@ export default async function SolutionsIndexPage() {
           {cards.map((c) => (
             <div
               key={c.slug}
-              className="group overflow-hidden rounded-2xl border bg-white/70 accent-surface border-black/10 transition-shadow hover:shadow-sm"
+              className="group relative overflow-hidden rounded-2xl border bg-white/70 accent-surface border-black/10 transition-all duration-300 hover:shadow-xl hover:-translate-y-[2px]"
               style={{
                 ['--acc-a' as any]: c.accentRgb?.a ?? defaultAcc.a,
                 ['--acc-b' as any]: c.accentRgb?.b ?? defaultAcc.b,
@@ -71,7 +71,8 @@ export default async function SolutionsIndexPage() {
                   ) : (
                     <div className="h-full w-full bg-gray-100" />
                   )}
-                  <div className="absolute inset-0 accent-card-overlay" />
+                  <div className="absolute inset-0 motion-gradient-hero opacity-25 pointer-events-none" />
+                  <div className="absolute inset-0 accent-card-overlay pointer-events-none" />
                 </div>
                 <div className="p-5">
                   <div className="text-xs text-gray-500">{c.familyLabel}</div>
@@ -81,7 +82,9 @@ export default async function SolutionsIndexPage() {
                     <span className="text-sm text-gray-600">
                       {t(locale, 'componentiLabel')}: {c.matchedCount}
                     </span>
-                    <span className="text-sm font-semibold">{t(locale, 'openLabel')} →</span>
+                    <span className="inline-flex items-center gap-2 rounded-full bg-black/5 px-3 py-1 text-sm font-semibold text-gray-900 transition-colors group-hover:bg-black/10">
+                      {t(locale, 'openLabel')} <span className="text-gray-600">→</span>
+                    </span>
                   </div>
                 </div>
               </Link>

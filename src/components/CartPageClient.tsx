@@ -6,6 +6,7 @@ import { useCart } from '@/lib/cart';
 import { formatEur } from '@/lib/price';
 import { t, type Locale } from '@/lib/i18n';
 import { getLocaleClient } from '@/lib/localeClient';
+import { FancyAnchor, FancyButton } from '@/components/FancyButton';
 
 export function CartPageClient({ products }: { products: Product[] }) {
   const NOTES_KEY = 'unitree_shop_cart_note_v1';
@@ -140,12 +141,13 @@ export function CartPageClient({ products }: { products: Product[] }) {
                   {product.priceEur > 0 ? formatEur(product.priceEur * qty) : t(locale, 'priceOnRequest')}
                 </div>
 
-                <button
+                <FancyButton
+                  variant="secondary"
+                  className="px-3 py-2 text-sm"
                   onClick={() => removeFromCart(product.id)}
-                  className="rounded-lg border px-3 py-2 text-sm hover:bg-gray-50"
                 >
                   {t(locale, 'remove')}
-                </button>
+                </FancyButton>
               </div>
             </div>
           </div>
@@ -182,20 +184,16 @@ export function CartPageClient({ products }: { products: Product[] }) {
                 <div className="text-sm font-bold">{paypalEnabled ? formatEur(paypalAmountEur) : '—'}</div>
               </div>
 
-              <a
+              <FancyAnchor
+                variant="primary"
+                disabled={!paypalEnabled}
                 href={paypalUrl}
                 target="_blank"
                 rel="noreferrer"
-                className={`mt-3 inline-flex w-full items-center justify-center rounded-lg px-4 py-3 text-sm font-semibold ${
-                  paypalEnabled ? 'bg-[#0A0A0A] text-white hover:bg-black' : 'bg-gray-200 text-gray-500 cursor-not-allowed'
-                }`}
-                aria-disabled={!paypalEnabled}
-                onClick={(e) => {
-                  if (!paypalEnabled) e.preventDefault();
-                }}
+                className="mt-3 w-full justify-center"
               >
                 {t(locale, 'payPal')}
-              </a>
+              </FancyAnchor>
 
               <div className="mt-2 text-[11px] text-gray-500">{t(locale, 'noOnlinePayment')}</div>
             </div>
@@ -230,13 +228,18 @@ export function CartPageClient({ products }: { products: Product[] }) {
                 className="min-h-24 w-full rounded-lg border px-3 py-2 text-sm"
               />
 
-              <button
+              <FancyButton
+                variant="primary"
                 type="submit"
                 disabled={status === 'sending' || status === 'sent'}
-                className="w-full rounded-lg bg-black px-4 py-3 text-sm font-semibold text-white hover:bg-gray-900 disabled:opacity-60"
+                className="w-full justify-center px-4 py-3 text-sm"
               >
-                {status === 'sent' ? t(locale, 'sent') : status === 'sending' ? t(locale, 'sending') : t(locale, 'sendRequest')}
-              </button>
+                {status === 'sent'
+                  ? t(locale, 'sent')
+                  : status === 'sending'
+                    ? t(locale, 'sending')
+                    : t(locale, 'sendRequest')}
+              </FancyButton>
             </form>
           </div>
         </div>
