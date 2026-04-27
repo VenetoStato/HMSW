@@ -52,21 +52,51 @@ export function SolutionKitBuilder({
   contextTitle,
   products,
   imagePool,
+  excludeKeywords,
 }: {
   contextTitle: string;
   products: Product[];
   imagePool?: Product[];
+  excludeKeywords?: string[];
 }) {
   const { addToCart } = useCart();
   const [scenario, setScenario] = useState<Scenario>('rd');
   const [status, setStatus] = useState<'idle' | 'added'>('idle');
 
+  const excludeNeedles = (excludeKeywords ?? [])
+    .map((s) => (s ?? '').toLowerCase().trim())
+    .filter(Boolean);
+
+  const effectiveProducts = useMemo(() => {
+    if (!excludeNeedles.length) return products;
+    return products.filter((p) => {
+      const hay = [p.name, p.shortDescription, p.category, p.brand]
+        .filter(Boolean)
+        .join(' ')
+        .toLowerCase();
+      return !excludeNeedles.some((kw) => kw && hay.includes(kw));
+    });
+  }, [products, excludeNeedles]);
+
+  const effectiveImagePool = useMemo(() => {
+    const base = imagePool ?? products;
+    if (!excludeNeedles.length) return base;
+    return base.filter((p) => {
+      const hay = [p.name, p.shortDescription, p.category, p.brand]
+        .filter(Boolean)
+        .join(' ')
+        .toLowerCase();
+      return !excludeNeedles.some((kw) => kw && hay.includes(kw));
+    });
+  }, [imagePool, products, excludeNeedles]);
+
   const kit = useMemo(() => {
     const accessoryCount = scenario === 'demo' ? 1 : scenario === 'rd' ? 2 : 4;
-    const { base, chosen } = pickBaseAndAccessories(products, accessoryCount, contextTitle);
+    const { base, chosen } = pickBaseAndAccessories(effectiveProducts, accessoryCount, contextTitle);
     const items = [base, ...chosen].filter(Boolean) as Product[];
     return items;
-  }, [products, scenario, contextTitle]);
+  }, [effectiveProducts, scenario, contextTitle]);
+
 
   const pricing = useMemo(() => {
     const priced = kit.filter((p) => (p.priceEur ?? 0) > 0);
@@ -112,7 +142,7 @@ export function SolutionKitBuilder({
     setTimeout(() => setStatus('idle'), 2200);
   }
 
-  const pool = imagePool ?? products;
+  const pool = effectiveImagePool;
 
   const allImages = useMemo(() => {
     const all: string[] = [];

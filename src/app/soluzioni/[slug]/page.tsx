@@ -193,9 +193,21 @@ export default async function SolutionPage({
   const localizedSolution = solution ? getLocalizedSolution(solution, locale) : null;
 
   const products = await getProducts();
-  const matched = solution ? matchProductsForSolution(solution, products) : products.slice(0, 12);
+  let matched = solution ? matchProductsForSolution(solution, products) : products.slice(0, 12);
+
+  // Hard filter: per “CNC / presse” non devono comparire le “dexterous hands” end-effector humanoidi.
+  // (Nel dataset possono essere elegibili via matching generico, quindi li escludiamo a livello di landing.)
+  if (slug === 'cobot-machine-tending') {
+    const hayNeedles = ['dexterous', 'dex3', 'dex3-1', 'three- finger dexterous hand'];
+    const n = (s: string) => (s ?? '').toLowerCase();
+    matched = matched.filter((p) => {
+      const hay = n([p.name, p.shortDescription, p.category, p.brand].filter(Boolean).join(' '));
+      return !hayNeedles.some((kw) => kw && hay.includes(kw));
+    });
+  }
 
   const imagePool = matched.flatMap((p) => p.images ?? []).filter(Boolean);
+
   const heroImages = pickUniqueImages(imagePool, { limit: 10, minW: 400, minH: 200 });
   const heroImg = heroImages[0] ?? null;
   const gallery = heroImages.slice(0, 8);
@@ -203,7 +215,7 @@ export default async function SolutionPage({
   return (
     <main className="py-6 md:py-10">
       <section
-        className="overflow-hidden rounded-2xl border bg-white/65 accent-surface"
+        className="relative overflow-hidden rounded-2xl border border-black/10 bg-white/70 p-6 motion-gradient-hero backdrop-blur accent-surface"
         style={{
           ['--acc-a' as any]: solution?.accentRgb?.a ?? '56 189 248',
           ['--acc-b' as any]: solution?.accentRgb?.b ?? '99 102 241',
@@ -346,7 +358,16 @@ export default async function SolutionPage({
             <DynamicAccentGradient className="absolute inset-0" />
 
             <div className="relative p-6 md:p-8">
-              <SolutionKitBuilder contextTitle={solution?.title ?? slug} products={matched} imagePool={matched} />
+              <SolutionKitBuilder
+                contextTitle={solution?.title ?? slug}
+                products={matched}
+                imagePool={matched}
+                excludeKeywords={
+                  slug === 'cobot-machine-tending'
+                    ? ['dexterous', 'dex3', 'dex3-1', 'three- finger dexterous hand']
+                    : undefined
+                }
+              />
 
               <div className="mt-4 rounded-xl border bg-white/55 p-4 backdrop-blur accent-surface">
                 <div className="flex items-center justify-between gap-3">
@@ -373,9 +394,14 @@ export default async function SolutionPage({
           <div className="text-sm text-gray-500">{txt.recommendedCount(matched.length)}</div>
         </div>
 
-        <div className="mt-4">
-          <ProductGrid products={matched} />
-        </div>
+              <ProductGrid
+                products={matched}
+                excludeKeywords={
+                  slug === 'cobot-machine-tending'
+                    ? ['dexterous', 'dex3', 'dex3-1', 'three- finger dexterous hand']
+                    : undefined
+                }
+              />
       </section>
     </main>
   );

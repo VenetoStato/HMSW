@@ -12,6 +12,8 @@ export type SolutionDefinition = {
   fallbackCategories: string[];
   keywordHints: string[];
   imageSearchHints: string[];
+  // Negative keywords used to avoid mixing in unrelated products (e.g. dexterous hands in CNC tending)
+  negativeKeywordHints?: string[];
   kitScenarioLabels: {
     demo: string;
     rd: string;
@@ -303,6 +305,8 @@ export const SOLUTIONS: SolutionDefinition[] = [
     fallbackCategories: ['Robotic arms'],
     keywordHints: ['tending', 'cpc', 'cnc', 'press', 'machine', 'loading', 'unloading', 'workholding'],
     imageSearchHints: ['robot', 'automation', 'industrial'],
+    // Evita di mostrare “mani dexterous” (end-effector humanoidi) nella tending per CNC/presse.
+    negativeKeywordHints: ['dexterous hand', 'dexterous', 'dex3', 'dex3-1', 'dex3-1 force-controlled', 'three- finger dexterous hand'],
     kitScenarioLabels: {
       demo: 'Demo in tempi rapidi',
       rd: 'Validazione processo',
@@ -661,7 +665,15 @@ export function matchProductsForSolution(solution: SolutionDefinition, products:
   }
   if (familySlugs.size === 0) familySlugs.add('accessori');
 
-  const familyCandidates = products.filter((p) => familySlugs.has(p.solutionSlug));
+  const negativeNeedles = (solution.negativeKeywordHints ?? []).map(normalize).filter(Boolean);
+
+  const familyCandidates = products
+    .filter((p) => familySlugs.has(p.solutionSlug))
+    .filter((p) => {
+      if (!negativeNeedles.length) return true;
+      const hay = normalize([p.name, p.shortDescription, p.category, p.brand].filter(Boolean).join(' '));
+      return !includesAny(hay, negativeNeedles);
+    });
 
   // If we have exact matches (rare, but keep deterministic behavior)
   const explicit = familyCandidates.filter((p) => p.solutionSlug === solution.slug);
