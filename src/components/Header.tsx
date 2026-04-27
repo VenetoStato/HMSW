@@ -6,6 +6,7 @@ import { useMemo, useState } from 'react';
 import { useCart } from '@/lib/cart';
 import { t, type Locale } from '@/lib/i18n';
 import { getLocaleClient } from '@/lib/localeClient';
+import { FancyAnchor } from '@/components/FancyButton';
 
 export function Header() {
   const { items } = useCart();
@@ -34,23 +35,27 @@ export function Header() {
         </div>
 
         <nav className="hidden items-center gap-3 text-sm lg:flex">
-          <Link href="/soluzioni" className="rounded-md px-2 py-1 hover:bg-gray-100">
+          <FancyAnchor variant="ghost" href="/soluzioni" className="px-2 py-1">
             {t(locale, 'solutions')}
-          </Link>
+          </FancyAnchor>
           <span className="mx-1 hidden h-5 w-px bg-gray-200 lg:block" />
-          <Link href="/shop" className="rounded-md px-2 py-1 hover:bg-gray-100">
+          <FancyAnchor variant="ghost" href="/shop" className="px-2 py-1">
             {t(locale, 'shop')}
-          </Link>
-          <Link href="/blog" className="rounded-md px-2 py-1 hover:bg-gray-100">
+          </FancyAnchor>
+          <FancyAnchor variant="ghost" href="/blog" className="px-2 py-1">
             {t(locale, 'blog')}
-          </Link>
-          <Link href="/carrello" className="relative rounded-md px-2 py-1 hover:bg-gray-100">
+          </FancyAnchor>
+          <FancyAnchor
+            variant="ghost"
+            href="/carrello"
+            className="px-2 py-1"
+          >
             {t(locale, 'cart')}
             {count > 0 ? ` (${count})` : ''}
-          </Link>
-          <Link href="/admin" className="rounded-md px-2 py-1 hover:bg-gray-100">
+          </FancyAnchor>
+          <FancyAnchor variant="ghost" href="/admin" className="px-2 py-1">
             {t(locale, 'admin')}
-          </Link>
+          </FancyAnchor>
         </nav>
 
         <button
