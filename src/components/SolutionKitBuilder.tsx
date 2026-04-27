@@ -14,23 +14,63 @@ function clamp(n: number, min: number, max: number) {
   return Math.max(min, Math.min(max, n));
 }
 
-function pickBaseAndAccessories(products: Product[], accessoryCount: number, contextTitle: string) {
+function pickBaseAndAccessories(
+  products: Product[],
+  accessoryCount: number,
+  opts: { contextTitle: string; solutionSlug?: string }
+) {
   const priced = products.filter((p) => (p.priceEur ?? 0) > 0);
+  const { contextTitle, solutionSlug } = opts;
 
-  const ctx = contextTitle.toLowerCase();
+  const ctx = (contextTitle ?? '').toLowerCase();
+  const slug = (solutionSlug ?? '').toLowerCase();
+
   const baseCategoryHints: string[] = [];
-  if (ctx.includes('quad') || ctx.includes('quadruped')) baseCategoryHints.push('mobile robots', 'quadruped');
-  if (ctx.includes('braccia') || ctx.includes('gripper') || ctx.includes('robotic arm')) {
+
+  // Prefer slug-based routing (più affidabile dell'uso del titolo, che cambia lingua/format)
+  if (
+    slug === 'quadrupedi' ||
+    slug.includes('quad') ||
+    slug.includes('quadruped')
+  ) {
+    baseCategoryHints.push('mobile robots', 'quadruped');
+  } else if (
+    slug === 'umanoidi' ||
+    slug.includes('humanoid')
+  ) {
+    baseCategoryHints.push('humanoid robots', 'humanoid');
+  } else if (
+    slug === 'braccia' ||
+    slug.includes('cobot') ||
+    slug.includes('pick-and-place') ||
+    slug.includes('tending') ||
+    slug.includes('pallet') ||
+    slug.includes('welding') ||
+    slug.includes('dispensing') ||
+    slug.includes('finishing') ||
+    slug.includes('screw')
+  ) {
     baseCategoryHints.push('robotic arms', 'robotic gripper', 'arm', 'gripper', 'z1');
+  } else if (slug === 'accessori' || slug.includes('accessor')) {
+    baseCategoryHints.push('accessory', 'charger', 'battery', 'dock', 'controller');
   }
-  if (ctx.includes('umano')) baseCategoryHints.push('humanoid robots', 'humanoid');
-  if (ctx.includes('accessor')) baseCategoryHints.push('accessory', 'charger', 'battery', 'dock', 'controller');
+
+  // Fallback basato sul titolo (solo se slug non informativo)
+  if (!baseCategoryHints.length) {
+    if (ctx.includes('quad') || ctx.includes('quadruped')) baseCategoryHints.push('mobile robots', 'quadruped');
+    if (ctx.includes('braccia') || ctx.includes('gripper') || ctx.includes('robotic arm')) {
+      baseCategoryHints.push('robotic arms', 'robotic gripper', 'arm', 'gripper', 'z1');
+    }
+    if (ctx.includes('umano')) baseCategoryHints.push('humanoid robots', 'humanoid');
+    if (ctx.includes('accessor')) baseCategoryHints.push('accessory', 'charger', 'battery', 'dock', 'controller');
+  }
 
   const normalize = (s: string) => s.toLowerCase();
   const matchesHint = (p: Product) => {
     const hay = normalize([p.name, p.category, p.brand].filter(Boolean).join(' '));
     return baseCategoryHints.some((h) => hay.includes(h));
   };
+
 
   const baseCandidates = priced.length ? priced.filter(matchesHint) : [];
   const base =
@@ -50,11 +90,13 @@ function pickBaseAndAccessories(products: Product[], accessoryCount: number, con
 
 export function SolutionKitBuilder({
   contextTitle,
+  solutionSlug,
   products,
   imagePool,
   excludeKeywords,
 }: {
   contextTitle: string;
+  solutionSlug?: string;
   products: Product[];
   imagePool?: Product[];
   excludeKeywords?: string[];
@@ -92,10 +134,13 @@ export function SolutionKitBuilder({
 
   const kit = useMemo(() => {
     const accessoryCount = scenario === 'demo' ? 1 : scenario === 'rd' ? 2 : 4;
-    const { base, chosen } = pickBaseAndAccessories(effectiveProducts, accessoryCount, contextTitle);
+    const { base, chosen } = pickBaseAndAccessories(effectiveProducts, accessoryCount, {
+      contextTitle,
+      solutionSlug,
+    });
     const items = [base, ...chosen].filter(Boolean) as Product[];
     return items;
-  }, [effectiveProducts, scenario, contextTitle]);
+  }, [effectiveProducts, scenario, contextTitle, solutionSlug]);
 
 
   const pricing = useMemo(() => {

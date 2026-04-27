@@ -30,7 +30,7 @@ const TEXT: Record<Locale, {
 }> = {
   it: {
     solutionChipFallback: 'Soluzione',
-    heroMeta: 'Kit configurabile • carrello con richiesta',
+    heroMeta: 'Configura il kit • invia la richiesta dal carrello',
     faq: 'FAQ',
     goShop: 'Vai allo shop',
     cart: 'Carrello',
@@ -48,7 +48,7 @@ const TEXT: Record<Locale, {
   },
   en: {
     solutionChipFallback: 'Solution',
-    heroMeta: 'Configurable kit • cart with request',
+    heroMeta: 'Configure the kit • send the request from cart',
     faq: 'FAQ',
     goShop: 'Go to shop',
     cart: 'Cart',
@@ -360,6 +360,7 @@ export default async function SolutionPage({
             <div className="relative p-6 md:p-8">
               <SolutionKitBuilder
                 contextTitle={solution?.title ?? slug}
+                solutionSlug={slug}
                 products={matched}
                 imagePool={matched}
                 excludeKeywords={

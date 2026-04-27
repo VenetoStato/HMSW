@@ -685,13 +685,20 @@ export function matchProductsForSolution(solution: SolutionDefinition, products:
   }
 
   // Fallback: keyword scoring within the right family only
-  const keywords = [...solution.keywordHints, ...solution.imageSearchHints].map(normalize).filter(Boolean);
+  const primaryKeywords = solution.keywordHints.map(normalize).filter(Boolean);
+  const secondaryKeywords = solution.imageSearchHints.map(normalize).filter(Boolean);
+  const keywords = [...primaryKeywords, ...secondaryKeywords];
   const fallbacks = new Set(solution.fallbackCategories);
 
   const scored = familyCandidates
     .map((p) => {
       const hay = normalize([p.name, p.shortDescription, p.category, p.brand].filter(Boolean).join(' '));
       let score = 0;
+
+      const hasPrimary = primaryKeywords.some((kw) => {
+        if (!kw || kw.length < 3) return false;
+        return hay.includes(kw);
+      });
 
       for (const kw of keywords) {
         if (kw.length < 3) continue;
@@ -705,11 +712,14 @@ export function matchProductsForSolution(solution: SolutionDefinition, products:
         if (normalize(p.brand).includes('unitree') || normalize(p.name).includes('g1')) score += 30;
       }
 
-      return { p, score };
+      return { p, score, hasPrimary };
     })
     .sort((a, b) => b.score - a.score);
 
-  const picked = scored.map((x) => x.p);
+  // Guardrail: se esistono candidati con almeno 1 keyword “primaria”,
+  // restringiamo il pool a quelli per evitare componenti troppo “generiche”.
+  const anyPrimary = scored.some((x) => x.hasPrimary);
+  const picked = (anyPrimary ? scored.filter((x) => x.hasPrimary) : scored).map((x) => x.p);
   const minCount = 9;
   if (picked.length >= minCount) return picked.slice(0, 12);
 
