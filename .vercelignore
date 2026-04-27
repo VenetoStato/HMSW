@@ -1,12 +1,13 @@
-# Ignore legacy Next.js app so Vercel doesn't auto-detect Next routes manifest
-src/**
-next.config.mjs
-middleware.ts
-postcss.config.mjs
-tailwind.config.js
-tailwind.config.ts
-.eslintrc.json
-tsconfig.json
-package.json
-package-lock.json
-.next/**
+# Ignore legacy Next.js app so Vercel doesn't auto-detect Next routes manifest.
+# IMPORTANT: patterns are root-only (leading "/") so they don't break the SvelteKit folder.
+/src/**
+/next.config.mjs
+/middleware.ts
+/postcss.config.mjs
+/tailwind.config.js
+/tailwind.config.ts
+/.eslintrc.json
+/tsconfig.json
+/package.json
+/package-lock.json
+/.next/**
