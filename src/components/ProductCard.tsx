@@ -20,7 +20,7 @@ export function ProductCard({ product }: { product: Product }) {
       : product.shortDescription;
 
   return (
-    <div className="group relative overflow-hidden rounded-2xl border border-black/10 bg-white/60 backdrop-blur shadow-[0_10px_30px_rgba(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_18px_60px_rgba(0,0,0,0.10)] hover:-translate-y-[2px]">
+    <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-all duration-300 hover:shadow-[0_18px_60px_rgba(0,0,0,0.45)] hover:-translate-y-[2px]">
       {/* subtle accent */}
       <div
         aria-hidden
@@ -62,16 +62,16 @@ export function ProductCard({ product }: { product: Product }) {
         )}
 
         <div className="p-4 pb-3">
-          <div className="text-xs text-gray-600">
-            <span className="rounded-full bg-black/5 px-2 py-0.5">
+          <div className="text-xs text-gray-300">
+            <span className="rounded-full bg-white/5 px-2 py-0.5">
               {product.brand}
             </span>{' '}
-            <span className="text-gray-400">•</span> {product.category}
+            <span className="text-gray-500">•</span> {product.category}
           </div>
           <h3 className="mt-1 text-base font-semibold leading-snug line-clamp-2">
             {product.name}
           </h3>
-          <p className="mt-2 line-clamp-2 text-sm text-gray-600">
+          <p className="mt-2 line-clamp-2 text-sm text-gray-300">
             {shortTranslated}
           </p>
           {product.priceEur > 0 ? (

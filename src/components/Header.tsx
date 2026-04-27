@@ -15,7 +15,7 @@ export function Header() {
   const locale: Locale = getLocaleClient();
 
   return (
-    <header className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/35 backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3">
         <div className="flex items-center gap-3">
           <Link
@@ -62,7 +62,7 @@ export function Header() {
           type="button"
           aria-label={t(locale, 'menu')}
           onClick={() => setOpen((v) => !v)}
-          className="lg:hidden inline-flex items-center justify-center rounded-lg border bg-white px-3 py-2 text-sm"
+          className="lg:hidden inline-flex items-center justify-center rounded-lg border border-white/10 bg-black/40 px-3 py-2 text-sm"
         >
           {open ? t(locale, 'close') : t(locale, 'menu')}
         </button>
@@ -75,28 +75,28 @@ export function Header() {
               <Link
                 href="/soluzioni"
                 onClick={() => setOpen(false)}
-                className="rounded-lg border px-3 py-2 hover:bg-gray-50"
+                className="rounded-lg border border-white/10 bg-black/25 px-3 py-2 hover:bg-white/5"
               >
                 {t(locale, 'solutions')}
               </Link>
               <Link
                 href="/shop"
                 onClick={() => setOpen(false)}
-                className="rounded-lg border px-3 py-2 hover:bg-gray-50"
+                className="rounded-lg border border-white/10 bg-black/25 px-3 py-2 hover:bg-white/5"
               >
                 {t(locale, 'shop')}
               </Link>
               <Link
                 href="/blog"
                 onClick={() => setOpen(false)}
-                className="rounded-lg border px-3 py-2 hover:bg-gray-50"
+                className="rounded-lg border border-white/10 bg-black/25 px-3 py-2 hover:bg-white/5"
               >
                 {t(locale, 'blog')}
               </Link>
               <Link
                 href="/carrello"
                 onClick={() => setOpen(false)}
-                className="rounded-lg border px-3 py-2 hover:bg-gray-50"
+                className="rounded-lg border border-white/10 bg-black/25 px-3 py-2 hover:bg-white/5"
               >
                 {t(locale, 'cart')}
                 {count > 0 ? ` (${count})` : ''}
@@ -104,7 +104,7 @@ export function Header() {
               <Link
                 href="/admin"
                 onClick={() => setOpen(false)}
-                className="rounded-lg border px-3 py-2 hover:bg-gray-50"
+                className="rounded-lg border border-white/10 bg-black/25 px-3 py-2 hover:bg-white/5"
               >
                 {t(locale, 'admin')}
               </Link>

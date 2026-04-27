@@ -19,15 +19,13 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgb(var(--background-end-rgb))
-  )
-    rgb(var(--background-start-rgb));
+  background: radial-gradient(circle at 20% 10%, rgba(99, 102, 241, 0.18), transparent 45%),
+    radial-gradient(circle at 80% 25%, rgba(56, 189, 248, 0.14), transparent 50%),
+    radial-gradient(circle at 55% 95%, rgba(16, 185, 129, 0.12), transparent 55%),
+    linear-gradient(to bottom right, #070812, #0b1020 55%, #070812);
 }
 
-/* ===== Premium background texture (Akiflow-ish: subtle grid + soft glow) ===== */
+/* ===== Redesign 2026: premium dark grid + soft glow blobs ===== */
 body::before {
   content: '';
   position: fixed;
@@ -35,24 +33,25 @@ body::before {
   pointer-events: none;
   z-index: -2;
   background-image:
-    linear-gradient(to right, rgba(0, 0, 0, 0.045) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.045) 1px, transparent 1px);
-  background-size: 52px 52px;
-  opacity: 0.35;
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  opacity: 0.22;
+  mask-image: radial-gradient(circle at 50% 20%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.2) 55%, rgba(0, 0, 0, 0) 85%);
 }
 
 body::after {
   content: '';
   position: fixed;
-  inset: -20%;
+  inset: -25%;
   pointer-events: none;
   z-index: -3;
   background:
-    radial-gradient(circle at 15% 20%, rgba(99, 102, 241, 0.2), transparent 45%),
+    radial-gradient(circle at 15% 20%, rgba(99, 102, 241, 0.20), transparent 45%),
     radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.18), transparent 45%),
     radial-gradient(circle at 55% 95%, rgba(16, 185, 129, 0.14), transparent 50%);
-  filter: saturate(1.05);
-  animation: pageGlow 12s ease-in-out infinite;
+  filter: saturate(1.15);
+  animation: pageGlow 14s ease-in-out infinite;
 }
 
 @keyframes pageGlow {
