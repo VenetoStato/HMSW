@@ -20,7 +20,9 @@ export function ProductCard({ product }: { product: Product }) {
       : product.shortDescription;
 
   return (
-    <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-all duration-300 hover:shadow-[0_18px_60px_rgba(0,0,0,0.45)] hover:-translate-y-[2px]">
+    <div
+      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-all duration-300 will-change-transform hover:shadow-[0_18px_60px_rgba(0,0,0,0.45)] hover:-translate-y-[2px] hover:[transform:perspective(900px)_rotateX(6deg)_rotateY(-8deg)]"
+    >
       {/* subtle accent */}
       <div
         aria-hidden
@@ -31,7 +33,16 @@ export function ProductCard({ product }: { product: Product }) {
         }}
       />
 
+      {/* 2026 “shine sweep” */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+        <div
+          className="product-shine-sweep absolute inset-[-35%] opacity-70 bg-[linear-gradient(120deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.22)_40%,rgba(255,255,255,0)_65%)] group-hover:animate-[shineSweep_900ms_ease-out_both]"
+          style={{ transform: 'translateX(-55%)' }}
+        />
+      </div>
+
       <Link href={`/prodotti/${product.slug}`} className="block relative z-10">
+
         {cover ? (
           <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-50">
             <div className="absolute inset-0">

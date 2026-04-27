@@ -183,6 +183,21 @@ body::after {
   }
 }
 
+/* 2026 Product “shine sweep” */
+@keyframes shineSweep {
+  from {
+    opacity: 0;
+    transform: translateX(-60%) rotate(0deg);
+  }
+  30% {
+    opacity: 0.9;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(60%) rotate(0deg);
+  }
+}
+
 @keyframes reveal {
   from {
     opacity: 0;
@@ -198,7 +213,8 @@ body::after {
   .motion-gradient-hero,
   .motion-kit-swap,
   .motion-reveal,
-  .fancy-ripple {
+  .fancy-ripple,
+  .product-shine-sweep {
     animation: none !important;
   }
 }
