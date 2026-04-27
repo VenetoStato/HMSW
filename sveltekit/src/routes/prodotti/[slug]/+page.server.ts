@@ -1,0 +1,9 @@
+import type { PageServerLoad } from './$types';
+import { getProductBySlug } from '$lib/catalog';
+import { error } from '@sveltejs/kit';
+
+export const load: PageServerLoad = async ({ params }) => {
+  const product = await getProductBySlug(params.slug);
+  if (!product) throw error(404, 'Not found');
+  return { product };
+};
