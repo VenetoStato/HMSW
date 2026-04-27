@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "installCommand": "cd sveltekit && npm ci",
+  "installCommand": "cd sveltekit && npm install --no-audit --no-fund",
   "buildCommand": "cd sveltekit && npm run build",
   "outputDirectory": "sveltekit/.vercel/output"
 }
