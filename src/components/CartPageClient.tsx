@@ -241,6 +241,16 @@ export function CartPageClient({ products }: { products: Product[] }) {
                     : t(locale, 'sendRequest')}
               </FancyButton>
             </form>
+
+            <div className="mt-3">
+              <FancyAnchor
+                href="/richiesta-preventivo"
+                variant="ghost"
+                className="w-full justify-center text-sm"
+              >
+                Richiedi preventivo con moduli + allegati
+              </FancyAnchor>
+            </div>
           </div>
         </div>
       </div>
