@@ -102,7 +102,7 @@ export function CartPageClient({ products }: { products: Product[] }) {
 
   if (!lines.length) {
     return (
-      <div className="mt-6 rounded-2xl border border-black/10 bg-white/65 backdrop-blur shadow-sm p-6">
+      <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur shadow-[0_10px_30px_rgba(0,0,0,0.35)] p-6">
         <h2 className="text-lg font-semibold">{t(locale, 'cartEmptyTitle')}</h2>
         <p className="mt-2 text-sm text-gray-600">{t(locale, 'cartEmptyBody')}</p>
       </div>
@@ -113,7 +113,10 @@ export function CartPageClient({ products }: { products: Product[] }) {
     <div className="mt-6 grid gap-6 lg:grid-cols-3">
       <div className="lg:col-span-2 space-y-4">
         {lines.map(({ product, qty }) => (
-          <div key={product.id} className="rounded-2xl border border-black/10 bg-white/65 backdrop-blur shadow-sm p-4">
+          <div
+            key={product.id}
+            className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur shadow-[0_10px_30px_rgba(0,0,0,0.35)] p-4"
+          >
             <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
               <div>
                 <div className="text-sm text-gray-500">
@@ -133,7 +136,7 @@ export function CartPageClient({ products }: { products: Product[] }) {
                     min={1}
                     value={qty}
                     onChange={(e) => setQty(product.id, Number(e.target.value))}
-                    className="mt-1 w-24 rounded-lg border px-2 py-1 text-sm"
+                    className="mt-1 w-24 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-gray-100 outline-none focus-visible:ring-2 focus-visible:ring-white/20"
                   />
                 </div>
 
@@ -155,9 +158,8 @@ export function CartPageClient({ products }: { products: Product[] }) {
       </div>
 
       <div className="lg:col-span-1">
-        <div className="rounded-2xl border border-black/10 bg-white/65 backdrop-blur shadow-sm p-5">
+        <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur shadow-[0_10px_30px_rgba(0,0,0,0.35)] p-5">
           <h2 className="text-lg font-semibold">{t(locale, 'total')}</h2>
-
           <div className="mt-2 flex items-center justify-between text-sm">
             <span>{t(locale, 'subtotalConfirmed')}</span>
             <span className="font-semibold">{formatEur(subtotalKnownEur)}</span>
@@ -173,7 +175,7 @@ export function CartPageClient({ products }: { products: Product[] }) {
           </div>
 
           <div className="mt-5 space-y-3">
-            <div className="rounded-xl border border-black/10 bg-white/60 backdrop-blur p-4">
+            <div className="rounded-xl border border-white/10 bg-white/5 backdrop-blur p-4">
               <h3 className="text-sm font-semibold">{t(locale, 'payPal')}</h3>
               <div className="mt-1 text-xs text-gray-600">
                 {hasUnknownPrice ? t(locale, 'payPalDescriptionDeposit') : t(locale, 'payPalDescriptionConfirmed')}
