@@ -4,5 +4,6 @@
   "buildCommand": "cd sveltekit && npm run build",
   "outputDirectory": "sveltekit/.vercel/output",
   "_note": "bump #2 to ensure latest deployment used (2026-04-27)",
-  "_bump": 1777330535073
+  "_bump": 1777330535073,
+  "_trigger": 1777330652628
 }
