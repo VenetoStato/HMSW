@@ -2,9 +2,5 @@
   "version": 2,
   "installCommand": "cd sveltekit && npm install --no-audit --no-fund",
   "buildCommand": "cd sveltekit && npm run build",
-  "outputDirectory": "sveltekit/.vercel/output",
-  "_note": "bump #2 to ensure latest deployment used (2026-04-27)",
-  "_bump": 1777330535073,
-  "_trigger": 1777330652628,
-  "__force": 1777331013379
+  "outputDirectory": "sveltekit/.vercel/output"
 }
