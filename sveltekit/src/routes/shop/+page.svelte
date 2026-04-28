@@ -3,11 +3,15 @@
 
   let { data } = $props();
   const products: Product[] = data.products;
-
-  function addQty(p: Product) {
-    // lazy import to keep this page smaller
-  }
 </script>
+
+<svelte:head>
+  <title>Shop • UNITREE Shop</title>
+  <meta
+    name="description"
+    content="Robot Unitree e accessori con prezzi esposti. Scegli il prodotto e aggiungilo al carrello." 
+  />
+</svelte:head>
 
 <h1 class="text-2xl font-semibold">Shop</h1>
 <p class="mt-2 text-sm text-white/70">Robot Unitree + accessori con prezzi e carrello.</p>

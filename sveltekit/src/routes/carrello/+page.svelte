@@ -42,6 +42,14 @@
   }
 </script>
 
+<svelte:head>
+  <title>Carrello • UNITREE Shop</title>
+  <meta
+    name="description"
+    content="Rivedi i prodotti nel carrello e invia la richiesta." 
+  />
+</svelte:head>
+
 <h1 class="text-2xl font-semibold">Carrello</h1>
 <p class="mt-2 text-sm text-white/70">Articoli: {$cartCount}</p>
 
@@ -102,3 +110,4 @@
     </div>
   </div>
 {/if}
+
