@@ -1,129 +1,140 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import { SOLUTIONS } from '@/lib/solutions';
-import { DynamicAccentGradient } from '@/components/DynamicAccentGradient';
-import { getLocaleServer } from '@/lib/localeServer';
-import type { Locale } from '@/lib/i18n';
-import { FancyAnchor } from '@/components/FancyButton';
 
-const HOME_TEXT: Record<Locale, { 
-  title: string;
-  subtitle: string;
-  discoverSolution: string;
+import { SOLUTIONS } from '@/lib/solutions';
+import type { Locale } from '@/lib/i18n';
+import { getLocaleServer } from '@/lib/localeServer';
+import { DynamicAccentGradient } from '@/components/DynamicAccentGradient';
+import { FancyAnchor } from '@/components/FancyButton';
+import { LeadMagnetClient } from '@/components/LeadMagnetClient';
+
+type HomeCopy = {
+  heroTitle: string;
+  heroSubtitle: string;
+  heroPrimaryCta: string;
+  heroSecondaryCta: string;
+
   solutionsHeading: string;
   solutionsSubheading: string;
-  solutionCardLabel: string;
-  howTitle: string;
-  step1Title: string;
-  step1Body: string;
-  step2Title: string;
-  step2Body: string;
-  step3Title: string;
-  step3Body: string;
-}> = {
+
+  approachTitle: string;
+  approachBullets: string[];
+
+  servicesTitle: string;
+  servicesBullets: string[];
+
+  costTitle: string;
+  costBody: string;
+  costBullets: string[];
+
+  processTitle: string;
+  processSteps: Array<{ title: string; body: string }>;
+
+  aboutTitle: string;
+  aboutBody: string;
+  aboutBullets: string[];
+};
+
+const HOME_TEXT: Partial<Record<Locale, HomeCopy>> = {
   it: {
-    title: 'UNITREE Shop + Accessori',
-    subtitle: 'Scegli la soluzione, esplora i prodotti con prezzi trasparenti e costruisci il tuo kit.',
-    discoverSolution: 'Scopri una soluzione',
+    heroTitle: 'UNITREE Shop + Accessori: scegli la soluzione, costruisci il kit',
+    heroSubtitle:
+      'Una landing per ogni scenario, uno shop con prezzi trasparenti dove disponibili e un flusso guidato per arrivare alla tua configurazione.',
+    heroPrimaryCta: 'Configura la tua soluzione',
+    heroSecondaryCta: 'Vai allo shop',
+
     solutionsHeading: 'Soluzioni',
-    solutionsSubheading: 'Landing dedicate (una per ogni soluzione).',
-    solutionCardLabel: 'Soluzione',
-    howTitle: 'Come funziona',
-    step1Title: '1) Scegli la soluzione',
-    step1Body: 'Apri la landing e vedi i prodotti consigliati.',
-    step2Title: '2) Guarda lo shop',
-    step2Body: 'Tutti i prodotti con prezzi esposti e carrello.',
-    step3Title: '3) Contatta / richiesta',
-    step3Body: 'Invia la richiesta dal carrello per il preventivo.',
+    solutionsSubheading: 'Una landing dedicata (una per ogni soluzione) per accelerare scelta e compatibilità.',
+
+    approachTitle: 'Approccio high-level (senza perdere tempo)',
+    approachBullets: [
+      'Partiamo dai tuoi obiettivi (demo, R&D o integrazione) e ti mostriamo la direzione giusta.',
+      'Selezioniamo componenti coerenti e ti guidiamo nel configuratore.',
+      'Carrello e richiesta servono a confermare disponibilità, spedizione e dettagli di integrazione.',
+    ],
+
+    servicesTitle: 'Cosa facciamo',
+    servicesBullets: [
+      'Fornitura e configurazione: kit pronti per partire subito',
+      'Assessment / POC: verifiche mirate prima di andare “in produzione”',
+      'Sviluppo codice e training: supporto per integrare più velocemente',
+    ],
+
+    costTitle: 'Obiezione: “Quanto mi costa?”',
+    costBody:
+      'Il punto è chiarire budget e fattibilità prima di iniziare. Dove possibile mostriamo prezzi; dove non lo è, gestiamo “su richiesta” con conferma guidata.',
+    costBullets: [
+      'Trasparenza: prezzi esposti dove disponibili',
+      'Conferma: per i componenti su richiesta il totale viene validato prima di procedere',
+      'Zero sorprese: il carrello serve a finalizzare dettagli e disponibilità',
+    ],
+
+    processTitle: 'Processo di lavoro',
+    processSteps: [
+      { title: '1) Scelta guidata', body: 'Apri la landing della soluzione e prendi la direzione giusta.' },
+      { title: '2) Configura lo shop', body: 'Aggiungi al carrello i componenti compatibili con prezzi esposti quando presenti.' },
+      { title: '3) Richiesta di conferma', body: 'Invia dal carrello: verifichiamo disponibilità, spedizione e requisiti.' },
+      { title: '4) Kit / POC / integrazione', body: 'Ricevi conferma e supporto per partire (o validare con un POC).' },
+    ],
+
+    aboutTitle: 'About us (chi siamo)',
+    aboutBody:
+      'Siamo un team orientato a robotica applicata: aiutiamo team R&D, formazione e integrazione a ridurre tempi di setup e rischio tecnico.',
+    aboutBullets: [
+      'Approccio pragmatico: prima l’obiettivo, poi la configurazione',
+      'Focus su compatibilità e integrazione',
+      'Supporto tecnico quando serve (POC / training / sviluppo)',
+    ],
   },
   en: {
-    title: 'UNITREE Shop + Accessories',
-    subtitle: 'Choose your solution, explore products with transparent pricing, and build your kit.',
-    discoverSolution: 'Discover a solution',
+    heroTitle: 'UNITREE Shop + Accessories: pick a solution, build your kit',
+    heroSubtitle:
+      'Landing pages for each scenario, a shop with transparent pricing where available, and a guided flow to reach your configuration.',
+    heroPrimaryCta: 'Configure your solution',
+    heroSecondaryCta: 'Go to shop',
+
     solutionsHeading: 'Solutions',
-    solutionsSubheading: 'Dedicated landing pages (one for each solution).',
-    solutionCardLabel: 'Solution',
-    howTitle: 'How it works',
-    step1Title: '1) Choose your solution',
-    step1Body: 'Open the landing page and see the recommended products.',
-    step2Title: '2) Browse the shop',
-    step2Body: 'All products with visible prices and a cart.',
-    step3Title: '3) Contact / request',
-    step3Body: 'Send your request from the cart for a quote.',
-  },
-  de: {
-    title: 'UNITREE Shop + Zubehör',
-    subtitle: 'Wählen Sie Ihre Lösung, entdecken Sie Produkte mit transparenten Preisen und stellen Sie Ihr Kit zusammen.',
-    discoverSolution: 'Entdecken Sie eine Lösung',
-    solutionsHeading: 'Lösungen',
-    solutionsSubheading: 'Dedicated Landingpages (eine für jede Lösung).',
-    solutionCardLabel: 'Lösung',
-    howTitle: 'So funktioniert’s',
-    step1Title: '1) Wählen Sie Ihre Lösung',
-    step1Body: 'Öffnen Sie die Landingpage und sehen Sie die empfohlenen Produkte.',
-    step2Title: '2) Shop ansehen',
-    step2Body: 'Alle Produkte mit sichtbaren Preisen und Warenkorb.',
-    step3Title: '3) Kontakt / Anfrage',
-    step3Body: 'Senden Sie Ihre Anfrage aus dem Warenkorb für ein Angebot.',
-  },
-  fr: {
-    title: 'Boutique UNITREE + Accessoires',
-    subtitle: 'Choisissez votre solution, explorez les produits avec des prix transparents et composez votre kit.',
-    discoverSolution: 'Découvrir une solution',
-    solutionsHeading: 'Solutions',
-    solutionsSubheading: 'Pages d’atterrissage dédiées (une pour chaque solution).',
-    solutionCardLabel: 'Solution',
-    howTitle: 'Comment ça marche',
-    step1Title: '1) Choisissez votre solution',
-    step1Body: 'Ouvrez la landing et découvrez les produits recommandés.',
-    step2Title: '2) Voir la boutique',
-    step2Body: 'Tous les produits avec prix affichés et panier.',
-    step3Title: '3) Contacter / demande',
-    step3Body: 'Envoyez votre demande depuis le panier pour un devis.',
-  },
-  nl: {
-    title: 'UNITREE Shop + Accessoires',
-    subtitle: 'Kies je oplossing, bekijk producten met transparante prijzen en stel je kit samen.',
-    discoverSolution: 'Ontdek een oplossing',
-    solutionsHeading: 'Oplossingen',
-    solutionsSubheading: 'Dedicated landings (één voor elke oplossing).',
-    solutionCardLabel: 'Oplossing',
-    howTitle: 'Zo werkt het',
-    step1Title: '1) Kies je oplossing',
-    step1Body: 'Open de landing en bekijk de aanbevolen producten.',
-    step2Title: '2) Bekijk de shop',
-    step2Body: 'Alle producten met zichtbare prijzen en winkelwagen.',
-    step3Title: '3) Contact / aanvraag',
-    step3Body: 'Stuur je aanvraag vanuit de winkelwagen voor een offerte.',
-  },
-  no: {
-    title: 'UNITREE Shop + Tilbehør',
-    subtitle: 'Velg løsning, utforsk produkter med transparente priser og bygg din pakke.',
-    discoverSolution: 'Oppdag en løsning',
-    solutionsHeading: 'Løsninger',
-    solutionsSubheading: 'Dedikerte landingssider (én for hver løsning).',
-    solutionCardLabel: 'Løsning',
-    howTitle: 'Slik fungerer det',
-    step1Title: '1) Velg løsning',
-    step1Body: 'Åpne landingssiden og se anbefalte produkter.',
-    step2Title: '2) Se butikken',
-    step2Body: 'Alle produkter med synlige priser og handlekurv.',
-    step3Title: '3) Kontakt / forespørsel',
-    step3Body: 'Send forespørselen fra handlekurven for et tilbud.',
-  },
-  es: {
-    title: 'Tienda UNITREE + Accesorios',
-    subtitle: 'Elige tu solución, explora productos con precios transparentes y monta tu kit.',
-    discoverSolution: 'Descubre una solución',
-    solutionsHeading: 'Soluciones',
-    solutionsSubheading: 'Landings dedicadas (una por cada solución).',
-    solutionCardLabel: 'Solución',
-    howTitle: 'Cómo funciona',
-    step1Title: '1) Elige tu solución',
-    step1Body: 'Abre la landing y ve los productos recomendados.',
-    step2Title: '2) Ver la tienda',
-    step2Body: 'Todos los productos con precios visibles y carrito.',
-    step3Title: '3) Contactar / solicitud',
-    step3Body: 'Envía tu solicitud desde el carrito para un presupuesto.',
+    solutionsSubheading: 'Dedicated landing (one per solution) to speed up choices and compatibility.',
+
+    approachTitle: 'High-level approach (no time wasted)',
+    approachBullets: [
+      'We start from your goals (demo, R&D or integration) and point you to the right direction.',
+      'We select coherent components and guide you through the configurator.',
+      'Cart + request are used to confirm availability, shipping and integration details.',
+    ],
+
+    servicesTitle: 'What we do',
+    servicesBullets: [
+      'Supply & configuration: kits you can start with right away',
+      'Assessment / POC: targeted checks before going “production”',
+      'Code development & training: help for faster integration',
+    ],
+
+    costTitle: 'Concern: “How much will it cost?”',
+    costBody:
+      'We clarify budget and feasibility upfront. Where possible we show prices; otherwise we handle “on request” with guided confirmation.',
+    costBullets: [
+      'Transparency: listed prices when available',
+      'Confirmation: totals for “on request” components are validated before proceeding',
+      'No surprises: the cart finalizes details and availability',
+    ],
+
+    processTitle: 'Workflow',
+    processSteps: [
+      { title: '1) Guided choice', body: 'Open the solution landing to get the right direction.' },
+      { title: '2) Configure the shop', body: 'Add compatible components to the cart with visible prices when present.' },
+      { title: '3) Confirmation request', body: 'Send from the cart: we verify availability, shipping and requirements.' },
+      { title: '4) Kit / POC / integration', body: 'Receive confirmation and support to start (or validate via POC).' },
+    ],
+
+    aboutTitle: 'About us',
+    aboutBody:
+      'We focus on applied robotics: we help R&D teams, education and integration reduce setup time and technical risk.',
+    aboutBullets: [
+      'Pragmatic approach: first goals, then configuration',
+      'Compatibility & integration focus',
+      'Technical support when needed (POC / training / development)',
+    ],
   },
 };
 
@@ -131,44 +142,92 @@ export default async function Home() {
   const locale = getLocaleServer();
   const text = HOME_TEXT[locale] ?? HOME_TEXT.it;
 
+  const primarySolutionSlug = SOLUTIONS[0]?.slug ?? 'quadrupedi';
+  const primarySolutionAccent = SOLUTIONS[0]?.accentRgb ?? { a: '56 189 248', b: '99 102 241', c: '16 185 129' };
+
   return (
     <main className="py-8">
-      <section className="relative overflow-hidden rounded-2xl border border-black/10 bg-white/70 p-6 motion-gradient-hero backdrop-blur">
-        <div className="pointer-events-none absolute inset-0 accent-surface" />
-        <div className="relative">
-          <h1 className="text-3xl font-bold tracking-tight">
-            <span className="bg-gradient-to-r from-black via-black to-indigo-600 bg-clip-text text-transparent">
-              {text.title}
-            </span>
-          </h1>
-          <p className="mt-2 text-gray-700">{text.subtitle}</p>
-          <div className="mt-5 flex flex-wrap items-center gap-3">
-            <FancyAnchor
-              variant="primary"
-              href="/shop"
-              className="text-sm"
-            >
-              {locale === 'it'
-                ? 'Vai allo shop'
-                : locale === 'de'
-                  ? 'Zum Shop'
-                  : locale === 'fr'
-                    ? 'Aller à la boutique'
-                    : locale === 'nl'
-                      ? 'Ga naar de winkel'
-                      : locale === 'no'
-                        ? 'Gå til butikken'
-                        : locale === 'es'
-                          ? 'Ir a la tienda'
-                          : 'Go to shop'}
-            </FancyAnchor>
-            <FancyAnchor
-              variant="secondary"
-              href={`/soluzioni/${SOLUTIONS[0]?.slug ?? 'robot-per-uso-quotidiano'}`}
-              className="text-sm"
-            >
-              {text.discoverSolution}
-            </FancyAnchor>
+      <section
+        className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 md:p-10 backdrop-blur"
+        style={{
+          ['--acc-a' as any]: primarySolutionAccent.a,
+          ['--acc-b' as any]: primarySolutionAccent.b,
+          ['--acc-c' as any]: primarySolutionAccent.c,
+        }}
+      >
+        <div className="pointer-events-none absolute inset-0 opacity-90">
+          <div className="absolute inset-0 accent-surface" />
+        </div>
+
+        <div className="relative grid gap-10 md:grid-cols-[1.1fr_0.9fr] items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/20 px-4 py-2 text-xs text-gray-200/90">
+              <span className="inline-block h-2 w-2 rounded-full bg-emerald-400/90" />
+              {locale === 'it' ? 'Setup guidato • pricing trasparente dove possibile' : 'Guided setup • transparent pricing where available'}
+            </div>
+
+            <h1 className="mt-5 text-3xl md:text-4xl font-bold tracking-tight text-white">
+              {text?.heroTitle}
+            </h1>
+            <p className="mt-3 text-sm md:text-base text-gray-200/80 leading-relaxed max-w-xl">
+              {text?.heroSubtitle}
+            </p>
+
+            <div className="mt-7 flex flex-col sm:flex-row gap-3 sm:items-center">
+              <FancyAnchor variant="primary" href={`/soluzioni/${primarySolutionSlug}`} className="justify-center">
+                {text?.heroPrimaryCta}
+              </FancyAnchor>
+              <FancyAnchor variant="secondary" href="/shop" className="justify-center">
+                {text?.heroSecondaryCta}
+              </FancyAnchor>
+            </div>
+
+            <div className="mt-6 grid gap-3 sm:grid-cols-3">
+              {[
+                { label: locale === 'it' ? 'Landing dedicate' : 'Dedicated landings', value: locale === 'it' ? 'per soluzione' : 'per solution' },
+                { label: locale === 'it' ? 'Prezzi esposti' : 'Visible prices', value: locale === 'it' ? 'dove disponibili' : 'where available' },
+                { label: locale === 'it' ? 'Richiesta guidata' : 'Guided request', value: locale === 'it' ? 'dal carrello' : 'from cart' },
+              ].map((s, i) => (
+                <div key={i} className="rounded-2xl border border-white/10 bg-black/20 p-4">
+                  <div className="text-xs text-gray-200/70">{s.label}</div>
+                  <div className="mt-1 text-sm font-semibold">{s.value}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="absolute -inset-8 bg-gradient-to-r from-cyan-500/25 via-indigo-500/25 to-emerald-500/25 blur-2xl" />
+            <div className="relative rounded-3xl border border-white/10 bg-black/25 p-5">
+              <div className="flex items-center justify-between gap-3">
+                <div className="text-sm font-semibold text-white">UNITREE Shop</div>
+                <div className="text-xs rounded-full border border-white/10 bg-white/5 px-3 py-1 text-gray-200/80">
+                  {SOLUTIONS.length} soluzioni
+                </div>
+              </div>
+              <div className="mt-4">
+                {/* Use our local asset (no external branding images) */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <div className="relative overflow-hidden rounded-2xl border border-white/10">
+                  <Image
+                    src="/logo.jpg"
+                    alt="UNITREE Shop"
+                    width={640}
+                    height={360}
+                    className="h-52 w-full object-cover opacity-95"
+                    priority
+                  />
+                  <div className="pointer-events-none absolute inset-0">
+                    <DynamicAccentGradient className="absolute inset-0 opacity-50" />
+                  </div>
+                </div>
+              </div>
+              <p className="mt-4 text-xs md:text-sm text-gray-200/80 leading-relaxed">
+                {locale === 'it'
+                  ? 'Dalla scelta alla configurazione: meno tentativi, più risultati.'
+                  : 'From choice to configuration: fewer attempts, more results.'}
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -176,12 +235,15 @@ export default async function Home() {
       <section className="mt-10">
         <div className="flex items-end justify-between gap-4">
           <div>
-            <h2 className="text-xl font-semibold">{text.solutionsHeading}</h2>
-            <p className="mt-1 text-sm text-gray-600">{text.solutionsSubheading}</p>
+            <h2 className="text-xl font-semibold">{text?.solutionsHeading}</h2>
+            <p className="mt-1 text-sm text-gray-200/70">{text?.solutionsSubheading}</p>
           </div>
+          <Link href="/soluzioni" className="text-sm text-gray-200/80 underline underline-offset-4 hover:text-white">
+            {locale === 'it' ? 'Vedi tutte' : 'View all'}
+          </Link>
         </div>
 
-        <div className="mt-4 grid gap-4 md:grid-cols-3">
+        <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {SOLUTIONS.map((s) => (
             <Link
               key={s.slug}
@@ -189,19 +251,22 @@ export default async function Home() {
               className="group"
             >
               <div
-                className="relative overflow-hidden rounded-2xl border border-black/10 bg-white/70 p-5 accent-surface backdrop-blur shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all duration-300 group-hover:shadow-[0_18px_60px_rgba(0,0,0,0.10)] group-hover:-translate-y-[2px]"
+                className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 transition-all duration-300 group-hover:-translate-y-[2px] group-hover:bg-white/7"
                 style={{
                   ['--acc-a' as any]: s.accentRgb?.a ?? '56 189 248',
                   ['--acc-b' as any]: s.accentRgb?.b ?? '99 102 241',
                   ['--acc-c' as any]: s.accentRgb?.c ?? '16 185 129',
                 }}
               >
-                <DynamicAccentGradient className="absolute inset-0 opacity-90" />
-
+                <div className="pointer-events-none absolute inset-0">
+                  <DynamicAccentGradient className="absolute inset-0 opacity-35" />
+                </div>
                 <div className="relative z-10">
-                  <div className="text-xs text-gray-600">{text.solutionCardLabel}</div>
-                  <h3 className="mt-1 text-lg font-bold group-hover:underline">{s.title}</h3>
-                  <p className="mt-2 text-sm text-gray-600">{s.seoDescription}</p>
+                  <div className="text-xs text-gray-200/70">{locale === 'it' ? 'Soluzione' : 'Solution'}</div>
+                  <h3 className="mt-1 text-lg font-bold text-white group-hover:underline">{s.title}</h3>
+                  <p className="mt-2 text-sm text-gray-200/80 leading-relaxed">
+                    {s.seoDescription}
+                  </p>
                 </div>
               </div>
             </Link>
@@ -209,20 +274,109 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="mt-10 rounded-2xl border border-black/10 bg-white/65 p-6 accent-surface backdrop-blur">
-        <h2 className="text-xl font-semibold">{text.howTitle}</h2>
-        <div className="mt-4 grid gap-4 md:grid-cols-3">
-          <div className="rounded-xl border border-black/5 bg-white/65 p-4 backdrop-blur shadow-sm">
-            <div className="text-sm font-semibold">{text.step1Title}</div>
-            <div className="mt-1 text-sm text-gray-600">{text.step1Body}</div>
+      <section className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-6 md:p-10 backdrop-blur">
+        <div className="grid gap-6 md:grid-cols-2">
+          <div>
+            <h2 className="text-xl md:text-2xl font-bold tracking-tight">{text?.approachTitle}</h2>
+            <ul className="mt-4 space-y-3 text-sm md:text-base text-gray-200/80">
+              {text?.approachBullets.map((b, i) => (
+                <li key={i} className="flex gap-3">
+                  <span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-400/90" />
+                  <span className="leading-relaxed">{b}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-          <div className="rounded-xl border border-black/5 bg-white/65 p-4 backdrop-blur shadow-sm">
-            <div className="text-sm font-semibold">{text.step2Title}</div>
-            <div className="mt-1 text-sm text-gray-600">{text.step2Body}</div>
+
+          <div>
+            <h2 className="text-xl md:text-2xl font-bold tracking-tight">{text?.servicesTitle}</h2>
+            <ul className="mt-4 space-y-3 text-sm md:text-base text-gray-200/80">
+              {text?.servicesBullets.map((b, i) => (
+                <li key={i} className="rounded-2xl border border-white/10 bg-black/20 p-4 flex gap-3">
+                  <span className="mt-1 inline-block h-2 w-2 rounded-full bg-indigo-400/90" />
+                  <span className="leading-relaxed">{b}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-          <div className="rounded-xl border border-black/5 bg-white/65 p-4 backdrop-blur shadow-sm">
-            <div className="text-sm font-semibold">{text.step3Title}</div>
-            <div className="mt-1 text-sm text-gray-600">{text.step3Body}</div>
+        </div>
+
+        <div className="mt-7 rounded-3xl border border-white/10 bg-black/20 p-6">
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+            <div>
+              <h2 className="text-xl font-bold tracking-tight">{text?.costTitle}</h2>
+              <p className="mt-2 text-sm md:text-base text-gray-200/80 leading-relaxed">{text?.costBody}</p>
+            </div>
+          </div>
+          <ul className="mt-4 space-y-2 text-sm md:text-base text-gray-200/80">
+            {text?.costBullets.map((b, i) => (
+              <li key={i} className="flex gap-3">
+                <span className="mt-1 inline-block h-2 w-2 rounded-full bg-cyan-300/90" />
+                <span>{b}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl md:text-2xl font-bold tracking-tight">{text?.processTitle}</h2>
+        <div className="mt-5 grid gap-4 sm:grid-cols-2">
+          {text?.processSteps.map((s, idx) => (
+            <div key={idx} className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+              <div className="flex items-start gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-black/20 text-sm font-bold">
+                  {idx + 1}
+                </div>
+                <div>
+                  <div className="text-base font-semibold text-white">{s.title}</div>
+                  <div className="mt-1 text-sm text-gray-200/80 leading-relaxed">{s.body}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-6 md:p-10 backdrop-blur">
+        <div className="grid gap-8 md:grid-cols-[1fr_0.9fr] items-start">
+          <div>
+            <h2 className="text-xl md:text-2xl font-bold tracking-tight">{text?.aboutTitle}</h2>
+            <p className="mt-3 text-sm md:text-base text-gray-200/80 leading-relaxed">{text?.aboutBody}</p>
+          </div>
+          <div>
+            <ul className="space-y-3">
+              {text?.aboutBullets.map((b, i) => (
+                <li key={i} className="rounded-2xl border border-white/10 bg-black/20 p-4 text-sm text-gray-200/80">
+                  {b}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <LeadMagnetClient locale={locale} />
+
+      <section className="mt-8">
+        <div className="rounded-3xl border border-white/10 bg-black/20 p-6 md:p-10">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+            <div>
+              <h2 className="text-xl font-bold">{locale === 'it' ? 'Vuoi passare subito all’azione?' : 'Ready to move?'}</h2>
+              <p className="mt-2 text-sm text-gray-200/80 leading-relaxed">
+                {locale === 'it'
+                  ? 'Scegli una soluzione e costruisci il tuo kit nello shop con compatibilità guidata.'
+                  : 'Pick a solution and build your kit in the shop with guided compatibility.'}
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <FancyAnchor variant="primary" href={`/soluzioni/${primarySolutionSlug}`}>
+                {locale === 'it' ? 'Apri una soluzione' : 'Open a solution'}
+              </FancyAnchor>
+              <FancyAnchor variant="secondary" href="/shop">
+                {locale === 'it' ? 'Vai allo shop' : 'Go to shop'}
+              </FancyAnchor>
+            </div>
           </div>
         </div>
       </section>

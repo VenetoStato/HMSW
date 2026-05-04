@@ -1,0 +1,25 @@
+Guida alla robotica base (mini guida)
+
+1) Scenario prima di tutto
+- Demo / formazione: punta su tempi rapidi e componenti “plug & play”.
+- R&D / ricerca: punta su flessibilità, sensing e iterazioni rapide.
+- Integrazione: punta su compatibilità e requisiti di processo.
+
+2) Compatibilità (check essenziale)
+- Alimentazione e controller coerenti
+- Interfacce (software / API / protocolli)
+- Meccanica: montaggi, fissaggi, ingombri
+- Sensori e feedback (se presenti)
+
+3) Setup iterativo
+- Parti dal minimo necessario per far “girare” la base
+- Misura cosa serve (log, dati sensori, performance)
+- Aggiorna il kit in step successivi
+
+4) Checklist finale
+- Obiettivo e vincoli chiari
+- Kit coerente (alimentazione / controllo / meccanica / software)
+- Piano di demo o POC
+
+—
+Questa guida è stata generata per semplificare la partenza. Per una configurazione completa usa le Soluzioni o invia una richiesta dal carrello.

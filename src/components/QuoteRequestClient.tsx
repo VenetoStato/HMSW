@@ -6,6 +6,7 @@ import { useCart } from '@/lib/cart';
 import { FancyButton, FancyAnchor } from '@/components/FancyButton';
 import type { Locale } from '@/lib/i18n';
 import { getLocaleClient } from '@/lib/localeClient';
+import { fireGoogleAdsConversion } from '@/lib/googleAds';
 
 function cls(...xs: Array<string | false | null | undefined>) {
   return xs.filter(Boolean).join(' ');
@@ -184,6 +185,7 @@ export function QuoteRequestClient({
       }
 
       setStatus('sent');
+      fireGoogleAdsConversion('quote_request');
 
       // Optional: clear cart + reset form
       // Not doing automatic clear here to avoid surprise; backend can still accept.
